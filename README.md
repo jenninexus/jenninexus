@@ -26,7 +26,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 - [Twitch.tv/JenniNexus](https://twitch.tv/jenninexus)
 - [Live Coders](https://livecoders.dev/members/jenninexus/)
 ---
-### 📺 YouTube
+### 📺 YouTube Playlists
 - [Devlogs](https://www.youtube.com/playlist?list=PL9QBjNDhgNwRsznW8e3-KVmwfEuwvr7Yi)
 - [Voice Acting](https://www.youtube.com/playlist?list=PL9QBjNDhgNwQbaceJmfZzc3x4L80gvh8J)
 - [3d, game art & vfx](https://www.youtube.com/playlist?list=PL9QBjNDhgNwQL08lHI_h-CJ281WitOzYp)
@@ -35,11 +35,6 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [🌈 Daily ☕️ Coffee + chat](https://www.youtube.com/watch?v=JIOQAeKVhjk)
-- [☕️ Coffee n chat](https://www.youtube.com/watch?v=BJRtrF9PfaY)
-- [☕️ Coffee n chat](https://www.youtube.com/watch?v=Q34DiperNG0)
-- [BICYCLE in BLOCKBENCH Let's make a Minecraft mod](https://www.youtube.com/watch?v=-ntscMP42OQ)
-- [DAVINCI RESOLVE for NOOBS ( the basics)](https://www.youtube.com/watch?v=-1HFuFAuy2w)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
