@@ -44,6 +44,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### ✏️ Latest Blog posts
 <!-- BLOG-POST-LIST:START -->
+- [Holiday madness](https://dev.to/jenninexus/holiday-madness-b46)
 <!-- BLOG-POST-LIST:END -->
 
 
