@@ -7,10 +7,12 @@
 [<img align="right" alt="jenninexus.com" width="22px" src="https://jenninexus.com/fontawesome/svgs/solid/globe.svg" />][website]
 <br>
 ---
+
 ### Hi there, Jenni here - Technical artist, game dev, streamer.
 I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and working at [Martian Games](https://martiangames.com).
 <br>
 ---
+
 ### Interests
 - C# in Unity
 - Blender 3d
@@ -20,22 +22,26 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 - Voice acting
 - Collaborating
 ---
-### YouTube
-<!-- YOUTUBE:START -->
+### 💻 Twitch
+- [Twitch.tv/JenniNexus](https://twitch.tv/jenninexus)
+- [Live Coders](https://livecoders.dev/members/jenninexus/)
+---
+### 📺 YouTube
 - [Devlogs](https://www.youtube.com/playlist?list=PL9QBjNDhgNwRsznW8e3-KVmwfEuwvr7Yi)
 - [Voice Acting](https://www.youtube.com/playlist?list=PL9QBjNDhgNwQbaceJmfZzc3x4L80gvh8J)
 - [3d, game art & vfx](https://www.youtube.com/playlist?list=PL9QBjNDhgNwQL08lHI_h-CJ281WitOzYp)
 - [Favorite tutorials](https://www.youtube.com/c/JenniNexus/playlists?view=50&sort=dd&shelf_id=25)
 - [jenninexus.com/youtube](https://jenninexus.com/youtube)
-<!-- YOUTUBE:END -->
-
 ---
+### 🎥 Latest YouTube videos
+<!-- YOUTUBE:START -->
+<!-- YOUTUBE:END -->
+---
+### ✏️ Latest Blog posts
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
 
-### 💻 Twitch
-<!-- Twitch:START -->
-- [Twitch.tv/JenniNexus](https://twitch.tv/jenninexus)
-- [Live Coders](https://livecoders.dev/members/jenninexus/)
-<!-- Twitch:END -->
+
 
 <br>
 Thx for stopping by :)
