@@ -35,11 +35,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [🌈 Daily ☕️ Coffee + chat](https://www.youtube.com/watch?v=37ZtwR4Z2Sw)
 - [🌈 Daily ☕️ Coffee + chat](https://www.youtube.com/watch?v=JIOQAeKVhjk)
 - [☕️ Coffee n chat](https://www.youtube.com/watch?v=BJRtrF9PfaY)
 - [☕️ Coffee n chat](https://www.youtube.com/watch?v=Q34DiperNG0)
 - [BICYCLE in BLOCKBENCH Let's make a Minecraft mod](https://www.youtube.com/watch?v=-ntscMP42OQ)
-- [DAVINCI RESOLVE for NOOBS ( the basics)](https://www.youtube.com/watch?v=-1HFuFAuy2w)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
