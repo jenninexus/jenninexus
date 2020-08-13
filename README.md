@@ -35,7 +35,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [🌈 Daily ☕️ Coffee + chat](https://www.youtube.com/watch?v=37ZtwR4Z2Sw)
+- [🌈 Daily ☕️ Coffee + chat](https://www.youtube.com/watch?v=nu7je09jijY)
 - [🌈 Daily ☕️ Coffee + chat](https://www.youtube.com/watch?v=JIOQAeKVhjk)
 - [☕️ Coffee n chat](https://www.youtube.com/watch?v=BJRtrF9PfaY)
 - [☕️ Coffee n chat](https://www.youtube.com/watch?v=Q34DiperNG0)
