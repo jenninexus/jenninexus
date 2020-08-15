@@ -35,8 +35,8 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [☕️ Setting up Media Alerts in OBS and Elgato Stream Deck buttons](https://www.youtube.com/watch?v=k5LgNIGo3gc)
 - [🌈 Daily ☕️ Coffee + chat hangout](https://www.youtube.com/watch?v=nticN_RbQQg)
+- [☕️ Setting up Media Alerts in OBS and Elgato Stream Deck buttons](https://www.youtube.com/watch?v=k5LgNIGo3gc)
 - [☕️ Crying about my Analytics | Youtube live](https://www.youtube.com/watch?v=nu7je09jijY)
 - [☕️ Brainstorm hangout | Youtube live](https://www.youtube.com/watch?v=JIOQAeKVhjk)
 - [☕️ Updating my website | Youtube live](https://www.youtube.com/watch?v=BJRtrF9PfaY)
