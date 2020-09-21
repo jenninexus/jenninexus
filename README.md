@@ -35,11 +35,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [💬 DiscordApp Server template Free download](https://www.youtube.com/watch?v=ZLXDPnrSfZU)
 - [🙂 Weekend hello | 🔴 YT Live](https://www.youtube.com/watch?v=Kw1YL00DBjI)
 - [🦄 Creative hangout | 🔴 YT Live](https://www.youtube.com/watch?v=UueQ9IyPWQQ)
 - [🔥 Burning Man 2020 in Altspace VR](https://www.youtube.com/watch?v=W2mk172xK1Q)
 - [Outro scene in BLENDER 3D | 🔴 YT Live](https://www.youtube.com/watch?v=_Q8YGT3fGog)
-- [👋 Just here to read the meter | 🔴 YT Live](https://www.youtube.com/watch?v=0Z0CcI7lid8)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
