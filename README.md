@@ -36,10 +36,10 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
 - [Leisure Suit Larry | 🔴 YT Live](https://www.youtube.com/watch?v=9vsoCXS7tRo)
+- [Playing house #unity3d | 🔴 YT Live](https://www.youtube.com/watch?v=VDkn7XKRIBg)
 - [👩‍💻Fungus Unity 3d Asset + Devlog update](https://www.youtube.com/watch?v=cozX4BuQGxQ)
 - [Sunday chillaxin | 🔴 YT Live](https://www.youtube.com/watch?v=jYI_q3PhBUg)
 - [💬 DiscordApp Server template Free download](https://www.youtube.com/watch?v=ZLXDPnrSfZU)
-- [🙂 Weekend hello | 🔴 YT Live](https://www.youtube.com/watch?v=Kw1YL00DBjI)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
