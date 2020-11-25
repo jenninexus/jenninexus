@@ -1,10 +1,10 @@
 
-[<img align="right" alt="jenninexus | Twitter" width="22px" src="https://jenninexus.com/fontawesome/svgs/brands/twitter.svg" />][twitter]
-[<img align="right" alt="jenninexus | LinkedIn" width="22px" src="https://jenninexus.com/fontawesome/svgs/brands/linkedin.svg" />][linkedin]
-[<img align="right" alt="jenninexus | YouTube" width="22px" src="https://jenninexus.com/fontawesome/svgs/brands/youtube-square.svg" />][youtube]
-[<img align="right" alt="jenninexus | Instagram" width="22px" src="https://jenninexus.com/fontawesome/svgs/brands/instagram.svg" />][instagram]
-[<img align="right" alt="jenninexus | Twitch" width="22px" src="https://jenninexus.com/fontawesome/svgs/brands/twitch.svg" />][twitch]
-[<img align="right" alt="jenninexus.com" width="22px" src="https://jenninexus.com/fontawesome/svgs/solid/globe.svg" />][website]
+[<img align="right" alt="jenninexus | Twitter" width="22px" src="https://jenninexus.com/svgs/brands/twitter.svg" />][twitter]
+[<img align="right" alt="jenninexus | LinkedIn" width="22px" src="https://jenninexus.com/svgs/brands/linkedin.svg" />][linkedin]
+[<img align="right" alt="jenninexus | YouTube" width="22px" src="https://jenninexus.com/svgs/brands/youtube-square.svg" />][youtube]
+[<img align="right" alt="jenninexus | Instagram" width="22px" src="https://jenninexus.com/svgs/brands/instagram.svg" />][instagram]
+[<img align="right" alt="jenninexus | Twitch" width="22px" src="https://jenninexus.com/svgs/brands/twitch.svg" />][twitch]
+[<img align="right" alt="jenninexus.com" width="22px" src="https://jenninexus.com/svgs/solid/globe.svg" />][website]
 <br>
 ---
 
