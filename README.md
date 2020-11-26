@@ -3,7 +3,7 @@
 [<img align="right" alt="jenninexus | YouTube" width="22px" src="https://jenninexus.com/svgs/youtube-square.svg" />][youtube]
 [<img align="right" alt="jenninexus | Instagram" width="22px" src="https://jenninexus.com/svgs/instagram.svg" />][instagram]
 [<img align="right" alt="jenninexus | Twitch" width="22px" src="https://jenninexus.com/svgs/twitch.svg" />][twitch]
-[<img align="right" alt="jenninexus.com" width="22px" src="https://jenninexus.com/emotes/flair_72-4.png" />][website]
+[<img align="right" alt="jenninexus.com" width="22px" src="https://jenninexus.com/imgs/emotes/flair_72-4.png" />][website]
 <br>
 ---
 
