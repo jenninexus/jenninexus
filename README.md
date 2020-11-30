@@ -35,10 +35,10 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
 - [Widgetbot.io vs Discord embed on jenninexus.com #shorts](https://www.youtube.com/watch?v=3D4vxZ1atj8)
-- [Sat night hula hooping | 🔴 YT Live](https://www.youtube.com/watch?v=Efw3ce6P2ZY)
 - [🌿 Jay & Silent Bob CBD Hemp products](https://www.youtube.com/watch?v=ILBjxC-vnQk)
 - [Got NewTek NDI Android APK working w OBS-NDI plugin (test) | 🔴 YT Live](https://www.youtube.com/watch?v=mVGWx_3ja1k)
 - [AMONG US Twitch Vixens community night!](https://www.youtube.com/watch?v=JfBci49EGLk)
+- [Devlog - cat game prototype in Unity3d](https://www.youtube.com/watch?v=yJdefnmFSnk)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
