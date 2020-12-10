@@ -34,7 +34,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [Reface 😂 AI Face-Swap iOS Android App](https://www.youtube.com/watch?v=XEu46El7DSY)
+- [Reface 😂 AI Face-Swap LOL](https://www.youtube.com/watch?v=XEu46El7DSY)
 - [Widgetbot.io vs Discord embed on jenninexus.com #shorts](https://www.youtube.com/watch?v=3D4vxZ1atj8)
 - [Sat night hula hooping | 🔴 YT Live](https://www.youtube.com/watch?v=Efw3ce6P2ZY)
 - [🌿 Jay & Silent Bob CBD Hemp products](https://www.youtube.com/watch?v=ILBjxC-vnQk)
