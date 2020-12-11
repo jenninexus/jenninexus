@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [TikTok profile clickable URL?](https://www.youtube.com/watch?v=EQPJ4TPhCR8)
 - [Reface 😂 AI Face-Swap LOL](https://www.youtube.com/watch?v=XEu46El7DSY)
 - [IRL SeattleOBA afterparty with friends - streets of Seattle 🎮 !social !thicc !twitchkittens](https://www.youtube.com/watch?v=qertKNzas40)
 - [Widgetbot.io vs Discord embed on jenninexus.com #shorts](https://www.youtube.com/watch?v=3D4vxZ1atj8)
 - [Sat night hula hooping | 🔴 YT Live](https://www.youtube.com/watch?v=Efw3ce6P2ZY)
-- [🌿 Jay & Silent Bob CBD Hemp products](https://www.youtube.com/watch?v=ILBjxC-vnQk)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
