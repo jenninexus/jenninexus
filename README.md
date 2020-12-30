@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [Should I shuffle?](https://www.youtube.com/watch?v=gJmapZpJThA)
 - [🔴Live Devlog | Cat Game + internet update](https://www.youtube.com/watch?v=_xtTGDVbXy0)
 - [🧡 Patreon holiday rewards](https://www.youtube.com/watch?v=4i4zYL1qEK4)
 - [Nintendo Switch !! Unboxing & freaking out !](https://www.youtube.com/watch?v=MpPwst3Emt8)
 - [TikTok: clickable URL website link in profile ( HowTo )](https://www.youtube.com/watch?v=EQPJ4TPhCR8)
-- [Reface 😂 AI Face-Swap LOL](https://www.youtube.com/watch?v=XEu46El7DSY)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
