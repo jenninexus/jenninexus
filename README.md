@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [🎆 Space Needle with T-Mobile New Year’s at the Needle 4k](https://www.youtube.com/watch?v=9HRyOPBhJNM)
+- [🔴LIVE Seattle 🎆 Seattle Space Needle New Years Eve Dec 31, 2018](https://www.youtube.com/watch?v=Wys0fjUKrek)
 - [lol happy NY 🥳🥂💃💕](https://www.youtube.com/watch?v=_1wXkTo0Yfc)
 - [Should I shuffle?](https://www.youtube.com/watch?v=gJmapZpJThA)
 - [🔴Live Devlog | Cat Game + internet update](https://www.youtube.com/watch?v=_xtTGDVbXy0)
-- [🧡 Patreon holiday rewards](https://www.youtube.com/watch?v=4i4zYL1qEK4)
-- [Nintendo Switch !! Unboxing & freaking out !](https://www.youtube.com/watch?v=MpPwst3Emt8)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
