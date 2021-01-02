@@ -36,7 +36,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 <!-- YOUTUBE:START -->
 - [🎆 New Year’s at the Space Needle 4k NYE December 31, 2020](https://www.youtube.com/watch?v=9HRyOPBhJNM)
 - [🔴LIVE Seattle 🎆 Seattle Space Needle New Years Eve Dec 31, 2018](https://www.youtube.com/watch?v=Wys0fjUKrek)
-- [lol happy NY 🥳🥂💃💕](https://www.youtube.com/watch?v=_1wXkTo0Yfc)
+- [Happy New Year 🥳🥂💃💕 NYE hula hoop !](https://www.youtube.com/watch?v=_1wXkTo0Yfc)
 - [Should I shuffle?](https://www.youtube.com/watch?v=gJmapZpJThA)
 - [🔴Live Devlog | Cat Game + internet update](https://www.youtube.com/watch?v=_xtTGDVbXy0)
 <!-- YOUTUBE:END -->
