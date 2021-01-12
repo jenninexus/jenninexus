@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [💻 Nerd-o-clock 2 Gaming Laptop 🥪](https://www.youtube.com/watch?v=AFmwim0VBhI)
 - [Damn, wtf US News](https://www.youtube.com/watch?v=RPvo5bjpofY)
 - [🎆 New Year’s at the Space Needle 4k NYE December 31, 2020](https://www.youtube.com/watch?v=9HRyOPBhJNM)
 - [🔴LIVE Seattle 🎆 Seattle Space Needle New Years Eve Dec 31, 2018](https://www.youtube.com/watch?v=Wys0fjUKrek)
 - [Happy New Year 🥳🥂💃💕 NYE hula hoop !](https://www.youtube.com/watch?v=_1wXkTo0Yfc)
-- [Should I shuffle?](https://www.youtube.com/watch?v=gJmapZpJThA)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
