@@ -34,8 +34,8 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [Alice goes to the Vet | Feline Hyperthyroidism i131 post checkup](https://www.youtube.com/watch?v=mEtn2FcaDyc)
 - [🌈 LED Hula Hoop back from the grave](https://www.youtube.com/watch?v=rnKaIlZr7Ag)
-- [🌈 Rainbow face melt filter](https://www.youtube.com/watch?v=p0EznDFxs70)
 - [24-Hour Day planner in 3d !](https://www.youtube.com/watch?v=LcWHxcPOkbw)
 - [📕 Jenni attempts to explain Reddit](https://www.youtube.com/watch?v=H7RKtVmISes)
 - [🧠🤯 Wrapping my head around 2 gaming 💻 stream setup](https://www.youtube.com/watch?v=PQXNfEMsfAk)
