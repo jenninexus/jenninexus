@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [How to assign multiple Discord roles to one role YAGPDB.xyz](https://www.youtube.com/watch?v=2tEBSZLoS4c)
 - [🔥 Lara is bae | Shadow of the Tomb Raider sesh](https://www.youtube.com/watch?v=hWV6y0mPHug)
 - [🔴 Streaming to Reddit from your phone?!](https://www.youtube.com/watch?v=d-BAkEN6jDE)
 - [Multistreaming with StreamElements mobile app @Restream.io](https://www.youtube.com/watch?v=FKY0SFbqV_8)
 - [Alice goes to the Vet | Feline Hyperthyroidism i131 post checkup](https://www.youtube.com/watch?v=mEtn2FcaDyc)
-- [🌈 LED Hula Hoop back from the grave](https://www.youtube.com/watch?v=rnKaIlZr7Ag)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
