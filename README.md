@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [🎨💻 NFT: Crypto Art chat + Blender highlight](https://www.youtube.com/watch?v=jPRVt7w_p94)
 - [🌈👩🏽‍💻 Making simple Unity 3d games (devlog)](https://www.youtube.com/watch?v=bpM5fpQlzw4)
 - [💖🎨 Speed ART Vlog - making a new Twitch Emote set using @XP-PEN + @Affinity Designer](https://www.youtube.com/watch?v=oCjC0_uEbfQ)
 - [How to assign multiple Discord roles to one role YAGPDB.xyz](https://www.youtube.com/watch?v=2tEBSZLoS4c)
 - [🔥 Lara is bae | Shadow of the Tomb Raider sesh](https://www.youtube.com/watch?v=hWV6y0mPHug)
-- [🔴 Streaming to Reddit from your phone?!](https://www.youtube.com/watch?v=d-BAkEN6jDE)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
