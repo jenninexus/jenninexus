@@ -38,7 +38,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 - [🎨💻 NFT: Crypto Art chat + Blender highlight](https://www.youtube.com/watch?v=jPRVt7w_p94)
 - [🌈👩🏽‍💻 Making simple Unity 3d games (devlog)](https://www.youtube.com/watch?v=bpM5fpQlzw4)
 - [💖🎨 Speed ART Vlog - making a new Twitch Emote set using @XP-PEN + @Affinity Designer](https://www.youtube.com/watch?v=oCjC0_uEbfQ)
-- [How to assign multiple Discord roles to one role YAGPDB.xyz](https://www.youtube.com/watch?v=2tEBSZLoS4c)
+- [Assign 1 Discord Role to MULTIPLE Roles using YAGPDB.xyz](https://www.youtube.com/watch?v=2tEBSZLoS4c)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
