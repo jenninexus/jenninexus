@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [How to Display your Keystrokes Blender 3d (shortcut_VUr Add-on)](https://www.youtube.com/watch?v=kAhBXCfweV0)
 - [📌 Pinterest Browser Extension | pin new vids](https://www.youtube.com/watch?v=hnqDBbgJyN4)
 - [🎨 Let's Try Krita ! Free, Open-Source Animation program](https://www.youtube.com/watch?v=rE1li2lkYDs)
 - [🎨💻 NFT: Crypto Art chat + Blender highlight](https://www.youtube.com/watch?v=jPRVt7w_p94)
 - [🌈👩🏽‍💻 Making simple Unity 3d games (devlog)](https://www.youtube.com/watch?v=bpM5fpQlzw4)
-- [💖🎨 Speed ART Vlog - making a new Twitch Emote set using @XP-PEN + @Affinity Designer](https://www.youtube.com/watch?v=oCjC0_uEbfQ)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
