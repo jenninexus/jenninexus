@@ -36,7 +36,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 <!-- YOUTUBE:START -->
 - [🎨 Clip Studio Paint | Best Affordable Animation program?](https://www.youtube.com/watch?v=3xQjAh7Ukic)
 - [🔴How to Live Stream to Reddit on an Android phone](https://www.youtube.com/watch?v=fHpH8sT1Ccs)
-- [How to Display your Keystrokes Blender 3d (shortcut_VUr Add-on)](https://www.youtube.com/watch?v=kAhBXCfweV0)
+- [How to Display your Keystrokes Blender 3d | Shortcut_VUr Add-on](https://www.youtube.com/watch?v=kAhBXCfweV0)
 - [📌 Pinterest Browser Extension | pin new vids](https://www.youtube.com/watch?v=hnqDBbgJyN4)
 - [🎨 Let's Try Krita ! Free, Open-Source Animation program](https://www.youtube.com/watch?v=rE1li2lkYDs)
 <!-- YOUTUBE:END -->
