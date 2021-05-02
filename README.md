@@ -7,7 +7,7 @@
 <br>
 ---
 
-### Hi there, Jenni here - Technical artist, game dev, streamer.
+### Hi there, Jenni here - Technical artist, indie game dev, streamer.
 I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and working at [Martian Games](https://martiangames.com).
 <br>
 ---
