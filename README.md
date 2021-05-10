@@ -35,7 +35,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
 - [👩‍💻🧼 Stream Room Organization](https://www.youtube.com/watch?v=FdxEdoqjXI0)
-- [🎨 Canva Template for DIY WebGL Indie Game Concept](https://www.youtube.com/watch?v=eWD4cK5Ak6Y)
+- [🎨 WebGL Indie Game Concept in Unity 3D](https://www.youtube.com/watch?v=eWD4cK5Ak6Y)
 - [😼 CRUSHING Indie Game Dev DREAMS](https://www.youtube.com/watch?v=poC_0RgP8nk)
 - [🎨 Clip Studio Paint | Best Affordable Animation program?](https://www.youtube.com/watch?v=3xQjAh7Ukic)
 - [🔴How to Live Stream to Reddit on an Android phone](https://www.youtube.com/watch?v=fHpH8sT1Ccs)
