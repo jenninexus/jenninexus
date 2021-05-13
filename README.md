@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [Create a Short demo on Android YouTube mobile app #shorts](https://www.youtube.com/watch?v=o-9lU-KveVg)
 - [Blender practice + chill (highlight)](https://www.youtube.com/watch?v=89tJAmwmols)
 - [👩‍💻🧼 DIY Stream Room Update](https://www.youtube.com/watch?v=FdxEdoqjXI0)
 - [🎨 WebGL Indie Game Concept in Unity 3D](https://www.youtube.com/watch?v=eWD4cK5Ak6Y)
 - [😼 CRUSHING Indie Game Dev DREAMS](https://www.youtube.com/watch?v=poC_0RgP8nk)
-- [🎨 Clip Studio Paint | Best Affordable Animation program?](https://www.youtube.com/watch?v=3xQjAh7Ukic)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
