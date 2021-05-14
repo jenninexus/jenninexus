@@ -34,7 +34,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- ["Create a Short" YouTube in-app mobile feature on Android](https://www.youtube.com/watch?v=o-9lU-KveVg)
+- [How to "Create a Short" in-app on Android](https://www.youtube.com/watch?v=o-9lU-KveVg)
 - [Blender practice + chill (highlight)](https://www.youtube.com/watch?v=89tJAmwmols)
 - [👩‍💻🧼 DIY Stream Room Update](https://www.youtube.com/watch?v=FdxEdoqjXI0)
 - [🎨 WebGL Indie Game Concept in Unity 3D](https://www.youtube.com/watch?v=eWD4cK5Ak6Y)
