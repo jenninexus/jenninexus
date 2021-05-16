@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [🚍 Speed-modeling a 3D Party Bus !](https://www.youtube.com/watch?v=c23PeT0Gk5s)
 - [🚍 Let's make a 3d Party Bus ! #blender3d](https://www.youtube.com/watch?v=DntLHQmKFKo)
 - [How to "Create a Short" in-app on Android](https://www.youtube.com/watch?v=o-9lU-KveVg)
 - [Blender practice + chill (highlight)](https://www.youtube.com/watch?v=89tJAmwmols)
 - [👩‍💻🧼 DIY Stream Room Update](https://www.youtube.com/watch?v=FdxEdoqjXI0)
-- [🎨 WebGL Indie Game Concept in Unity 3D](https://www.youtube.com/watch?v=eWD4cK5Ak6Y)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
