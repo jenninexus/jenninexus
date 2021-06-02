@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [Facebook Shop Setup + Cool Features](https://www.youtube.com/watch?v=M56N8beDGjs)
 - [Indie Game Dev: Advice for Noobs?](https://www.youtube.com/watch?v=yiGUep8hEhE)
 - [OBS Tip: Separate VOD Track Audio](https://www.youtube.com/watch?v=1b0NzX5NPrc)
 - [Cat-As-Trophy | Now the cat can fly a plane!](https://www.youtube.com/watch?v=Y1QjaPh2ZWo)
 - [🚍 Speed-modeling a 3D Party Bus !](https://www.youtube.com/watch?v=c23PeT0Gk5s)
-- [🚍 Let's make a 3d Party Bus ! #blender3d](https://www.youtube.com/watch?v=DntLHQmKFKo)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
