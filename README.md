@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [Robot Twerkout | Easy Mocap ! DeepMotion Animate3d](https://www.youtube.com/watch?v=tNrDvssF-4o)
 - [🐹 We Made a 3D Hamster | CatAsTrophy Devlog](https://www.youtube.com/watch?v=vAEDWIS8gCA)
 - ["Your Father is Dead' Louis CK & Matthew Broderick](https://www.youtube.com/watch?v=fnbwS4hQXCk)
 - [Portfolio Website made with Bootstrap | work-in-progress](https://www.youtube.com/watch?v=PLG5wTcCoGg)
 - [Ideas for Patreon Creators | Supporter Rewards](https://www.youtube.com/watch?v=LH0ljSeMD6o)
-- [🤾‍♀ Rigging a 2d character with 2d IK in Unity](https://www.youtube.com/watch?v=H-hzTMjnoo8)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
