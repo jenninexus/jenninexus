@@ -37,8 +37,8 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 - [Blog made w PHP (noob work-in-progress)](https://www.youtube.com/watch?v=Oem1DjqrwCw)
 - [📲 Hello from iPhone 12](https://www.youtube.com/watch?v=LfqIsCJTdOo)
 - [🌆 DIY Mocap?! Video to .FBX Animation | Deep Motion](https://www.youtube.com/watch?v=pF0ONaKUpH4)
-- [Robot Twerkout | Easy Mocap ! DeepMotion Animate3d](https://www.youtube.com/watch?v=tNrDvssF-4o)
 - [🐹 We Made a 3D Hamster | CatAsTrophy Devlog](https://www.youtube.com/watch?v=vAEDWIS8gCA)
+- ["Your Father is Dead' Louis CK & Matthew Broderick](https://www.youtube.com/watch?v=fnbwS4hQXCk)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
