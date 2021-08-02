@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [💾 Pool Party Level Design in CatAsTrophy - Devlog](https://www.youtube.com/watch?v=9JhlnKJxRQM)
+- [3 characters, 1 rig? Unity 2d IK (NOOB)](https://www.youtube.com/watch?v=04cWRup9buU)
 - [Blog made w PHP (noob work-in-progress)](https://www.youtube.com/watch?v=Oem1DjqrwCw)
 - [📲 Hello from iPhone 12](https://www.youtube.com/watch?v=LfqIsCJTdOo)
 - [🌆 DIY Mocap?! Video to .FBX Animation | Deep Motion](https://www.youtube.com/watch?v=pF0ONaKUpH4)
-- [🐹 We Made a 3D Hamster | CatAsTrophy Devlog](https://www.youtube.com/watch?v=vAEDWIS8gCA)
-- ["Your Father is Dead' Louis CK & Matthew Broderick](https://www.youtube.com/watch?v=fnbwS4hQXCk)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
