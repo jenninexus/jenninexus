@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [☕ Trying JAVY Microdose Coffee Concentrate](https://www.youtube.com/watch?v=Py0iG7w4VQM)
 - [🌈 PAX West Giveaway Winners Announcement !](https://www.youtube.com/watch?v=HaEFf2zxmAM)
 - [Blender 3d | Stylistic Character Modeling Time-lapse](https://www.youtube.com/watch?v=qJia-ZCyzhM)
 - [💾 Level Design ! | Unity 3D | game dev hangout](https://www.youtube.com/watch?v=_bAkTPGhkOQ)
 - [💾 Pool Party Level Design in CatAsTrophy - Devlog](https://www.youtube.com/watch?v=9JhlnKJxRQM)
-- [3 characters, 1 rig? Unity 2d IK (NOOB)](https://www.youtube.com/watch?v=04cWRup9buU)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
