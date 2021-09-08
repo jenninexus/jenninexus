@@ -34,7 +34,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [🔥 Exploring BRCvr - Burning Man 2021 in Altspace VR](https://www.youtube.com/watch?v=GOEhF2vWQkU)
+- [🔥 Exploring BRCvr - Burning Man 2021 in Altspace VR Tour](https://www.youtube.com/watch?v=GOEhF2vWQkU)
 - [☕ Trying JAVY Microdose Coffee Concentrate](https://www.youtube.com/watch?v=Py0iG7w4VQM)
 - [🌈 PAX West Giveaway Winners Announcement !](https://www.youtube.com/watch?v=HaEFf2zxmAM)
 - [Blender 3d | Stylistic Character Modeling Time-lapse](https://www.youtube.com/watch?v=qJia-ZCyzhM)
