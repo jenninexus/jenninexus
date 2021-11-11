@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [Age-defying pill organizer :-D](https://www.youtube.com/watch?v=jQdC-ihkLNU)
 - [💡 Cool new SunUV Lamp for Gel Nail Art etc](https://www.youtube.com/watch?v=KMX34Uao_84)
 - [🔥 Burning Man 2021 in Altspace VR | BRCvr Tour](https://www.youtube.com/watch?v=ETTPufADKhY)
 - [PAX West 2021 Vlog](https://www.youtube.com/watch?v=lWhPIpxSc_A)
 - [☕ Trying JAVY Microdose Coffee Concentrate](https://www.youtube.com/watch?v=Py0iG7w4VQM)
-- [🌈 PAX West Giveaway Winners Announcement !](https://www.youtube.com/watch?v=HaEFf2zxmAM)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
