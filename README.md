@@ -34,7 +34,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [🧦 Retro Game Fashion ~ Activision Pitfall Kaboom! Freeway Cute New Socks](https://www.youtube.com/watch?v=Zeuzy-Kp5A0)
+- [🧦 Retro Gamer Fashion ~ Pitfall Kaboom! Freeway Sock Collection Gift Ideas](https://www.youtube.com/watch?v=Zeuzy-Kp5A0)
 - [👩‍🎤 GRWM - my 1st Grey hairs.. fry n dye or stay natural?](https://www.youtube.com/watch?v=JuF5ioB-qM0)
 - [🐇 I want to stream Ori Will of the Wisps](https://www.youtube.com/watch?v=CVUhSZYWBMU)
 - [💊 Satisfying pill organizer](https://www.youtube.com/watch?v=jQdC-ihkLNU)
