@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [💅 Nail Art Tag on Twitch? Cool](https://www.youtube.com/watch?v=yJq6vXxhmxk)
 - [🧦 Retro Gamer Fashion ~ Pitfall Kaboom! Freeway Sock Collection Gift Ideas](https://www.youtube.com/watch?v=Zeuzy-Kp5A0)
 - [👩‍🎤 GRWM - my 1st Grey hairs.. fry n dye or stay natural?](https://www.youtube.com/watch?v=JuF5ioB-qM0)
 - [🐇 I want to stream Ori Will of the Wisps](https://www.youtube.com/watch?v=CVUhSZYWBMU)
 - [💊 Satisfying pill organizer](https://www.youtube.com/watch?v=jQdC-ihkLNU)
-- [💡 Cool new SunUV Lamp for Gel Nail Art etc](https://www.youtube.com/watch?v=KMX34Uao_84)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
