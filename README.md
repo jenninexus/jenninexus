@@ -34,7 +34,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [🦖 Impeccably Preserved Dinosaur Embryo 🥚 Live Science](https://www.youtube.com/watch?v=b8izmYs46SI)
+- [🦖🥚 Cool Dinosaur Embryo - Live Science](https://www.youtube.com/watch?v=b8izmYs46SI)
 - [🎁 Birthday Party Level Design in Cat-As-Trophy](https://www.youtube.com/watch?v=3u4zGWDTg9Y)
 - [💅 Nail Art Tag on Twitch? Cool](https://www.youtube.com/watch?v=yJq6vXxhmxk)
 - [🧦 Retro Gamer Fashion ~ Pitfall Kaboom! Freeway Sock Collection Gift Ideas](https://www.youtube.com/watch?v=Zeuzy-Kp5A0)
