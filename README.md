@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [❄️ Winter Level Design in Cat-As-Trophy ~ Indie Game Dev](https://www.youtube.com/watch?v=Xeo4kzvtbPc)
 - [🦖🥚 Cool Dinosaur Embryo - Live Science](https://www.youtube.com/watch?v=b8izmYs46SI)
 - [🎁 Birthday Party Level Design in Cat-As-Trophy](https://www.youtube.com/watch?v=3u4zGWDTg9Y)
 - [💅 Nail Art Tag on Twitch? Cool](https://www.youtube.com/watch?v=yJq6vXxhmxk)
 - [🧦 Retro Gamer Fashion ~ Pitfall Kaboom! Freeway Sock Collection Gift Ideas](https://www.youtube.com/watch?v=Zeuzy-Kp5A0)
-- [👩‍🎤 GRWM - my 1st Grey hairs.. fry n dye or stay natural?](https://www.youtube.com/watch?v=JuF5ioB-qM0)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
