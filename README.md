@@ -34,7 +34,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [🎆 Space Needle Show - New Years Eve Dec 31, 2021](https://www.youtube.com/watch?v=tvOz1JKTPwI)
+- [🎆 Space Needle Show - New Years Eve Seattle Dec 31, 2021](https://www.youtube.com/watch?v=tvOz1JKTPwI)
 - [❄️ Winter Level Design in Cat-As-Trophy ~ Indie Game Dev](https://www.youtube.com/watch?v=Xeo4kzvtbPc)
 - [🦖🥚 Cool Dinosaur Embryo - Live Science](https://www.youtube.com/watch?v=b8izmYs46SI)
 - [🎁 Birthday Party Level Design in Cat-As-Trophy](https://www.youtube.com/watch?v=3u4zGWDTg9Y)
