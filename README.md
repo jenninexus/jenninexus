@@ -43,6 +43,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### ✏️ Latest Blog posts
 <!-- BLOG-POST-LIST:START -->
+- [Level design for Botborgs](https://dev.to/jenninexus/level-design-for-botborgs-ce8)
 - [Tank Off](https://dev.to/jenninexus/tank-off-1pib)
 - [Holiday madness](https://dev.to/jenninexus/holiday-madness-b46)
 <!-- BLOG-POST-LIST:END -->
