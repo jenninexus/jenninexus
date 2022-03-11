@@ -34,7 +34,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [Kitty likes the Aurora lights](https://www.youtube.com/watch?v=rivwPzvkJpc)
+- [🌈 Kitty likes the Aurora lights](https://www.youtube.com/watch?v=rivwPzvkJpc)
 - [30+ Emote Slots Unlocked + Animated Twitch Emotes!](https://www.youtube.com/watch?v=K4h7T8aHbAk)
 - [🪐🌌 Game Dev chat + Botborgs Demo !](https://www.youtube.com/watch?v=n7stoLm0ad0)
 - [🤸‍♀️🤯 Alegria in Seattle vlog](https://www.youtube.com/watch?v=3WOGbu3mFwU)
