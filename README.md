@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [💅 DIY Gel Nail Polish 🌸 Spring Mani &lpar;Twitch stream highlight&rpar;](https://www.youtube.com/watch?v=BibaL-oyNEw)
 - [😱 I didn&#39;t realize it was a $300 tip !!!!!](https://www.youtube.com/watch?v=dIGSvD8iOa0)
 - [📲 How to Retain your Favorite camera settings on iPhone 13 pro max as the default](https://www.youtube.com/watch?v=Kd8Hhljc5aY)
 - [Beware of Impersonation Accounts on Ig 😩](https://www.youtube.com/watch?v=fPU3TH4rE_I)
 - [🌈 Kitty likes the Aurora lights](https://www.youtube.com/watch?v=rivwPzvkJpc)
-- [30+ Emote Slots Unlocked + Animated Twitch Emotes!](https://www.youtube.com/watch?v=K4h7T8aHbAk)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
