@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [Let&#39;s try Metahuman Creator](https://www.youtube.com/watch?v=1_6JoA75E74)
 - [☠️ Let&#39;s check out Z-Anatomy in Blender 3D !](https://www.youtube.com/watch?v=I0A7RZ9W1eU)
 - [💚 Nvidia&#39;s Omniverse Audio2Face](https://www.youtube.com/watch?v=2MtXCor1RZs)
 - [Mars Sim UE5 Dev Submissions to NASA ?!](https://www.youtube.com/watch?v=JoV8giSERdY)
 - [Character Creator 4 🤩](https://www.youtube.com/watch?v=0x8DlwVXorQ)
-- [Above Mt. Rainier ✈️😶‍🌫️🌁😱🙌💕🫶](https://www.youtube.com/watch?v=7ebKH1y0PzE)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
