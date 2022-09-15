@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [PAX West Seattle 2021 ~ Vlog](https://www.youtube.com/watch?v=36r7UeUiVkk)
 - [Trying the New Intel Arc Gfx at PAX West 2022](https://www.youtube.com/watch?v=9Rufoo_wCLg)
 - [Port of Tacoma Boat Tour | Vlog](https://www.youtube.com/watch?v=h611Fn_GcWo)
 - [Top 5 Upcoming Web 3 Blockchain Games !](https://www.youtube.com/watch?v=2_sRWcWA014)
 - [What is the Metaverse?](https://www.youtube.com/watch?v=5B6zDramoI0)
-- [💳 3d Land Cards-Enter the Borgverse Web3 Solana Game](https://www.youtube.com/watch?v=uwDftTC3aKo)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
