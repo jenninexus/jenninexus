@@ -34,8 +34,8 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [Discohook my new favorite Discord Bot](https://www.youtube.com/watch?v=uXmJqneXlJM)
-- [Gradient Animation in CSS Web Design tip 🌈👍](https://www.youtube.com/watch?v=E-mgrvRq0RQ)
+- [🪝 Discohook my new favorite Discord Bot](https://www.youtube.com/watch?v=uXmJqneXlJM)
+- [🌈👩‍💻 How to make a pretty Gradient Animation in CSS Web Design tip 👍](https://www.youtube.com/watch?v=E-mgrvRq0RQ)
 - [PAX West Seattle 2022 ~ Vlog](https://www.youtube.com/watch?v=36r7UeUiVkk)
 - [Trying the New Intel Arc Gfx at PAX West 2022](https://www.youtube.com/watch?v=9Rufoo_wCLg)
 - [Port of Tacoma Boat Tour | Vlog](https://www.youtube.com/watch?v=h611Fn_GcWo)
