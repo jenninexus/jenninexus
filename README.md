@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [🔴Live - Monthly Update ~ Thank u 🧡Patrons + Subs 👾🌌🎄🎁🍁](https://www.youtube.com/watch?v=_ePnFij_Fvk)
 - [in3D: Avatar Creator Pro Face and Body 3D Scan &amp; Export](https://www.youtube.com/watch?v=UxcsseRIb9A)
 - [🎨 Best AI Art Programs for creating Generative Art](https://www.youtube.com/watch?v=mrRsEV2WyUk)
 - [🍁🦆 Autumn Nature Walk](https://www.youtube.com/watch?v=Q1xGfNBDA7w)
 - [👻 Spooky Level Design in Cat-as-Trophyy Game](https://www.youtube.com/watch?v=qMUGDs7GpK8)
-- [🪝 Discohook my new favorite Discord Bot](https://www.youtube.com/watch?v=uXmJqneXlJM)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
