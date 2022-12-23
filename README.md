@@ -34,7 +34,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [🔴Live - Monthly Update 👾🌌🎄🎁🍁 Thank u 🧡Patrons + Subs](https://www.youtube.com/watch?v=_ePnFij_Fvk)
+- [🔴Live - Monthly Update + Chat Open ai  👾🌌🎄🎁🍁](https://www.youtube.com/watch?v=_ePnFij_Fvk)
 - [in3D: Avatar Creator Pro Face and Body 3D Scan &amp; Export](https://www.youtube.com/watch?v=UxcsseRIb9A)
 - [🎨 Best AI Art Programs for creating Generative Art](https://www.youtube.com/watch?v=mrRsEV2WyUk)
 - [🍁🦆 Autumn Nature Walk](https://www.youtube.com/watch?v=Q1xGfNBDA7w)
