@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [🗯️ What is Chat GPT ? 5 Use Cases](https://www.youtube.com/watch?v=Q5EiHhoGY8g)
 - [Unity AR XR: How to Use Live Face Capture ~ CC4, HDRP](https://www.youtube.com/watch?v=WAxpLCjSsoI)
 - [Scan Your Face and Body IN-3D using an iPhone](https://www.youtube.com/watch?v=ZickccsTS6g)
 - [🔴Live - Monthly Update + Chat Open ai  👾🌌🎄🎁🍁](https://www.youtube.com/watch?v=_ePnFij_Fvk)
 - [in3D: Avatar Creator Pro Face and Body 3D Scan &amp; Export](https://www.youtube.com/watch?v=UxcsseRIb9A)
-- [🎨 Best AI Art Programs for creating Generative Art](https://www.youtube.com/watch?v=mrRsEV2WyUk)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
