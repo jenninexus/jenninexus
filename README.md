@@ -36,7 +36,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 <!-- YOUTUBE:START -->
 - [🗯️ What is Chat GPT ? 5 Use Cases](https://www.youtube.com/watch?v=Q5EiHhoGY8g)
 - [Unity AR XR: How to Use Live Face Capture ~ CC4, HDRP](https://www.youtube.com/watch?v=WAxpLCjSsoI)
-- [3D Face / Body Scan iOS app !](https://www.youtube.com/watch?v=ZickccsTS6g)
+- [3D Face / Body Scan iOS app ! ~ 3d model, Character Creator Mixamo](https://www.youtube.com/watch?v=ZickccsTS6g)
 - [🔴Live - Monthly Update + Chat Open ai  👾🌌🎄🎁🍁](https://www.youtube.com/watch?v=_ePnFij_Fvk)
 - [in3D: Avatar Creator Pro Face and Body 3D Scan &amp; Export](https://www.youtube.com/watch?v=UxcsseRIb9A)
 <!-- YOUTUBE:END -->
