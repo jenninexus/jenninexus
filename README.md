@@ -37,8 +37,8 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 - [🤯 AI TOOLS that will BLOW YOUR MIND 2023](https://www.youtube.com/watch?v=QAgbR6KF6go)
 - [🏃‍♀️ DIY Motion Capture for Animations](https://www.youtube.com/watch?v=6mtOi8-Ew6g)
 - [🔴Live - Monthly Update 👾🌌🌴🌅💗](https://www.youtube.com/watch?v=RqFH1wDcDCM)
-- [🗯️ What is Chat GPT ? 5 Use Cases](https://www.youtube.com/watch?v=Q5EiHhoGY8g)
-- [INSANE Face Capture UNITY 3D TOOLS](https://www.youtube.com/watch?v=WAxpLCjSsoI)
+- [🗯️ WTF is Chat GPT ???](https://www.youtube.com/watch?v=Q5EiHhoGY8g)
+- [📱 INSANE Face Capture UNITY 3D TOOLS](https://www.youtube.com/watch?v=WAxpLCjSsoI)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
