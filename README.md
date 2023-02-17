@@ -34,7 +34,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [🧠 Top AI TOOLS for CONTENT CREATORS 2023](https://www.youtube.com/watch?v=QAgbR6KF6go)
+- [🧠 Top AI TOOLS that will BLOW YOUR MIND 2023](https://www.youtube.com/watch?v=QAgbR6KF6go)
 - [🏃‍♀️ DIY Motion Capture for Animations](https://www.youtube.com/watch?v=6mtOi8-Ew6g)
 - [🔴Live - Monthly Update 👾🌌🌴🌅💗](https://www.youtube.com/watch?v=RqFH1wDcDCM)
 - [🗯️ What is Chat GPT ? 5 Use Cases](https://www.youtube.com/watch?v=Q5EiHhoGY8g)
