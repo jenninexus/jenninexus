@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [AI Explains the SYMPATHETIC &amp; PARASYMPATHETIC NERVOUS SYSTEM](https://www.youtube.com/watch?v=lKTA_2ex36k)
 - [AI Explains UNIFIED FIELD THEORY](https://www.youtube.com/watch?v=OV-oEt1T3U4)
 - [🔴Live - Monthly Update 👾🌌🌴🌅💗](https://www.youtube.com/watch?v=VSp-Vncq7_Y)
 - [🤯 AI TOOLS that will BLOW YOUR MIND 2023](https://www.youtube.com/watch?v=QAgbR6KF6go)
 - [🏃‍♀️ DIY Motion Capture for Animations](https://www.youtube.com/watch?v=6mtOi8-Ew6g)
-- [🔴Live - Monthly Update 👾🌌🌴🌅💗](https://www.youtube.com/watch?v=RqFH1wDcDCM)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
