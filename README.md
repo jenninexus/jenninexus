@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [👨‍🎤 A.I. Stable Diffusion + Headshot Generator in CC4 #ai #gamedev](https://www.youtube.com/watch?v=b2CWvcOSMYI)
 - [🔴Live - Monthly Update 💜🌌🍀🌅🌸](https://www.youtube.com/watch?v=TFSo742L6MM)
 - [📐 Ai Render - Stable Diffusion In Blender](https://www.youtube.com/watch?v=hyEriAV71rQ)
 - [🧠 OpenBCI: Open-Source Brain-Computer Interface](https://www.youtube.com/watch?v=2eQD4rtb4kM)
 - [AI Explains: the Sympathetic &amp; Parasympathetic Nervous System](https://www.youtube.com/watch?v=lKTA_2ex36k)
-- [AI Explains UNIFIED FIELD THEORY](https://www.youtube.com/watch?v=OV-oEt1T3U4)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
