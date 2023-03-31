@@ -34,11 +34,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [🔴Live - Monthly Update 💜🌌🍀🐣🌅🌸🐰](https://www.youtube.com/watch?v=ZkCF71rKvEs)
 - [🎨 A.I. Redesigned my Twitch Emotes](https://www.youtube.com/watch?v=JOT-6VtQSKU)
 - [🥲 Emotional Regulation Skills | ChatGPT 4](https://www.youtube.com/watch?v=RFrYWB_ogDg)
 - [👨‍🎤 A.I. Stable Diffusion + Headshot Generator in CC4 #ai #gamedev](https://www.youtube.com/watch?v=b2CWvcOSMYI)
 - [🔴Live - Monthly Update 💜🌌🍀🌅🌸](https://www.youtube.com/watch?v=TFSo742L6MM)
-- [📐 Ai Render - Stable Diffusion In Blender](https://www.youtube.com/watch?v=hyEriAV71rQ)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
