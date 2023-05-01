@@ -13,13 +13,15 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 
 ### Interests
-- C# in Unity
+- Artificial Intelligence (AI) Researcher
+- OpenAI, ChatGPT, AI Art: Midjourney, Stable Difusion
+- Unity 3d Game Dev using C#
 - Blender 3d
-- HTML, CSS, JS
-- Broadcasting skills
-- Channel design
-- Voice acting
-- Collaborating
+- HTML, CSS, JS, WebGL
+- Online Broadcasting
+- Channel / brand design
+- Voice acting & narration
+- Collaborating with other creative engineers
 ---
 ### 💻 Twitch
 - [Twitch.tv/JenniNexus](https://twitch.tv/jenninexus)
