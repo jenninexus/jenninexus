@@ -36,7 +36,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [😿 Meltdown vs Tantrum |  | Let&#39;s Ask ChatGPT 4](https://www.youtube.com/watch?v=CfkIDZZzk-8)
+- [😿 Meltdown vs Tantrums | Let&#39;s Ask ChatGPT 4](https://www.youtube.com/watch?v=CfkIDZZzk-8)
 - [🔴Live - Monthly Update 💜🌌🍀🌞🧡💝](https://www.youtube.com/watch?v=NEwAnyTNnEk)
 - [The Future of Interactive Sex Tech 🍆 Teledildonics ?!](https://www.youtube.com/watch?v=w2gJm7qZhJ0)
 - [🔴Live - Monthly Update 💜🌌🍀🐣🌅🌸🐰](https://www.youtube.com/watch?v=ZkCF71rKvEs)
