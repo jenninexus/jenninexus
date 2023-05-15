@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [🌸 Self-Discovery ~ Daily Inspo](https://www.youtube.com/watch?v=kDhKmo4FDZc)
 - [😿 AI Explains | Meltdown vs Tantrums #chatgpt4](https://www.youtube.com/watch?v=CfkIDZZzk-8)
 - [🔴Live - Monthly Update 💜🌌🍀🌞🧡💝](https://www.youtube.com/watch?v=NEwAnyTNnEk)
 - [Future Interactive Sex Tech 🍆 Teledildonics ?!](https://www.youtube.com/watch?v=w2gJm7qZhJ0)
 - [🔴Live - Monthly Update 💜🌌🍀🐣🌅🌸🐰](https://www.youtube.com/watch?v=ZkCF71rKvEs)
-- [💉 AI Explains | Legal Assisted Suicide?! Dr Kevorkian #chatgpt4](https://www.youtube.com/watch?v=0yaJ8uv480o)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
