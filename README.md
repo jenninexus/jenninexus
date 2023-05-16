@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [💻 Indie Game Dev ~ Inspo](https://www.youtube.com/watch?v=NjrW8Va8Fe8)
 - [🎮 Careers in Game Dev ~ Inspo](https://www.youtube.com/watch?v=4bWwMYzrojk)
 - [🌸 Self-Discovery ~ Daily Inspo](https://www.youtube.com/watch?v=kDhKmo4FDZc)
 - [😿 AI Explains | Meltdown vs Tantrums #chatgpt4](https://www.youtube.com/watch?v=CfkIDZZzk-8)
 - [🔴Live - Monthly Update 💜🌌🍀🌞🧡💝](https://www.youtube.com/watch?v=NEwAnyTNnEk)
-- [Future Interactive Sex Tech 🍆 Teledildonics ?!](https://www.youtube.com/watch?v=w2gJm7qZhJ0)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
