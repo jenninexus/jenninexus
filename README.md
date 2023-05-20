@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [🎤 Uncover AI Tech that Clones Your Voice!](https://www.youtube.com/watch?v=j8hfYQF8QMs)
 - [🌸 Self-Discovery ~ Daily Inspo](https://www.youtube.com/watch?v=bcwNJZ3ALP8)
 - [💻 Indie Game Dev ~ Inspo](https://www.youtube.com/watch?v=1Re9FQEzWNw)
 - [👨‍🎤 AI-Generated Talking Avatars that Look Shockingly Real](https://www.youtube.com/watch?v=VcKlAfvDl1U)
 - [🔴Live - Monthly Update ⛱🫧🌊🌴🧃🍍🌞🐚🌺👙🪸🍡🥥🍦](https://www.youtube.com/watch?v=FcAt5VeBvUc)
-- [💻 Indie Game Dev ~ Inspo](https://www.youtube.com/watch?v=Ectd6jGfgy0)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
