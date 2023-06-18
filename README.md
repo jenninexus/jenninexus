@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [💻 Indie Game Dev ~ Inspo](https://www.youtube.com/watch?v=ougcHiXu3I4)
 - [🔴Live - Monthly Update ⛱🫧🌊🌴🧃🍍🌞🐚🌺👙🪸🍡🥥🍦](https://www.youtube.com/watch?v=FcAt5VeBvUc)
 - [🌸 Self-Discovery ~ Daily Inspo](https://www.youtube.com/watch?v=HrnAmZcSbfE)
 - [💻 Indie Game Dev ~ Inspo](https://www.youtube.com/watch?v=h087Qhx_D0I)
 - [🌸 Self-Discovery ~ Daily Inspo](https://www.youtube.com/watch?v=7P-G1bBGOwE)
-- [🎮 Careers in Game Dev ~ Inspo](https://www.youtube.com/watch?v=lmluYA0HMLA)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
