@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [🌸 Self-Discovery ~ Daily Inspo](https://www.youtube.com/watch?v=PbrdgPfk1hw)
 - [🌸 Self-Discovery ~ Daily Inspo](https://www.youtube.com/watch?v=3YUmYAXn83U)
 - [🛸 UFO Sighting?!](https://www.youtube.com/watch?v=OToYvhqSrPA)
 - [📱 YouTube Studio iOS App X-tra Features](https://www.youtube.com/watch?v=hMkALL-6-hY)
 - [🌸 Self-Discovery ~ Daily Inspo](https://www.youtube.com/watch?v=yCY4aRVdimU)
-- [❤️‍🩹 Join Me in Reading The Healing Connection](https://www.youtube.com/watch?v=uNHY4EAAnIM)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
