@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [💬 ChatGPT Explains Core Wounds &amp; Beliefs](https://www.youtube.com/watch?v=SPfiWFQkTA0)
 - [🌸 Self-Discovery ~ Daily Inspo](https://www.youtube.com/watch?v=Z0VPuDl5jtk)
 - [🌸 Self-Discovery ~ Daily Inspo](https://www.youtube.com/watch?v=PbrdgPfk1hw)
 - [🌸 Self-Discovery ~ Daily Inspo](https://www.youtube.com/watch?v=3YUmYAXn83U)
 - [🛸 UFO Sighting?!](https://www.youtube.com/watch?v=OToYvhqSrPA)
-- [📱 YouTube Studio iOS App X-tra Features](https://www.youtube.com/watch?v=hMkALL-6-hY)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
