@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [🎮 PAX West Seattle 2023 VLOG](https://www.youtube.com/watch?v=kuwONQPY-8Q)
 - [🐘 GameJolt party at PAX Friday night sneak peak](https://www.youtube.com/watch?v=pZmCkS32WQ4)
 - [🏙️ GRWM PAX West 2023 - Friday](https://www.youtube.com/watch?v=drEZLwEOQMs)
 - [🤳 2 in 1 Tripod for iPhone + mic extension for IRL](https://www.youtube.com/watch?v=v2NUDJn6tag)
 - [🔴Live - Monthly Update ⛱🫧🌊🌴🧃🍍🌞🐚🌺👙🪸🍡🥥🍦](https://www.youtube.com/watch?v=5Hl2axy8znY)
-- [💬 ChatGPT Explains Core Wounds &amp; Beliefs](https://www.youtube.com/watch?v=SPfiWFQkTA0)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
