@@ -36,7 +36,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [Amouranth made an AI Chatbot](https://www.youtube.com/watch?v=Id5xccUOdUE)
+- [Amouranth Cloned her Voice &amp; made an AI Chatbot](https://www.youtube.com/watch?v=Id5xccUOdUE)
 - [🎮 PAX West Seattle 2023 VLOG](https://www.youtube.com/watch?v=kuwONQPY-8Q)
 - [🐘 PAX West 2023 @Gamejolt Afterparty](https://www.youtube.com/watch?v=pZmCkS32WQ4)
 - [🏙️ GRWM PAX West 2023 - Friday](https://www.youtube.com/watch?v=drEZLwEOQMs)
