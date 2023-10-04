@@ -36,7 +36,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [Museum of Old Technology](https://www.youtube.com/watch?v=dvEFfYpO_I8)
+- [🕹️ Museum of Old Technology](https://www.youtube.com/watch?v=dvEFfYpO_I8)
 - [☁️ IS SKYNET HERE?! ChatGPT Custom Instructions AI Companion](https://www.youtube.com/watch?v=iWUGszrocLE)
 - [AutoGen LLM Workflows - Conversational AI](https://www.youtube.com/watch?v=LDfz-0TPju4)
 - [Amouranth Cloned her Voice &amp; made an AI Chatbot](https://www.youtube.com/watch?v=Id5xccUOdUE)
