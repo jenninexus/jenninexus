@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [🧬 AI Philosophy: my thoughts &amp; feelings](https://www.youtube.com/watch?v=iVC74mBcGS0)
 - [🐭 $1.5 Billion Disney x Fortnite collab](https://www.youtube.com/watch?v=u_jcZyVTUwY)
 - [❌ EXCISION Nexus Tour @ Thunderdome 2024](https://www.youtube.com/watch?v=2MANC56oZXs)
 - [🤯 3D FaceBuilder Blender Addon](https://www.youtube.com/watch?v=RtZenIF3chw)
 - [🧑‍🎤 TensorArt iOS app AI Image Generator](https://www.youtube.com/watch?v=7u3PbpUKP0k)
-- [🧑‍💻 Learn to Code in 2024? ChatGPT Game Dev tips](https://www.youtube.com/watch?v=gW3L7SkLJLI)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
