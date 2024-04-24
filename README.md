@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [🤯 AI Generated Animations Inside Unity3D - Unity Muse](https://www.youtube.com/watch?v=Dw0Fn3gm_Do)
 - [👩🏼‍💻 Convo AI x Ready Player Me 3D Metaverse Avatars](https://www.youtube.com/watch?v=tBlPbnrFPsA)
 - [🧬 AI Philosophy: my thoughts &amp; feelings](https://www.youtube.com/watch?v=iVC74mBcGS0)
 - [🐭 $1.5 Billion Disney x Fortnite collab](https://www.youtube.com/watch?v=u_jcZyVTUwY)
 - [❌ EXCISION Nexus Tour @ Thunderdome 2024](https://www.youtube.com/watch?v=2MANC56oZXs)
-- [🤯 3D FaceBuilder Blender Addon](https://www.youtube.com/watch?v=RtZenIF3chw)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
