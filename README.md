@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [🌼 Electric Daisy Carnival 2024](https://www.youtube.com/watch?v=S4kBHGN-JT8)
 - [👨🏼‍🎤 My New Metahuman Unreal 5](https://www.youtube.com/watch?v=Sz7DulDs4L0)
 - [🤯 Transform Text Prompts into 3D Animations with Unity Muse](https://www.youtube.com/watch?v=Dw0Fn3gm_Do)
 - [👩🏼‍💻 Convo AI x Ready Player Me 3D Metaverse Avatars](https://www.youtube.com/watch?v=tBlPbnrFPsA)
 - [🧬 AI Philosophy: my thoughts &amp; feelings](https://www.youtube.com/watch?v=iVC74mBcGS0)
-- [🐭 $1.5 Billion Disney x Fortnite collab](https://www.youtube.com/watch?v=u_jcZyVTUwY)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
