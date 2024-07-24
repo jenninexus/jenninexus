@@ -38,7 +38,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 <!-- YOUTUBE:START -->
 - [👱‍♀️🎭 DeepFaceLive: Realtime AI Face-Swap App &lpar;Demo&rpar;](https://www.youtube.com/watch?v=YV1PeHRETEo)
 - [🌼 Electric Daisy Carnival 2024](https://www.youtube.com/watch?v=S4kBHGN-JT8)
-- [👨🏼‍🎤 My New Metahuman Unreal 5](https://www.youtube.com/watch?v=Sz7DulDs4L0)
+- [👨🏼‍🎤 Metahuman Unreal 5](https://www.youtube.com/watch?v=Sz7DulDs4L0)
 - [🤯 Transform Text Prompts into 3D Animations with Unity Muse](https://www.youtube.com/watch?v=Dw0Fn3gm_Do)
 - [👩🏼‍💻 Convo AI x Ready Player Me 3D Metaverse Avatars](https://www.youtube.com/watch?v=tBlPbnrFPsA)
 <!-- YOUTUBE:END -->
