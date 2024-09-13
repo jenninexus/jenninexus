@@ -36,7 +36,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [🎮 PAX West 2024: A Gamer&#39;s Paradise – Highlights and Game Showcases!](https://www.youtube.com/watch?v=t_rRkoQascY)
+- [🕹️ PAX West 2024: 20th Anniversary - Highlights and Game Showcases!](https://www.youtube.com/watch?v=t_rRkoQascY)
 - [👱‍♀️🎭 DeepFaceLive: Realtime AI Face-Swap App &lpar;Demo&rpar;](https://www.youtube.com/watch?v=YV1PeHRETEo)
 - [🌼 Electric Daisy Carnival 2024](https://www.youtube.com/watch?v=S4kBHGN-JT8)
 - [👨🏼‍🎤 MetaHumans in Unreal Engine 5: High-Fidelity Digital Humans &amp; Their Uses](https://www.youtube.com/watch?v=Sz7DulDs4L0)
