@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [🧑🏼‍🎤 Voice Actors Sue AI Company | non-consensual voice cloning #ai #voicecloning](https://www.youtube.com/watch?v=ROcYZ9fmk4w)
 - [🧑🏼‍🎤 Let&#39;s try Donna AI Music App #aimusic #donnaai](https://www.youtube.com/watch?v=JDY-ujPgpIk)
 - [🕹️ Entering the Game Industry: Advice from my Idols, of Sierra Entertainment](https://www.youtube.com/watch?v=dc8ttOWMzcs)
 - [🤖 Claude AI Creates Dynamic YouTube Video Feed for my Website](https://www.youtube.com/watch?v=8F3T78MQjys)
 - [👾 PAX West Seattle 2024 preview #paxwest](https://www.youtube.com/watch?v=4asaN1xgo10)
-- [🕹️🎉 PAX West 20th Anniversary preview! #paxwest2024](https://www.youtube.com/watch?v=8NT01IasS6M)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
