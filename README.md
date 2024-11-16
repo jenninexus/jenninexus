@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [Unlock Your Creativity 3D Modeling Journey with Blender #3dmodeling](https://www.youtube.com/watch?v=e6B-DQSIQ7U)
 - [🎨💻 Getting Started in 3D Modeling &amp; Game Dev 🚀 | Top Tools, Tips &amp; Resources for Beginners!](https://www.youtube.com/watch?v=BL1MNGRUsxg)
 - [💱 AI Agent makes millions in Crypro #goat #crypto #ai](https://www.youtube.com/watch?v=eoMwO1_PydY)
 - [🎙️ Voice Actors Sue AI Company | non-consensual voice cloning #ai #voicecloning](https://www.youtube.com/watch?v=ROcYZ9fmk4w)
 - [🧑🏼‍🎤 Let&#39;s try Donna AI Music App #aimusic #donnaai](https://www.youtube.com/watch?v=JDY-ujPgpIk)
-- [🕹️ Entering the Game Industry: Advice from my Idols, of Sierra Entertainment](https://www.youtube.com/watch?v=dc8ttOWMzcs)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
