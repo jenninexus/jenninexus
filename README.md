@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [Get Started Faster by Using Free 3D Assets #3dgamess #indiegamedev](https://www.youtube.com/watch?v=U445fyA9oF4)
 - [From Drawing to 3D Art in Blender #greasepencil #3danimation](https://www.youtube.com/watch?v=Amo0xPaZxp4)
 - [Get Started with Blender - Your Ultimate Beginner&#39;s Guide](https://www.youtube.com/watch?v=pjyBTTM5z38)
 - [Kickstart Your 3D Modeling Journey &lpar;my ultimate tips&rpar;](https://www.youtube.com/watch?v=9E8_vTfMULU)
 - [Unlock Your Game Dev Skills Top YouTube Playlists Revealed #edutainment #3dmodeling](https://www.youtube.com/watch?v=govIkqGi7Ew)
-- [Unlock Your Creativity 3D Modeling Journey with Blender #3dmodeling](https://www.youtube.com/watch?v=e6B-DQSIQ7U)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
