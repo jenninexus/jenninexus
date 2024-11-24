@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [🎥💫 YouTube Channel Analytics &amp; Insights with ChatGPT](https://www.youtube.com/watch?v=cn0m5WL1LGk)
-- [📊✨ Level Up Your Youtube Content in 2025 with ChatGPT!](https://www.youtube.com/watch?v=WgjKfec5cXY)
-- [Join Creative Communities - Support &amp; Collaboration #indiegamedev](https://www.youtube.com/watch?v=dCDXaMNnrWI)
+- [🎥💫 YouTube Channel Analytics &amp; Insights with ChatGPT &lpar;part 2&rpar;](https://www.youtube.com/watch?v=cn0m5WL1LGk)
+- [📊✨ Level Up Your Youtube Content in 2025 with #ChatGPT!](https://www.youtube.com/watch?v=WgjKfec5cXY)
 - [Get Started Faster by Using Free 3D Assets #3dgamess #indiegamedev](https://www.youtube.com/watch?v=U445fyA9oF4)
 - [From Drawing to 3D Art in Blender #greasepencil #3danimation](https://www.youtube.com/watch?v=Amo0xPaZxp4)
+- [Get Started with Blender - Your Ultimate Beginner&#39;s Guide](https://www.youtube.com/watch?v=pjyBTTM5z38)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
