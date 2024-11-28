@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [Create Unique Characters with Reallusion&#39;s Character Creator 4 #cc4 #3dgamedev](https://www.youtube.com/watch?v=GP-0yn_Tr-g)
 - [🔧🔮 Anime to Realistic Transformation in #CC4 | #3DCharacterDesign Workflow 🎮✨](https://www.youtube.com/watch?v=JAg3PRgj5T8)
 - [Understanding YouTube Analytics &amp; Video Performance](https://www.youtube.com/watch?v=pwhPPe268Sw)
 - [📊 Unlocking Microsoft Excel &amp; PowerPoint](https://www.youtube.com/watch?v=_-KgM7jVjak)
 - [💸 Maximize Your YouTube Income Using ChatGPT Tips](https://www.youtube.com/watch?v=IMKGq3U8bQA)
-- [🐱‍🏍 From Dreams to Reality - Building a Thriving YouTube Channel](https://www.youtube.com/watch?v=mbchK2JAxyY)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
