@@ -36,7 +36,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
-- [🔧🔮 Anime to Realistic Transformation in CC4 | 3D Character Design Workflow 🎮✨](https://www.youtube.com/watch?v=JAg3PRgj5T8)
+- [🔧🔮 Anime to Realistic Transformation in #CC4 | #3DCharacterDesign Workflow 🎮✨](https://www.youtube.com/watch?v=JAg3PRgj5T8)
 - [Understanding YouTube Analytics &amp; Video Performance](https://www.youtube.com/watch?v=pwhPPe268Sw)
 - [📊 Unlocking Microsoft Excel &amp; PowerPoint](https://www.youtube.com/watch?v=_-KgM7jVjak)
 - [💸 Maximize Your YouTube Income Using ChatGPT Tips](https://www.youtube.com/watch?v=IMKGq3U8bQA)
