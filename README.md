@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [👩🏼‍🎤🖌️ Creating Creepy Yet Fun Characters - Design Tips #3dcharacterdesign #indiegamedev #cc4](https://www.youtube.com/watch?v=C_H4OG-SyjY)
 - [💇🏼‍♀️🖌️ Epic 3D Hairstyle Tips for Character Creator #cc4 #indiegamedev #3davatar](https://www.youtube.com/watch?v=Oion3MSC2xY)
 - [Create Unique Characters with Reallusion&#39;s Character Creator 4 #cc4 #3dgamedev](https://www.youtube.com/watch?v=GP-0yn_Tr-g)
 - [🔧🔮 Anime to Realistic Transformation in #CC4 | #3DCharacterDesign Workflow 🎮✨](https://www.youtube.com/watch?v=JAg3PRgj5T8)
 - [Understanding YouTube Analytics &amp; Video Performance](https://www.youtube.com/watch?v=pwhPPe268Sw)
-- [📊 Unlocking Microsoft Excel &amp; PowerPoint](https://www.youtube.com/watch?v=_-KgM7jVjak)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
