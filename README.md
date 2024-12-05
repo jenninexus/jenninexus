@@ -37,7 +37,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
 - [🦇👩🏼‍🎤 Alternative Fashion in 3D #CC4 ft our newest Cartoon-Inspired #3DCharacter  #3dgamedevelopment](https://www.youtube.com/watch?v=9ZXdukhCb7Q)
-- [🎮✨ 3D Character Transformation 🎨🖌️ &quot;Jenni Styles&quot; Flash Cartoon 10 years later #indiegamedev](https://www.youtube.com/watch?v=Xv5RxM0A2pg)
+- [👱🏼‍♀️🖌️ &quot;Jenni Styles&quot; Flash Cartoon 10 years later 🎮✨ 3D Character Transformation #indiegamedev](https://www.youtube.com/watch?v=Xv5RxM0A2pg)
 - [Crafting Lovable Weird 3D Characters #cc4 #3dcharacters #gamedev](https://www.youtube.com/watch?v=_oC6j83Yqpo)
 - [☠️🎨 3D Goth Girl Fashion Choosing the Perfect Outfit #reallusion #cc4 #3dcharacter](https://www.youtube.com/watch?v=BWxhJcf2EnU)
 - [👖👙 Anime to &quot;Realistic&quot; in Character Creator 4 - a creepy goth girl transformation #indiegamedev](https://www.youtube.com/watch?v=sDgpt0cp_MU)
