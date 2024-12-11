@@ -36,11 +36,11 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ---
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
+- [🎨🖊️ From Flash CS3 to XP-Pen: My Digital Art Evolution #DrawingJourney](https://www.youtube.com/watch?v=EZZDJI8gzd0)
 - [🎨✨ From Flash Games to Unity: How XP-Pen Transformed My Art Journey  #digitalart #indiegamedev](https://www.youtube.com/watch?v=Zly6qn3GrHA)
 - [🌞🎮 CC4 Characters in Unity 3D HDRP | Subsurface Scattering Magic! ✨](https://www.youtube.com/watch?v=MPeIIndcHLw)
 - [🖌️ Why XP-Pen is the Affordable Drawing Tablet You’ll Love &lpar;Cintiq vs. #XPPen Comparison&rpar;](https://www.youtube.com/watch?v=mK56eN6JJqo)
 - [YouTube Analytics - Mastering Channel Data with AI #chatgpt #youtubeanalytics](https://www.youtube.com/watch?v=FAaTPrlkudQ)
-- [🦇👩🏼‍🎤 Alternative Fashion in 3D #CC4 ft our newest Cartoon-Inspired #3DCharacter  #3dgamedevelopment](https://www.youtube.com/watch?v=9ZXdukhCb7Q)
 <!-- YOUTUBE:END -->
 ---
 ### ✏️ Latest Blog posts
