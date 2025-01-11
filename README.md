@@ -37,7 +37,7 @@ I'm skill-building daily ( [portfolio](https://jenninexus.com/portfolio) ) and w
 ### 🎥 Latest YouTube videos
 <!-- YOUTUBE:START -->
 - [🖍️👾 How Early Cartoons Sparked My Game Development Passion](https://www.youtube.com/watch?v=umr97zzfmuU)
-- [Stunning Water &amp; Lava Flow in Unity 🌊🔥 Game-Changing VFX Asset](https://www.youtube.com/watch?v=31wITZAsPgI)
+- [🌊🔥 Water &amp; Lava Flow in Unity 3D - Fluid Simulation in Realtime](https://www.youtube.com/watch?v=31wITZAsPgI)
 - [🎙️✨ How I Started Voice Acting: on Newgrounds #VoiceActingTips](https://www.youtube.com/watch?v=aShHqIyXo9g)
 - [👩🏼‍💻🎥Embedding YouTube Video Feed on my Website using PHP #youtubertips #html #webdesign #diywjenni](https://www.youtube.com/watch?v=FwOe9qx7hm8)
 - [🎨🖱️✨ From Drawing with a Mouse to using the XP-Pen #flashgames #humblebeginnings](https://www.youtube.com/watch?v=-jpWp98syGo)
