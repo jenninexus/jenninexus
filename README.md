@@ -2,14 +2,23 @@
   <h1>👾 Hey, I'm Jenni - Technical Artist & Indie Game Dev! 🚀</h1>
   <p>Skill-building daily | Streaming on Twitch | Crafting games & art</p>
   
-  [<img src="https://jenninexus.com/svgs/twitter.svg" width="22px" alt="Twitter"/>][twitter]
-  [<img src="https://jenninexus.com/svgs/instagram.svg" width="22px" alt="Instagram"/>][instagram]
-  [<img src="https://jenninexus.com/svgs/youtube.svg" width="22px" alt="YouTube"/>][youtube]
-  [<img src="https://jenninexus.com/svgs/twitch.svg" width="22px" alt="Twitch"/>][twitch]
-  [<img src="https://jenninexus.com/svgs/discord.svg" width="22px" alt="Discord"/>][discord]
-  [<img src="https://jenninexus.com/svgs/artstation.svg" width="22px" alt="ArtStation"/>][artstation]
-  [<img src="https://jenninexus.com/svgs/patreon.svg" width="22px" alt="Patreon"/>][patreon]
-  [<img src="https://jenninexus.com/imgs/36_9mo2.png" width="22px" alt="Website"/>][website]
+[<img src="https://jenninexus.com/svgs/twitter.svg" width="22px" alt="Twitter"/>][twitter]
+[<img src="https://jenninexus.com/svgs/instagram.svg" width="22px" alt="Instagram"/>][instagram]
+[<img src="https://jenninexus.com/svgs/youtube.svg" width="22px" alt="YouTube"/>][youtube]
+[<img src="https://jenninexus.com/svgs/twitch.svg" width="22px" alt="Twitch"/>][twitch]
+[<img src="https://jenninexus.com/svgs/discord.svg" width="22px" alt="Discord"/>][discord]
+[<img src="https://jenninexus.com/svgs/artstation.svg" width="22px" alt="ArtStation"/>][artstation]
+[<img src="https://jenninexus.com/svgs/patreon.svg" width="22px" alt="Patreon"/>][patreon]
+[<img src="https://jenninexus.com/imgs/36_9mo2.png" width="22px" alt="Website"/>][website]
+
+[website]: https://jenninexus.com
+[twitter]: https://twitter.com/jenninexus
+[instagram]: https://instagram.com/jenninexus
+[youtube]: https://youtube.com/@jenninexus
+[twitch]: https://twitch.tv/jenninexus
+[discord]: https://discord.com/users/jenninexus
+[artstation]: https://www.artstation.com/jenninexus
+[patreon]: https://www.patreon.com/jenninexus 
 </div>
 
 ---
