@@ -2,7 +2,7 @@
   <h1>👾 Hey, I'm Jenni - Technical Artist & Indie Game Dev! 🚀</h1>
   <p>Skill-building daily | Streaming on Twitch | Crafting games & art</p>
   
-[<img src="https://jenninexus.com/svgs/youtube.svg" width="22px" alt="YouTube"/>][youtube]  
+[<img src="https://jenninexus.com/svgs/youtube.svg" width="22px" alt="YouTube"/>][youtube]
 [<img src="https://jenninexus.com/svgs/instagram.svg" width="22px" alt="Instagram"/>][instagram]
 [<img src="https://jenninexus.com/svgs/twitch.svg" width="22px" alt="Twitch"/>][twitch]
 [<img src="https://jenninexus.com/svgs/discord.svg" width="22px" alt="Discord"/>][discord]
