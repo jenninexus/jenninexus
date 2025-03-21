@@ -44,9 +44,9 @@
 
 ### ✏️ Latest Blog Posts
 <!-- BLOG-POST-LIST:START -->
-- [🎲 Level design for Botborgs](https://dev.to/jenninexus/level-design-for-botborgs-ce8)  
-- [🛡️ Tank Off](https://dev.to/jenninexus/tank-off-1pib)  
-- [🎄 Holiday Madness](https://dev.to/jenninexus/holiday-madness-b46)  
+- [Level design for Botborgs](https://dev.to/jenninexus/level-design-for-botborgs-ce8)
+- [Tank Off](https://dev.to/jenninexus/tank-off-1pib)
+- [Holiday madness](https://dev.to/jenninexus/holiday-madness-b46)
 <!-- BLOG-POST-LIST:END -->
 
 ---
