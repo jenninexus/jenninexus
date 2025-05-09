@@ -2,12 +2,12 @@
   <h1>👾 Hey, I'm Jenni - Technical Artist & Indie Game Dev! 🚀</h1>
   <p>Skill-building daily | Streaming on Twitch | Crafting games & art</p>
   
-[<img src="https://jenninexus.com/svgs/youtube.svg" width="22px" alt="YouTube"/>][youtube]
-[<img src="https://jenninexus.com/svgs/instagram.svg" width="22px" alt="Instagram"/>][instagram]
-[<img src="https://jenninexus.com/svgs/twitch.svg" width="22px" alt="Twitch"/>][twitch]
-[<img src="https://jenninexus.com/svgs/discord.svg" width="22px" alt="Discord"/>][discord]
-[<img src="https://jenninexus.com/svgs/artstation.svg" width="22px" alt="ArtStation"/>][artstation]
-[<img src="https://jenninexus.com/svgs/patreon.svg" width="22px" alt="Patreon"/>][patreon]
+[<img src="https://jenninexus.com/public_html/resources/svgs/youtube.svg" width="22px" alt="YouTube"/>][youtube]
+[<img src="https://jenninexus.com/public_html/resources/svgs/instagram.svg" width="22px" alt="Instagram"/>][instagram]
+[<img src="https://jenninexus.com/public_html/resources/svgs/twitch.svg" width="22px" alt="Twitch"/>][twitch]
+[<img src="https://jenninexus.com/public_html/resources/svgs/discord.svg" width="22px" alt="Discord"/>][discord]
+[<img src="https://jenninexus.com/public_html/resources/svgs/artstation.svg" width="22px" alt="ArtStation"/>][artstation]
+[<img src="https://jenninexus.com/public_html/resources/svgs/patreon.svg" width="22px" alt="Patreon"/>][patreon]
 
 [website]: https://jenninexus.com
 [twitter]: https://twitter.com/jenninexus
