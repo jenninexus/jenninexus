@@ -1,22 +1,16 @@
 <div align="center">
   <h1>👾 Hey, I'm Jenni - Technical Artist & Indie Game Dev! 🚀</h1>
   <p>Skill-building daily | Streaming on Twitch | Crafting games & art</p>
-  
-[<img src="https://jenninexus.com/public_html/resources/svgs/youtube.svg" width="22px" alt="YouTube"/>][youtube]
-[<img src="https://jenninexus.com/public_html/resources/svgs/instagram.svg" width="22px" alt="Instagram"/>][instagram]
-[<img src="https://jenninexus.com/public_html/resources/svgs/twitch.svg" width="22px" alt="Twitch"/>][twitch]
-[<img src="https://jenninexus.com/public_html/resources/svgs/discord.svg" width="22px" alt="Discord"/>][discord]
-[<img src="https://jenninexus.com/public_html/resources/svgs/artstation.svg" width="22px" alt="ArtStation"/>][artstation]
-[<img src="https://jenninexus.com/public_html/resources/svgs/patreon.svg" width="22px" alt="Patreon"/>][patreon]
 
-[website]: https://jenninexus.com
-[twitter]: https://twitter.com/jenninexus
-[instagram]: https://instagram.com/jenninexus
-[youtube]: https://youtube.com/@jenninexus
-[twitch]: https://twitch.tv/jenninexus
-[discord]: https://discord.com/users/jenninexus
-[artstation]: https://www.artstation.com/jenninexus
-[patreon]: https://www.patreon.com/jenninexus 
+[![Website](https://img.shields.io/badge/🌐_Website-jenninexus.com-FF69B4?style=for-the-badge)](https://jenninexus.com)
+
+[<img src="https://jenninexus.com/shared/svgs/social/youtube.svg" width="32px" alt="YouTube"/>](https://youtube.com/@jenninexus)
+[<img src="https://jenninexus.com/shared/svgs/social/instagram.svg" width="32px" alt="Instagram"/>](https://instagram.com/jenninexus)
+[<img src="https://jenninexus.com/shared/svgs/social/twitch.svg" width="32px" alt="Twitch"/>](https://twitch.tv/jenninexus)
+[<img src="https://jenninexus.com/shared/svgs/social/discord.svg" width="32px" alt="Discord"/>](https://discord.com/users/jenninexus)
+[<img src="https://jenninexus.com/shared/svgs/social/artstation.svg" width="32px" alt="ArtStation"/>](https://www.artstation.com/jenninexus)
+[<img src="https://jenninexus.com/shared/svgs/social/patreon.svg" width="32px" alt="Patreon"/>](https://www.patreon.com/jenninexus)
+
 </div>
 
 ---
