@@ -1,15 +1,15 @@
 <div align="center">
   <h1>👾 Hey, I'm Jenni - Technical Artist & Indie Game Dev! 🚀</h1>
-  <p>Skill-building daily | Streaming on Twitch | Crafting games & art</p>
+  <p>Skill-building daily | Streaming on Twitch | <span style="background: linear-gradient(90deg, #E91E63, #6750A4, #9A82DB, #1976D2, #388E3C); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Crafting games & art</span></p>
 
 [![Website](https://img.shields.io/badge/🌐_Website-jenninexus.com-FF69B4?style=for-the-badge)](https://jenninexus.com)
 
-[<img src="https://jenninexus.com/shared/svgs/social/youtube.svg" width="32px" alt="YouTube"/>](https://youtube.com/@jenninexus)
-[<img src="https://jenninexus.com/shared/svgs/social/instagram.svg" width="32px" alt="Instagram"/>](https://instagram.com/jenninexus)
-[<img src="https://jenninexus.com/shared/svgs/social/twitch.svg" width="32px" alt="Twitch"/>](https://twitch.tv/jenninexus)
-[<img src="https://jenninexus.com/shared/svgs/social/discord.svg" width="32px" alt="Discord"/>](https://discord.com/users/jenninexus)
-[<img src="https://jenninexus.com/shared/svgs/social/artstation.svg" width="32px" alt="ArtStation"/>](https://www.artstation.com/jenninexus)
-[<img src="https://jenninexus.com/shared/svgs/social/patreon.svg" width="32px" alt="Patreon"/>](https://www.patreon.com/jenninexus)
+[<img src="https://jenninexus.com/shared/svgs/social/youtube-rainbow.svg" width="40px" alt="YouTube"/>](https://youtube.com/@jenninexus)
+[<img src="https://jenninexus.com/shared/svgs/social/instagram-rainbow.svg" width="40px" alt="Instagram"/>](https://instagram.com/jenninexus)
+[<img src="https://jenninexus.com/shared/svgs/social/twitch-rainbow.svg" width="40px" alt="Twitch"/>](https://twitch.tv/jenninexus)
+[<img src="https://jenninexus.com/shared/svgs/social/discord-rainbow.svg" width="40px" alt="Discord"/>](https://discord.com/users/jenninexus)
+[<img src="https://jenninexus.com/shared/svgs/social/artstation-rainbow.svg" width="40px" alt="ArtStation"/>](https://www.artstation.com/jenninexus)
+[<img src="https://jenninexus.com/shared/svgs/social/patreon-rainbow.svg" width="40px" alt="Patreon"/>](https://www.patreon.com/jenninexus)
 
 </div>
 
@@ -62,15 +62,6 @@
 ---
 
 <div align="center">
-  <p>Thx for stopping by! Let’s create something awesome together! 😎</p>
+  <p>Thx for stopping by! Let's create something awesome together! 😎</p>
   <a href="https://jenninexus.com"><img src="https://media.giphy.com/media/5wWf7GZ2ASBPu7QGwTu/giphy.gif" width="200" alt="Cool GIF"></a>
 </div>
-
-[website]: https://jenninexus.com
-[twitter]: https://twitter.com/jenninexus
-[youtube]: https://youtube.com/jenninexus
-[twitch]: https://twitch.tv/jenninexus
-[instagram]: https://instagram.com/jenninexus
-[discord]: https://discord.com/users/jenninexus
-[artstation]: https://www.artstation.com/jenninexus
-[patreon]: https://www.patreon.com/jenninexus
