@@ -4,12 +4,12 @@
 
 [![Website](https://img.shields.io/badge/🌐_Website-jenninexus.com-FF69B4?style=for-the-badge)](https://jenninexus.com)
 
-[<img src="https://jenninexus.com/shared/svgs/social/youtube-rainbow.svg" width="40px" alt="YouTube"/>](https://youtube.com/@jenninexus)
-[<img src="https://jenninexus.com/public_html/resources/svgs/instagram.svg" width="40px" alt="Instagram"/>](https://instagram.com/jenninexus)
-[<img src="https://jenninexus.com/public_html/resources/svgs/twitch.svg" width="40px" alt="Twitch"/>](https://twitch.tv/jenninexus)
-[<img src="https://jenninexus.com/public_html/resources/svgs/discord.svg" width="40px" alt="Discord"/>](https://discord.com/users/jenninexus)
-[<img src="https://jenninexus.com/public_html/resources/svgs/artstation.svg" width="40px" alt="ArtStation"/>](https://www.artstation.com/jenninexus)
-[<img src="https://jenninexus.com/public_html/resources/svgs/patreon.svg" width="40px" alt="Patreon"/>](https://www.patreon.com/jenninexus)
+<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/youtube.svg" width="40px" alt="YouTube">
+<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/instagram.svg" width="40px" alt="Instagram">
+<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/twitch.svg" width="40px" alt="Twitch">
+<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/discord.svg" width="40px" alt="Discord">
+<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/artstation.svg" width="40px" alt="ArtStation">
+<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/patreon.svg" width="40px" alt="Patreon">
 
 </div>
 
