@@ -5,11 +5,11 @@
 [![Website](https://img.shields.io/badge/🌐_Website-jenninexus.com-FF69B4?style=for-the-badge)](https://jenninexus.com)
 
 [<img src="https://jenninexus.com/shared/svgs/social/youtube-rainbow.svg" width="40px" alt="YouTube"/>](https://youtube.com/@jenninexus)
-[<img src="https://jenninexus.com/shared/svgs/social/instagram-rainbow.svg" width="40px" alt="Instagram"/>](https://instagram.com/jenninexus)
-[<img src="https://jenninexus.com/shared/svgs/social/twitch-rainbow.svg" width="40px" alt="Twitch"/>](https://twitch.tv/jenninexus)
-[<img src="https://jenninexus.com/shared/svgs/social/discord-rainbow.svg" width="40px" alt="Discord"/>](https://discord.com/users/jenninexus)
-[<img src="https://jenninexus.com/shared/svgs/social/artstation-rainbow.svg" width="40px" alt="ArtStation"/>](https://www.artstation.com/jenninexus)
-[<img src="https://jenninexus.com/shared/svgs/social/patreon-rainbow.svg" width="40px" alt="Patreon"/>](https://www.patreon.com/jenninexus)
+[<img src="https://jenninexus.com/public_html/resources/svgs/instagram.svg" width="40px" alt="Instagram"/>](https://instagram.com/jenninexus)
+[<img src="https://jenninexus.com/public_html/resources/svgs/twitch.svg" width="40px" alt="Twitch"/>](https://twitch.tv/jenninexus)
+[<img src="https://jenninexus.com/public_html/resources/svgs/discord.svg" width="40px" alt="Discord"/>](https://discord.com/users/jenninexus)
+[<img src="https://jenninexus.com/public_html/resources/svgs/artstation.svg" width="40px" alt="ArtStation"/>](https://www.artstation.com/jenninexus)
+[<img src="https://jenninexus.com/public_html/resources/svgs/patreon.svg" width="40px" alt="Patreon"/>](https://www.patreon.com/jenninexus)
 
 </div>
 
