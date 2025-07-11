@@ -3,12 +3,6 @@
   <p>Skill-building daily | Streaming on Twitch | <span style="background: linear-gradient(90deg, #E91E63, #6750A4, #9A82DB, #1976D2, #388E3C); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Crafting games & art</span></p>
 
 [![Website](https://img.shields.io/badge/🌐_Website-jenninexus.com-FF69B4?style=for-the-badge)](https://jenninexus.com)
-<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/youtube.svg" width="40px" alt="YouTube">
-<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/instagram.svg" width="40px" alt="Instagram">
-<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/twitch.svg" width="40px" alt="Twitch">
-<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/discord.svg" width="40px" alt="Discord">
-<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/artstation.svg" width="40px" alt="ArtStation">
-<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/patreon.svg" width="40px" alt="Patreon">
 </div>
 
 ---
