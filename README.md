@@ -85,11 +85,11 @@
 ---
 
 <!-- YOUTUBE:START -->
-🖍️👾 [**How Early Cartoons Sparked My Game Development Passion**](https://www.youtube.com/shorts/umr97zzfmuU)  
-🌊🔥 [**Water & Lava Flow in Unity 3D – Fluid Simulation in Realtime**](https://www.youtube.com/shorts/31wITZAsPgI)  
-🎙️✨ [**How I Started Voice Acting: on Newgrounds #VoiceActingTips**](https://www.youtube.com/shorts/aShHqIyXo9g)  
-👩🏼‍💻🎥 [**Embedding YouTube Video Feed on My Website Using PHP**](https://www.youtube.com/shorts/FwOe9qx7hm8)  
-🎨🖱️✨ [**From Drawing with a Mouse to Using the XP-Pen**](https://www.youtube.com/shorts/-jpWp98syGo)
+- [🖍️👾 How Early Cartoons Sparked My Game Development Passion](https://www.youtube.com/shorts/umr97zzfmuU)
+- [🌊🔥 Water &amp; Lava Flow in Unity 3D - Fluid Simulation in Realtime](https://www.youtube.com/shorts/31wITZAsPgI)
+- [🎙️✨ How I Started Voice Acting: on Newgrounds #VoiceActingTips](https://www.youtube.com/shorts/aShHqIyXo9g)
+- [👩🏼‍💻🎥Embedding YouTube Video Feed on my Website using PHP #youtubertips #html #webdesign #diywjenni](https://www.youtube.com/shorts/FwOe9qx7hm8)
+- [🎨🖱️✨ From Drawing with a Mouse to using the XP-Pen #flashgames #humblebeginnings](https://www.youtube.com/shorts/-jpWp98syGo)
 <!-- YOUTUBE:END -->
 </div>
 
