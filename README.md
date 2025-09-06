@@ -8,17 +8,6 @@
 
 </div>
 
-
-<div align="center">
-
-## 💜 Hey, I'm Jenni – Technical Artist & Indie Game Dev 🚀
-**Building the future of interactive entertainment** • Live coding on Twitch • *Crafting immersive games with cutting-edge AI tools*
-
-[![Portfolio](https://img.shields.io/badge/👩‍💻_Portfolio-jenninexus.com-D14BFF?style=flat&logo=google-chrome&logoColor=white)](https://jenninexus.com)
-[![Martian Games](https://img.shields.io/badge/Martian_Games_Studio-FF6EC4?style=flat&logo=github&logoColor=white)](https://github.com/monofinitystudio)
-
-</div>
-
 ---
 
 <div align="center">
