@@ -3,9 +3,8 @@
 ## 💜 Hey, I'm Jenni – Technical Artist & Indie Game Dev 🚀
 **Building the future of interactive entertainment** • Live coding on Twitch • *Crafting immersive games with cutting-edge AI tools*
 
-[![Portfolio](https://img.shields.io/badge/👩‍💻_Portfolio-jenninexus.com-D14BFF?style=flat&logo=google-chrome&logoColor=white)](https://jenninexus.com)
-[![Martian Games](https://img.shields.io/badge/Martian_Games_Studio-00C896?style=flat&logo=unity&logoColor=white&labelColor=2E2E2E)](https://github.com/monofinitystudio)
-
+[![Portfolio](https://img.shields.io/badge/👩‍💻_Portfolio-jenninexus.com-D14BFF?style=flat-square&logo=google-chrome&logoColor=white)](https://jenninexus.com)
+[![Martian Games](https://img.shields.io/badge/Martian_Games_Studio-00C896?style=flat-square&logo=unity&logoColor=white&labelColor=2E2E2E)](https://github.com/monofinitystudio)
 </div>
 
 ---
@@ -40,6 +39,7 @@
 <img src="https://img.shields.io/badge/Blender-e67e22?style=flat-square&logo=blender&logoColor=white" alt="Blender" />
 <img src="https://img.shields.io/badge/Character_Creator-000000?style=flat-square&logo=reallusion&logoColor=white" alt="CC4" />
 <img src="https://img.shields.io/badge/Steam-1B2838?style=flat-square&logo=steam&logoColor=white" alt="Steam" />
+<a href="https://www.seattleindies.org/"><img src="https://img.shields.io/badge/Seattle_Indies-FA5B32?style=flat-square&logo=meetup&logoColor=white" alt="Seattle Indies" /></a>
 
 </td>
     <td align="center" width="50%" valign="top">
@@ -170,10 +170,11 @@
 🎥 I regularly stream **game development, AI workflows, and creative problem solving** live on Twitch.  
 🎤 Expect a mix of **code + art + philosophy + Q&A** in real time.  
 
-[![Twitch](https://img.shields.io/badge/Twitch-9146FF?style=flat&logo=twitch&logoColor=white)](https://twitch.tv/JenniNexus)
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white)](https://youtube.com/@jenninexus)
-[![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat&logo=discord&logoColor=white)](https://discord.gg/KYPh7Cp)  
-[![Live Coders](https://img.shields.io/badge/Live_Coders_Ambassador-A563D1?style=flat&logo=code&logoColor=white)](https://livecoders.dev/members/jenninexus)
+[![Twitch](https://img.shields.io/badge/Twitch-9146FF?style=flat-square&logo=twitch&logoColor=white)](https://twitch.tv/JenniNexus)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://youtube.com/@jenninexus)
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/KYPh7Cp)  
+[![Live Coders](https://img.shields.io/badge/Live_Coders_Ambassador-A563D1?style=flat-square&logo=code&logoColor=white)](https://livecoders.dev/members/jenninexus)
+[![SOBA](https://img.shields.io/badge/Team_SOBA-9146FF?style=flat-square&logo=twitch&logoColor=white)](https://www.twitch.tv/team/soba)
 
 </div>
 
@@ -186,9 +187,9 @@
 **Help us build the future of indie gaming! 🚀**  
 *Every contribution fuels our studio's growth and keeps the creative content flowing.*  
 
-[![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-D14BFF?style=flat&logo=github&logoColor=white)](https://github.com/sponsors/jenninexus)
-[![Patreon](https://img.shields.io/badge/Patreon-FF6EC4?style=flat&logo=patreon&logoColor=white)](https://patreon.com/jenninexus)
-[![PayPal](https://img.shields.io/badge/PayPal-A563D1?style=flat&logo=paypal&logoColor=white)](https://paypal.me/jenninexus)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-D14BFF?style=flat-square&logo=github&logoColor=white)](https://github.com/sponsors/jenninexus)
+[![Patreon](https://img.shields.io/badge/Patreon-FF6EC4?style=flat-square&logo=patreon&logoColor=white)](https://patreon.com/jenninexus)
+[![PayPal](https://img.shields.io/badge/PayPal-A563D1?style=flat-square&logo=paypal&logoColor=white)](https://paypal.me/jenninexus)
 
 </div>
 
