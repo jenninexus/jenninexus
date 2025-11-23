@@ -14,10 +14,11 @@
 
 ## ✨ About Me
 
-🎨 **Technical Artist** crafting next-gen interactive experiences  
+🎨 **Technical Artist** & **Game Developer** based in Seattle/Tacoma  
 🏢 Co-founder at **[Martian Games](https://github.com/monofinitystudio)** - indie game studio pushing creative boundaries  
 🎙️ **Voice Actor** & **Live Streamer** sharing the gamedev journey in real-time  
 🤖 **AI Tools Architect** - building workflows that amplify creative potential  
+🤝 **Community:** Member of Seattle Indies & Seattle Online Broadcasters Association  
 🎯 **Mission:** Secure publishing deals & funding to bring our studio's vision to life  
 
 </div>
@@ -33,19 +34,23 @@
     <td align="center" width="50%" valign="top">
 
 ### 🎮 Game Development
-- Unity & Unreal Engine  
-- Blender 3D Modeling  
-- Character Creator 4 & iClone  
-- WebGL / WebGPU Programming  
+<img src="https://img.shields.io/badge/Unity-100000?style=flat-square&logo=unity&logoColor=white" alt="Unity" />
+<img src="https://img.shields.io/badge/Unreal_Engine-313131?style=flat-square&logo=unrealengine&logoColor=white" alt="Unreal" />
+<img src="https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white" alt="C#" />
+<img src="https://img.shields.io/badge/Blender-e67e22?style=flat-square&logo=blender&logoColor=white" alt="Blender" />
+<img src="https://img.shields.io/badge/Character_Creator-000000?style=flat-square&logo=reallusion&logoColor=white" alt="CC4" />
+<img src="https://img.shields.io/badge/Steam-1B2838?style=flat-square&logo=steam&logoColor=white" alt="Steam" />
 
 </td>
     <td align="center" width="50%" valign="top">
 
-### 🌐 Full-Stack Development
-- HTML5, CSS3, JavaScript ES6+  
-- PHP Backend Development  
-- SCSS Preprocessing  
-- Responsive Design Mastery  
+### 🌐 Full-Stack Web
+<img src="https://img.shields.io/badge/Bootstrap_5-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+<img src="https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=sass&logoColor=white" alt="Sass" />
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JS" />
+<img src="https://img.shields.io/badge/PHP_8.3-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" />
+<img src="https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white" alt="Nginx" />
+<img src="https://img.shields.io/badge/DigitalOcean-0080FF?style=flat-square&logo=digitalocean&logoColor=white" alt="DO" />
 
 </td>
   </tr>
@@ -53,20 +58,21 @@
     <td align="center" width="50%" valign="top">
 
 ### 🎙️ Content & Creative
-- Professional Voice Acting  
-- Live Broadcasting (OBS)  
-- Audio Production (FL Studio)  
-- Channel Design & Branding  
+<img src="https://img.shields.io/badge/FL_Studio-F27C0E?style=flat-square&logo=fl-studio&logoColor=white" alt="FL Studio" />
+<img src="https://img.shields.io/badge/OBS_Studio-302E31?style=flat-square&logo=obs-studio&logoColor=white" alt="OBS" />
+<img src="https://img.shields.io/badge/DaVinci_Resolve-1258A5?style=flat-square&logo=davinciresolve&logoColor=white" alt="DaVinci Resolve" />
+<img src="https://img.shields.io/badge/🎙️_Voice_Acting-FF4081?style=flat-square&logoColor=white" alt="Voice Acting" />
+<img src="https://img.shields.io/badge/DIY_&_Fashion-FF69B4?style=flat-square&logo=etsy&logoColor=white" alt="DIY" />
 
 </td>
     <td align="center" width="50%" valign="top">
 
 ### 🤖 AI & Innovation
-- **AI Tools & Research:** OpenAI GPT-4, Claude Sonnet, Midjourney  
-- **Generative Art:** Stable Diffusion  
-- **Rapid Prototyping:** Apps, Storyboarding  
-- **Custom Workflow Design:** Cursor AI Development  
-- **Consultation:** AI for Individuals & Businesses  
+<img src="https://img.shields.io/badge/OpenAI_GPT--4-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI" />
+<img src="https://img.shields.io/badge/Claude_Sonnet-D97757?style=flat-square&logo=anthropic&logoColor=white" alt="Claude" />
+<img src="https://img.shields.io/badge/Stable_Diffusion-000000?style=flat-square&logo=stability-ai&logoColor=white" alt="Stable Diffusion" />
+<img src="https://img.shields.io/badge/Midjourney-FF0000?style=flat-square&logo=midjourney&logoColor=white" alt="Midjourney" />
+<img src="https://img.shields.io/badge/MCP_Servers-00C896?style=flat-square&logo=serverless&logoColor=white" alt="MCP" />
 
 </td>
   </tr>
@@ -83,11 +89,11 @@
 *A feed of my newest videos, updated automatically!*  
 
 <!-- YOUTUBE:START -->
-- [🖍️👾 How Early Cartoons Sparked My Game Development Passion](https://www.youtube.com/shorts/umr97zzfmuU)
-- [🌊🔥 Water &amp; Lava Flow in Unity 3D - Fluid Simulation in Realtime](https://www.youtube.com/shorts/31wITZAsPgI)
-- [🎙️✨ How I Started Voice Acting: on Newgrounds #VoiceActingTips](https://www.youtube.com/shorts/aShHqIyXo9g)
-- [👩🏼‍💻🎥Embedding YouTube Video Feed on my Website using PHP #youtubertips #html #webdesign #diywjenni](https://www.youtube.com/shorts/FwOe9qx7hm8)
-- [🎨🖱️✨ From Drawing with a Mouse to using the XP-Pen #flashgames #humblebeginnings](https://www.youtube.com/shorts/-jpWp98syGo)
+🎥 [**How Early Cartoons Sparked My Game Development Passion**](https://www.youtube.com/shorts/umr97zzfmuU)  
+🎥 [**Water & Lava Flow in Unity 3D - Fluid Simulation in Realtime**](https://www.youtube.com/shorts/31wITZAsPgI)  
+🎥 [**How I Started Voice Acting: on Newgrounds #VoiceActingTips**](https://www.youtube.com/shorts/aShHqIyXo9g)  
+🎥 [**Embedding YouTube Video Feed on my Website using PHP**](https://www.youtube.com/shorts/FwOe9qx7hm8)  
+🎥 [**From Drawing with a Mouse to using the XP-Pen**](https://www.youtube.com/shorts/-jpWp98syGo)  
 <!-- YOUTUBE:END -->
 
 </div>
@@ -100,37 +106,53 @@
 
 <table>
   <tr>
-    <td align="center" width="50%" valign="top">
+    <td align="center" width="33%" valign="top">
 
 ### 🧠 Tips + Tuts
 <a href="https://youtube.com/playlist?list=PL9QBjNDhgNwTnv3qzgtrxReBySCOv7SFN">
-  <img src="https://i.ytimg.com/vi/FwOe9qx7hm8/maxresdefault.jpg" alt="Tips + Tuts Playlist" width="100%">
+  <img src="https://i.ytimg.com/vi/WAxpLCjSsoI/maxresdefault.jpg" alt="Tips + Tuts Playlist" width="100%">
 </a>
 
 </td>
-    <td align="center" width="50%" valign="top">
+    <td align="center" width="33%" valign="top">
 
 ### 👩‍💻 Dev Journey
 <a href="https://youtube.com/playlist?list=PL9QBjNDhgNwRsznW8e3-KVmwfEuwvr7Yi">
-  <img src="https://i.ytimg.com/vi/umr97zzfmuU/maxresdefault.jpg" alt="Dev Journey Playlist" width="100%">
+  <img src="https://i.ytimg.com/vi/BL1MNGRUsxg/maxresdefault.jpg" alt="Dev Journey Playlist" width="100%">
+</a>
+
+</td>
+    <td align="center" width="33%" valign="top">
+
+### 🎮 Game Jams
+<a href="https://youtube.com/playlist?list=PL9QBjNDhgNwTFn7QSZRbZGoKCCIsUlemX">
+  <img src="https://i.ytimg.com/vi/F8N6aQCg3iI/maxresdefault.jpg" alt="Game Jams Playlist" width="100%">
 </a>
 
 </td>
   </tr>
   <tr>
-    <td align="center" width="50%" valign="top">
-
-### 🎮 Game Jams
-<a href="https://youtube.com/playlist?list=PL9QBjNDhgNwTFn7QSZRbZGoKCCIsUlemX">
-  <img src="https://i.ytimg.com/vi/31wITZAsPgI/maxresdefault.jpg" alt="Game Jams Playlist" width="100%">
-</a>
-
-</td>
-    <td align="center" width="50%" valign="top">
+    <td align="center" width="33%" valign="top">
 
 ### 🎨 3D Graphics
 <a href="https://youtube.com/playlist?list=PLYI86hek1EWcNBgR0ilmsUsDLWHHDxEet">
-  <img src="https://i.ytimg.com/vi/-jpWp98syGo/maxresdefault.jpg" alt="3D Graphics Playlist" width="100%">
+  <img src="https://i.ytimg.com/vi/JAg3PRgj5T8/maxresdefault.jpg" alt="3D Graphics Playlist" width="100%">
+</a>
+
+</td>
+    <td align="center" width="33%" valign="top">
+
+### 👗 Jenni Styles
+<a href="https://youtube.com/playlist?list=PL9QBjNDhgNwS8zNaKAFjuWf4NTfk3Ul3g">
+  <img src="https://i.ytimg.com/vi/Xv5RxM0A2pg/maxresdefault.jpg" alt="Jenni Styles Playlist" width="100%">
+</a>
+
+</td>
+    <td align="center" width="33%" valign="top">
+
+### 🤖 AI & Tech Art
+<a href="https://youtube.com/playlist?list=PL9QBjNDhgNwQygOzxOAYImp0L3zC6pBO2">
+  <img src="https://i.ytimg.com/vi/YV1PeHRETEo/maxresdefault.jpg" alt="AI Tools Playlist" width="100%">
 </a>
 
 </td>
