@@ -5,6 +5,7 @@
 
 [![Portfolio](https://img.shields.io/badge/👩‍💻_Portfolio-jenninexus.com-D14BFF?style=flat-square&logo=google-chrome&logoColor=white)](https://jenninexus.com)
 [![Martian Games](https://img.shields.io/badge/Martian_Games_Studio-00C896?style=flat-square&logo=unity&logoColor=white&labelColor=2E2E2E)](https://github.com/monofinitystudio)
+
 </div>
 
 ---
@@ -33,24 +34,24 @@
     <td align="center" width="50%" valign="top">
 
 ### 🎮 Game Development
-<img src="https://img.shields.io/badge/Unity-100000?style=flat-square&logo=unity&logoColor=white" alt="Unity" />
-<img src="https://img.shields.io/badge/Unreal_Engine-313131?style=flat-square&logo=unrealengine&logoColor=white" alt="Unreal" />
-<img src="https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white" alt="C#" />
-<img src="https://img.shields.io/badge/Blender-e67e22?style=flat-square&logo=blender&logoColor=white" alt="Blender" />
-<img src="https://img.shields.io/badge/Character_Creator-000000?style=flat-square&logo=reallusion&logoColor=white" alt="CC4" />
-<img src="https://img.shields.io/badge/Steam-1B2838?style=flat-square&logo=steam&logoColor=white" alt="Steam" />
+<a href="https://unity.com/"><img src="https://img.shields.io/badge/Unity-100000?style=flat-square&logo=unity&logoColor=white" alt="Unity" /></a>
+<a href="https://www.unrealengine.com/"><img src="https://img.shields.io/badge/Unreal_Engine-313131?style=flat-square&logo=unrealengine&logoColor=white" alt="Unreal" /></a>
+<a href="https://learn.microsoft.com/en-us/dotnet/csharp/"><img src="https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white" alt="C#" /></a>
+<a href="https://www.blender.org/"><img src="https://img.shields.io/badge/Blender-e67e22?style=flat-square&logo=blender&logoColor=white" alt="Blender" /></a>
+<a href="https://www.reallusion.com/character-creator/"><img src="https://img.shields.io/badge/Character_Creator-000000?style=flat-square&logo=reallusion&logoColor=white" alt="CC4" /></a>
+<a href="https://store.steampowered.com/"><img src="https://img.shields.io/badge/Steam-1B2838?style=flat-square&logo=steam&logoColor=white" alt="Steam" /></a>
 <a href="https://www.seattleindies.org/"><img src="https://img.shields.io/badge/Seattle_Indies-FA5B32?style=flat-square&logo=meetup&logoColor=white" alt="Seattle Indies" /></a>
 
 </td>
     <td align="center" width="50%" valign="top">
 
 ### 🌐 Full-Stack Web
-<img src="https://img.shields.io/badge/Bootstrap_5-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-<img src="https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=sass&logoColor=white" alt="Sass" />
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JS" />
-<img src="https://img.shields.io/badge/PHP_8.3-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" />
-<img src="https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white" alt="Nginx" />
-<img src="https://img.shields.io/badge/DigitalOcean-0080FF?style=flat-square&logo=digitalocean&logoColor=white" alt="DO" />
+<a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/Bootstrap_5-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap" /></a>
+<a href="https://sass-lang.com/"><img src="https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=sass&logoColor=white" alt="Sass" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JS" /></a>
+<a href="https://www.php.net/"><img src="https://img.shields.io/badge/PHP_8.3-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" /></a>
+<a href="https://nginx.org/"><img src="https://img.shields.io/badge/Nginx-009639?style=flat-square&logo=nginx&logoColor=white" alt="Nginx" /></a>
+<a href="https://www.digitalocean.com/"><img src="https://img.shields.io/badge/DigitalOcean-0080FF?style=flat-square&logo=digitalocean&logoColor=white" alt="DO" /></a>
 
 </td>
   </tr>
@@ -58,21 +59,21 @@
     <td align="center" width="50%" valign="top">
 
 ### 🎙️ Content & Creative
-<img src="https://img.shields.io/badge/FL_Studio-F27C0E?style=flat-square&logo=fl-studio&logoColor=white" alt="FL Studio" />
-<img src="https://img.shields.io/badge/OBS_Studio-302E31?style=flat-square&logo=obs-studio&logoColor=white" alt="OBS" />
-<img src="https://img.shields.io/badge/DaVinci_Resolve-1258A5?style=flat-square&logo=davinciresolve&logoColor=white" alt="DaVinci Resolve" />
-<img src="https://img.shields.io/badge/🎙️_Voice_Acting-FF4081?style=flat-square&logoColor=white" alt="Voice Acting" />
-<img src="https://img.shields.io/badge/DIY_&_Fashion-FF69B4?style=flat-square&logo=etsy&logoColor=white" alt="DIY" />
+<a href="https://www.image-line.com/"><img src="https://img.shields.io/badge/FL_Studio-F27C0E?style=flat-square&logo=fl-studio&logoColor=white" alt="FL Studio" /></a>
+<a href="https://obsproject.com/"><img src="https://img.shields.io/badge/OBS_Studio-302E31?style=flat-square&logo=obs-studio&logoColor=white" alt="OBS" /></a>
+<a href="https://www.blackmagicdesign.com/products/davinciresolve"><img src="https://img.shields.io/badge/DaVinci_Resolve-1258A5?style=flat-square&logo=davinciresolve&logoColor=white" alt="DaVinci Resolve" /></a>
+<a href="https://jenninexus.com"><img src="https://img.shields.io/badge/🎙️_Voice_Acting-FF4081?style=flat-square&logoColor=white" alt="Voice Acting" /></a>
+<a href="https://jenninexus.com"><img src="https://img.shields.io/badge/DIY_&_Fashion-FF69B4?style=flat-square&logo=etsy&logoColor=white" alt="DIY" /></a>
 
 </td>
     <td align="center" width="50%" valign="top">
 
 ### 🤖 AI & Innovation
-<img src="https://img.shields.io/badge/OpenAI_GPT--4-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI" />
-<img src="https://img.shields.io/badge/Claude_Sonnet-D97757?style=flat-square&logo=anthropic&logoColor=white" alt="Claude" />
-<img src="https://img.shields.io/badge/Stable_Diffusion-000000?style=flat-square&logo=stability-ai&logoColor=white" alt="Stable Diffusion" />
-<img src="https://img.shields.io/badge/Midjourney-FF0000?style=flat-square&logo=midjourney&logoColor=white" alt="Midjourney" />
-<img src="https://img.shields.io/badge/MCP_Servers-00C896?style=flat-square&logo=serverless&logoColor=white" alt="MCP" />
+<a href="https://openai.com/gpt-4"><img src="https://img.shields.io/badge/OpenAI_GPT--4-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI" /></a>
+<a href="https://www.anthropic.com/claude"><img src="https://img.shields.io/badge/Claude_Sonnet-D97757?style=flat-square&logo=anthropic&logoColor=white" alt="Claude" /></a>
+<a href="https://stability.ai/"><img src="https://img.shields.io/badge/Stable_Diffusion-000000?style=flat-square&logo=stability-ai&logoColor=white" alt="Stable Diffusion" /></a>
+<a href="https://www.midjourney.com/"><img src="https://img.shields.io/badge/Midjourney-FF0000?style=flat-square&logo=midjourney&logoColor=white" alt="Midjourney" /></a>
+<a href="https://modelcontextprotocol.io/"><img src="https://img.shields.io/badge/MCP_Servers-00C896?style=flat-square&logo=serverless&logoColor=white" alt="MCP" /></a>
 
 </td>
   </tr>
