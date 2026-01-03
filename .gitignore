@@ -10,9 +10,14 @@
 /storage/sessions/
 /storage/logs/
 
-# Secrets & Tokens
+# Secrets & Tokens (CRITICAL - NEVER COMMIT)
+/storage/secrets/
+!/storage/secrets/README.md
+!/storage/secrets/*.example
+!/storage/secrets/*.example.json
 /storage/patreon/
 secrets.json
+*.json.secret
 
 # Large Files (>100MB - upload manually or use Git LFS)
 public_html/resources/pdfs/jenninexus_cc4_2025.pdf
