@@ -1,0 +1,706 @@
+{
+  "name": "JenniNexus Video System",
+  "version": "3.2.2",
+  "lastUpdated": "2025-11-11",
+  "description": "YouTube playlist and RSS feed system. NO API REQUIRED - uses RSS feeds and public playlist IDs only.",
+  "architecture": "RSS-based (no YouTube API key needed), server-side proxy caching",
+  "api_status": "NOT USED - RSS feeds only, no API credentials required",
+  "versionNotes": "v3.2.2 (2025-11-11): Fixed RSS channel assignments - @jenniplaysgames for gaming, @diywjenni for DIY. v3.2.1: Verified cache security. v3.2: Added video embedding patterns. v3.1: Fixed youtube.php RSS proxy. v3.0: Complete RSS architecture.",
+  
+  "rss_feeds": {
+    "description": "Active YouTube RSS Feeds - NO API KEY NEEDED",
+    "channels": {
+      "jenninexus_main": {
+        "handle": "@jenninexus",
+        "channel_id": "UCMdVZ64zYbNZ5jBhaa7VxQA",
+        "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCMdVZ64zYbNZ5jBhaa7VxQA",
+        "channel_url": "https://www.youtube.com/channel/UCMdVZ64zYbNZ5jBhaa7VxQA",
+        "status": "✅ ACTIVE - Verified working (CORRECTED 2025-11-11)",
+        "content": "Main channel - all content types (gaming, gamedev, DIY, music, AI)",
+        "used_in": ["youtube.php", "youtube.yaml"],
+        "note": "Previous ID UCu1S6_Gza2Y06pT1n5U_L4Q was incorrect - correct ID is UCMdVZ64zYbNZ5jBhaa7VxQA"
+      },
+      "jenniplaysgames": {
+        "handle": "@jenniplaysgames",
+        "channel_id": "UC4byqahPWuY9WPJNvDgbQMQ",
+        "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC4byqahPWuY9WPJNvDgbQMQ",
+        "status": "✅ ACTIVE - Verified working",
+        "content": "Gaming Let's Plays, walkthroughs, horror games, indie games",
+        "used_in": ["gaming.php", "gaming.yaml"]
+      },
+      "diywjenni": {
+        "handle": "@diywjenni",
+        "channel_id": "UCk2SWSg1fvdZGnrN0XAt6NQ",
+        "rss_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCk2SWSg1fvdZGnrN0XAt6NQ",
+        "status": "✅ ACTIVE - Verified working",
+        "content": "DIY fashion, beauty, nail art, hair tutorials, self-care",
+        "used_in": ["diy.php", "diy.yaml"]
+      }
+    },
+    "testing": {
+      "test_jenninexus_channel": "curl 'https://www.youtube.com/feeds/videos.xml?channel_id=UCMdVZ64zYbNZ5jBhaa7VxQA'",
+      "test_gaming_channel": "curl 'https://www.youtube.com/feeds/videos.xml?channel_id=UC4byqahPWuY9WPJNvDgbQMQ'",
+      "test_diy_channel": "curl 'https://www.youtube.com/feeds/videos.xml?channel_id=UCk2SWSg1fvdZGnrN0XAt6NQ'",
+      "test_playlist_rss": "curl 'https://www.youtube.com/feeds/videos.xml?playlist_id=PL6WnzXOaRqA16UY1KibrFUHu4gDZ8hmep'",
+      "test_proxy_jenninexus": "curl 'http://localhost:8002/resources/api/get-youtube.php?channel_id=UCMdVZ64zYbNZ5jBhaa7VxQA'",
+      "test_proxy_gaming": "curl 'http://localhost:8002/resources/api/get-youtube.php?channel_id=UC4byqahPWuY9WPJNvDgbQMQ'",
+      "test_proxy_production": "curl 'https://jenninexus.com/resources/api/get-youtube.php?channel_id=UCMdVZ64zYbNZ5jBhaa7VxQA'"
+    },
+    "troubleshooting": {
+      "404_error": "Channel ID is invalid, channel deleted, or set to private. Verify channel exists by visiting https://www.youtube.com/channel/UC...",
+      "502_error": "Server-side proxy failed to fetch RSS feed. Check cache directory exists, PHP allow_url_fopen enabled.",
+      "no_videos": "RSS feed returns empty entry array. Channel may have no public videos or be brand new.",
+      "cors_error": "Must use server-side proxy (get-youtube.php). Direct RSS fetch from browser will fail CORS."
+    }
+  },
+  "dependencies": {
+    "core_proxy": {
+      "description": "Server-side proxy for YouTube RSS feeds",
+      "files": [
+        {
+          "path": "public_html/resources/api/get-youtube.php",
+          "type": "php",
+          "description": "Fetches YouTube RSS feeds, converts XML to JSON, caches results",
+          "cache_ttl": "10 minutes",
+          "cache_location": "/var/www/jenninexus/storage/cache/youtube/",
+          "supported_params": [
+            "channel_id (e.g., UCu1S6_Gza2Y06pT1n5U_L4Q)",
+            "playlist_id (e.g., PL6WnzXOaRqA16UY1KibrFUHu4gDZ8hmep)",
+            "rss (full RSS URL)"
+          ],
+          "critical": true,
+          "note": "NO API - only fetches public RSS feeds"
+        }
+      ]
+    },
+    "client_javascript": {
+      "description": "Client-side JavaScript for rendering video grids",
+      "files": [
+        {
+          "path": "public_html/resources/js/youtube-grid.js",
+          "type": "javascript",
+          "description": "Renders responsive video grids from YAML configs, fetches via proxy",
+          "minified": "public_html/resources/js/youtube-grid.min.js",
+          "critical": true,
+          "api": {
+            "loadPageConfig": "Loads YAML config (e.g., youtube.yaml) and renders playlists",
+            "renderPlaylist": "Renders single playlist by ID",
+            "renderPlaylistSection": "Renders playlist section with custom config"
+          }
+        }
+      ]
+    },
+    "yaml_configs": {
+      "description": "YAML configuration files for video playlists",
+      "files": [
+        {
+          "path": "public_html/resources/playlists/youtube.yaml",
+          "type": "yaml",
+          "description": "Featured playlists for /youtube page (8 playlists across all categories)",
+          "grid_config": {
+            "columns": "{ xs: 1, sm: 2, md: 3, lg: 4 }",
+            "videos_per_playlist": 6,
+            "show_single_video": false
+          }
+        },
+        {
+          "path": "public_html/resources/playlists/gaming.yaml",
+          "type": "yaml",
+          "description": "Gaming page playlists"
+        },
+        {
+          "path": "public_html/resources/playlists/gamedev.yaml",
+          "type": "yaml",
+          "description": "Game dev page playlists"
+        },
+        {
+          "path": "public_html/resources/playlists/gamejams.yaml",
+          "type": "yaml",
+          "description": "Game jams page playlists",
+          "grid_config": {
+            "videos_per_playlist": 1,
+            "show_single_video": true,
+            "note": "Simplified to 1 video per playlist"
+          }
+        },
+        {
+          "path": "public_html/resources/playlists/diy.yaml",
+          "type": "yaml",
+          "description": "DIY page playlists"
+        },
+        {
+          "path": "public_html/resources/playlists/music.yaml",
+          "type": "yaml",
+          "description": "Music page playlists"
+        },
+        {
+          "path": "public_html/resources/playlists/live.yaml",
+          "type": "yaml",
+          "description": "Live streams page playlists"
+        },
+        {
+          "path": "public_html/resources/playlists/ai.yaml",
+          "type": "yaml",
+          "description": "AI tools page playlists"
+        }
+      ]
+    },
+    "php_pages": {
+      "description": "Pages that display video content",
+      "files": [
+        {
+          "path": "public_html/youtube.php",
+          "type": "php",
+          "description": "YouTube hub page - RSS feed + 8 featured playlists",
+          "features": [
+            "RSS feed: Latest 12 videos from @jenninexus channel",
+            "Featured playlists via youtube.yaml",
+            "Tag filtering integration"
+          ],
+          "url": "/youtube",
+          "critical": true
+        },
+        {
+          "path": "public_html/diy.php",
+          "type": "php",
+          "description": "DIY page with RSS feed (4 latest videos from @diywjenni)",
+          "channel_id": "UCk2SWSg1fvdZGnrN0XAt6NQ",
+          "url": "/diy"
+        },
+        {
+          "path": "public_html/gamedev.php",
+          "type": "php",
+          "description": "Game dev page with 22 playlists",
+          "url": "/gamedev"
+        },
+        {
+          "path": "public_html/gaming.php",
+          "type": "php",
+          "description": "Gaming page with playlists",
+          "url": "/gaming"
+        },
+        {
+          "path": "public_html/game/gamejams.php",
+          "type": "php",
+          "description": "Game jams page - simplified 1 video per playlist",
+          "url": "/gamejams"
+        }
+      ]
+    },
+    "secrets_config": {
+      "description": "YouTube configuration - NO SECRETS REQUIRED",
+      "files": [
+        {
+          "path": "storage/secrets/youtube.json",
+          "type": "json",
+          "description": "Exists but NOT USED - RSS mode doesn't need API credentials",
+          "contents": {
+            "use_api": false,
+            "note": "JenniNexus uses RSS feeds exclusively"
+          },
+          "status": "archived - kept for future API features if needed"
+        }
+      ]
+    },
+    "playlist_ids": {
+      "description": "Public channel and playlist IDs",
+      "files": [
+        {
+          "path": "public_html/resources/playlists/playlist-ids.json",
+          "type": "json",
+          "description": "Public playlist and channel configuration",
+          "version": "2.1",
+          "contains": {
+            "channels": {
+              "main": "UCu1S6_Gza2Y06pT1n5U_L4Q (@jenninexus)",
+              "gaming": "UC4byqahPWuY9WPJNvDgbQMQ",
+              "diy": "UCk2SWSg1fvdZGnrN0XAt6NQ (@diywjenni)"
+            },
+            "note": "Channel/playlist IDs are PUBLIC - not secrets"
+          }
+        }
+      ]
+    }
+  },
+  "rss_architecture": {
+    "description": "How RSS feeds work (no API needed)",
+    "channel_rss_format": "https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}",
+    "playlist_rss_format": "https://www.youtube.com/feeds/videos.xml?playlist_id={PLAYLIST_ID}",
+    "example_urls": {
+      "main_channel": "https://www.youtube.com/feeds/videos.xml?channel_id=UCu1S6_Gza2Y06pT1n5U_L4Q",
+      "diy_channel": "https://www.youtube.com/feeds/videos.xml?channel_id=UCk2SWSg1fvdZGnrN0XAt6NQ",
+      "horror_playlist": "https://www.youtube.com/feeds/videos.xml?playlist_id=PL6WnzXOaRqA16UY1KibrFUHu4gDZ8hmep"
+    },
+    "flow": [
+      "1. Page JS calls: fetch('/resources/api/get-youtube.php?channel_id=UC...')",
+      "2. Proxy fetches RSS XML from YouTube (public, no auth)",
+      "3. Proxy converts XML to JSON",
+      "4. Proxy caches result for 10 minutes",
+      "5. Client JS renders videos in responsive grid"
+    ],
+    "caching": {
+      "server_side": "10 minutes at /var/www/jenninexus/storage/cache/youtube/",
+      "client_side": "24 hours in localStorage (key: diy_rss_{channel_id})",
+      "cache_keys": "MD5 hash of RSS URL"
+    }
+  },
+  "workflow": {
+    "1_update_yaml": "Edit gaming.yaml, youtube.yaml, etc. - add playlist IDs and tags",
+    "2_verify_ids": "Check playlist IDs are public (start with PL...) or channel IDs (UC...)",
+    "3_test_rss": "Manually test RSS URL in browser to verify it's accessible",
+    "4_build": "Run: scripts/build-all.ps1 to minify JS",
+    "5_test_page": "Visit page, check browser console for fetch errors",
+    "6_check_cache": "Verify cache files created at storage/cache/youtube/"
+  },
+  "critical_rules": [
+    "NO API KEY NEEDED - RSS feeds are public",
+    "Channel IDs start with 'UC', playlist IDs start with 'PL'",
+    "ALWAYS use /resources/api/get-youtube.php proxy (not direct RSS)",
+    "Hardcode proxy paths in JS: '/resources/api/get-youtube.php' (not <?= RES_ROOT ?>)",
+    "Cache is essential - don't hit YouTube RSS too frequently",
+    "Test with: curl 'https://www.youtube.com/feeds/videos.xml?channel_id=UC...'",
+    "ALWAYS set aspect_ratio: '16:9' in YAML section configs (featured_section, learning_section, etc.)",
+    "Use .ratio.ratio-16x9 Bootstrap classes for consistent video/image displays",
+    "Blog post thumbnails must use ratio-16x9 containers with object-fit: cover",
+    "Playlist cards inherit aspect_ratio from section config or default to 16:9"
+  ],
+  "integration_points": {
+    "tag_system": "youtube-grid.js sets data-tags on playlist cards for filtering",
+    "responsive_grid": "Bootstrap 5.3.8 col-* classes + YAML grid_config",
+    "theme_system": "Video grids inherit theme colors from page-specific CSS",
+    "aspect_ratio_system": "Section configs specify aspect_ratio (16:9, 9:16, 4:3, 1:1, 21:9)",
+    "blog_thumbnails": "Blog cards use .ratio.ratio-16x9 with object-fit: cover",
+    "gamedev_playlists": "All gamedev sections specify aspect_ratio: '16:9' in YAML",
+    "media_css": "Core video/card styles centralized in media.css (hover, transitions, ratios)"
+  },
+  "video_embedding_patterns": {
+    "description": "How videos are embedded across different page types",
+    "page_types": {
+      "main_pages": {
+        "pattern": "YAML-driven automatic rendering via youtube-grid.js",
+        "examples": ["gaming.php", "youtube.php", "diy.php", "gamedev.php"],
+        "workflow": [
+          "1. Load js-yaml CDN script (in head.php or page)",
+          "2. Load youtube-grid.js after js-yaml",
+          "3. Call: YouTubeGrid.loadPageConfig('gaming') - matches gaming.yaml",
+          "4. Playlists automatically render into containers defined in YAML"
+        ],
+        "gaming_php_example": {
+          "scripts": [
+            "<script src=\"https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js\"></script>",
+            "<script src=\"<?= RES_ROOT ?>/js/youtube-grid.js\"></script>",
+            "<script>YouTubeGrid.loadPageConfig('gaming');</script>"
+          ],
+          "yaml_config": "resources/playlists/gaming.yaml",
+          "containers": "HTML containers with IDs matching YAML container_id fields",
+          "res_root_usage": "<?= RES_ROOT ?> for script paths, RES_ROOT constant defined in head.php"
+        }
+      },
+      "game_pages": {
+        "pattern": "Nested directory - define RES_ROOT, use __DIR__ for includes",
+        "directory": "public_html/game/",
+        "examples": ["gamejams.php", "cowdefender.php", "martiangames.php"],
+        "res_root_usage": "Inherits from head.php (defined at top of file)",
+        "includes_pattern": "include __DIR__ . '/../includes/head.php'",
+        "resources_access": {
+          "yaml": "<?= RES_ROOT ?>/playlists/gamejams.yaml (via fetch())",
+          "images": "<?= RES_ROOT ?>/images/gamedev/... (in HTML src attributes)",
+          "css": "$customCSS = [RES_ROOT . '/css/gamedev-theme.min.css']; (before head.php)",
+          "note": "RES_ROOT resolves to '/resources' - always use in PHP, never in JS template literals"
+        },
+        "video_embedding": {
+          "method": "data-playlist attribute on container + youtube-grid.js auto-init",
+          "example": "<div class=\"video-grid-container\" data-playlist=\"PL...\" data-max=\"12\" data-columns=\"3\"></div>",
+          "init": "youtube-grid.js scans for [data-playlist] on DOMContentLoaded",
+          "yaml_alternative": "Call YouTubeGrid.loadPageConfig('gamejams') for YAML-based rendering"
+        },
+        "example_gamejams_php": {
+          "line_9": "include __DIR__ . '/../includes/head.php'; (go up one level)",
+          "line_73": "include __DIR__ . '/../includes/header.php';",
+          "line_220": "<script src=\"<?= RES_ROOT ?>/js/youtube-grid.js\"></script>",
+          "line_225": "YouTubeGrid.loadPageConfig('gamejams'); (loads resources/playlists/gamejams.yaml)"
+        }
+      },
+      "blog_pages": {
+        "pattern": "Nested directory - define RES_ROOT if needed, use relative includes",
+        "directory": "public_html/blog/",
+        "examples": ["voice-acting-in-games.php", "ai-tools-for-technical-artists.php"],
+        "res_root_definition": "if (!defined('RES_ROOT')) { define('RES_ROOT', '/resources'); }",
+        "includes_pattern": "include '../includes/head.php'; (relative path)",
+        "resources_access": {
+          "yaml": "blog-posts.yaml at resources/playlists/blog-posts.yaml",
+          "images": "<?= RES_ROOT ?>/images/blog/voice-acting.png",
+          "image_directory": "public_html/resources/images/blog/",
+          "yaml_access": "fetch('<?= RES_ROOT ?>/playlists/blog-posts.yaml') from main blog.php",
+          "note": "Blog metadata in YAML, blog content in individual PHP files"
+        },
+        "video_embedding": {
+          "method": "data-playlist attribute on container (inline embedding)",
+          "example": "<div class=\"video-grid-container\" data-playlist=\"PL9QBjNDhgNwQbaceJmfZzc3x4L80gvh8J\" data-max=\"6\" data-columns=\"3\"></div>",
+          "init": "youtube-grid.js auto-detects on page load",
+          "playlist_source": "Playlist IDs from blog-posts.yaml metadata",
+          "note": "Blog pages can embed related video playlists inline in content"
+        },
+        "example_voice_acting_php": {
+          "line_8": "if (!defined('RES_ROOT')) { define('RES_ROOT', '/resources'); }",
+          "line_14": "include '../includes/head.php'; (relative path)",
+          "line_16": "include '../includes/header.php';",
+          "line_62": "<div class=\"video-grid-container\" data-playlist=\"PL9QBjNDhgNwQbaceJmfZzc3x4L80gvh8J\" data-max=\"6\" data-columns=\"3\"></div>",
+          "note": "RES_ROOT defined defensively before includes, playlist embedded inline"
+        },
+        "blog_listing_integration": {
+          "file": "blog.php (main listing page)",
+          "yaml_fetch": "fetch('<?= RES_ROOT ?>/playlists/blog-posts.yaml')",
+          "renders": "Blog post cards with metadata (title, excerpt, image, date, category, tags)",
+          "image_paths": "blog-posts.yaml uses /blog/image.jpg, resolves to RES_ROOT/images/blog/image.jpg",
+          "example": "image: \"/blog/voice-acting.png\" → <?= RES_ROOT ?>/images/blog/voice-acting.png"
+        }
+      }
+    },
+    "res_root_patterns": {
+      "description": "How RES_ROOT is used across different page types",
+      "root_pages": {
+        "files": ["index.php", "gaming.php", "youtube.php", "diy.php"],
+        "res_root_defined": "Automatically by includes/head.php (line 3)",
+        "usage": "<?= RES_ROOT ?>/js/script.js, <?= RES_ROOT ?>/css/theme.css, <?= RES_ROOT ?>/images/photo.jpg"
+      },
+      "nested_game_pages": {
+        "files": ["game/*.php"],
+        "res_root_defined": "Inherited from head.php (no need to redefine)",
+        "includes": "__DIR__ . '/../includes/head.php' (filesystem path with __DIR__)",
+        "resources": "<?= RES_ROOT ?> for web URLs (CSS, JS, images, YAML)",
+        "critical": "Use __DIR__ for includes (filesystem), RES_ROOT for assets (web URLs)"
+      },
+      "nested_blog_pages": {
+        "files": ["blog/*.php"],
+        "res_root_defined": "Defensively: if (!defined('RES_ROOT')) { define('RES_ROOT', '/resources'); }",
+        "includes": "Relative: '../includes/head.php' (works with PHP include path)",
+        "resources": "<?= RES_ROOT ?> for web URLs",
+        "why_defensive": "Blog pages may be accessed directly or via router, ensures RES_ROOT exists"
+      },
+      "javascript_usage": {
+        "wrong": "fetch(`<?= RES_ROOT ?>/api/get-youtube.php`) - PHP doesn't interpolate in JS",
+        "correct": "fetch('/resources/api/get-youtube.php') - hardcoded path",
+        "or_use": "window.RES_ROOT (injected by head.php) - const url = `${window.RES_ROOT}/api/get-youtube.php`",
+        "rule": "NEVER use <?= RES_ROOT ?> inside JavaScript template literals"
+      }
+    },
+    "yaml_file_locations": {
+      "directory": "public_html/resources/playlists/",
+      "files": [
+        "gaming.yaml - Gaming page playlists",
+        "youtube.yaml - YouTube hub page playlists",
+        "gamedev.yaml - Game dev page playlists",
+        "gamejams.yaml - Game jams page playlists",
+        "diy.yaml - DIY page playlists",
+        "music.yaml - Music page playlists",
+        "live.yaml - Live streaming page playlists",
+        "ai.yaml - AI content playlists",
+        "blog-posts.yaml - Blog metadata (title, excerpt, image, tags, playlist)"
+      ],
+      "access_from_js": "fetch('<?= RES_ROOT ?>/playlists/gaming.yaml') or fetch('/resources/playlists/gaming.yaml')",
+      "access_from_php": "Can use __DIR__ . '/resources/playlists/gaming.yaml' for file operations"
+    },
+    "image_paths": {
+      "game_pages": {
+        "directory": "public_html/resources/images/gamedev/",
+        "usage": "<img src=\"<?= RES_ROOT ?>/images/gamedev/game.jpg\">",
+        "subdirectories": ["purgatory fell/", "martian games/", "cat-as-trophy/", "etc."]
+      },
+      "blog_pages": {
+        "directory": "public_html/resources/images/blog/",
+        "usage": "<img src=\"<?= RES_ROOT ?>/images/blog/post-image.jpg\">",
+        "yaml_format": "image: \"/blog/post-image.jpg\" (leading slash, relative to /images/)",
+        "resolution": "RES_ROOT + /images + /blog/post-image.jpg → /resources/images/blog/post-image.jpg"
+      },
+      "general_rule": "Always use <?= RES_ROOT ?>/images/... in HTML, ensures correct paths in nested pages"
+    }
+  },
+  "aspect_ratio_system": {
+    "description": "Control video thumbnail aspect ratios across different content types (added Nov 9, 2025)",
+    "yaml_configuration": {
+      "field_name": "aspect_ratio",
+      "location": "Can be set at section level or individual playlist level",
+      "format": "String in format '16:9', '9:16', '4:3', '1:1', '21:9'",
+      "example_section_level": {
+        "featured_section": {
+          "title": "Gaming Playlists",
+          "aspect_ratio": "16:9",
+          "playlists": ["..."]
+        }
+      },
+      "example_playlist_level": {
+        "recent_shorts": {
+          "title": "Latest Gaming Shorts",
+          "aspect_ratio": "9:16",
+          "playlists": ["..."]
+        }
+      },
+      "precedence": "playlist.aspect_ratio > sectionConfig.aspect_ratio > default ('16:9')"
+    },
+    "supported_values": {
+      "16:9": {
+        "bootstrap_class": "ratio-16x9",
+        "use_case": "Standard landscape video",
+        "examples": "YouTube videos, gaming content, tutorials, Let's Plays",
+        "percentage": "95% of content - default for all playlists"
+      },
+      "9:16": {
+        "bootstrap_class": "ratio-9x16",
+        "use_case": "Portrait/vertical video",
+        "examples": "YouTube Shorts, Instagram Reels, TikTok, mobile recordings",
+        "percentage": "5% of content - specialty vertical content"
+      },
+      "4:3": {
+        "bootstrap_class": "ratio-4x3",
+        "use_case": "Classic/retro format",
+        "examples": "Retro games (NES, SNES, PS1), old TV shows, presentations",
+        "percentage": "Rare - legacy content only"
+      },
+      "1:1": {
+        "bootstrap_class": "ratio-1x1",
+        "use_case": "Square format",
+        "examples": "Instagram posts, album artwork, profile pictures, icons",
+        "percentage": "Very rare - social media specific"
+      },
+      "21:9": {
+        "bootstrap_class": "ratio-21x9",
+        "use_case": "Ultrawide/cinematic",
+        "examples": "Ultrawide gaming (3440x1440), cinematic trailers, professional video",
+        "percentage": "Very rare - specialty widescreen"
+      }
+    },
+    "bootstrap_classes": {
+      "description": "Bootstrap 5.3.8 provides native ratio utility classes",
+      "format": "ratio ratio-{aspect}",
+      "available_classes": ["ratio-16x9", "ratio-9x16", "ratio-4x3", "ratio-1x1", "ratio-21x9"],
+      "html_example": "<div class=\"ratio ratio-16x9\"><img src=\"thumbnail.jpg\" /></div>",
+      "how_it_works": "Bootstrap ratio utility maintains aspect ratio using CSS padding-top trick"
+    },
+    "default_behavior": {
+      "no_config": "If aspect_ratio not specified in YAML, defaults to 16:9",
+      "invalid_value": "If invalid format provided, logs warning and defaults to 16:9",
+      "validation": "youtube-grid.js validates against supportedRatios array",
+      "fallback_chain": "playlist.aspect_ratio → sectionConfig.aspect_ratio → '16:9'"
+    },
+    "implementation_in_youtube_grid_js": {
+      "helper_function": "getAspectRatioClass(ratio) - converts '16:9' to 'ratio-16x9'",
+      "location": "Lines 66-80",
+      "applied_in_functions": [
+        "createPlaylistCard() - reads from sectionConfig.aspect_ratio or playlist.aspect_ratio",
+        "createVideoThumbnail(video, index, aspectRatio) - accepts aspectRatio parameter",
+        "loadSingleVideoPreview(playlistId, container, aspectRatio) - passes to preview",
+        "loadPlaylistVideos(playlistId, maxResults, container, aspectRatio) - passes to thumbnails",
+        "renderFallbackPlaylistThumbnail(playlistId, container, aspectRatio) - uses for placeholder",
+        "renderVideoGrid(container, videos, options) - options.aspectRatio passed through"
+      ],
+      "conversion_logic": "ratio.trim().replace(':', 'x') → validates → returns 'ratio-${normalized}'"
+    },
+    "page_specific_usage": {
+      "gaming_php_carousel": {
+        "aspect_ratio": "16:9",
+        "implementation": "Hardcoded <div class=\"ratio ratio-16x9\"> for iframe embeds",
+        "location": "gaming.php lines 207-285",
+        "note": "Carousel slides use hardcoded ratio, not YAML config"
+      },
+      "gaming_php_playlists": {
+        "aspect_ratio": "16:9",
+        "config_file": "gaming.yaml line 16 (changed from 9:16 on Nov 9, 2025)",
+        "layout": "Single-card with large thumbnail preview",
+        "note": "Was incorrectly set to 9:16 (portrait), fixed to 16:9 (landscape)"
+      },
+      "youtube_php_rss_feed": {
+        "aspect_ratio": "16:9",
+        "implementation": "Hardcoded in JavaScript: 'ratio ratio-16x9'",
+        "location": "youtube.php lines 231-256",
+        "note": "RSS feed video cards in 3-column grid"
+      },
+      "blog_php_cards": {
+        "aspect_ratio": "Not ratio-constrained",
+        "implementation": "Uses CSS object-fit: cover with max-height: 200px",
+        "location": "blog.php lines 135-148",
+        "note": "Blog cards deliberately crop to fixed height, different design pattern"
+      },
+      "gamedev_diy_pages": {
+        "aspect_ratio": "16:9 (default)",
+        "config_files": "gamedev.yaml, diy.yaml",
+        "note": "No explicit aspect_ratio set, youtube-grid.js applies default 16:9"
+      }
+    },
+    "troubleshooting": {
+      "stretched_videos": "Check YAML aspect_ratio matches actual video format (16:9 vs 9:16)",
+      "ratio_not_applying": "Check console for 'Invalid aspect ratio' warnings, inspect element for ratio class",
+      "fallback_images_overflow": "Ensure renderFallbackPlaylistThumbnail() receives aspectRatio parameter",
+      "blog_images_cropping": "Expected behavior - blog.php uses object-fit: cover, not ratio classes"
+    }
+  },
+  "configuration_workflow": {
+    "description": "Step-by-step guide for configuring video sections with thumbnails, aspect ratios, grid columns, and tags (added Nov 9, 2025)",
+    "step_1_yaml_definition": {
+      "purpose": "Define playlist content and display settings",
+      "location": "public_html/resources/playlists/{page}.yaml",
+      "required_fields": {
+        "page": "Page identifier matching YouTubeGrid.loadPageConfig() parameter",
+        "title": "Page title for metadata",
+        "description": "Brief page description",
+        "sections": "Named sections ending in _section (e.g., featured_section)",
+        "playlists": "Array of playlist objects with id, title, icon, tags, aspect_ratio"
+      },
+      "example": {
+        "page": "mypage",
+        "featured_section": {
+          "aspect_ratio": "16:9",
+          "columns": {"xs": 1, "sm": 2, "md": 3},
+          "playlists": [
+            {
+              "id": "PL...",
+              "title": "Playlist Name",
+              "icon": "play-circle",
+              "tags": ["gaming", "fps"],
+              "aspect_ratio": "16:9"
+            }
+          ]
+        },
+        "grid_config": {
+          "columns": {"xs": 1, "sm": 2, "md": 3, "lg": 4},
+          "videos_per_playlist": 6,
+          "show_single_video": false,
+          "aspect_ratio": "16:9"
+        }
+      },
+      "validation": [
+        "Playlist IDs must start with 'PL' (YouTube playlist format)",
+        "Tags must exist in tags.json or filtering breaks",
+        "Aspect ratio must be one of: 16:9, 9:16, 4:3, 1:1, 21:9",
+        "Column objects must have numeric values for xs/sm/md/lg",
+        "Section names ending in _section map to #{name}-playlists HTML containers"
+      ]
+    },
+    "step_2_fetch_thumbnails": {
+      "purpose": "Download static thumbnails for faster loading and offline fallback",
+      "script": "scripts/download-playlist-thumbnails.ps1",
+      "command": "pwsh -File 'scripts\\download-playlist-thumbnails.ps1' -YamlFile 'mypage.yaml'",
+      "what_it_does": [
+        "Reads YAML file and extracts all playlist IDs",
+        "Fetches each playlist RSS feed from YouTube",
+        "Extracts first video <media:thumbnail> (480x360 hqdefault)",
+        "Downloads to public_html/resources/images/playlists/{PLAYLIST_ID}.jpg",
+        "Rate limits to 1-second delay between requests"
+      ],
+      "output_location": "public_html/resources/images/playlists/*.jpg",
+      "quality": "480x360 (hqdefault) from RSS feed, higher than constructed URLs (320x180 mqdefault)",
+      "optional": "Not required but recommended - youtube-grid.js fetches from RSS at runtime if missing",
+      "empty_playlists": "Run create-*-placeholders.ps1 scripts for gradient placeholders"
+    },
+    "step_3_html_container": {
+      "purpose": "Add container div for youtube-grid.js to populate",
+      "location": "public_html/{page}.php",
+      "required_structure": {
+        "container_id": "Must match YAML section name pattern: {section}-playlists",
+        "classes": "row g-4 (Bootstrap grid with gap)",
+        "loading_spinner": "Optional but recommended for UX"
+      },
+      "example": "<section>\n  <div class=\"container\">\n    <h2>Section Title</h2>\n    <div id=\"featured-playlists\" class=\"row g-4\">\n      <div class=\"spinner-border\">Loading...</div>\n    </div>\n  </div>\n</section>",
+      "naming_convention": "YAML section 'featured_section' → HTML ID 'featured-playlists' (remove _section, add -playlists, replace _ with -)"
+    },
+    "step_4_javascript_loader": {
+      "purpose": "Load YAML config and render all sections",
+      "location": "Page footer after youtube-grid.js script tag",
+      "dependencies": [
+        "js-yaml library (loaded in includes/head.php)",
+        "youtube-grid.js (loaded in page footer)",
+        "Bootstrap 5.3.8 CSS (for grid and aspect ratio classes)"
+      ],
+      "example": "(function() {\n  function loadPlaylists() {\n    if (window.YouTubeGrid && typeof window.YouTubeGrid.loadPageConfig === 'function') {\n      window.YouTubeGrid.loadPageConfig('mypage')\n        .then(() => console.log('✅ Loaded'))\n        .catch(err => console.error('❌ Error:', err));\n    }\n  }\n  if (document.readyState === 'loading') {\n    document.addEventListener('DOMContentLoaded', loadPlaylists);\n  } else {\n    loadPlaylists();\n  }\n})();",
+      "what_happens": [
+        "YouTubeGrid.loadPageConfig('mypage') fetches /resources/playlists/mypage.yaml",
+        "js-yaml parses YAML into JavaScript object",
+        "For each section, youtube-grid.js creates playlist cards",
+        "Applies aspect ratio classes, grid columns, tags, thumbnails",
+        "Renders into #{section}-playlists containers"
+      ]
+    },
+    "step_5_configure_tags": {
+      "purpose": "Ensure all tags used in YAML exist in tags.json",
+      "location": "public_html/resources/playlists/tags.json",
+      "verification_script": "scripts/generate-playlist-tags.ps1",
+      "command": "pwsh -File 'scripts\\generate-playlist-tags.ps1' -Verbose",
+      "tag_structure": {
+        "id": "Unique numeric identifier",
+        "name": "Display name (e.g., 'Game Development')",
+        "slug": "URL-safe lowercase hyphenated (e.g., 'game-development')",
+        "category": "One of: gaming, gamedev, diy, music, meta, blog"
+      },
+      "categories": {
+        "gaming": "Game-specific, genre, platform tags",
+        "gamedev": "Development tools, engines, processes",
+        "diy": "Beauty, fashion, crafts, tutorials",
+        "music": "Instruments, genres, production",
+        "meta": "Content types, streaming, social media",
+        "blog": "Topics, tools, events"
+      },
+      "usage": "youtube-grid.js sets data-tags='gaming,fps,horror' attribute on playlist cards for tag-system.js filtering"
+    },
+    "step_6_build_and_test": {
+      "purpose": "Minify assets and verify rendering",
+      "build_command": "scripts\\build-all.ps1",
+      "what_gets_minified": [
+        "youtube-grid.js → youtube-grid.min.js (automatic)",
+        "YAML files loaded directly (no minification)"
+      ],
+      "test_checklist": [
+        "Visit page in browser (http://localhost:8002/{page})",
+        "Check console: '✅ Loading playlists from {page}.yaml' and '✅ Playlists loaded successfully'",
+        "Verify no 404 errors on /resources/api/get-youtube.php",
+        "Desktop: Correct number of columns per section",
+        "Tablet: Columns adjust responsively",
+        "Mobile: Single column layout",
+        "Inspect thumbnails: <div class='ratio ratio-16x9'> (or ratio-9x16)",
+        "Videos not stretched or squashed",
+        "Thumbnails load from RSS feed or fallback",
+        "Gradient placeholders for empty playlists",
+        "Cards have data-tags attribute",
+        "Tag badges clickable and link to /tag/index.php?slug=...",
+        "Tag filtering works correctly"
+      ],
+      "common_issues": "See YOUTUBE.md 'Troubleshooting by System' section for detailed fixes"
+    },
+    "complete_example": {
+      "scenario": "Add new 'Music Production' section to music.php",
+      "step_by_step": [
+        "1. Create music.yaml with music_production_section, 4 playlists, aspect_ratio: '16:9', columns: {xs:1, sm:2, md:3, lg:4}, tags",
+        "2. Run: pwsh -File 'scripts\\download-playlist-thumbnails.ps1' -YamlFile 'music.yaml'",
+        "3. Add to music.php: <div id='music-production-playlists' class='row g-4'></div>",
+        "4. Add footer script: YouTubeGrid.loadPageConfig('music')",
+        "5. Build: scripts\\build-all.ps1",
+        "6. Test: Visit http://localhost:8002/music, check console, verify grid, test responsive, check tags"
+      ],
+      "yaml_snippet": "music_production_section:\n  aspect_ratio: '16:9'\n  columns: {xs: 1, sm: 2, md: 3, lg: 4}\n  playlists:\n    - id: 'PL...'\n      title: 'Music Production Tips'\n      icon: 'music-note'\n      tags: ['music', 'production', 'tutorial']",
+      "html_snippet": "<section>\n  <div class='container'>\n    <h2>Music Production</h2>\n    <div id='music-production-playlists' class='row g-4'></div>\n  </div>\n</section>",
+      "javascript_snippet": "YouTubeGrid.loadPageConfig('music')\n  .then(() => console.log('✅ Music playlists loaded'))\n  .catch(err => console.error('❌ Error:', err));"
+    }
+  },
+  "documentation": {
+    "primary": "storage/docs/YOUTUBE.md",
+    "rss_architecture": "storage/docs/YOUTUBE-RSS-ARCHITECTURE.md",
+    "video_grid": "storage/docs/VIDEO-GRID.md",
+    "playlist_mapping": "storage/docs/PLAYLIST-MAPPING.md",
+    "blog_system": "storage/docs/BLOG-SYSTEM.md",
+    "game_dev_pages": "storage/docs/GAME-DEV-PAGES.md"
+  },
+  "troubleshooting": {
+    "videos_not_loading": [
+      "Check browser console for fetch() errors",
+      "Verify proxy URL is /resources/api/get-youtube.php (not <?= RES_ROOT ?>)",
+      "Test RSS URL directly in browser",
+      "Check server cache directory permissions: storage/cache/youtube/",
+      "Look for PHP errors in get-youtube.php"
+    ],
+    "empty_grid": [
+      "Check YAML file exists and has correct playlist IDs",
+      "Verify YouTubeGrid.loadPageConfig('pagename') matches YAML filename",
+      "Check grid container ID matches YAML container_id",
+      "Look for JavaScript errors in console"
+    ]
+  }
+}

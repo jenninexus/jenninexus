@@ -1,0 +1,369 @@
+/* ===================================
+   Link Cards CSS - JenniNexus
+   Shared styles for sitemap.php and links.php
+   =================================== */
+
+/* Base link card container */
+.link-card {
+  transition: all 0.3s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Default card styling - lavender glass in light mode */
+.link-card .card,
+.card {
+  background: rgba(249, 243, 251, 0.85);
+  border: 1px solid rgba(165, 99, 209, 0.2);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+/* Light theme - lavender glass panels (no white backgrounds) */
+:root[data-bs-theme="light"] .link-card .card,
+:root[data-bs-theme="light"] .card {
+  background: rgba(249, 243, 251, 0.9);
+  border-color: rgba(165, 99, 209, 0.25);
+}
+
+/* Dark theme - dark glass with purple glow */
+:root[data-bs-theme="dark"] .link-card .card,
+:root[data-bs-theme="dark"] .card {
+  background: rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 46, 136, 0.3);
+}
+
+/* Hover state - enhanced glow with brand colors */
+.link-card:hover .card {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(165, 99, 209, 0.4);
+}
+
+:root[data-bs-theme="dark"] .link-card:hover .card {
+  box-shadow: 0 8px 20px rgba(255, 46, 136, 0.5);
+}
+
+/* Text contrast - ensure readability in both themes */
+.link-card .card-body span,
+.card h3, .card h4 {
+  transition: color 0.3s ease;
+}
+
+.link-card .card-body i,
+.card i {
+  transition: all 0.3s ease;
+}
+
+/* Icon hover - accent color with subtle glow */
+.link-card:hover i {
+  color: var(--jenni-primary, #A563D1);
+  filter: drop-shadow(0 0 8px rgba(165, 99, 209, 0.6));
+}
+
+/* Light mode text - dark on lavender */
+:root[data-bs-theme="light"] .card h3,
+:root[data-bs-theme="light"] .card h4,
+:root[data-bs-theme="light"] .link-card .card-body span {
+  color: #2C2A33;
+}
+
+/* Dark mode text - light purple-gray on dark */
+:root[data-bs-theme="dark"] .card h3,
+:root[data-bs-theme="dark"] .card h4,
+:root[data-bs-theme="dark"] .link-card .card-body span {
+  color: #E8E4F3;
+}
+
+/* ===================================
+   Social Media Platform Hover Effects
+   (Uses platform colors from all-themes.css)
+   =================================== */
+
+/* YouTube hover */
+.link-card:has(.fa-youtube):hover .card {
+  border-color: var(--youtube-red, #ff0000);
+}
+
+:root[data-bs-theme="light"] .link-card:has(.fa-youtube):hover .card {
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3);
+}
+
+:root[data-bs-theme="dark"] .link-card:has(.fa-youtube):hover .card {
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.5);
+}
+
+/* GitHub hover */
+.link-card:has(.fa-github):hover .card {
+  border-color: var(--github-dark, #333333);
+}
+
+:root[data-bs-theme="light"] .link-card:has(.fa-github):hover .card {
+  box-shadow: 0 8px 20px rgba(51, 51, 51, 0.3);
+}
+
+:root[data-bs-theme="dark"] .link-card:has(.fa-github):hover .card {
+  box-shadow: 0 8px 20px rgba(200, 200, 200, 0.4);
+}
+
+/* LinkedIn hover */
+.link-card:has(.fa-linkedin):hover .card {
+  border-color: #0077b5;
+}
+
+:root[data-bs-theme="light"] .link-card:has(.fa-linkedin):hover .card {
+  box-shadow: 0 8px 20px rgba(0, 119, 181, 0.3);
+}
+
+:root[data-bs-theme="dark"] .link-card:has(.fa-linkedin):hover .card {
+  box-shadow: 0 8px 20px rgba(0, 119, 181, 0.5);
+}
+
+/* Twitter/X hover */
+.link-card:has(.fa-x-twitter):hover .card {
+  border-color: #000000;
+}
+
+:root[data-bs-theme="light"] .link-card:has(.fa-x-twitter):hover .card {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-bs-theme="dark"] .link-card:has(.fa-x-twitter):hover .card {
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Instagram hover */
+.link-card:has(.fa-instagram):hover .card {
+  border-color: var(--instagram-magenta, #E4405F);
+}
+
+:root[data-bs-theme="light"] .link-card:has(.fa-instagram):hover .card {
+  box-shadow: 0 8px 20px rgba(228, 64, 95, 0.3);
+}
+
+:root[data-bs-theme="dark"] .link-card:has(.fa-instagram):hover .card {
+  box-shadow: 0 8px 20px rgba(228, 64, 95, 0.5);
+}
+
+/* Twitch hover */
+.link-card:has(.fa-twitch):hover .card {
+  border-color: var(--twitch-purple, #9146FF);
+}
+
+:root[data-bs-theme="light"] .link-card:has(.fa-twitch):hover .card {
+  box-shadow: 0 8px 20px rgba(145, 70, 255, 0.3);
+}
+
+:root[data-bs-theme="dark"] .link-card:has(.fa-twitch):hover .card {
+  box-shadow: 0 8px 20px rgba(145, 70, 255, 0.5);
+}
+
+/* Spotify hover */
+.link-card:has(.fa-spotify):hover .card {
+  border-color: var(--spotify-green, #1DB954);
+}
+
+:root[data-bs-theme="light"] .link-card:has(.fa-spotify):hover .card {
+  box-shadow: 0 8px 20px rgba(29, 185, 84, 0.3);
+}
+
+:root[data-bs-theme="dark"] .link-card:has(.fa-spotify):hover .card {
+  box-shadow: 0 8px 20px rgba(29, 185, 84, 0.5);
+}
+
+/* TikTok hover */
+.link-card:has(.fa-tiktok):hover .card {
+  border-color: var(--tiktok-black, #000000);
+}
+
+:root[data-bs-theme="light"] .link-card:has(.fa-tiktok):hover .card {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-bs-theme="dark"] .link-card:has(.fa-tiktok):hover .card {
+  box-shadow: 0 8px 20px rgba(255, 0, 80, 0.5);
+}
+
+/* ArtStation hover */
+.link-card:has(.fa-artstation):hover .card {
+  border-color: #13AFF0;
+}
+
+:root[data-bs-theme="light"] .link-card:has(.fa-artstation):hover .card {
+  box-shadow: 0 8px 20px rgba(19, 175, 240, 0.3);
+}
+
+:root[data-bs-theme="dark"] .link-card:has(.fa-artstation):hover .card {
+  box-shadow: 0 8px 20px rgba(19, 175, 240, 0.5);
+}
+
+/* Facebook hover */
+.link-card:has(.fa-facebook):hover .card {
+  border-color: #1877F2;
+}
+
+:root[data-bs-theme="light"] .link-card:has(.fa-facebook):hover .card {
+  box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3);
+}
+
+:root[data-bs-theme="dark"] .link-card:has(.fa-facebook):hover .card {
+  box-shadow: 0 8px 20px rgba(24, 119, 242, 0.5);
+}
+
+/* Discord hover */
+.link-card:has(.fa-discord):hover .card {
+  border-color: var(--discord-blurple, #5865F2);
+}
+
+:root[data-bs-theme="light"] .link-card:has(.fa-discord):hover .card {
+  box-shadow: 0 8px 20px rgba(88, 101, 242, 0.3);
+}
+
+:root[data-bs-theme="dark"] .link-card:has(.fa-discord):hover .card {
+  box-shadow: 0 8px 20px rgba(88, 101, 242, 0.5);
+}
+
+/* Patreon hover */
+.link-card:has(.fa-patreon):hover .card {
+  border-color: var(--patreon-coral, #FF424D);
+}
+
+:root[data-bs-theme="light"] .link-card:has(.fa-patreon):hover .card {
+  box-shadow: 0 8px 20px rgba(255, 66, 77, 0.3);
+}
+
+:root[data-bs-theme="dark"] .link-card:has(.fa-patreon):hover .card {
+  box-shadow: 0 8px 20px rgba(255, 66, 77, 0.5);
+}
+
+/* JenniNexus brand icons (scissors, newspaper, gamepad, music) */
+.link-card:has(.fa-scissors):hover .card,
+.link-card:has(.fa-newspaper):hover .card,
+.link-card:has(.fa-gamepad):hover .card,
+.link-card:has(.fa-music):hover .card {
+  border-color: var(--jenni-primary, #A563D1);
+}
+
+:root[data-bs-theme="light"] .link-card:has(.fa-scissors):hover .card,
+:root[data-bs-theme="light"] .link-card:has(.fa-newspaper):hover .card {
+  box-shadow: 0 8px 20px rgba(165, 99, 209, 0.4);
+}
+
+:root[data-bs-theme="dark"] .link-card:has(.fa-scissors):hover .card,
+:root[data-bs-theme="dark"] .link-card:has(.fa-newspaper):hover .card,
+:root[data-bs-theme="dark"] .link-card:has(.fa-gamepad):hover .card,
+:root[data-bs-theme="dark"] .link-card:has(.fa-music):hover .card {
+  box-shadow: 0 8px 20px rgba(255, 46, 136, 0.5);
+}
+
+/* ===================================
+   Theme-Aware Icon Colors
+   (Ensure visibility in both themes)
+   =================================== */
+
+/* Dark mode: lighten black icons so they're visible */
+:root[data-bs-theme="dark"] .fa-github {
+  color: #E8E4F3;
+}
+
+:root[data-bs-theme="dark"] .fa-x-twitter {
+  color: #E8E4F3;
+}
+
+:root[data-bs-theme="dark"] .fa-tiktok {
+  color: #ff0050;
+}
+
+/* Light mode: keep black icons black for contrast */
+:root[data-bs-theme="light"] .fa-github {
+  color: #333333;
+}
+
+:root[data-bs-theme="light"] .fa-x-twitter {
+  color: #000000;
+}
+
+:root[data-bs-theme="light"] .fa-tiktok {
+  color: #000000;
+}
+
+/* ===================================
+   Glass Card Utilities
+   =================================== */
+
+.glass-card {
+  background: rgba(249, 243, 251, 0.85);
+  border: 1px solid rgba(165, 99, 209, 0.2);
+  transition: all 0.3s ease;
+}
+
+.link-card:hover .glass-card {
+  box-shadow: 0 8px 20px rgba(165, 99, 209, 0.4);
+}
+
+/* Grid consistency - ensure equal heights */
+.row.g-3 .card,
+.row.g-4 .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Badge colors */
+.text-primary { color: var(--jenni-primary, #A563D1) !important; }
+.text-success { color: #28a745 !important; }
+.text-info { color: #17a2b8 !important; }
+.text-warning { color: #ffc107 !important; }
+
+.text-muted, .small.text-muted {
+  color: rgba(108, 117, 125, 0.8) !important;
+}
+
+:root[data-bs-theme="light"] .text-muted,
+:root[data-bs-theme="light"] .small.text-muted {
+  color: rgba(108, 117, 125, 0.9) !important;
+}
+
+/* Icon colors - theme-aware, use project brand colors */
+.sitemap-link-icon {
+  color: var(--jenni-primary, #A563D1);
+  transition: all 0.3s ease;
+}
+
+:root[data-bs-theme="dark"] .sitemap-link-icon {
+  color: var(--jenni-secondary, #FF2E88);
+}
+
+/* Enhanced hover effect with brand color glow */
+.link-card:hover .sitemap-link-icon {
+  color: var(--jenni-secondary, #FF2E88);
+  filter: drop-shadow(0 0 8px rgba(255, 46, 136, 0.6));
+}
+
+/* Stats card - special gradient background */
+.card[style*="background: linear-gradient"] {
+  border-color: transparent;
+}
+
+:root[data-bs-theme="light"] .card[style*="background: linear-gradient"] {
+  box-shadow: 0 4px 12px rgba(165, 99, 209, 0.3);
+}
+
+:root[data-bs-theme="dark"] .card[style*="background: linear-gradient"] {
+  box-shadow: 0 4px 12px rgba(255, 46, 136, 0.4);
+}
+
+/* ===================================
+   Accessibility: Reduced Motion
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .link-card,
+  .link-card .card,
+  .link-card:hover,
+  .link-card:hover .card {
+    transition: none !important;
+    transform: none !important;
+  }
+}

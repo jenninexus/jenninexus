@@ -1,0 +1,24 @@
+{
+  "name": "jenninexus",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "JenniNexus project - dev helper package.json",
+  "private": true,
+  "scripts": {
+    "dev": "pwsh .\\scripts\\dev-server.ps1",
+    "build": "pwsh .\\scripts\\build.ps1",
+    "watch": "pwsh .\\scripts\\watch.ps1",
+    "deploy": "pwsh .\\scripts\\build-and-deploy.ps1",
+    "start": "pwsh .\\scripts\\dev-server.ps1",
+    "test": "node scripts/test-importer.js",
+    "import-tags": "node scripts/import-youtube-tags.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "purgecss": "^7.0.2",
+    "terser": "^5.37.0"
+  }
+}

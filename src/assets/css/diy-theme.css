@@ -1,0 +1,740 @@
+:root[data-bs-theme="light"] {
+  --diy-pink: #FF6EC4;
+  --diy-purple: #A563D1;
+  --diy-lavender: #C590E3;
+  --diy-peach: #FFB6C1;
+  --diy-coral: #FF7F7F;
+  --diy-mint: #00D4AA;
+  --diy-gold: #FFD700;
+  --diy-rose: #FF1493;
+}
+
+:root[data-bs-theme="dark"] {
+  --diy-pink: #FF2E88;
+  --diy-purple: #A563D1;
+  --diy-lavender: #B579DA;
+  --diy-peach: #FF9FB8;
+  --diy-coral: #FF6B9D;
+  --diy-mint: #00D4AA;
+  --diy-gold: #FFB020;
+  --diy-rose: #FF1493;
+}
+
+.diy-hero {
+  background: linear-gradient(135deg, var(--diy-pink) 0%, var(--diy-purple) 50%, var(--diy-lavender) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+[data-bs-theme="dark"] .diy-hero {
+  background: linear-gradient(135deg, rgba(255, 46, 136, 0.3) 0%, rgba(165, 99, 209, 0.3) 50%, rgba(181, 121, 218, 0.3) 100%);
+}
+
+.diy-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,197.3C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+  background-size: cover;
+  background-position: bottom;
+  opacity: 0.3;
+}
+
+/* Badge Styles */
+.badge.bg-danger.bg-opacity-75,
+.badge.bg-dark.bg-opacity-75,
+.badge.bg-info.bg-opacity-75,
+.badge.bg-primary.bg-opacity-75,
+.badge.bg-purple.bg-opacity-75,
+.badge.bg-secondary.bg-opacity-75,
+.badge.bg-success.bg-opacity-75,
+.badge.bg-warning.bg-opacity-75 {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.badge.bg-primary.bg-opacity-75:hover {
+  background: var(--diy-purple) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(165, 99, 209, 0.4);
+}
+
+.badge.bg-danger.bg-opacity-75:hover {
+  background: var(--diy-pink) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 46, 136, 0.4);
+}
+
+.badge.bg-success.bg-opacity-75:hover {
+  background: var(--diy-mint) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 212, 170, 0.4);
+}
+
+.badge.bg-warning.bg-opacity-75:hover {
+  background: var(--diy-gold) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 176, 32, 0.4);
+}
+
+.badge.bg-info.bg-opacity-75:hover {
+  background: var(--diy-coral) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 157, 0.4);
+}
+
+/* Text Gradients - MOVED TO jenni-fonts.css */
+/* .diy-text-gradient now defined in jenni-fonts.css */
+
+/* Category Cards */
+.diy-category-fashion {
+  background: linear-gradient(135deg, var(--diy-pink) 0%, var(--diy-coral) 100%);
+  border: none;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.diy-category-fashion:hover {
+  transform: translateY(-10px) rotate(2deg);
+  box-shadow: 0 15px 40px rgba(255, 110, 196, 0.5);
+}
+
+.diy-category-beauty {
+  background: linear-gradient(135deg, var(--diy-purple) 0%, var(--diy-lavender) 100%);
+  border: none;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.diy-category-beauty:hover {
+  transform: translateY(-10px) rotate(-2deg);
+  box-shadow: 0 15px 40px rgba(165, 99, 209, 0.5);
+}
+
+.diy-category-selfcare {
+  background: linear-gradient(135deg, var(--diy-peach) 0%, var(--diy-rose) 100%);
+  border: none;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.diy-category-selfcare:hover {
+  transform: translateY(-10px) rotate(2deg);
+  box-shadow: 0 15px 40px rgba(255, 20, 147, 0.5);
+}
+
+.diy-category-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.diy-category-beauty:hover .diy-category-icon,
+.diy-category-fashion:hover .diy-category-icon,
+.diy-category-selfcare:hover .diy-category-icon {
+  transform: scale(1.2) rotate(360deg);
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
+}
+
+/* Playlist Cards */
+/* DIY Playlist Card Styling - Color Overrides Only */
+/* Base display/transition styles handled by media.css */
+#diyPlaylistsContainer .card,
+#diySecondaryContainer .card,
+.diy-playlist-card {
+  /* Base styles: media.css handles transitions, transforms, glass effects */
+  /* Theme override: border and gradient overlay */
+  border: 2px solid transparent;
+}
+
+/* Gradient overlay effect - theme-specific */
+#diyPlaylistsContainer .card::before,
+#diySecondaryContainer .card::before,
+.diy-playlist-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--diy-pink), var(--diy-purple));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+  border-radius: 1rem;
+  pointer-events: none;
+}
+
+#diyPlaylistsContainer .card:hover::before,
+#diySecondaryContainer .card:hover::before,
+.diy-playlist-card:hover::before {
+  opacity: 0.1;
+}
+
+#diyPlaylistsContainer .card:hover,
+#diySecondaryContainer .card:hover,
+.diy-playlist-card:hover {
+  /* Transform handled by media.css .playlist-card-multi:hover */
+  /* Theme override: brand color border and shadow */
+  border-color: var(--diy-pink) !important;
+  box-shadow: 0 20px 50px rgba(255, 46, 136, 0.3);
+}
+
+[data-bs-theme="dark"] #diyPlaylistsContainer .card:hover,
+[data-bs-theme="dark"] #diySecondaryContainer .card:hover,
+[data-bs-theme="dark"] .diy-playlist-card:hover {
+  box-shadow: 0 20px 50px rgba(255, 46, 136, 0.5), 0 0 30px rgba(165, 99, 209, 0.3);
+}
+
+/* Card body z-index for gradient overlay */
+#diyPlaylistsContainer .card .card-body,
+#diyPlaylistsContainer .card .card-footer,
+#diySecondaryContainer .card .card-body,
+#diySecondaryContainer .card .card-footer,
+.diy-playlist-card .card-body,
+.diy-playlist-card .card-footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* Custom Badges */
+.badge-diy-fashion {
+  background: linear-gradient(135deg, var(--diy-pink), var(--diy-coral));
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+
+.badge-diy-fashion.active,
+.badge-diy-fashion:focus,
+.badge-diy-fashion:hover {
+  background: linear-gradient(135deg, var(--diy-purple), var(--diy-pink));
+  color: #fff !important;
+  box-shadow: 0 4px 12px rgba(165, 99, 209, 0.4);
+}
+
+.badge-diy-beauty {
+  background: linear-gradient(135deg, var(--diy-purple), var(--diy-lavender));
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+
+.badge-diy-beauty.active,
+.badge-diy-beauty:focus,
+.badge-diy-beauty:hover {
+  background: linear-gradient(135deg, var(--diy-pink), var(--diy-purple));
+  color: #fff !important;
+}
+
+.badge-diy-hair {
+  background: linear-gradient(135deg, var(--diy-gold), var(--diy-peach));
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+
+.badge-diy-hair.active,
+.badge-diy-hair:focus,
+.badge-diy-hair:hover {
+  background: linear-gradient(135deg, var(--diy-coral), var(--diy-gold));
+  color: #fff !important;
+}
+
+.badge-diy-nails {
+  background: linear-gradient(135deg, var(--diy-rose), var(--diy-pink));
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+
+.badge-diy-nails.active,
+.badge-diy-nails:focus,
+.badge-diy-nails:hover {
+  background: linear-gradient(135deg, var(--diy-purple), var(--diy-rose));
+  color: #fff !important;
+}
+
+.badge-diy-selfcare {
+  background: linear-gradient(135deg, var(--diy-mint), var(--diy-lavender));
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+
+.badge-diy-selfcare.active,
+.badge-diy-selfcare:focus,
+.badge-diy-selfcare:hover {
+  background: linear-gradient(135deg, var(--diy-coral), var(--diy-mint));
+  color: #fff !important;
+}
+
+.tag-badge,
+button.badge {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.tag-badge:focus,
+.tag-badge:hover,
+button.badge:focus,
+button.badge:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.tag-badge.active,
+button.badge.active {
+  /* Use tag-secondary when available, otherwise fall back to theme body color
+     and apply a softer colored shadow for better contrast in light themes */
+  border-color: var(--tag-secondary, var(--bs-body-color)) !important;
+  box-shadow: 0 0 0 3px rgba(165, 99, 209, 0.18) !important;
+  color: var(--tag-secondary, var(--bs-body-color)) !important;
+}
+
+/* Buttons */
+.btn-diy-primary {
+  background: linear-gradient(135deg, var(--diy-pink), var(--diy-purple));
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-diy-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-diy-primary:hover::before {
+  left: 100%;
+}
+
+.btn-diy-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 46, 136, 0.4);
+}
+
+.btn-diy-secondary {
+  background: linear-gradient(135deg, var(--diy-lavender), var(--diy-mint));
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-diy-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(165, 99, 209, 0.4);
+}
+
+/* Social Buttons - Theme-Adaptive with Platform Colors */
+/* NOTE: Inherits platform colors from all-themes.css (--youtube-red, --discord-blurple, etc.) */
+/* These buttons maintain brand identity while adapting shadows/borders to theme */
+
+.btn-youtube {
+  background: linear-gradient(135deg, var(--youtube-red, #FF0000) 0%, #CC0000 100%);
+  border: none;
+  color: #fff;
+}
+
+.btn-youtube:hover {
+  background: linear-gradient(135deg, #FF0000 0%, #FF4444 50%, #CC0000 100%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+}
+
+[data-bs-theme="dark"] .btn-youtube:hover {
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6);
+}
+
+.btn-discord {
+  background: linear-gradient(135deg, var(--discord-blurple, #5865F2) 0%, #4752C4 100%);
+  border: none;
+  color: #fff;
+}
+
+.btn-discord:hover {
+  background: linear-gradient(135deg, #5865F2 0%, #7983F5 50%, #4752C4 100%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
+}
+
+[data-bs-theme="dark"] .btn-discord:hover {
+  box-shadow: 0 6px 20px rgba(88, 101, 242, 0.6);
+}
+
+.btn-instagram {
+  background: linear-gradient(135deg, #833AB4 0%, #E1306C 50%, #FD1D1D 100%);
+  border: none;
+  color: #fff;
+}
+
+.btn-instagram:hover {
+  background: linear-gradient(135deg, #9b4ac4 0%, #E1306C 50%, #FD1D1D 100%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(228, 64, 95, 0.4);
+}
+
+[data-bs-theme="dark"] .btn-instagram:hover {
+  box-shadow: 0 6px 20px rgba(228, 64, 95, 0.6);
+}
+
+/* DIY page surface helpers: ensure sections use glass-panel background to avoid white-on-white issues */
+.diy-surface {
+  background: var(--glass-bg) !important;
+  border-radius: 0.75rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+/* Ensure text is always readable on diy-surface backgrounds */
+.diy-surface,
+.diy-surface .card-title,
+.diy-surface h1,
+.diy-surface h2,
+.diy-surface h3,
+.diy-surface h4,
+.diy-surface h5,
+.diy-surface h6 {
+  color: var(--bs-body-color) !important;
+}
+
+/* Light mode: dark text on pastel backgrounds */
+:root[data-bs-theme="light"] .diy-surface,
+:root[data-bs-theme="light"] .diy-surface .card-title,
+:root[data-bs-theme="light"] .diy-surface h1,
+:root[data-bs-theme="light"] .diy-surface h2,
+:root[data-bs-theme="light"] .diy-surface h3,
+:root[data-bs-theme="light"] .diy-surface h4,
+:root[data-bs-theme="light"] .diy-surface h5,
+:root[data-bs-theme="light"] .diy-surface h6,
+:root[data-bs-theme="light"] .diy-surface .lead,
+:root[data-bs-theme="light"] .diy-surface p {
+  color: #2C2A33 !important;
+}
+
+/* Dark mode: light text on dark backgrounds */
+:root[data-bs-theme="dark"] .diy-surface,
+:root[data-bs-theme="dark"] .diy-surface .card-title,
+:root[data-bs-theme="dark"] .diy-surface h1,
+:root[data-bs-theme="dark"] .diy-surface h2,
+:root[data-bs-theme="dark"] .diy-surface h3,
+:root[data-bs-theme="dark"] .diy-surface h4,
+:root[data-bs-theme="dark"] .diy-surface h5,
+:root[data-bs-theme="dark"] .diy-surface h6,
+:root[data-bs-theme="dark"] .diy-surface .lead,
+:root[data-bs-theme="dark"] .diy-surface p {
+  color: #F5F3FF !important;
+}
+
+/* Cards inside diy-surface should use glass panel surfaces for contrast */
+.diy-surface .card,
+.diy-surface .glass-panel,
+.diy-surface .diy-community-card,
+.diy-surface .carousel-item {
+  /* Use glass-card pattern from custom.css */
+  background: var(--glass-panel-bg) !important;
+  -webkit-backdrop-filter: blur(var(--glass-panel-blur));
+  backdrop-filter: blur(var(--glass-panel-blur));
+  border: 1px solid var(--glass-panel-border) !important;
+  box-shadow: 0 8px 32px 0 var(--glass-panel-shadow);
+  /* Use mixin for contrast */
+  color: var(--bs-body-color) !important;
+}
+
+/* Prevent white-on-white titles on smaller screens by keeping title/tags compact */
+@media (max-width: 575.98px) {
+  .diy-surface .card .card-title,
+  .diy-surface .card .card-text,
+  #diy-latest-videos .card-title {
+    display: none; /* Hide titles to keep previews compact */
+  }
+  .diy-surface .card .card-body {
+    padding: 0.5rem !important;
+  }
+  .diy-surface .card img {
+    max-height: 120px;
+    object-fit: cover;
+  }
+  /* Hide tag badges on very small screens to reduce vertical height */
+  .diy-surface .d-flex.flex-wrap.gap-1,
+  .diy-surface .card .d-flex.flex-wrap.gap-1 {
+    display: none;
+  }
+  /* Ratio and card-body responsive handled by media.css */
+}
+
+
+.btn-twitch {
+  background: linear-gradient(135deg, var(--twitch-purple, #9146FF) 0%, #772CE8 100%);
+  border: none;
+  color: #fff;
+}
+
+.btn-twitch:hover {
+  background: linear-gradient(135deg, #9146FF 0%, #A970FF 50%, #772CE8 100%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(145, 70, 255, 0.4);
+}
+
+[data-bs-theme="dark"] .btn-twitch:hover {
+  box-shadow: 0 6px 20px rgba(145, 70, 255, 0.6);
+}
+
+.btn-tiktok {
+  background: linear-gradient(135deg, #000000 0%, #25F4EE 50%, #FE2C55 100%);
+  border: none;
+  color: #fff;
+}
+
+.btn-tiktok:hover {
+  background: linear-gradient(135deg, #000000 0%, #25F4EE 40%, #FE2C55 80%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(254, 44, 85, 0.4);
+}
+
+[data-bs-theme="dark"] .btn-tiktok:hover {
+  box-shadow: 0 6px 20px rgba(254, 44, 85, 0.6);
+}
+
+.btn-patreon {
+  background: linear-gradient(135deg, var(--patreon-coral, #FF424D) 0%, #E63B46 100%);
+  border: none;
+  color: #fff;
+}
+
+.btn-patreon:hover {
+  background: linear-gradient(135deg, #FF424D 0%, #FF6B74 50%, #E63B46 100%);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(255, 66, 77, 0.4);
+}
+
+[data-bs-theme="dark"] .btn-patreon:hover {
+  box-shadow: 0 6px 20px rgba(255, 66, 77, 0.6);
+}
+
+/* Ensure rounded pills have correct padding/radius - Theme Adaptive */
+.btn-discord.rounded-pill,
+.btn-instagram.rounded-pill,
+.btn-outline-discord.rounded-pill,
+.btn-outline-instagram.rounded-pill,
+.btn-outline-youtube.rounded-pill,
+.btn-youtube.rounded-pill,
+.btn-twitch.rounded-pill,
+.btn-tiktok.rounded-pill,
+.btn-patreon.rounded-pill {
+  border-radius: 50rem !important;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Dark mode - Deeper shadows for better contrast */
+[data-bs-theme="dark"] .btn-discord.rounded-pill,
+[data-bs-theme="dark"] .btn-instagram.rounded-pill,
+[data-bs-theme="dark"] .btn-youtube.rounded-pill,
+[data-bs-theme="dark"] .btn-twitch.rounded-pill,
+[data-bs-theme="dark"] .btn-tiktok.rounded-pill,
+[data-bs-theme="dark"] .btn-patreon.rounded-pill {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Light mode - Softer shadows */
+[data-bs-theme="light"] .btn-discord.rounded-pill,
+[data-bs-theme="light"] .btn-instagram.rounded-pill,
+[data-bs-theme="light"] .btn-youtube.rounded-pill,
+[data-bs-theme="light"] .btn-twitch.rounded-pill,
+[data-bs-theme="light"] .btn-tiktok.rounded-pill,
+[data-bs-theme="light"] .btn-patreon.rounded-pill {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover state - Adapts to theme */
+.btn-discord.rounded-pill:hover,
+.btn-instagram.rounded-pill:hover,
+.btn-youtube.rounded-pill:hover,
+.btn-twitch.rounded-pill:hover,
+.btn-tiktok.rounded-pill:hover,
+.btn-patreon.rounded-pill:hover {
+  transform: translateY(-2px);
+}
+
+[data-bs-theme="dark"] .btn-discord.rounded-pill:hover,
+[data-bs-theme="dark"] .btn-instagram.rounded-pill:hover,
+[data-bs-theme="dark"] .btn-youtube.rounded-pill:hover,
+[data-bs-theme="dark"] .btn-twitch.rounded-pill:hover,
+[data-bs-theme="dark"] .btn-tiktok.rounded-pill:hover,
+[data-bs-theme="dark"] .btn-patreon.rounded-pill:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+[data-bs-theme="light"] .btn-discord.rounded-pill:hover,
+[data-bs-theme="light"] .btn-instagram.rounded-pill:hover,
+[data-bs-theme="light"] .btn-youtube.rounded-pill:hover,
+[data-bs-theme="light"] .btn-twitch.rounded-pill:hover,
+[data-bs-theme="light"] .btn-tiktok.rounded-pill:hover,
+[data-bs-theme="light"] .btn-patreon.rounded-pill:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Other DIY Styles */
+.diy-section-alt {
+  background: linear-gradient(180deg, var(--background) 0%, rgba(255, 110, 196, 0.05) 50%, var(--background) 100%);
+}
+
+[data-bs-theme="dark"] .diy-section-alt {
+  background: linear-gradient(180deg, var(--background) 0%, rgba(255, 46, 136, 0.1) 50%, var(--background) 100%);
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+.diy-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.diy-loading {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.diy-loading:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid var(--diy-pink);
+  border-color: var(--diy-pink) transparent var(--diy-purple) transparent;
+  animation: diy-loading-spin 1.2s linear infinite;
+}
+
+@keyframes diy-loading-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.diy-video-overlay {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.diy-video-overlay::after {
+  content: '▶';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.4s ease;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.diy-video-overlay:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.diy-heart {
+  color: var(--diy-rose);
+  transition: all 0.3s ease;
+}
+
+.diy-heart:hover {
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 10px var(--diy-rose));
+  animation: heartbeat 1s ease-in-out;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.3); }
+  50% { transform: scale(1.1); }
+  75% { transform: scale(1.3); }
+}
+
+.diy-scissors {
+  transition: all 0.3s ease;
+}
+
+.diy-scissors:hover {
+  transform: rotate(45deg) scale(1.2);
+  color: var(--diy-pink);
+}
+
+.diy-palette {
+  transition: all 0.3s ease;
+}
+
+.diy-palette:hover {
+  transform: rotate(-15deg) scale(1.2);
+  filter: drop-shadow(0 0 15px var(--diy-purple));
+}
+
+.diy-page-transition {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.diy-video-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.diy-video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(255, 46, 136, 0.3);
+}
+
+[data-bs-theme="dark"] .diy-video-card:hover {
+  box-shadow: 0 6px 12px rgba(255, 46, 136, 0.5);
+}
+
+/* Video card image zoom handled by media.css .card:hover img */
+/* Card image and title styles - now handled in media.css */
+/* Theme-specific overrides only (colors, borders) */
+
+.diy-community-card {
+  background: linear-gradient(135deg, rgba(255, 110, 196, 0.1) 0%, rgba(165, 99, 209, 0.1) 100%);
+  border: 2px solid var(--diy-pink);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.4s ease;
+}
+
+[data-bs-theme="dark"] .diy-community-card {
+  background: linear-gradient(135deg, rgba(255, 46, 136, 0.2) 0%, rgba(165, 99, 209, 0.2) 100%);
+  border-color: var(--diy-pink);
+}
+
+.diy-community-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(255, 46, 136, 0.3);
+  border-color: var(--diy-purple);
+}

@@ -1,0 +1,27 @@
+# AI Page Playlists
+# YouTube playlists for AI tools, research, and technical art content
+# Last Updated: November 8, 2025
+
+featured_section:
+  container_id: "ai-playlists"
+  columns: { xs: 1, sm: 2, md: 3, lg: 5 }
+  playlists:
+    - id: "PL9QBjNDhgNwQygOzxOAYImp0L3zC6pBO2"
+      title: "AI Tools + Info"
+      description: "AI tools, tutorials, and information for creators and developers"
+      tags: ["ai", "tools", "productivity", "technical-art", "gamedev"]
+    
+    - id: "PL9QBjNDhgNwTE59SOPeMdfxs29nWwf8C1"
+      title: "AI Research & Technical Art"
+      description: "AI research, technical art workflows, and advanced AI applications in game development"
+      tags: ["ai", "technical-art", "research", "gamedev", "3d-modeling"]
+
+grid_config:
+  columns: { xs: 1, sm: 2, md: 2, lg: 5 }
+  videos_per_playlist: 6
+  show_single_video: false
+  layout: "multi-video"
+  aspect_ratio: "16:9"
+  enable_hover_effects: true
+  lazy_load: true
+  responsive: true

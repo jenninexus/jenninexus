@@ -1,0 +1,1253 @@
+/* ===================================
+   JenniNexus Media & Video Styles
+   ===================================
+   
+   This file consolidates ALL media embed styles for YouTube videos, cards, tags, buttons, 
+   and descriptions across all theme pages (DIY, Game Dev, Gaming, Live, Patreon, Home).
+   
+   USAGE:
+   - All pages using youtube-grid.js should reference this file
+   - Theme-specific CSS files should ONLY override colors/borders, not layout/display
+   - Use utility classes below to include/exclude tags, buttons, descriptions
+   
+   YOUTUBE GRID OPTIONS:
+   ====================
+   
+   Responsive Column Layout (via youtube-grid.js):
+   - 3 columns: col-12 col-sm-6 col-md-4 (Mobile: 1, Small: 2, Medium+: 3)
+   - 4 columns: col-12 col-sm-6 col-md-4 col-lg-3 (Mobile: 1, Small: 2, Medium: 3, Large: 4)
+   - 5 columns: col-12 col-sm-6 col-md-4 col-lg-2-4 (Mobile: 1, Small: 2, Medium: 3, Large: 5)
+   - 6 columns: col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 (Mobile: 1, Small: 2, Medium: 3, Large: 4, XL: 6)
+   
+   Default: 3-6 videos per row (6 only on XL screens ≥1400px)
+   Rows are center-justified vertically and horizontally
+   
+   Card Content Options (use utility classes):
+   - .media-show-tags - Show tag badges (default: hidden)
+   - .media-hide-tags - Hide tag badges
+   - .media-show-buttons - Show action buttons (default: shown)
+   - .media-hide-buttons - Hide action buttons
+   - .media-show-description - Show video description (default: shown)
+   - .media-hide-description - Hide video description
+   
+   Glass Panel Styles:
+   - All video/playlist cards use glass-card pattern from custom.css
+   - Background: var(--glass-panel-bg)
+   - Backdrop filter: blur(var(--glass-panel-blur))
+   - Border: var(--glass-panel-border)
+   =================================== */
+
+/* ===================================
+   Video Thumbnail Hover Effects (optimized to avoid flicker)
+   =================================== */
+.video-thumbnail {
+  /* Only transition what's necessary to reduce layout churn */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, opacity 0.3s ease;
+  will-change: transform, box-shadow, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.video-thumbnail:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px var(--glow-primary);
+}
+
+.video-thumbnail::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  /* Only transition border-color/opacity for cheaper repaints */
+  transition: border-color 0.22s ease, opacity 0.22s ease;
+  pointer-events: none;
+}
+
+.video-thumbnail:hover::after {
+  border-color: rgba(var(--primary-rgb), 0.5);
+}
+
+/* ===================================
+   YouTube & Platform Buttons
+   =================================== */
+.btn-youtube,
+.btn[class*="subscribe"],
+.btn[class*="channel"] {
+  gap: 0.75rem;
+}
+
+.btn-youtube svg,
+.btn[class*="subscribe"] svg,
+.btn[class*="channel"] svg,
+.btn-youtube i,
+.btn[class*="subscribe"] i,
+.btn[class*="channel"] i {
+  width: 1.5em;
+  height: 1.5em;
+  flex-shrink: 0;
+}
+
+.btn-youtube {
+  background: linear-gradient(135deg, var(--youtube-red, #FF0000), #cc0000);
+  color: white;
+  border: none;
+}
+
+.btn-youtube:hover {
+  background: linear-gradient(135deg, #ff1a1a, #e60000);
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+[data-bs-theme="dark"] .btn-youtube:hover {
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+}
+
+.btn-discord {
+  background: linear-gradient(135deg, var(--discord-blurple, #5865F2), #4752C4);
+  color: white;
+  border: none;
+}
+
+.btn-discord:hover {
+  background: linear-gradient(135deg, #6973F4, var(--discord-blurple, #5865F2));
+  color: white;
+  box-shadow: 0 0 20px rgba(88, 101, 242, 0.4);
+  transform: translateY(-2px);
+}
+
+[data-bs-theme="dark"] .btn-discord:hover {
+  box-shadow: 0 0 25px rgba(88, 101, 242, 0.6);
+}
+
+.btn-twitch {
+  background: linear-gradient(135deg, var(--twitch-purple, #9146FF), #772CE8);
+  color: white;
+  border: none;
+}
+
+.btn-twitch:hover {
+  background: linear-gradient(135deg, #A970FF, var(--twitch-purple, #9146FF));
+  color: white;
+  box-shadow: 0 0 20px rgba(145, 70, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+[data-bs-theme="dark"] .btn-twitch:hover {
+  box-shadow: 0 0 25px rgba(145, 70, 255, 0.6);
+}
+
+.btn-patreon {
+  background: linear-gradient(135deg, var(--patreon-coral, #FF424D), #E73843);
+  color: white;
+  border: none;
+}
+
+.btn-patreon:hover {
+  background: linear-gradient(135deg, #FF5A63, var(--patreon-coral, #FF424D));
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 66, 77, 0.4);
+  transform: translateY(-2px);
+}
+
+[data-bs-theme="dark"] .btn-patreon:hover {
+  box-shadow: 0 0 25px rgba(255, 66, 77, 0.6);
+}
+
+.btn-instagram {
+  background: linear-gradient(135deg, #833AB4, #E1306C, #FD1D1D);
+  color: white;
+  border: none;
+}
+
+.btn-instagram:hover {
+  background: linear-gradient(135deg, #9b4ac4, #E1306C, #FD1D1D);
+  color: white;
+  box-shadow: 0 0 20px rgba(228, 64, 95, 0.4);
+  transform: translateY(-2px);
+}
+
+[data-bs-theme="dark"] .btn-instagram:hover {
+  box-shadow: 0 0 25px rgba(228, 64, 95, 0.6);
+}
+
+.btn-steam {
+  background: linear-gradient(135deg, var(--steam-navy, #1b2838), var(--steam-blue, #66c0f4));
+  color: var(--steam-blue, #66c0f4);
+  border: 2px solid var(--steam-blue, #66c0f4);
+}
+
+.btn-steam:hover {
+  background: linear-gradient(135deg, #1b2838, #57a8d9);
+  color: white;
+  box-shadow: 0 0 20px rgba(102, 192, 244, 0.4);
+  transform: translateY(-2px);
+}
+
+[data-bs-theme="dark"] .btn-steam:hover {
+  box-shadow: 0 0 25px rgba(102, 192, 244, 0.6);
+}
+
+/* ===================================
+   Shared Play Overlay
+   =================================== */
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  opacity: 0;
+  /* Only animate opacity (cheaper) and the icon separately */
+  transition: opacity 0.26s ease;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: opacity, transform;
+  transform: translateZ(0);
+}
+
+.play-overlay i {
+  font-size: 4rem;
+  color: white;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+  transition: transform 0.26s ease;
+  will-change: transform;
+}
+
+.ratio:hover .play-overlay,
+.video-thumbnail:hover .play-overlay,
+.card:hover .play-overlay {
+  opacity: 1;
+}
+
+.ratio:hover .play-overlay i,
+.video-thumbnail:hover .play-overlay i,
+.card:hover .play-overlay i {
+  transform: scale(1.08);
+}
+
+/* ===================================
+   YouTube Video Grid System
+   Responsive: 3-6 videos per row (6 only on XL screens ≥1400px)
+   Center-justified vertically and horizontally
+   =================================== */
+
+/* Video Grid Container - Center justified */
+.video-grid-container,
+.playlist-videos-container,
+.video-row-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bootstrap Row - Center justified */
+.video-grid-container .row,
+.playlist-videos-container .row,
+.video-row-container .row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center; /* Center columns horizontally */
+  align-items: stretch; /* Stretch cards vertically for equal height */
+}
+
+/* Video Grid - CSS Grid fallback (if not using Bootstrap) */
+.video-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-items: center; /* Center grid items */
+  align-items: stretch; /* Stretch items vertically */
+}
+
+/* Responsive Column Classes - Applied by youtube-grid.js
+   Default: 3 columns (Mobile: 1, Small: 2, Medium+: 3)
+   Max: 6 columns (Mobile: 1, Small: 2, Medium: 3, Large: 4, XL: 6)
+*/
+.video-col-responsive {
+  /* Default handled by Bootstrap .col-* classes */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure playlist rows stretch so cards expand to fill container */
+#diyPlaylistsContainer .row,
+#diySecondaryContainer .row,
+#diyPlaylistsContainer,
+#diySecondaryContainer,
+#featured-playlists .row,
+#martian_games-playlists .row,
+#learning-playlists .row,
+#purgatoryfell-playlists .row,
+#tankoff-playlists .row,
+#botborgs-playlists .card,
+#gamingPlaylists .row {
+  align-items: stretch;
+  justify-content: center;
+}
+
+#diyPlaylistsContainer .card,
+#diySecondaryContainer .card {
+  height: 100%;
+}
+
+/* ===================================
+   Video & Playlist Card Styling
+   Using glass-card pattern from custom.css
+   =================================== */
+.video-card .card,
+.playlist-card-single .card,
+.playlist-card-multi .card,
+.youtube-card .card,
+.gaming-short-card,
+.gaming-playlist-card,
+.diy-video-card,
+.project-card {
+  /* Glass panel styling - uses mixins.css pattern */
+  background: var(--glass-panel-bg) !important;
+  -webkit-backdrop-filter: blur(var(--glass-panel-blur));
+  backdrop-filter: blur(var(--glass-panel-blur));
+  border: 1px solid var(--glass-panel-border) !important;
+  box-shadow: 0 8px 32px 0 var(--glass-panel-shadow);
+  /* Transition only transform/box-shadow/border-color to avoid expensive repaints */
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.22s ease;
+  will-change: transform, box-shadow, border-color;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  /* Ensure proper aspect ratio - prevent skinny columns */
+  min-height: 0;
+  max-height: none; /* Let aspect ratio control height */
+  /* Center content */
+  display: flex;
+  flex-direction: column;
+}
+
+.video-card:hover .card,
+.playlist-card-single:hover .card,
+.youtube-card:hover .card,
+.gaming-short-card:hover,
+.gaming-playlist-card:hover,
+.diy-video-card:hover,
+.project-card:hover {
+  box-shadow: 0 12px 40px var(--glow-primary, rgba(255, 46, 136, 0.3));
+  border-color: var(--jenni-primary, #FF2E88) !important;
+  transform: translateY(-8px) scale(1.02);
+}
+
+[data-bs-theme="dark"] .video-card:hover .card,
+[data-bs-theme="dark"] .playlist-card-single:hover .card,
+[data-bs-theme="dark"] .youtube-card:hover .card,
+[data-bs-theme="dark"] .gaming-short-card:hover,
+[data-bs-theme="dark"] .gaming-playlist-card:hover,
+[data-bs-theme="dark"] .diy-video-card:hover,
+[data-bs-theme="dark"] .project-card:hover {
+  box-shadow: 0 12px 40px rgba(255, 46, 136, 0.5);
+}
+
+/* Single-Card Layout */
+.playlist-card-single {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  position: relative;
+}
+
+.playlist-card-single .card {
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+.playlist-card-single .card-body {
+  padding: 1.75rem;
+}
+
+.playlist-card-single .card-title {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.playlist-card-single:hover {
+  transform: translateY(-8px);
+  z-index: 10;
+}
+
+/* Playlist Icon Control */
+.playlist-icon-control {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 18px;
+  background: rgba(var(--primary-rgb), 0.08);
+  border: 1px solid rgba(var(--primary-rgb), 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 20px rgba(var(--primary-rgb), 0.05);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.playlist-icon-control i, 
+.playlist-icon-control svg {
+  font-size: 2.75rem !important;
+  width: 2.75rem !important;
+  height: 2.75rem !important;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+@media (max-width: 575.98px) {
+  .playlist-icon-control {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .playlist-icon-control i,
+  .playlist-icon-control svg {
+    font-size: 2rem !important;
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+}
+
+.playlist-card-single:hover .playlist-icon-control {
+  background: rgba(var(--primary-rgb), 0.15);
+  transform: scale(1.1) rotate(-8deg);
+  border-color: rgba(var(--primary-rgb), 0.4);
+  box-shadow: 0 8px 25px rgba(var(--primary-rgb), 0.2);
+}
+
+.playlist-card-single:hover .playlist-icon-control i {
+  transform: scale(1.1);
+  color: var(--jenni-primary) !important;
+}
+
+/* Playlist Button Styling */
+.playlist-card-single .btn {
+  border-radius: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.playlist-card-single .btn-outline-danger {
+  border-width: 2px;
+  border-color: rgba(220, 53, 69, 0.4);
+}
+
+.playlist-card-single .btn-outline-danger:hover {
+  background: #dc3545;
+  border-color: #dc3545;
+  box-shadow: 0 8px 20px rgba(220, 53, 69, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Multi-Video Layout */
+.playlist-card-multi {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  will-change: transform, box-shadow, border-color;
+  transform: translateZ(0) !important;
+  width: 100%;
+}
+
+/* Minimal card height for multi-card layouts */
+.playlist-card-multi .card-body {
+  padding: 0.75rem;
+}
+
+.playlist-card-multi .card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.3;
+}
+
+.playlist-card-multi .card {
+  margin-bottom: 0.75rem;
+}
+
+/* Reduce card footer padding */
+.playlist-card-multi .card-footer {
+  padding: 0.5rem 0.75rem;
+}
+
+/* Remove extra spacing from card elements */
+.playlist-card-multi .card .d-flex.gap-2 {
+  gap: 0.25rem !important;
+  margin-bottom: 0 !important;
+}
+
+/* Ensure playlist cards don't have excessive white space */
+.playlist-card-multi .mb-4 {
+  margin-bottom: 0.75rem !important;
+}
+
+/* Hide descriptions and badges in multi-card layouts to keep cards minimal */
+.playlist-card-multi .small.text-muted,
+.playlist-card-multi .card-text,
+.playlist-card-multi .badge:not(.badge.bg-warning):not(.badge.bg-primary),
+.playlist-card-multi .tag-badge {
+  display: none !important;
+}
+
+.playlist-card-multi .ratio {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.playlist-card-multi .ratio:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+[data-bs-theme="light"] .playlist-card-multi .ratio:hover {
+  box-shadow: 0 8px 20px rgba(165, 99, 209, 0.3);
+}
+
+.playlist-title-link {
+  transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--bs-body-color);
+}
+
+.playlist-title-link:hover {
+  color: var(--bs-primary) !important;
+  text-decoration: none;
+}
+
+/* ===================================
+   Card Content Visibility Utilities
+   Control tags, buttons, descriptions
+   =================================== */
+
+/* Tags - Hidden by default, show with .media-show-tags */
+.video-card .tag-badge,
+.playlist-card-single .tag-badge,
+.playlist-card-multi .tag-badge,
+.card .tag-badge {
+  display: none;
+}
+
+.media-show-tags .tag-badge,
+.media-show-tags .badge,
+.video-card.media-show-tags .tag-badge,
+.playlist-card-single.media-show-tags .tag-badge,
+.playlist-card-multi.media-show-tags .tag-badge {
+  display: inline-block;
+}
+
+.media-hide-tags .tag-badge,
+.media-hide-tags .badge,
+.video-card.media-hide-tags .tag-badge,
+.playlist-card-single.media-hide-tags .tag-badge,
+.playlist-card-multi.media-hide-tags .tag-badge {
+  display: none !important;
+}
+
+/* Buttons - Shown by default, hide with .media-hide-buttons */
+.video-card .btn,
+.playlist-card-single .btn,
+.playlist-card-multi .btn,
+.card .btn {
+  display: inline-flex;
+}
+
+.media-hide-buttons .btn,
+.video-card.media-hide-buttons .btn,
+.playlist-card-single.media-hide-buttons .btn,
+.playlist-card-multi.media-hide-buttons .btn {
+  display: none !important;
+}
+
+.media-show-buttons .btn,
+.video-card.media-show-buttons .btn,
+.playlist-card-single.media-show-buttons .btn,
+.playlist-card-multi.media-show-buttons .btn {
+  display: inline-flex !important;
+}
+
+/* Descriptions - Shown by default, hide with .media-hide-description */
+.video-card .card-text,
+.playlist-card-single .card-text,
+.playlist-card-multi .card-text,
+.card .card-text {
+  display: block;
+}
+
+.media-hide-description .card-text,
+.video-card.media-hide-description .card-text,
+.playlist-card-single.media-hide-description .card-text,
+.playlist-card-multi.media-hide-description .card-text {
+  display: none !important;
+}
+
+.media-show-description .card-text,
+.video-card.media-show-description .card-text,
+.playlist-card-single.media-show-description .card-text,
+.playlist-card-multi.media-show-description .card-text {
+  display: block !important;
+}
+
+/* ===================================
+   Universal Card Image & Body Styling
+   =================================== */
+/* Universal card image zoom effect */
+.card-img-top,
+.card img,
+.video-card img,
+.playlist-card-single img,
+.playlist-card-multi img,
+.youtube-card img,
+.gaming-short-card img,
+.gaming-playlist-card img,
+.diy-video-card img,
+.project-card img {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover .card-img-top,
+.card:hover img,
+.video-card:hover img,
+.playlist-card-single:hover img,
+.playlist-card-multi:hover img,
+.youtube-card:hover img,
+.gaming-short-card:hover img,
+.gaming-playlist-card:hover img,
+.diy-video-card:hover img,
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Universal card body styling - ensures readable text */
+.video-card .card-body,
+.playlist-card-single .card-body,
+.playlist-card-multi .card-body,
+.card .card-body,
+.youtube-card .card-body,
+.gaming-short-card .card-body,
+.gaming-playlist-card .card-body,
+.diy-video-card .card-body,
+.project-card .card-body {
+  color: var(--bs-body-color);
+  padding: 1.75rem;
+}
+
+/* Ensure card titles are readable */
+.video-card .card-title,
+.playlist-card-single .card-title,
+.playlist-card-multi .card-title,
+.card .card-title,
+.youtube-card .card-title,
+.gaming-short-card .card-title,
+.gaming-playlist-card .card-title,
+.diy-video-card .card-title,
+.project-card .card-title {
+  color: var(--bs-body-color);
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+/* Card text/description readability */
+.video-card .card-text,
+.playlist-card-single .card-text,
+.playlist-card-multi .card-text,
+.card .card-text,
+.youtube-card .card-text,
+.gaming-short-card .card-text,
+.gaming-playlist-card .card-text,
+.diy-video-card .card-text,
+.project-card .card-text {
+  color: var(--bs-body-color);
+  opacity: 0.85;
+}
+
+/* Card title truncation for multi-line */
+.video-card .card-title,
+.gaming-short-card .card-title,
+.diy-video-card .card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 2.5em;
+}
+
+/* ===================================
+   Contrast Safety Rules
+   Prevent white-on-white or low-contrast text
+   =================================== */
+/* Ensure cards with glass backgrounds have readable text */
+.video-card,
+.playlist-card-single,
+.playlist-card-multi,
+.card,
+.youtube-card,
+.gaming-short-card,
+.gaming-playlist-card,
+.diy-video-card,
+.project-card {
+  color: var(--bs-body-color);
+}
+
+/* Light theme: Ensure dark text on light backgrounds */
+:root[data-bs-theme="light"] .video-card,
+:root[data-bs-theme="light"] .playlist-card-single,
+:root[data-bs-theme="light"] .playlist-card-multi,
+:root[data-bs-theme="light"] .card,
+:root[data-bs-theme="light"] .youtube-card,
+:root[data-bs-theme="light"] .gaming-short-card,
+:root[data-bs-theme="light"] .gaming-playlist-card,
+:root[data-bs-theme="light"] .diy-video-card,
+:root[data-bs-theme="light"] .project-card {
+  color: var(--bs-body-color, #212529);
+}
+
+:root[data-bs-theme="light"] .video-card .card-title,
+:root[data-bs-theme="light"] .playlist-card-single .card-title,
+:root[data-bs-theme="light"] .playlist-card-multi .card-title,
+:root[data-bs-theme="light"] .card .card-title,
+:root[data-bs-theme="light"] .youtube-card .card-title,
+:root[data-bs-theme="light"] .gaming-short-card .card-title,
+:root[data-bs-theme="light"] .gaming-playlist-card .card-title,
+:root[data-bs-theme="light"] .diy-video-card .card-title,
+:root[data-bs-theme="light"] .project-card .card-title {
+  color: var(--bs-body-color, #212529);
+}
+
+/* Dark theme: Ensure light text on dark backgrounds */
+:root[data-bs-theme="dark"] .video-card,
+:root[data-bs-theme="dark"] .playlist-card-single,
+:root[data-bs-theme="dark"] .playlist-card-multi,
+:root[data-bs-theme="dark"] .card,
+:root[data-bs-theme="dark"] .youtube-card,
+:root[data-bs-theme="dark"] .gaming-short-card,
+:root[data-bs-theme="dark"] .gaming-playlist-card,
+:root[data-bs-theme="dark"] .diy-video-card,
+:root[data-bs-theme="dark"] .project-card {
+  color: var(--bs-body-color, #f8f9fa);
+}
+
+:root[data-bs-theme="dark"] .video-card .card-title,
+:root[data-bs-theme="dark"] .playlist-card-single .card-title,
+:root[data-bs-theme="dark"] .playlist-card-multi .card-title,
+:root[data-bs-theme="dark"] .card .card-title,
+:root[data-bs-theme="dark"] .youtube-card .card-title,
+:root[data-bs-theme="dark"] .gaming-short-card .card-title,
+:root[data-bs-theme="dark"] .gaming-playlist-card .card-title,
+:root[data-bs-theme="dark"] .diy-video-card .card-title,
+:root[data-bs-theme="dark"] .project-card .card-title {
+  color: var(--bs-body-color, #f8f9fa);
+}
+
+/* Badge contrast safety - prevent white-on-white */
+.badge,
+.glass-badge,
+.tag-badge {
+  color: var(--bs-body-color);
+}
+
+/* Light theme badges on light backgrounds */
+:root[data-bs-theme="light"] .badge,
+:root[data-bs-theme="light"] .glass-badge,
+:root[data-bs-theme="light"] .tag-badge {
+  color: var(--bs-body-color, #212529);
+}
+
+/* Dark theme badges on dark backgrounds */
+:root[data-bs-theme="dark"] .badge,
+:root[data-bs-theme="dark"] .glass-badge,
+:root[data-bs-theme="dark"] .tag-badge {
+  color: var(--bs-body-color, #f8f9fa);
+}
+
+/* Hero section badges - white text on gradient backgrounds */
+.hero-section .badge,
+.hero-section .glass-badge,
+.hero-section .tag-badge,
+.bg-gradient .badge,
+.bg-gradient .glass-badge,
+.bg-gradient .tag-badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Light theme hero badges - dark text for contrast */
+:root[data-bs-theme="light"] .hero-section .badge,
+:root[data-bs-theme="light"] .hero-section .glass-badge,
+:root[data-bs-theme="light"] .hero-section .tag-badge,
+:root[data-bs-theme="light"] .bg-gradient .badge,
+:root[data-bs-theme="light"] .bg-gradient .glass-badge,
+:root[data-bs-theme="light"] .bg-gradient .tag-badge {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--bs-body-color, #212529);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ===================================
+   Universal Ratio/Aspect Ratio Styling
+   =================================== */
+/* Bootstrap ratio containers - universal styling */
+.ratio {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.375rem 0.375rem 0 0;
+  /* Ensure aspect ratio is maintained - prevent skinny columns */
+  min-height: 0;
+  max-width: 100%;
+}
+
+/* Additional Aspect Ratios */
+.ratio-9x16 {
+  aspect-ratio: 9/16;
+}
+
+.ratio-16x9 {
+  aspect-ratio: 16/9;
+}
+
+.ratio-4x3 {
+  aspect-ratio: 4/3;
+}
+
+.ratio-1x1 {
+  aspect-ratio: 1/1;
+}
+
+.ratio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Prevent images from breaking aspect ratio */
+  min-height: 0;
+}
+
+/* Ensure video thumbnails maintain proper aspect ratio and prevent skinny columns */
+.video-card .ratio,
+.playlist-card-single .ratio,
+.playlist-card-multi .ratio,
+.youtube-card .ratio,
+.gaming-short-card .ratio,
+.gaming-playlist-card .ratio,
+.diy-video-card .ratio,
+.project-card .ratio {
+  /* Bootstrap ratio classes handle aspect ratio via padding-top */
+  /* Ensure minimum height for readability - prevents extremely skinny videos */
+  min-height: 140px; /* Mobile: prevents skinny columns */
+  /* Max height prevents overly tall videos when columns are narrow */
+  max-height: 400px; /* Mobile: prevents overly tall videos */
+  /* Ensure aspect ratio is maintained */
+  aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 576px) {
+  .video-card .ratio,
+  .playlist-card-single .ratio,
+  .playlist-card-multi .ratio,
+  .youtube-card .ratio,
+  .gaming-short-card .ratio,
+  .gaming-playlist-card .ratio,
+  .diy-video-card .ratio,
+  .project-card .ratio {
+    min-height: 180px; /* Tablet: slightly taller */
+    max-height: 450px; /* Tablet: slightly taller max */
+  }
+}
+
+@media (min-width: 768px) {
+  .video-card .ratio,
+  .playlist-card-single .ratio,
+  .playlist-card-multi .ratio,
+  .youtube-card .ratio,
+  .gaming-short-card .ratio,
+  .gaming-playlist-card .ratio,
+  .diy-video-card .ratio,
+  .project-card .ratio {
+    min-height: 200px; /* Desktop: standard height */
+    max-height: 500px; /* Desktop: standard max height */
+  }
+}
+
+@media (min-width: 992px) {
+  .video-card .ratio,
+  .playlist-card-single .ratio,
+  .playlist-card-multi .ratio,
+  .youtube-card .ratio,
+  .gaming-short-card .ratio,
+  .gaming-playlist-card .ratio,
+  .diy-video-card .ratio,
+  .project-card .ratio {
+    max-height: 600px; /* Large desktop: taller max */
+  }
+}
+
+/* Responsive ratio adjustments */
+@media (max-width: 575.98px) {
+  .playlist-card-single .ratio,
+  .playlist-card-multi .ratio {
+    min-height: 140px !important;
+  }
+  
+  .playlist-card-single .card-body,
+  .playlist-card-multi .card-body {
+    padding: 1rem !important;
+  }
+}
+
+/* ===================================
+   Video Card Hover Effects
+   =================================== */
+.ratio::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 46, 136, 0.3), rgba(165, 99, 209, 0.3));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none; /* Don't interfere with clicks */
+  z-index: 1; /* Above image, below play overlay */
+}
+
+.video-card:hover .ratio::after,
+.playlist-card-single:hover .ratio::after,
+.playlist-card-multi:hover .ratio::after {
+  opacity: 1;
+}
+
+.video-card::before {
+  content: '▶';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 10;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.video-card:hover::before {
+  opacity: 0.9;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* ===================================
+   Gallery & Carousel
+   =================================== */
+.gallery-image,
+.carousel-item img,
+img.gallery-image,
+.card img.gallery-image {
+  height: clamp(180px, 40vw, 300px);
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.carousel-item img {
+  object-fit: contain;
+  max-height: clamp(300px, 50vw, 600px);
+  width: 100%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: clamp(40px, 10%, 60px) !important;
+  opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: clamp(1.5rem, 5vw, 3rem);
+  height: clamp(1.5rem, 5vw, 3rem);
+  filter: brightness(1.5) drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+  transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  filter: brightness(2) drop-shadow(0 0 12px rgba(255, 255, 255, 0.8));
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    background: rgba(0, 0, 0, 0.7) !important;
+  }
+}
+
+/* ===================================
+   Steam Widget
+   =================================== */
+.steam-iframe-wrapper {
+  min-height: 190px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.steam-iframe-wrapper iframe {
+  max-width: 100%;
+  height: 190px;
+}
+
+/* ===================================
+   Video Embed Responsive Improvements
+   =================================== */
+iframe[src*="youtube"],
+iframe[src*="steam"] {
+  max-width: 100%;
+}
+
+/* Playlist Grid Container */
+.video-grid-container,
+.playlist-videos-container {
+  min-height: 100px;
+}
+
+/* ===================================
+   Playlist Embed Card (YouTube iframe in card)
+   =================================== */
+.playlist-embed {
+  width: 100%;
+  max-width: 100%;
+}
+
+.playlist-embed .card { 
+  background: linear-gradient(135deg, #2f0d4a 0%, #5b2f9a 100%);
+  border: 1px solid rgba(0,0,0,0.08);
+  color: #fff;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.playlist-embed .ratio { 
+  background: #000; 
+  overflow: hidden; 
+  border-radius: 0.75rem 0.75rem 0 0; 
+  min-height: 220px;
+  width: 100%;
+  position: relative;
+}
+
+.playlist-embed iframe { 
+  width: 100%; 
+  height: 100%; 
+  border: 0; 
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.playlist-embed .card-body { 
+  padding-top: 1rem; 
+  padding-bottom: 0.75rem; 
+}
+
+.playlist-embed .card-title { 
+  color: #fff; 
+  font-weight: 800; 
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.playlist-embed .card-title i {
+  font-size: 1.5rem !important;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  flex-shrink: 0;
+}
+
+.playlist-embed .card-footer { 
+  padding-top: 0.75rem; 
+  padding-bottom: 0.75rem; 
+}
+
+/* Primary YouTube CTA styling for embed cards */
+.playlist-embed .btn-youtube {
+  background: linear-gradient(135deg, #ff3b3b 0%, #cc0000 100%);
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 6px 18px rgba(204,0,0,0.18);
+}
+
+.playlist-embed .btn-youtube:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(255,59,59,0.22);
+}
+
+/* Responsive height adjustments */
+@media (max-width: 991.98px) { 
+  .playlist-embed .ratio { min-height: 200px; } 
+}
+
+@media (max-width: 575.98px) { 
+  .playlist-embed .ratio { min-height: 150px; } 
+  .playlist-embed .card-title { font-size: 0.95rem; }
+  .playlist-embed .card-title i {
+    font-size: 1.25rem !important;
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+  }
+}
+
+/* ===================================
+   Media UI Effects & Mixins
+   =================================== */
+/* Uses standard --glass-panel-* variables from all-themes.css for consistency */
+.media-glass-panel {
+  background: var(--glass-panel-bg) !important;
+  backdrop-filter: blur(var(--glass-panel-blur));
+  -webkit-backdrop-filter: blur(var(--glass-panel-blur));
+  border: 1px solid var(--glass-panel-border) !important;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px 0 var(--glass-panel-shadow);
+  transition: all 0.3s ease;
+}
+
+.media-glass-panel:hover {
+  border-color: rgba(var(--primary-rgb), 0.4) !important;
+  box-shadow: 0 12px 40px 0 var(--glass-panel-shadow), 0 0 20px var(--glow-primary, rgba(255, 46, 136, 0.1));
+}
+
+/* Image Hover Zoom Mixin */
+.img-hover-zoom {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.img-hover-zoom img {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.1);
+}
+
+/* Media Badge Mixin */
+.media-badge {
+  background: rgba(var(--primary-rgb, 255, 46, 136), 0.15);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(var(--primary-rgb, 255, 46, 136), 0.3);
+  color: var(--text, #fff);
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ===================================
+   Universal Container Targeting
+   Works with youtube-grid.js across all pages
+   =================================== */
+/* Game Dev containers */
+#featured-playlists .card,
+#martian_games-playlists .card,
+#learning-playlists .card,
+#purgatoryfell-playlists .card,
+#tankoff-playlists .card,
+#botborgs-playlists .card {
+  /* Base styles handled by .video-card, .playlist-card-single above */
+  /* Theme files should only override colors/borders */
+}
+
+/* DIY containers */
+#diyPlaylistsContainer .card,
+#diySecondaryContainer .card {
+  /* Base styles handled by .video-card, .playlist-card-multi above */
+  /* Theme files should only override colors/borders */
+}
+
+/* Gaming containers */
+#gamingPlaylists .card,
+#featured-playlists .card {
+  /* Base styles handled by .video-card, .playlist-card-single above */
+  /* Theme files should only override colors/borders */
+}
+
+/* YouTube card placeholder text overlap fix */
+.youtube-card .card-body {
+  position: relative;
+  z-index: 2;
+}
+
+.youtube-card .placeholder-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure only one text overlay on placeholders */
+.youtube-card .ratio:has(img[src*="placeholder"]) .overlay-text:not(:first-child) {
+  display: none;
+}
+
+/* ===================================
+   Responsive Mobile Adjustments
+   =================================== */
+@media (max-width: 575.98px) {
+  /* Hide titles/tags on very small screens for compact display */
+  .diy-surface .card .card-title,
+  .diy-surface .card .card-text,
+  #diy-latest-videos .card-title {
+    display: none;
+  }
+  
+  .diy-surface .card .card-body {
+    padding: 0.5rem !important;
+  }
+  
+  .diy-surface .card img {
+    max-height: 120px;
+    object-fit: cover;
+  }
+  
+  /* Hide tag badges on very small screens to reduce vertical height */
+  .diy-surface .d-flex.flex-wrap.gap-1,
+  .diy-surface .card .d-flex.flex-wrap.gap-1 {
+    display: none;
+  }
+}

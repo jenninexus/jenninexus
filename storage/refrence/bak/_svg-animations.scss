@@ -1,0 +1,241 @@
+/// ============================================================================
+/// SVG ANIMATION UTILITIES
+/// FontAwesome 6.7.2 Inspired - Adapted for MG Custom SVG System
+/// ============================================================================
+///
+/// PURPOSE: Provides animation classes for MG's 8 whitelisted SVG icons
+/// (light.svg, dark.svg, discord.svg, facebook.svg, x-twitter.svg, 
+///  steam.svg, youtube.svg, chevron-up.svg)
+///
+/// ANIMATIONS PROVIDED:
+/// 1. .svg-spin - Continuous 360° rotation (2s linear)
+/// 2. .svg-pulse - Stepped rotation for loading states (1s, 8 steps)
+/// 3. .svg-beat - Heartbeat scale effect (1s ease-in-out)
+/// 4. .svg-fade - Opacity fade animation (1s cubic-bezier)
+/// 5. .svg-bounce - Vertical bounce effect (1s cubic-bezier)
+/// 6. .svg-shake - Horizontal shake for errors (1s linear)
+///
+/// ROTATION UTILITIES:
+/// 7. .svg-rotate-90 - Rotate 90° clockwise
+/// 8. .svg-rotate-180 - Rotate 180°
+/// 9. .svg-rotate-270 - Rotate 270° clockwise
+///
+/// FLIP UTILITIES:
+/// 10. .svg-flip-h - Horizontal flip (scale -1, 1)
+/// 11. .svg-flip-v - Vertical flip (scale 1, -1)
+/// 12. .svg-flip-both - Horizontal + vertical flip
+///
+/// ACCESSIBILITY:
+/// All animations respect prefers-reduced-motion media query
+///
+/// USAGE EXAMPLES:
+/// ```html
+/// <!-- Loading spinner -->
+/// <svg class="svg-spin" width="24" height="24">...</svg>
+///
+/// <!-- Notification icon -->
+/// <svg class="svg-beat" width="20" height="20">...</svg>
+///
+/// <!-- Error shake -->
+/// <svg class="svg-shake" width="24" height="24">...</svg>
+///
+/// <!-- Rotated chevron -->
+/// <svg class="svg-rotate-180" width="16" height="16">...</svg>
+/// ```
+///
+/// PURGECSS SAFETY:
+/// All classes use .svg-* prefix and will be kept if used in HTML
+/// Demo usage in theme-demo.php ensures classes are preserved in dev builds
+///
+/// DEPENDENCIES:
+/// - None (standalone utility file)
+/// - Imported by: customMG.scss
+/// ============================================================================
+
+// ============================================================================
+// ANIMATION CLASSES
+// ============================================================================
+
+/// Continuous spin animation (loading states)
+.svg-spin {
+    animation: svg-spin 2s linear infinite;
+    transform-origin: center;
+}
+
+/// Stepped pulse animation (discrete loading states)
+.svg-pulse {
+    animation: svg-spin 1s steps(8) infinite;
+    transform-origin: center;
+}
+
+/// Heartbeat scale animation (notifications, alerts)
+.svg-beat {
+    animation: svg-beat 1s ease-in-out infinite;
+    transform-origin: center;
+}
+
+/// Fade opacity animation (transitions, soft effects)
+.svg-fade {
+    animation: svg-fade 1s cubic-bezier(.4, 0, .6, 1) infinite;
+}
+
+/// Bounce animation (playful interactions)
+.svg-bounce {
+    animation: svg-bounce 1s cubic-bezier(0.280, 0.840, 0.420, 1) infinite;
+}
+
+/// Shake animation (errors, validation failures)
+.svg-shake {
+    animation: svg-shake 1s linear infinite;
+}
+
+// ============================================================================
+// ROTATION UTILITIES
+// ============================================================================
+
+/// Rotate 90 degrees clockwise
+.svg-rotate-90 {
+    transform: rotate(90deg);
+}
+
+/// Rotate 180 degrees
+.svg-rotate-180 {
+    transform: rotate(180deg);
+}
+
+/// Rotate 270 degrees clockwise (90° counter-clockwise)
+.svg-rotate-270 {
+    transform: rotate(270deg);
+}
+
+// ============================================================================
+// FLIP UTILITIES
+// ============================================================================
+
+/// Flip horizontally (mirror on Y axis)
+.svg-flip-h {
+    transform: scale(-1, 1);
+}
+
+/// Flip vertically (mirror on X axis)
+.svg-flip-v {
+    transform: scale(1, -1);
+}
+
+/// Flip both horizontally and vertically (180° rotation equivalent)
+.svg-flip-both,
+.svg-flip-h.svg-flip-v {
+    transform: scale(-1, -1);
+}
+
+// ============================================================================
+// ACCESSIBILITY: REDUCED MOTION
+// ============================================================================
+
+/// Disable all animations for users who prefer reduced motion
+/// See: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion
+@media (prefers-reduced-motion: reduce) {
+
+    .svg-spin,
+    .svg-pulse,
+    .svg-beat,
+    .svg-fade,
+    .svg-bounce,
+    .svg-shake {
+        animation-delay: -1ms;
+        animation-duration: 1ms;
+        animation-iteration-count: 1;
+        transition-delay: 0s;
+        transition-duration: 0s;
+    }
+}
+
+// ============================================================================
+// KEYFRAME DEFINITIONS
+// ============================================================================
+
+/// 360° rotation for spin/pulse effects
+@keyframes svg-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/// Heartbeat scale effect
+@keyframes svg-beat {
+
+    0%,
+    90% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.15);
+    }
+}
+
+/// Opacity fade effect
+@keyframes svg-fade {
+    50% {
+        opacity: 0.4;
+    }
+}
+
+/// Vertical bounce effect
+@keyframes svg-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-0.5em);
+    }
+}
+
+/// Horizontal shake effect (decreasing intensity)
+@keyframes svg-shake {
+    0% {
+        transform: rotate(-15deg);
+    }
+
+    4% {
+        transform: rotate(15deg);
+    }
+
+    8%,
+    24% {
+        transform: rotate(-18deg);
+    }
+
+    12%,
+    28% {
+        transform: rotate(18deg);
+    }
+
+    16% {
+        transform: rotate(-22deg);
+    }
+
+    20% {
+        transform: rotate(22deg);
+    }
+
+    32% {
+        transform: rotate(-12deg);
+    }
+
+    36% {
+        transform: rotate(12deg);
+    }
+
+    40%,
+    100% {
+        transform: rotate(0deg);
+    }
+}

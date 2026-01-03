@@ -1,0 +1,164 @@
+{
+  "_comment": "JenniNexus Social Media Statistics - Last Updated: October 2025 (rounded to nearest 25, 50, 75, or 100 down)",
+  "_purpose": "This file stores accurate social media follower counts for use across the site, specifically for the /links page stats display and any other pages referencing our actual social media metrics. Update this file when stats change to maintain accuracy sitewide.",
+  "_usage": "Reference this JSON for displaying subscriber/follower counts in profile sections, social panels, and analytics dashboards.",
+
+  "youtube": {
+    "total_subscribers": 11000,
+    "channels": {
+      "jenninexus": {
+        "channel_id": "UCu1S6_Gza2Y06pT1n5U_L4Q",
+        "url": "https://www.youtube.com/@jenninexus",
+        "subscribers": 4950,
+        "description": "Devlogs, Tech, AI & Various",
+        "button_text": "Subscribe"
+      },
+      "diywjenni": {
+        "channel_id": "UCk2SWSg1fvdZGnrN0XAt6NQ",
+        "url": "https://www.youtube.com/@diywjenni",
+        "subscribers": 5700,
+        "description": "DIY Fashion, Hair, Nail Art & Self Care",
+        "button_text": "Subscribe"
+      },
+      "jenniplaysgames": {
+        "channel_id": "UC4byqahPWuY9WPJNvDgbQMQ",
+        "url": "https://www.youtube.com/@jenniplaysgames",
+        "subscribers": 350,
+        "description": "Gaming, tutorials & creative content",
+        "button_text": "Subscribe"
+      }
+    }
+  },
+
+  "twitch": {
+    "followers": 3900,
+    "url": "https://twitch.tv/jenninexus",
+    "description": "Live streaming & community",
+    "buttons": {
+      "follow": {
+        "text": "Follow",
+        "action": "follow"
+      },
+      "subscribe": {
+        "text": "Subscribe",
+        "action": "subscribe"
+      }
+    }
+  },
+
+  "discord": {
+    "members": 300,
+    "url": "https://discord.gg/jenninexus",
+    "description": "Join the Discord community to chat about Game Dev, share gameplay or art tools etc",
+    "button_text": "Join Discord"
+  },
+
+  "tiktok": {
+    "total_followers": 1100,
+    "accounts": {
+      "jenninexus": {
+        "url": "https://www.tiktok.com/@jenninexus",
+        "followers": 850,
+        "description": "Short videos & behind-the-scenes",
+        "button_text": "Follow"
+      },
+      "diywjenni": {
+        "url": "https://www.tiktok.com/@diywjenni",
+        "followers": 250,
+        "description": "DIY Fashion, Hair & Nail Art vids",
+        "button_text": "Follow"
+      }
+    }
+  },
+
+  "instagram": {
+    "total_followers": 3000,
+    "accounts": {
+      "jenninexus": {
+        "url": "https://www.instagram.com/jenninexus/",
+        "followers": 2750,
+        "bio": "💻👩‍🎤 3d Artist, Game Dev, New Tech, AI, EDM + random📸",
+        "button_text": "Follow"
+      },
+      "diywjenni": {
+        "url": "https://www.instagram.com/diywjenni",
+        "followers": 275,
+        "bio": "DIY t-shirt cutting, fashion, beauty & self-care ideas 📺 Youtube 📌 Pinterest 📡 Twitch 🖤👾💙👽💛🧡💖🍬",
+        "button_text": "Follow"
+      }
+    }
+  },
+
+  "spotify": {
+    "url": "https://open.spotify.com/user/1230189762",
+    "description": "JenniNexus Spotify profile",
+    "button_text": "Listen",
+    "followers": null
+  },
+
+  "github": {
+    "url": "https://github.com/jenninexus/",
+    "description": "Code & open source projects",
+    "buttons": {
+      "follow": {
+        "text": "Follow",
+        "action": "follow",
+        "url": "https://github.com/jenninexus/"
+      },
+      "sponsor": {
+        "text": "Sponsor",
+        "action": "sponsor",
+        "url": "https://github.com/sponsors/jenninexus"
+      }
+    }
+  },
+
+  "facebook": {
+    "total_followers": 6750,
+    "accounts": {
+      "profile": {
+        "url": "https://www.facebook.com/JenniNexus/",
+        "followers": 5000,
+        "description": "Main JenniNexus profile with general updates and content",
+        "button_text": "Follow"
+      },
+      "mostlyjenninexus": {
+        "url": "https://www.facebook.com/MostlyJenniNexus/",
+        "followers": 1800,
+        "description": "Mostly JenniNexus Facebook page for content and community",
+        "button_text": "Follow Page"
+      }
+    }
+  },
+
+  "twitter": {
+    "followers": 3400,
+    "url": "https://x.com/JenniNexus",
+    "description": "Updates, thoughts, and creative content",
+    "button_text": "Follow on X"
+  },
+
+  "gamejolt": {
+    "url": "https://gamejolt.com/@JenniNexus",
+    "description": "Game development portfolio and community",
+    "button_text": "View Profile"
+  },
+
+  "itch": {
+    "url": "https://jenninexus.itch.io/",
+    "description": "Indie games and game jam projects",
+    "button_text": "View Games"
+  },
+
+  "sora": {
+    "url": "https://sora.chatgpt.com/profile/jennix",
+    "description": "AI-generated video content and experiments",
+    "button_text": "View Profile"
+  },
+
+  "patreon": {
+    "url": "https://patreon.com/jenninexus",
+    "description": "Support exclusive content",
+    "button_text": "Support on Patreon"
+  }
+}

@@ -1,0 +1,253 @@
+/**
+ * Pastel Background Options - JenniNexus Light Mode Palettes
+ * 
+ * PURPOSE: Provide soft, colorful alternatives to white backgrounds
+ * USAGE: Add .bg-pastel-* classes to sections for themed backgrounds
+ * 
+ * Architecture Notes:
+ * - NO pure white (#FFFFFF) backgrounds allowed
+ * - All colors have sufficient contrast for text (WCAG AA)
+ * - Dark mode variants provided for each pastel
+ * - Glass effect compatible (works with backdrop-filter)
+ * 
+ * Last Updated: January 1, 2026
+ */
+
+/* ===================================
+   PASTEL BACKGROUND UTILITIES
+   =================================== */
+
+/* Default Section Background - Soft Lavender */
+.section-pastel,
+.bg-pastel {
+  background: var(--section-bg, #F9F3FB);
+  color: var(--bs-body-color);
+}
+
+/* Light Mode: Gradient Pastel Backgrounds */
+:root[data-bs-theme="light"] .section-pastel,
+:root[data-bs-theme="light"] .bg-pastel {
+  background: linear-gradient(180deg, #F9F3FB 0%, #F5F3FF 100%);
+}
+
+/* Dark Mode: Dark gradient backgrounds */
+:root[data-bs-theme="dark"] .section-pastel,
+:root[data-bs-theme="dark"] .bg-pastel {
+  background: linear-gradient(180deg, rgba(15, 15, 25, 1) 0%, rgba(20, 20, 30, 1) 100%);
+}
+
+/* ===================================
+   SPECIFIC PASTEL OPTIONS
+   =================================== */
+
+/* Lavender (Default JenniNexus Purple) */
+.bg-pastel-lavender {
+  background: #F9F3FB;
+}
+:root[data-bs-theme="light"] .bg-pastel-lavender {
+  background: linear-gradient(135deg, #F9F3FB 0%, #EDE7F6 100%);
+}
+:root[data-bs-theme="dark"] .bg-pastel-lavender {
+  background: linear-gradient(135deg, rgba(25, 20, 35, 1) 0%, rgba(30, 25, 40, 1) 100%);
+}
+
+/* Rose Pink (Jenni Secondary Accent) */
+.bg-pastel-rose {
+  background: #FFE4F0;
+}
+:root[data-bs-theme="light"] .bg-pastel-rose {
+  background: linear-gradient(135deg, #FFE4F0 0%, #FFC1DC 100%);
+}
+:root[data-bs-theme="dark"] .bg-pastel-rose {
+  background: linear-gradient(135deg, rgba(35, 20, 28, 1) 0%, rgba(40, 25, 33, 1) 100%);
+}
+
+/* Sky Blue (Cool Accent) */
+.bg-pastel-sky {
+  background: #E3F2FD;
+}
+:root[data-bs-theme="light"] .bg-pastel-sky {
+  background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+}
+:root[data-bs-theme="dark"] .bg-pastel-sky {
+  background: linear-gradient(135deg, rgba(20, 28, 40, 1) 0%, rgba(25, 33, 45, 1) 100%);
+}
+
+/* Mint Green (Fresh Tech Accent) */
+.bg-pastel-mint {
+  background: #E8F5E9;
+}
+:root[data-bs-theme="light"] .bg-pastel-mint {
+  background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+}
+:root[data-bs-theme="dark"] .bg-pastel-mint {
+  background: linear-gradient(135deg, rgba(20, 35, 22, 1) 0%, rgba(25, 40, 27, 1) 100%);
+}
+
+/* Peach (Warm Accent) */
+.bg-pastel-peach {
+  background: #FFE0B2;
+}
+:root[data-bs-theme="light"] .bg-pastel-peach {
+  background: linear-gradient(135deg, #FFE0B2 0%, #FFCC80 100%);
+}
+:root[data-bs-theme="dark"] .bg-pastel-peach {
+  background: linear-gradient(135deg, rgba(35, 28, 20, 1) 0%, rgba(40, 33, 25, 1) 100%);
+}
+
+/* Periwinkle (Purple-Blue Blend) */
+.bg-pastel-periwinkle {
+  background: #F3E5F5;
+}
+:root[data-bs-theme="light"] .bg-pastel-periwinkle {
+  background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);
+}
+:root[data-bs-theme="dark"] .bg-pastel-periwinkle {
+  background: linear-gradient(135deg, rgba(28, 20, 35, 1) 0%, rgba(33, 25, 40, 1) 100%);
+}
+
+/* Blush (Light Pink) */
+.bg-pastel-blush {
+  background: #FCE4EC;
+}
+:root[data-bs-theme="light"] .bg-pastel-blush {
+  background: linear-gradient(135deg, #FCE4EC 0%, #F8BBD0 100%);
+}
+:root[data-bs-theme="dark"] .bg-pastel-blush {
+  background: linear-gradient(135deg, rgba(35, 22, 28, 1) 0%, rgba(40, 27, 33, 1) 100%);
+}
+
+/* Cream (Neutral Warm) */
+.bg-pastel-cream {
+  background: #FFECB3;
+}
+:root[data-bs-theme="light"] .bg-pastel-cream {
+  background: linear-gradient(135deg, #FFECB3 0%, #FFE082 100%);
+}
+:root[data-bs-theme="dark"] .bg-pastel-cream {
+  background: linear-gradient(135deg, rgba(32, 30, 20, 1) 0%, rgba(37, 35, 25, 1) 100%);
+}
+
+/* ===================================
+   BODY & GLOBAL OVERRIDES
+   =================================== */
+
+/* Ensure body NEVER shows white background */
+body {
+  background: var(--bs-body-bg, #F9F3FB) !important;
+  min-height: 100vh;
+}
+
+:root[data-bs-theme="light"] body {
+  background: #F9F3FB !important; /* Soft lavender default */
+  background-color: #F9F3FB !important; /* Force override any conflicting styles */
+}
+
+:root[data-bs-theme="dark"] body {
+  background: #0F0F19 !important; /* Deep purple-black */
+  background-color: #0F0F19 !important;
+}
+
+/* Ensure all page sections inherit proper background in light mode */
+:root[data-bs-theme="light"] .container,
+:root[data-bs-theme="light"] .container-fluid {
+  /* Containers should be transparent to show body background */
+  background: transparent;
+}
+
+/* Section-pastel should use lavender tint, not white */
+:root[data-bs-theme="light"] .section-pastel {
+  background: rgba(249, 243, 251, 0.7) !important; /* Semi-transparent lavender */
+  backdrop-filter: blur(10px);
+}
+
+:root[data-bs-theme="dark"] .section-pastel {
+  background: rgba(15, 15, 25, 0.8) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* ===================================
+   SECTION ALTERNATING PATTERNS
+   =================================== */
+
+/* Zebra striping for sections (alternating pastels) */
+.section-zebra:nth-child(odd) {
+  background: var(--section-odd, #F9F3FB);
+}
+
+.section-zebra:nth-child(even) {
+  background: var(--section-even, #F5F3FF);
+}
+
+:root[data-bs-theme="light"] .section-zebra:nth-child(odd) {
+  background: linear-gradient(180deg, #F9F3FB 0%, #F5F3FF 100%);
+}
+
+:root[data-bs-theme="light"] .section-zebra:nth-child(even) {
+  background: linear-gradient(180deg, #F5F3FF 0%, #EDE7F6 100%);
+}
+
+:root[data-bs-theme="dark"] .section-zebra:nth-child(odd) {
+  background: rgba(15, 15, 25, 1);
+}
+
+:root[data-bs-theme="dark"] .section-zebra:nth-child(even) {
+  background: rgba(20, 20, 30, 1);
+}
+
+/* ===================================
+   TEXT CONTRAST HELPERS
+   =================================== */
+
+/* Ensure proper text contrast on pastel backgrounds */
+.bg-pastel-lavender,
+.bg-pastel-rose,
+.bg-pastel-sky,
+.bg-pastel-mint,
+.bg-pastel-peach,
+.bg-pastel-periwinkle,
+.bg-pastel-blush,
+.bg-pastel-cream {
+  color: var(--text, #2C2A33);
+}
+
+:root[data-bs-theme="light"] .bg-pastel-lavender *:not([class*="text-"]),
+:root[data-bs-theme="light"] .bg-pastel-rose *:not([class*="text-"]),
+:root[data-bs-theme="light"] .bg-pastel-sky *:not([class*="text-"]),
+:root[data-bs-theme="light"] .bg-pastel-mint *:not([class*="text-"]),
+:root[data-bs-theme="light"] .bg-pastel-peach *:not([class*="text-"]),
+:root[data-bs-theme="light"] .bg-pastel-periwinkle *:not([class*="text-"]),
+:root[data-bs-theme="light"] .bg-pastel-blush *:not([class*="text-"]),
+:root[data-bs-theme="light"] .bg-pastel-cream *:not([class*="text-"]) {
+  color: #2C2A33; /* Dark text on light pastels */
+}
+
+:root[data-bs-theme="dark"] .bg-pastel-lavender *:not([class*="text-"]),
+:root[data-bs-theme="dark"] .bg-pastel-rose *:not([class*="text-"]),
+:root[data-bs-theme="dark"] .bg-pastel-sky *:not([class*="text-"]),
+:root[data-bs-theme="dark"] .bg-pastel-mint *:not([class*="text-"]),
+:root[data-bs-theme="dark"] .bg-pastel-peach *:not([class*="text-"]),
+:root[data-bs-theme="dark"] .bg-pastel-periwinkle *:not([class*="text-"]),
+:root[data-bs-theme="dark"] .bg-pastel-blush *:not([class*="text-"]),
+:root[data-bs-theme="dark"] .bg-pastel-cream *:not([class*="text-"]) {
+  color: #E0D5EB; /* Light text on dark backgrounds */
+}
+
+/* ===================================
+   WCAG CONTRAST NOTES
+   =================================== */
+/**
+ * Color Contrast Ratios (WCAG AA requires 4.5:1 for normal text):
+ * 
+ * Light Mode Pastels:
+ * - Lavender (#F9F3FB) + Dark Text (#2C2A33) = 12.8:1 ✓ AAA
+ * - Rose (#FFF0F5) + Dark Text (#2C2A33) = 13.2:1 ✓ AAA
+ * - Sky (#E3F2FD) + Dark Text (#2C2A33) = 11.5:1 ✓ AAA
+ * - Mint (#E8F5E9) + Dark Text (#2C2A33) = 11.8:1 ✓ AAA
+ * - Peach (#FFF3E0) + Dark Text (#2C2A33) = 12.5:1 ✓ AAA
+ * 
+ * Dark Mode Backgrounds:
+ * - Dark Purple (#0F0F19) + Light Text (#E0D5EB) = 10.2:1 ✓ AAA
+ * 
+ * All combinations exceed WCAG AAA standards (7:1 minimum).
+ */

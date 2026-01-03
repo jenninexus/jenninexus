@@ -1,0 +1,355 @@
+# Content Tagging Guide - JenniNexus
+
+**Last Updated:** November 1, 2025  
+**Version:** 2.0
+
+---
+
+## 📋 Table of Contents
+
+1. [How Content Gets Tagged](#how-content-gets-tagged)
+2. [Tag Data Flow](#tag-data-flow)
+3. [Adding Tags to Content](#adding-tags-to-content)
+4. [Missing Thumbnails Fix](#missing-thumbnails-fix)
+5. [Tag System Files](#tag-system-files)
+
+---
+
+## 🏷️ How Content Gets Tagged
+
+The JenniNexus site uses a **multi-source tagging system** that pulls tags from different places:
+
+### **1. YAML Files (Playlists & Videos)**
+
+Location: `public_html/resources/playlists/*.yaml`
+
+**Example** (gaming.yaml):
+```yaml
+playlists:
+  - id: "PL6WnzXOaRqA09bFvNzWaJa3q97w7bGo6c"
+    title: "Nintendo Switch Games"
+    icon: "nintendo-switch"
+    description: "Portable adventures and cozy Switch exclusives"
+    tags: ["gaming", "nintendo-switch", "portable", "adventure"]  # ← Tags defined here
+```
+
+**These tags automatically:**
+- ✅ Populate the offcanvas filter panel on gaming.php
+- ✅ Get added to `content_tags.json` by automation scripts
+- ✅ Enable filtering via tag buttons
+- ✅ Show up in `/tags.php` results
+
+### **2. content_tags.json (Central Registry)**
+
+Location: `public_html/resources/playlists/content_tags.json`
+
+**Purpose:** Central database mapping all content IDs to their tags
+
+**Format:**
+```json
+{
+  "playlist:PL6WnzXOaRqA09bFvNzWaJa3q97w7bGo6c": {
+    "title": "Nintendo Switch Games",
+    "url": "/gaming.php#playlist-nintendoswitch",
+    "tags": ["gaming", "nintendo-switch", "portable", "adventure", "console"]
+  },
+  "blog:my-gaming-post": {
+    "title": "My Gaming Experience",
+    "url": "/blog/my-gaming-post.php",
+    "tags": ["gaming", "ps5", "review"]
+  }
+}
+```
+
+**Key Format Types:**
+- `playlist:{PLAYLIST_ID}` - YouTube playlists
+- `blog:{SLUG}` - Blog posts
+- `page:{PAGE}` - Static pages
+- `game/{SLUG}` - Game project pages
+- `video/{VIDEO_ID}` - Individual videos
+
+### **3. Blog Posts (blog-posts.yaml)**
+
+Location: `public_html/resources/playlists/blog-posts.yaml`
+
+**Example:**
+```yaml
+- slug: pax-west-2022
+  title: "PAX West 2022 — Gallery & Recap"
+  date: 2022-09-05
+  category: gaming
+  tags: ["pax-west", "gaming", "community"]  # ← Blog post tags
+  excerpt: "My experience at PAX West 2022..."
+```
+
+### **4. Page-Level Tags (HTML data attributes)**
+
+Location: PHP files like `gaming.php`, `diy.php`
+
+**Example:**
+```html
+<div class="content-item" 
+     data-category="gaming" 
+     data-tags="gaming,nintendo-switch,portable">
+  <!-- Content card HTML -->
+</div>
+```
+
+**Used for:** Client-side JavaScript filtering without page reload
+
+---
+
+## 🔄 Tag Data Flow
+
+Here's how tags flow through the system:
+
+```
+1. Developer adds tags to gaming.yaml
+   tags: ["gaming", "nintendo-switch", "portable"]
+   
+2. youtube-grid.js loads gaming.yaml
+   ↓
+   
+3. tag-system.js reads tags.json
+   Converts: "nintendo-switch" (slug) → "Nintendo Switch" (display name)
+   ↓
+   
+4. Offcanvas panel shows clickable tags
+   User clicks: "Nintendo Switch" + "Indie"
+   ↓
+   
+5. User clicks "Apply Filters"
+   Redirects to: /tags.php?filters=Nintendo Switch,Indie
+   ↓
+   
+6. tags.php converts names → slugs
+   "Nintendo Switch" → "nintendo-switch"
+   "Indie" → "indie"
+   ↓
+   
+7. tags.php loads content_tags.json
+   Finds: "playlist:PL..." has tags [31, 39, 10]
+   Converts: 31 → "gaming", 39 → "nintendo-switch", 10 → "indie"
+   ↓
+   
+8. Comparison: ["nintendo-switch", "indie"] ∩ ["gaming", "nintendo-switch", "indie"] = MATCH
+   ↓
+   
+9. Display: Playlist card shown with tag badges "Gaming", "Nintendo Switch", "Indie"
+```
+
+---
+
+## ➕ Adding Tags to Content
+
+### **For YouTube Playlists:**
+
+1. Open the appropriate YAML file:
+   - Gaming: `public_html/resources/playlists/gaming.yaml`
+   - DIY: `public_html/resources/playlists/diy.yaml`
+   - Game Dev: `public_html/resources/playlists/gamedev.yaml`
+
+2. Find your playlist entry:
+   ```yaml
+   - id: "PL6WnzXOaRqA09bFvNzWaJa3q97w7bGo6c"
+     title: "Nintendo Switch Games"
+   ```
+
+3. Add or update tags:
+   ```yaml
+   - id: "PL6WnzXOaRqA09bFvNzWaJa3q97w7bGo6c"
+     title: "Nintendo Switch Games"
+     tags: ["gaming", "nintendo-switch", "portable", "adventure", "console"]  # ← Add here
+   ```
+
+4. **Optional:** Run automation to update `content_tags.json`:
+   ```powershell
+   .\scripts\fix-tag-system.ps1
+   ```
+   
+   Or just let the JavaScript load tags dynamically from the YAML!
+
+### **For Blog Posts:**
+
+1. Open `public_html/resources/playlists/blog-posts.yaml`
+
+2. Find your blog post entry:
+   ```yaml
+   - slug: my-post
+     title: "My Blog Post"
+     date: 2025-11-01
+   ```
+
+3. Add tags:
+   ```yaml
+   - slug: my-post
+     title: "My Blog Post"
+     date: 2025-11-01
+     category: gaming
+     tags: ["gaming", "ps5", "review", "fps"]  # ← Add here
+   ```
+
+4. Run automation to update `content_tags.json`:
+   ```powershell
+   .\scripts\fix-tag-system.ps1
+   ```
+
+### **For Static Pages:**
+
+Add tags directly in `content_tags.json`:
+
+```json
+{
+  "page:custom-project": {
+    "title": "My Custom Project",
+    "url": "/projects/custom.php",
+    "tags": ["gamedev", "unity", "indie", "3d-modeling"]
+  }
+}
+```
+
+---
+
+## 🖼️ Missing Thumbnails Fix
+
+### **Problem:**
+Some playlists show a generic purple gradient instead of actual video thumbnails.
+
+### **Root Cause:**
+The YouTube RSS feed proxy (`get-youtube.php`) sometimes fails due to:
+- Rate limiting
+- Network issues
+- YouTube API changes
+- Cache corruption
+
+### **Solution 1: Download Static Thumbnails (Recommended)**
+
+Run the thumbnail downloader script:
+
+```powershell
+# Download thumbnails for all playlists in gaming.yaml
+.\scripts\download-playlist-thumbnails.ps1 -YamlFile gaming.yaml
+
+# Download thumbnail for a specific playlist
+.\scripts\download-playlist-thumbnails.ps1 -PlaylistId PL6WnzXOaRqA09bFvNzWaJa3q97w7bGo6c
+```
+
+**What it does:**
+1. Reads playlist IDs from `gaming.yaml`
+2. Fetches first video from each playlist via RSS
+3. Downloads highest quality thumbnail from YouTube
+4. Saves to `public_html/resources/images/playlists/{PLAYLIST_ID}.jpg`
+
+**Fallback System:**
+The updated `youtube-grid.js` now tries:
+1. **First:** Fetch video from RSS feed → use its thumbnail
+2. **Second:** Load static thumbnail from `/resources/images/playlists/{PLAYLIST_ID}.jpg`
+3. **Third:** Show purple gradient with playlist icon
+
+### **Solution 2: Clear Cache**
+
+Delete old cache files:
+
+```powershell
+Remove-Item -Path "public_html\storage\cache\youtube\*.json" -Force
+```
+
+Then reload the page to fetch fresh data.
+
+### **Solution 3: Increase Cache TTL**
+
+Edit `public_html/resources/api/get-youtube.php`:
+
+```php
+$cacheTTL = 60 * 60; // 1 hour (was 10 minutes)
+```
+
+Longer cache = fewer API calls = less rate limiting
+
+---
+
+## 📁 Tag System Files
+
+### **Core Files:**
+
+| File | Purpose |
+|------|---------|
+| `public_html/resources/playlists/tags.json` | Master tag definitions (36 tags) |
+| `public_html/resources/playlists/content_tags.json` | Content → tag mappings (110 entries) |
+| `public_html/resources/js/tag-system.js` | Offcanvas filter panel logic |
+| `public_html/resources/js/tag-filter-api.js` | Centralized tag state management |
+| `public_html/tags.php` | Multi-tag filtering results page |
+
+### **Content Source Files:**
+
+| File | Purpose |
+|------|---------|
+| `public_html/resources/playlists/gaming.yaml` | Gaming playlists + tags |
+| `public_html/resources/playlists/diy.yaml` | DIY playlists + tags |
+| `public_html/resources/playlists/gamedev.yaml` | Game dev playlists + tags |
+| `public_html/resources/playlists/blog-posts.yaml` | Blog posts + tags |
+
+### **Automation Scripts:**
+
+| Script | Purpose |
+|--------|---------|
+| `scripts/fix-tag-system.ps1` | Sync tags from YAML → content_tags.json |
+| `scripts/generate-playlist-tags.ps1` | Extract unique tags from YAML files |
+| `scripts/optimize-tags.ps1` | Reduce to top N most-used tags |
+| `scripts/download-playlist-thumbnails.ps1` | Download YouTube thumbnails |
+
+### **API & Proxy:**
+
+| File | Purpose |
+|------|---------|
+| `public_html/resources/api/get-youtube.php` | Proxy for YouTube RSS feeds (no API key!) |
+| `public_html/storage/cache/youtube/` | Cached RSS responses (10min TTL) |
+
+---
+
+## 🎯 Quick Reference
+
+### **Add tags to a playlist:**
+```yaml
+# In gaming.yaml, diy.yaml, etc.
+- id: "PLAYLIST_ID"
+  title: "Playlist Title"
+  tags: ["tag1", "tag2", "tag3"]
+```
+
+### **Download missing thumbnails:**
+```powershell
+.\scripts\download-playlist-thumbnails.ps1
+```
+
+### **Test tag filtering:**
+1. Visit http://localhost:8002/gaming.php
+2. Click "Filter by Tags"
+3. Select tags → Click "Apply Filters"
+4. Verify `/tags.php?filters=...` shows results
+
+### **Debug tag issues:**
+1. Open browser DevTools → Console
+2. Look for errors like:
+   - `❌ Tag System: Failed to load tags.json`
+   - `Error loading playlist PL...`
+   - `502: GET /resources/api/get-youtube.php`
+
+3. Check cache:
+   - `public_html/storage/cache/youtube/*.json`
+   
+4. Check tag files exist:
+   - `public_html/resources/playlists/tags.json`
+   - `public_html/resources/playlists/content_tags.json`
+
+---
+
+## 📚 Related Documentation
+
+- [TAG-SYSTEM.md](TAG-SYSTEM.md) - Comprehensive tag system architecture
+- [DEPLOYMENT-MANIFEST.md](../../DEPLOYMENT-MANIFEST.md) - Deployment checklist
+- [README.md](../../README.md) - Project overview
+
+---
+
+**Questions?** Check the console logs or run the automation scripts to regenerate tag files!

@@ -1,0 +1,296 @@
+// _offcanvas.scss
+// Bootstrap 5.3.8 Offcanvas Mobile Navigation Styles
+// Adapted from standalone demo page patterns
+
+@use "base/mixins" as *;
+
+// ============================================
+// MOBILE MENU TOGGLE (Hamburger Button)
+// ============================================
+
+.mobile-menu-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1040; // Lower than offcanvas (1045) so it gets covered
+    background: rgba(0, 0, 0, 0.2); // Add subtle background for visibility
+    border: 1px solid rgba(255, 107, 0, 0.3); // Add border
+    border-radius: 8px;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: none; // Hidden on desktop
+    -webkit-backdrop-filter: blur(4px); // Safari 9+ support, glass effect
+    backdrop-filter: blur(4px); // Glass effect
+
+    @media (max-width: 991.98px) {
+        display: block; // Show on mobile/tablet
+    }
+
+    &:hover {
+        background: rgba(var(--color-primary-rgb), 0.2); // Stronger hover background
+        transform: translateY(-2px);
+        border-color: var(--color-primary);
+    }
+
+    &:focus {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+
+    // Hide when menu is open (Bootstrap toggles aria-expanded)
+    &[aria-expanded="true"] {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+        transform: scale(0.8); // Shrink effect
+        z-index: -1;
+    }
+}
+
+// Robust fallback: Hide toggle when offcanvas is open (using :has selector)
+body:has(.offcanvas.show) .mobile-menu-toggle {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: -1;
+}
+
+// SVG Icon Styling - White SVGs with theme-aware coloring
+.mobile-menu-icon {
+    width: 1.75em;
+    height: 1.75em;
+    transition: all 0.3s ease;
+    color: #FFFFFF; // White SVG by default
+    fill: currentColor;
+
+    // Dark Theme - Orange color with glow
+    :root[data-theme="dark"] & {
+        color: var(--color-primary); // Orange in dark mode
+        filter: drop-shadow(0 0 8px rgba(255, 107, 0, 0.6));
+    }
+
+    // Light Theme - White with subtle shadow
+    :root[data-theme="light"] & {
+        color: #FFFFFF; // White in light mode
+        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+    }
+}
+
+.mobile-menu-toggle:hover .mobile-menu-icon {
+    transform: scale(1.1);
+
+    :root[data-theme="dark"] & {
+        color: var(--color-primary);
+        filter: drop-shadow(0 0 12px rgba(255, 107, 0, 0.8));
+    }
+
+    :root[data-theme="light"] & {
+        color: var(--color-primary); // Orange on hover in light mode
+        filter: drop-shadow(0 0 8px rgba(255, 107, 0, 0.6));
+    }
+}
+
+// Remove theme-specific toggle backgrounds - icon only now
+:root[data-theme="dark"] .mobile-menu-toggle,
+:root[data-theme="light"] .mobile-menu-toggle {
+    background: transparent;
+    border: none;
+}
+
+// ============================================
+// BOOTSTRAP 5.3.8 OFFCANVAS CUSTOMIZATION
+// Adapted from standalone demo page patterns
+// ============================================
+
+.offcanvas {
+    background: linear-gradient(135deg,
+            rgba(var(--color-primary-rgb), 0.2) 0%,
+            rgba(var(--color-background-rgb), 0.95) 100%);
+    -webkit-backdrop-filter: blur(10px); // Safari 9+ support
+    backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(var(--color-primary-rgb), 0.3);
+}
+
+/* Light mode: orange transparent glass gradient */
+:root[data-theme="light"] .offcanvas {
+    background: linear-gradient(135deg,
+            rgba(255, 107, 0, 0.25) 0%,
+            rgba(255, 255, 255, 0.65) 100%);
+    -webkit-backdrop-filter: blur(12px); // Safari 9+ support
+    backdrop-filter: blur(12px);
+    border-left: 1px solid rgba(255, 107, 0, 0.4);
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid rgba(var(--color-primary-rgb), 0.2);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .offcanvas-title {
+        color: var(--color-primary);
+        font-weight: 700;
+        font-size: 1.25rem;
+    }
+
+    .btn-close {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(var(--color-primary-rgb), 0.3);
+        border-radius: 8px;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+
+        // Create visible X icon with white lines
+        background-image: none;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 2px;
+            background: #FFFFFF; // White X icon
+            border-radius: 1px;
+            transition: all 0.3s ease;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+
+        &:hover {
+            background: rgba(var(--color-primary-rgb), 0.25);
+            border-color: var(--color-primary);
+            transform: rotate(90deg);
+            
+            &::before,
+            &::after {
+                background: var(--color-primary); // Orange on hover
+            }
+        }
+    }
+}
+
+.offcanvas-body {
+    padding: 1.5rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    // Apply themed custom scrollbar (uses --scrollbar-track and --scrollbar-thumb from colors.scss)
+    @include custom-scrollbar;
+
+    .navbar-nav {
+        .nav-link {
+            @include nav-link-standard(1.05rem, 0.875rem 1.25rem);
+            width: 100%;
+            margin-bottom: 0.5rem;
+
+            i, .svg-inline {
+                width: 24px;
+                font-size: 1.2rem;
+                margin-right: 0.5rem;
+            }
+
+            &:hover {
+                transform: translateX(4px) translateY(-2px);
+            }
+        }
+    }
+
+    h6 {
+        color: var(--color-text-secondary);
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    hr {
+        margin: 1.5rem 0;
+        opacity: 0.25;
+    }
+
+    .btn-outline-primary {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 8px;
+        font-weight: 600;
+
+        &:hover {
+            background: var(--color-primary);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.3);
+        }
+    }
+}
+
+// ============================================
+// MOBILE THEME TOGGLE (Inside Offcanvas)
+// ============================================
+
+#theme-toggle-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+
+    &:hover i {
+        transform: rotate(15deg);
+    }
+}
+
+// ============================================
+// THEME-SPECIFIC ADJUSTMENTS
+// ============================================
+
+[data-bs-theme="dark"] {
+    .offcanvas {
+        background: linear-gradient(135deg,
+                rgba(255, 107, 0, 0.15) 0%,
+                rgba(0, 0, 0, 0.95) 100%);
+    }
+
+    .btn-close {
+        filter: invert(1) grayscale(100%) brightness(200%);
+    }
+}
+
+[data-bs-theme="light"] {
+    .offcanvas {
+        background: linear-gradient(135deg,
+                rgba(255, 107, 0, 0.08) 0%,
+                rgba(255, 255, 255, 0.95) 100%);
+    }
+}
+
+// ============================================
+// ACCESSIBILITY: REDUCED MOTION SUPPORT
+// ============================================
+
+@media (prefers-reduced-motion: reduce) {
+
+    .offcanvas,
+    .offcanvas-backdrop,
+    .mobile-menu-toggle,
+    .hamburger-icon span,
+    .navbar-nav .nav-link {
+        transition: none;
+    }
+}

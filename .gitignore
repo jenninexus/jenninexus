@@ -1,0 +1,30 @@
+# Build Artifacts & Dependencies
+/deploy/
+/github-package/
+/node_modules/
+/vendor/
+
+# Runtime Data, Caches & Logs
+/storage/cache/
+/public_html/storage/cache/
+/storage/sessions/
+/storage/logs/
+
+# Secrets & Tokens
+/storage/patreon/
+secrets.json
+
+# Backups & Archives
+/public_html/resources/archived/
+/public_html/resources/css/!bak/
+**/!bak/
+**/archived/
+*.bak
+*.backup
+*~
+
+# Editor & OS Artifacts
+/.vscode/
+*.swp
+Thumbs.db
+desktop.ini

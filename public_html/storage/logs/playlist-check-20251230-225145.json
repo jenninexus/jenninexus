@@ -1,0 +1,44 @@
+[
+  {
+    "playlist_id": "PL9QBjNDhgNwRtiIPeSEi1HAa5ehnYpau0",
+    "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PL9QBjNDhgNwRtiIPeSEi1HAa5ehnYpau0",
+    "status": "ERR",
+    "content_length": null,
+    "error": "Exception calling \"GetResponse\" with \"0\" argument(s): \"The remote server returned an error: (404) Not Found.\""
+  },
+  {
+    "playlist_id": "PL9QBjNDhgNwSELFNvTx9hpk3xbGduBpHY",
+    "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PL9QBjNDhgNwSELFNvTx9hpk3xbGduBpHY",
+    "status": "ERR",
+    "content_length": null,
+    "error": "Exception calling \"GetResponse\" with \"0\" argument(s): \"The remote server returned an error: (404) Not Found.\""
+  },
+  {
+    "playlist_id": "PL9QBjNDhgNwRaJX--_cZhEAJ8HbG9umiX",
+    "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PL9QBjNDhgNwRaJX--_cZhEAJ8HbG9umiX",
+    "status": "ERR",
+    "content_length": null,
+    "error": "Exception calling \"GetResponse\" with \"0\" argument(s): \"The remote server returned an error: (404) Not Found.\""
+  },
+  {
+    "playlist_id": "PL9QBjNDhgNwRQONB9N2tIIhP0vPrkyNvy",
+    "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PL9QBjNDhgNwRQONB9N2tIIhP0vPrkyNvy",
+    "status": "ERR",
+    "content_length": null,
+    "error": "Exception calling \"GetResponse\" with \"0\" argument(s): \"The remote server returned an error: (404) Not Found.\""
+  },
+  {
+    "playlist_id": "PL9QBjNDhgNwTnhBcU2WKXnjJN78OFW_JN",
+    "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PL9QBjNDhgNwTnhBcU2WKXnjJN78OFW_JN",
+    "status": "ERR",
+    "content_length": null,
+    "error": "Exception calling \"GetResponse\" with \"0\" argument(s): \"The remote server returned an error: (404) Not Found.\""
+  },
+  {
+    "playlist_id": "PL9QBjNDhgNwSYG7c6qnwlqgRdQW-SWTHK",
+    "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PL9QBjNDhgNwSYG7c6qnwlqgRdQW-SWTHK",
+    "status": "ERR",
+    "content_length": null,
+    "error": "Exception calling \"GetResponse\" with \"0\" argument(s): \"The remote server returned an error: (404) Not Found.\""
+  }
+]

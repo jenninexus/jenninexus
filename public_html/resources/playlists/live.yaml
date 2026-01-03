@@ -1,0 +1,65 @@
+# Live Streaming Page - Featured Playlists Configuration
+page: live
+title: "JenniNexus Live & Streaming"
+description: "Watch JenniNexus & DIYwJenni live on Twitch and YouTube — creative sessions, music, and behind-the-scenes."
+
+# LIVE STATUS DETECTION
+live_channels:
+  twitch:
+    username: "jenninexus"
+    url: "https://twitch.tv/jenninexus"
+    api_check: "https://decapi.me/twitch/uptime/jenninexus"
+    embed_height: 480
+  
+  youtube_main:
+    channel_id: "UCu1S6_Gza2Y06pT1n5U_L4Q"
+    username: "JenniNexus"
+    url: "https://www.youtube.com/@JenniNexus/live"
+    rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCu1S6_Gza2Y06pT1n5U_L4Q"
+  
+  youtube_diy:
+    channel_id: "UCk2SWSg1fvdZGnrN0XAt6NQ"
+    username: "DIYwJenni"
+    url: "https://www.youtube.com/@DIYwJenni/live"
+    rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UCk2SWSg1fvdZGnrN0XAt6NQ"
+
+featured_section:
+  title: "Live Stream Highlights"
+  icon: "broadcast"
+  container_id: "live-playlists-grid"
+  render_mode: "videos"
+  playlists:
+    - id: "PL6WnzXOaRqA1q_0XZ2fPo0LIEErxxyoT1"
+      title: "Twitch Highlights"
+      icon: "twitch"
+      badge: "Twitch"
+      description: "Best clips and highlight reels from live Twitch streams"
+      tags: ["live", "twitch", "clips", "highlights"]
+      external_url: "https://youtube.com/playlist?list=PL6WnzXOaRqA1q_0XZ2fPo0LIEErxxyoT1&si=GgS-qeO4j8arfIJr"
+
+# Responsive Bootstrap 5.3.8 grid configuration
+# Show up to 6 videos with responsive grid (xs:1, sm:2, md:3, lg:4, xl:6)
+grid_config:
+  columns:
+    xs: 1    # 1 column on mobile (iPhone 390px, etc.)
+    sm: 2    # 2 columns on small tablets
+    md: 3    # 3 columns on medium tablets
+    lg: 4    # 4 columns on large desktops
+    xl: 6    # 6 columns on extra large screens
+  videos_per_playlist: 6
+  enable_hover_effects: true
+  enable_lazy_loading: true
+  card_style: "shadow-lg border-0 rounded-4"
+  aspect_ratio: "16:9"
+  responsive: true
+
+metadata:
+  page_title: "JenniNexus Live Streams & Highlights"
+  page_description: "Watch JenniNexus live on Twitch and YouTube. Stream replays, live tutorials, creative sessions, and highlights all in one place."
+  keywords:
+    - jenni nexus live
+    - diywjenni
+    - twitch jenninexus
+    - youtube live stream
+    - edm creative streams
+    - game dev livestreams

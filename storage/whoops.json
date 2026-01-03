@@ -1,0 +1,12 @@
+{
+  "project": "jenninexus",
+  "whoops": {
+    "enable_in_development": true,
+    "enable_in_production": false,
+    "editor": "vscode",
+    "log_errors": true,
+    "error_log": "storage/logs/php_errors.log",
+    "notes": "Whoops error handler enabled for development. Production remains disabled."
+  },
+  "created_at": "2025-10-20"
+}

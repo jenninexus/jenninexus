@@ -1,0 +1,72 @@
+# YouTube Page Playlists
+# Featured playlists across all categories
+# Last Updated: November 11, 2025
+# @jenninexus main channel: UCMdVZ64zYbNZ5jBhaa7VxQA (corrected from incorrect ID UCu1S6_Gza2Y06pT1n5U_L4Q)
+
+featured_section:
+  title: "Featured Playlists"
+  description: "Curated playlists across gaming, game dev, DIY, and more"
+  icon: "collection-play"
+  container_id: "youtube-playlists"
+  columns:
+    xs: 1
+    sm: 2
+    md: 3
+    lg: 5
+  playlists:
+    # Tips & Tutorials
+    - id: "PL9QBjNDhgNwTnv3qzgtrxReBySCOv7SFN"
+      title: "🧠 Tips + Tuts"
+      description: "Game dev tips, tutorials, and educational content"
+      icon: "lightbulb"
+      tags: ["gamedev", "tutorials", "tips", "education"]
+    
+    # Devlogs
+    - id: "PL9QBjNDhgNwRsznW8e3-KVmwfEuwvr7Yi"
+      title: "👩‍💻 Devlogs"
+      description: "Development updates and behind-the-scenes game dev"
+      icon: "code-slash"
+      tags: ["gamedev", "devlog", "unity", "unreal", "indie"]
+    
+    # Voice Acting
+    - id: "PL9QBjNDhgNwQbaceJmfZzc3x4L80gvh8J"
+      title: "🎤 Voice Acting"
+      description: "Voice acting samples and character work"
+      icon: "mic"
+      tags: ["voice-acting", "gamedev", "animation"]
+    
+    # DIY Fashion & Crafts
+    - id: "PL9QBjNDhgNwSjirfHOJ5a8D-Orcj5y-Mf"
+      title: "💫 DIY Fashion & Crafts"
+      description: "DIY fashion, crafts, and creative projects"
+      icon: "palette"
+      tags: ["diy", "fashion", "crafts", "tutorials"]
+    
+    # AI Tools
+    - id: "PL9QBjNDhgNwQygOzxOAYImp0L3zC6pBO2"
+      title: "🤖 AI Tools + Info"
+      description: "AI tools, tutorials, and information"
+      icon: "robot"
+      tags: ["ai", "tools", "productivity", "technical-art"]
+    
+    # Recent Videos
+    - id: "PL6WnzXOaRqA16OQ60_EcUZ0Y8tjHB73Gi"
+      title: "🕛 Recent"
+      description: "Latest uploads from all channels"
+      icon: "clock-history"
+      tags: ["recent", "latest", "new"]
+
+# Grid configuration - Use single-card layout matching gaming/gamedev pages
+grid_config:
+  columns:
+    xs: 1
+    sm: 2
+    md: 3
+    lg: 5
+  videos_per_playlist: 1
+  show_single_video: true
+  layout: "single-card"
+  aspect_ratio: "16:9"
+  enable_hover_effects: true
+  lazy_load: true
+  responsive: true

@@ -1,0 +1,75 @@
+# Music Page - Featured Playlists Configuration
+page: music
+title: "Music & Production"
+description: "DJ tutorials, music production, and live sets"
+
+production_section:
+  title: "Music Production"
+  icon: "music-note-beamed"
+  container_id: "musicPlaylistsContainer"
+  columns: { xs: 1, sm: 2, md: 2, lg: 2 }
+  playlists:
+    - id: "PL9QBjNDhgNwRtiIPeSEi1HAa5ehnYpau0"
+      title: "DJ Tutorials"
+      icon: "disc"
+      tags: ["music", "tutorial", "dj"]
+      embed: true
+      
+    - id: "PL9QBjNDhgNwSELFNvTx9hpk3xbGduBpHY"
+      title: "FL Studio (tutorials)"
+      icon: "music-note-beamed"
+      tags: ["music", "tutorial", "fl-studio"]
+      embed: true
+
+performances_section:
+  title: "DJ Sets & Performances"
+  icon: "disc-fill"
+  container_id: "performances_sectionContainer"
+  columns: { xs: 1, sm: 2, md: 2, lg: 2 }
+  playlists:
+    - id: "PL9QBjNDhgNwRaJX--_cZhEAJ8HbG9umiX"
+      title: "Favorite DJ / VJ Sets"
+      icon: "disc-fill"
+      featured: true
+      tags: ["music", "live", "dj"]
+      embed: true
+      
+    - id: "PL9QBjNDhgNwRQONB9N2tIIhP0vPrkyNvy"
+      title: "EDC 2024"
+      icon: "star"
+      featured: true
+      tags: ["music", "event"]
+      embed: true
+
+music_culture_section:
+  title: "Music Culture"
+  icon: "vinyl"
+  container_id: "music_culture_sectionContainer"
+  columns: { xs: 1, sm: 2, md: 2, lg: 2 }
+  playlists:
+    - id: "PL9QBjNDhgNwTnhBcU2WKXnjJN78OFW_JN"
+      title: "Music History | X Gen"
+      icon: "vinyl"
+      tags: ["music", "history"]
+      embed: true
+      
+    - id: "PL9QBjNDhgNwSYG7c6qnwlqgRdQW-SWTHK"
+      title: "Shuffle Dance Music"
+      icon: "person-dancing"
+      tags: ["music", "dance"]
+      embed: true
+
+# Responsive Bootstrap 5.3.8 grid configuration
+grid_config:
+  columns:
+    xs: 1    # 1 column on mobile (iPhone 390px, etc.)
+    sm: 2    # 2 columns on small tablets
+    md: 3    # 3 columns on medium screens
+    lg: 5    # 5 columns on large desktops (custom .col-lg-2-4)
+  videos_per_playlist: 6
+  show_single_video: false
+  layout: "multi-video"
+  enable_hover_effects: true
+  aspect_ratio: "16:9"
+  lazy_load: true
+  responsive: true

@@ -1,0 +1,24 @@
+# robots.txt for jenninexus.com
+# Optimized for search engine indexing and investor/recruiter discovery
+
+User-agent: *
+Allow: /
+
+# Prioritize professional pages for indexing
+Allow: /resume
+Allow: /services
+Allow: /gamedev
+Allow: /purgatoryfell
+Allow: /martiangames
+
+# Block admin/system files
+Disallow: /includes/
+Disallow: /resources/scss/
+Disallow: /*.json$
+Disallow: /router.php
+
+# Sitemap location
+Sitemap: https://jenninexus.com/sitemap.xml
+
+# Crawl delay (be nice to servers)
+Crawl-delay: 1

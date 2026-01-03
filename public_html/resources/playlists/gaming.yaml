@@ -1,0 +1,273 @@
+page: gaming
+title: "Gaming Content"
+description: "Let's Plays, highlights, and game dev collaborations from @jenniplaysgames and @martiangames"
+
+# RECENT VIDEOS FEED - @jenniplaysgames Channel
+recent_videos_section:
+  title: "Latest Gaming Videos 🎮"
+  container_id: "gaming-feed"
+  render_mode: "videos"
+  max_videos: 8
+  aspect_ratio: "16:9"
+  columns:
+    xs: 1
+    sm: 2
+    md: 3
+    lg: 4
+  playlists:
+    - channel_id: "UC4byqahPWuY9WPJNvDgbQMQ"
+      title: "Latest Videos"
+      tags: ["gaming", "recent", "new"]
+
+# RECENT SHORTS FEED (Disabled/Unused)
+# recent_shorts:
+#   title: "Latest Gaming Shorts 🎮"
+#   source: "rss"
+#   channel_id: "UC4byqahPWuY9WPJNvDgbQMQ"
+#   rss: "https://www.youtube.com/feeds/videos.xml?channel_id=UC4byqahPWuY9WPJNvDgbQMQ&filter=shorts"
+#   max_videos: 12
+#   layout: "grid"
+#   show_thumbnails: true
+#   hover_play_preview: true
+#   badge: "Shorts"
+#   aspect_ratio: "16:9"
+
+# FEATURED SERIES - Pattern 2 (Multi-Video Layout)
+featured_series_section:
+  title: "Featured Series"
+  icon: "star"
+  container_id: "featured-series"
+  layout: "multi-video"
+  videos_per_playlist: 3
+  columns: 1
+  aspect_ratio: "16:9"
+  playlists:
+    - id: "PL6WnzXOaRqA16UY1KibrFUHu4gDZ8hmep"
+      title: "Ori and the Blind Forest"
+      icon: "tree"
+      description: "Magical platforming adventures in a hand-drawn world"
+      tags: ["gaming", "platformer", "indie", "metroidvania", "action-adventure"]
+
+    - id: "PL6WnzXOaRqA0AmWzg6b12-8O4eRifnTRC"
+      title: "PS5 Playthroughs"
+      icon: "playstation"
+      badge: "Next-Gen"
+      description: "Epic first plays on PlayStation 5 exclusives and ports"
+      tags: ["gaming", "ps5", "console", "playthrough", "action-adventure", "action"]
+
+    - id: "PL6WnzXOaRqA0MiE5cffmM2ZZcuSTl9DcS"
+      title: "Dead Space 2 [PC] - 1st Playthrough"
+      icon: "bug"
+      badge: "Horror"
+      description: "Terrifying necromorph battles in zero gravity"
+      tags: ["gaming", "dead-space", "horror", "survival", "action", "fps"]
+
+# ALL PLAYLISTS - Pattern 1 (Single Card Layout)
+all_playlists_section:
+  title: "Gaming Playlists"
+  icon: "controller"
+  container_id: "all-playlists"
+  columns:
+    xs: 1
+    sm: 2
+    md: 3
+    lg: 4
+  playlists:
+    - id: "PL6WnzXOaRqA16OQ60_EcUZ0Y8tjHB73Gi"
+      title: "Recent Uploads"
+      icon: "clock-history"
+      badge: "Latest"
+      description: "Fresh gameplay sessions and live stream highlights"
+      tags: ["gaming", "recent", "live", "highlights", "multiplayer"]
+
+    - id: "PL6WnzXOaRqA09bFvNzWaJa3q97w7bGo6c"
+      title: "Nintendo Switch Games"
+      icon: "nintendo-switch"
+      description: "Portable adventures and cozy Switch exclusives"
+      tags: ["gaming", "nintendo-switch", "console", "portable", "adventure", "indie"]
+
+    - id: "PL6WnzXOaRqA19W60NFfCJNJOrr4SBPkZe"
+      title: "Ludum Dare"
+      icon: "joystick"
+      description: "Game jam entries and rapid dev challenges"
+      tags: ["gaming", "ludum-dare", "gamedev", "indie"]
+
+    - id: "PL6WnzXOaRqA3yKvAYjZ4Gja9__cfwG3Ii"
+      title: "Let's Play: Ludum Dare 46 Games"
+      icon: "joystick"
+      description: "Playthroughs of creative 48-hour game jam creations"
+      tags: ["gaming", "ludum-dare", "indie", "playthrough"]
+
+    - id: "PL6WnzXOaRqA3pXypZTl65mYKnSy0eC8cG"
+      title: "Funny Games + Moments"
+      icon: "emoji-laughing"
+      badge: "Hilarious"
+      description: "Laugh-out-loud fails, glitches, and comedic plays"
+      tags: ["gaming", "funny", "highlights", "moments"]
+
+    - id: "PL6WnzXOaRqA0nMzZ_iOGxUpxdvYJIBap8"
+      title: "Retro Games"
+      icon: "controller"
+      description: "Nostalgic classics and pixelated throwbacks"
+      tags: ["gaming", "retro", "classic", "nostalgia"]
+
+    - id: "PL6WnzXOaRqA0laP8POd37FfKmh_lkr4FN"
+      title: "Metro Exodus - 1st Playthrough"
+      icon: "train-freight-front"
+      description: "Post-apocalyptic survival journey across Russia"
+      tags: ["gaming", "metro-exodus", "survival", "fps", "action", "horror"]
+
+    - id: "PL6WnzXOaRqA3l4G2qBFlSgm8Yv3-zZlL3"
+      title: "Let's Play: Ludum Dare #44 Games"
+      icon: "joystick"
+      description: "Exploring themes of 'The End is Nigh' in jam games"
+      tags: ["gaming", "ludum-dare", "indie", "playthrough"]
+
+    - id: "PL6WnzXOaRqA3vuLsU1KgCJNySY_CHDByN"
+      title: "Red Dead Redemption 2"
+      icon: "cowboy"
+      description: "Wild West outlaw saga with deep storytelling"
+      tags: ["gaming", "rdr2", "open-world", "story", "action-adventure", "action"]
+
+    - id: "PL6WnzXOaRqA15NmslIKkGhX-uTqbKjwC-"
+      title: "Resident Evil 2 Remake"
+      icon: "biohazard"
+      badge: "Survival Horror"
+      description: "Zombie outbreak investigations in Raccoon City"
+      tags: ["gaming", "resident-evil", "horror", "survival", "action"]
+
+    - id: "PL6WnzXOaRqA35cPcERn6qwjx92i1PrXfb"
+      title: "Shadow of the Colossus"
+      icon: "building"
+      description: "Epic boss battles against ancient giants"
+      tags: ["gaming", "shadow-colossus", "action-adventure", "boss-fight", "action", "puzzle"]
+
+    - id: "PL6WnzXOaRqA3PDrywv-oe88ZjSdCfEnJa"
+      title: "Apex Legends"
+      icon: "crosshair"
+      badge: "Battle Royale"
+      description: "Hero shooter squad tactics and legend abilities"
+      tags: ["gaming", "apex-legends", "multiplayer", "fps", "action"]
+
+    - id: "PL6WnzXOaRqA3UuVTTT-4v6CGS3FD4SlSl"
+      title: "Alan Wake [PC] - 1st Playthrough"
+      icon: "lightbulb"
+      description: "Thrilling writer's nightmare in Bright Falls"
+      tags: ["gaming", "alan-wake", "horror", "story", "action", "survival"]
+
+    - id: "PL6WnzXOaRqA3jKLBqMuntlPHewF1jvl5c"
+      title: "Marvel's Spider-Man [PS4]"
+      icon: "spider-web"
+      description: "Web-slinging action through New York City"
+      tags: ["gaming", "spider-man", "action", "superhero", "action-adventure", "ps5", "console"]
+
+    - id: "PL6WnzXOaRqA0qconj5DXBRn1BbjTsh-La"
+      title: "Let's Play: Portal"
+      icon: "arrow-repeat"
+      description: "Puzzle-solving with portal guns and cake lies"
+      tags: ["gaming", "portal", "puzzle", "sci-fi", "fps"]
+
+    - id: "PL6WnzXOaRqA2UVHD5gMNAqvBZ_7_cjnWQ"
+      title: "Assassin's Creed: Odyssey [PS4 - Live]"
+      icon: "shield"
+      description: "Ancient Greek myths and naval conquests live"
+      tags: ["gaming", "assassins-creed", "rpg", "live", "action-adventure", "action", "ps5", "console"]
+
+    - id: "PL6WnzXOaRqA3wr2EWmwo7_v--glFo0Qwk"
+      title: "Far Cry 5 [PS4] - 1st Playthrough"
+      icon: "crosshair"
+      description: "Cult resistance in Montana's wilds"
+      tags: ["gaming", "far-cry", "open-world", "fps", "action", "ps5", "console"]
+
+    - id: "PL6WnzXOaRqA1E_JpXdwR_FVBFz9Mo_808"
+      title: "Bioshock 2 Remastered - Blind Playthrough"
+      icon: "droplet-half"
+      badge: "Underwater Horror"
+      description: "Big Daddy's blind dive into Rapture's depths"
+      tags: ["gaming", "bioshock", "horror", "blind-playthrough", "fps", "action", "survival"]
+
+    - id: "PL6WnzXOaRqA0TU01Qs7tR0AFEjqFnlSVr"
+      title: "Alien Isolation"
+      icon: "bug"
+      description: "Stealth survival against xenomorph horrors"
+      tags: ["gaming", "alien-isolation", "horror", "stealth", "survival", "action"]
+
+    - id: "PL6WnzXOaRqA1EIQeodJsyu256lzjzJcCK"
+      title: "Detroit: Become Human"
+      icon: "android2"
+      description: "Branching narratives of android rebellion"
+      tags: ["gaming", "detroit", "interactive-drama", "story", "action-adventure", "ps5", "console"]
+
+    - id: "PL6WnzXOaRqA2iRZTiNSFIXkmhTAAZ0GVJ"
+      title: "Bioshock 1: Full Playthrough"
+      icon: "droplet"
+      description: "Underwater dystopia and plasmid powers unleashed"
+      tags: ["gaming", "bioshock", "fps", "story", "action", "horror"]
+
+    - id: "PL6WnzXOaRqA15_KprTTYjVf8ERVO4F-hl"
+      title: "Soma - Full Playthrough"
+      icon: "cpu"
+      badge: "Sci-Fi Horror"
+      description: "Underwater facility's existential AI nightmares"
+      tags: ["gaming", "soma", "horror", "sci-fi", "survival", "puzzle"]
+
+    - id: "PL6WnzXOaRqA3CdHVSiGIsuMt0mB04ZpdF"
+      title: "VR Games"
+      icon: "vr"
+      description: "Immersive virtual reality experiences and demos"
+      tags: ["gaming", "vr", "immersive", "indie", "action"]
+
+    - id: "PL6WnzXOaRqA0cTClXMfa1TC_zf0qw_77W"
+      title: "Undead Isle by MartianGames"
+      icon: "skull"
+      description: "Zombie survival collab with Martian Games dev"
+      tags: ["gaming", "undead-isle", "survival", "gamedev", "horror", "action", "indie"]
+
+    - id: "PL6WnzXOaRqA1bMG-O_gSlUIdFJCRzF4ki"
+      title: "Life is Strange Before the Storm"
+      icon: "camera-reels"
+      description: "Teen drama prequel with choice-driven stories"
+      tags: ["gaming", "life-is-strange", "adventure", "narrative", "story"]
+
+    - id: "PL6WnzXOaRqA2HN6SQkmpsqetJNwgyRUXZ"
+      title: "Ludum Dare #40 Game Jam - Birthday Weekend"
+      icon: "joystick"
+      description: "Game dev jam entries from a fun birthday stream"
+      tags: ["gaming", "ludum-dare", "gamedev", "jam", "indie"]
+
+    - id: "PL6WnzXOaRqA1_RuR0QpR-dZJiZBlUbU58"
+      title: "Half-Life Gameplay"
+      icon: "crosshairs"
+      description: "Classic FPS with physics puzzles and aliens"
+      tags: ["gaming", "half-life", "fps", "classic", "retro", "action", "puzzle"]
+
+# Responsive Bootstrap 5.3.8 grid configuration for single-card playlist layout
+grid_config:
+  columns:
+    xs: 1    # 1 column on mobile (iPhone 390px, etc.)
+    sm: 2    # 2 columns on small tablets
+    md: 3    # 3 columns on medium screens
+    lg: 3    # 3 columns on large desktops
+  videos_per_playlist: 1
+  enable_hover_effects: true
+  enable_lazy_loading: true
+  aspect_ratio: "16:9"
+  lazy_load: true
+  responsive: true
+  layout: "single-card"
+  show_single_video: true
+
+metadata:
+  page_title: "Gaming Content from Jenni Plays Games"
+  page_description: "Watch real playthroughs, horror survival, indie jams, and collabs with Martian Games — from Bioshock to Ludum Dare."
+  keywords:
+    - gaming
+    - let's play
+    - playthrough
+    - horror games
+    - indie
+    - ludum dare
+    - bioshock
+    - resident evil
+    - gamedev
+    - jenni nexus

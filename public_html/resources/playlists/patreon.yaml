@@ -1,0 +1,71 @@
+# Patreon VIP Page - Exclusive Playlists Configuration
+page: patreon
+title: "VIP Exclusive Content"
+description: "Patreon supporter exclusive playlists and content"
+
+vip_section:
+  title: "VIP Exclusive Playlists"
+  icon: "crown-fill"
+  playlists:
+    - id: "PL9QBjNDhgNwTweJsdrAKnGkQxBdUE51i6"
+      title: "🎶 Patreon Exclusive Music Collection"
+      description: "Private music, unreleased mixes, and experimental sounds"
+      icon: "music-note-beamed"
+      visibility: "private"
+      featured: true
+      tags: ["patreon", "vip", "music"]
+
+    - id: "PL9QBjNDhgNwTomE8_IMCAuUepcM5xzo8p"
+      title: "👑 Sub Updates"
+      description: "Updates, behind-the-scenes clips, and Patreon news"
+      icon: "bell-fill"
+      visibility: "private"
+      tags: ["patreon", "vip", "updates"]
+
+    - id: "PL9QBjNDhgNwQSoU9lNj3GdJLh8t2zSMSI"
+      title: "💡 Creative BTS Sessions"
+      description: "Patreon-only behind-the-scenes of game dev, modeling, and creative sessions"
+      icon: "camera-video-fill"
+      visibility: "private"
+      tags: ["patreon", "vip", "bts"]
+
+    - id: "PL00CB02AC17DFC8E2"
+      title: "🔥 Legacy Patreon Mixes"
+      description: "Archived Patreon-only DJ sets and older music drops"
+      icon: "vinyl-fill"
+      visibility: "private"
+      tags: ["patreon", "vip", "music", "legacy"]
+
+    - id: "PL9QBjNDhgNwRihbrW60bHzJPCUzfRi3bq"
+      title: "🎥 Dev Diaries"
+      description: "Exclusive updates and commentary on game development projects"
+      icon: "journal-code"
+      visibility: "private"
+      tags: ["patreon", "vip", "dev", "diary"]
+
+    - id: "PL9QBjNDhgNwToY2nfpDaZ_k3FwTNtX1b8"
+      title: "🌈 Nexus VIP Extras"
+      description: "Miscellaneous private videos, creative experiments, and bonus content"
+      icon: "stars"
+      visibility: "private"
+      tags: ["patreon", "vip", "extras"]
+
+# Responsive Bootstrap 5.3.8 grid configuration
+grid_config:
+  columns:
+    xs: 1    # 1 column on mobile (iPhone 390px, etc.)
+    sm: 2    # 2 columns on small tablets
+    md: 3    # 3 columns on medium screens
+    lg: 3    # 3 columns on large desktops
+  videos_per_playlist: 8
+  show_single_video: false
+  layout: "multi-video"
+  enable_hover_effects: true
+  aspect_ratio: "16:9"
+  lazy_load: true
+  responsive: true
+
+metadata:
+  access_level: "vip"
+  tier: "Patreon VIP ($10/month)"
+  category: "exclusive"

@@ -1,0 +1,462 @@
+{
+  "name": "JenniNexus Assets System",
+  "version": "1.1",
+  "lastUpdated": "2026-01-02",
+  "description": "CSS and JavaScript asset management, injection points, theme system, and minification workflow",
+  "architecture": "Environment-aware loading (dev vs production), per-page custom CSS/JS injection. Uses resources/vendor/ for external libraries.",
+  "versionNotes": "v1.1 (2026-01-02): Moved FontAwesome to vendor/ directory, updated build pipeline",
+  "dependencies": {
+    "injection_points": {
+      "description": "Where CSS and JavaScript files are loaded into HTML",
+      "files": [
+        {
+          "path": "public_html/includes/head.php",
+          "type": "php",
+          "description": "Primary CSS injection point - loads all global stylesheets in <head>",
+          "loads": [
+            "Bootstrap 5.3.8 CSS (CDN)",
+            "Google Fonts (Parisienne, Montserrat)",
+            "Alien League font (CDN)",
+            "Font Awesome 6.7.2 (local, minified)",
+            "Bootstrap Icons (CDN, legacy)",
+            "js-yaml (CDN)",
+            "main.css/main.min.css (custom Bootstrap properties)",
+            "custom.css/custom.min.css (overrides)",
+            "Page-specific CSS via $customCSS array"
+          ],
+          "environment_detection": "Lines 4-9: Checks localhost/127.0.0.1 to set $assetSuffix ('' for dev, '.min' for prod)",
+          "res_root_definition": "Line 3: if (!defined('RES_ROOT')) define('RES_ROOT', '/resources');",
+          "custom_css_injection": "Lines 164-169: Loops through $customCSS array if set by page",
+          "window_variable": "Lines 157-159: Exposes window.RES_ROOT for JavaScript resource loading",
+          "critical": true
+        },
+        {
+          "path": "public_html/includes/footer.php",
+          "type": "php",
+          "description": "Primary JavaScript injection point - loads all scripts before </body>",
+          "loads": [
+            "Bootstrap 5.3.8 JS Bundle (CDN)",
+            "theme-toggle.js/min.js (dark mode)",
+            "back-to-top.js/min.js (scroll button)",
+            "performance-optimizer.js/min.js (lazy loading)",
+            "polyfills.js/min.js (browser compat)",
+            "compat-resume.js/min.js (legacy support)",
+            "tag-filter-api.js/min.js (tag system)",
+            "tag-cloud.js/min.js (tag UI)",
+            "Facebook SDK (conditional - if $needsFb = true)",
+            "Page-specific scripts via $pageScripts array"
+          ],
+          "environment_detection": "Lines 18-24: Checks $assetSuffix or re-detects environment",
+          "res_root_definition": "Line 16: if (!defined('RES_ROOT')) define('RES_ROOT', '/resources');",
+          "page_scripts_injection": "Lines 140-151: Loops through $pageScripts array, handles absolute URLs",
+          "path_depth_detection": "Lines 4-13: Calculates $pathPrefix for nested pages (../)",
+          "critical": true
+        }
+      ]
+    },
+    "global_css": {
+      "description": "CSS files loaded on ALL pages via head.php",
+      "files": [
+        {
+          "path": "public_html/resources/css/main.css",
+          "minified": "public_html/resources/css/main.min.css",
+          "type": "css",
+          "description": "Bootstrap 5.3.8 custom properties - theme colors, logo branding, layout",
+          "loads_on": "ALL pages",
+          "injection_point": "head.php line 145"
+        },
+        {
+          "path": "public_html/resources/css/custom.css",
+          "minified": "public_html/resources/css/custom.min.css",
+          "type": "css",
+          "description": "Global overrides - scrollbar styling, card effects, mobile improvements",
+          "loads_on": "ALL pages",
+          "injection_point": "head.php line 149",
+          "notes": "Replaced mobile-improvements.css (archived 2025-11-05)"
+        },
+        {
+          "path": "public_html/resources/vendor/fontawesome/css/all.min.css",
+          "type": "css",
+          "description": "Font Awesome 6.7.2 - professional icon library (moved to vendor/ 2026-01-02)",
+          "loads_on": "ALL pages",
+          "injection_point": "head.php"
+        }
+      ]
+    },
+    "global_js": {
+      "description": "JavaScript files loaded on ALL pages via footer.php",
+      "files": [
+        {
+          "path": "public_html/resources/js/theme-toggle.js",
+          "minified": "public_html/resources/js/theme-toggle.min.js",
+          "type": "javascript",
+          "description": "Dark/light mode switcher - manages Bootstrap theme data attribute",
+          "loads_on": "ALL pages",
+          "injection_point": "footer.php line 125"
+        },
+        {
+          "path": "public_html/resources/js/back-to-top.js",
+          "minified": "public_html/resources/js/back-to-top.min.js",
+          "type": "javascript",
+          "description": "Floating scroll-to-top button - shows after scrolling 300px",
+          "loads_on": "ALL pages",
+          "injection_point": "footer.php line 126"
+        },
+        {
+          "path": "public_html/resources/js/performance-optimizer.js",
+          "minified": "public_html/resources/js/performance-optimizer.min.js",
+          "type": "javascript",
+          "description": "Lazy loading for images and iframes - improves page speed",
+          "loads_on": "ALL pages",
+          "injection_point": "footer.php line 127"
+        },
+        {
+          "path": "public_html/resources/js/polyfills.js",
+          "minified": "public_html/resources/js/polyfills.min.js",
+          "type": "javascript",
+          "description": "Browser compatibility shims - ensures modern JS works everywhere",
+          "loads_on": "ALL pages",
+          "injection_point": "footer.php line 128"
+        },
+        {
+          "path": "public_html/resources/js/compat-resume.js",
+          "minified": "public_html/resources/js/compat-resume.min.js",
+          "type": "javascript",
+          "description": "Legacy compatibility layer - resume page support",
+          "loads_on": "ALL pages",
+          "injection_point": "footer.php line 129"
+        },
+        {
+          "path": "public_html/resources/js/tag-filter-api.js",
+          "minified": "public_html/resources/js/tag-filter-api.min.js",
+          "type": "javascript",
+          "description": "Tag filtering API - provides filtering logic for tag system",
+          "loads_on": "ALL pages",
+          "injection_point": "footer.php line 130"
+        },
+        {
+          "path": "public_html/resources/js/tag-cloud.js",
+          "minified": "public_html/resources/js/tag-cloud.min.js",
+          "type": "javascript",
+          "description": "Tag cloud UI - header offcanvas panel with all tags",
+          "loads_on": "ALL pages",
+          "injection_point": "footer.php line 131"
+        }
+      ]
+    },
+    "theme_css": {
+      "description": "Page-specific theme CSS files loaded via $customCSS array",
+      "files": [
+        {
+          "path": "public_html/resources/css/gamedev-theme.css",
+          "minified": "public_html/resources/css/gamedev-theme.min.css",
+          "type": "css",
+          "description": "Game development theme - purple gradient, unity branding",
+          "loads_on": "gamedev.php, gamejams.php, game/*.php",
+          "injection_example": "$customCSS = [RES_ROOT . '/css/gamedev-theme.min.css'];"
+        },
+        {
+          "path": "public_html/resources/css/gaming-theme.css",
+          "minified": "public_html/resources/css/gaming-theme.min.css",
+          "type": "css",
+          "description": "Gaming content theme - pink/purple gradient",
+          "loads_on": "gaming.php",
+          "injection_example": "$customCSS = [$resourceRoot . '/css/gaming-theme.min.css'];"
+        },
+        {
+          "path": "public_html/resources/css/diy-theme.css",
+          "minified": "public_html/resources/css/diy-theme.min.css",
+          "type": "css",
+          "description": "DIY/maker theme - orange/yellow gradient, rounded-pill buttons",
+          "loads_on": "diy.php",
+          "injection_example": "$customCSS = ['resources/css/diy-theme.min.css'];"
+        },
+        {
+          "path": "public_html/resources/css/live-theme.css",
+          "minified": "public_html/resources/css/live-theme.min.css",
+          "type": "css",
+          "description": "Live streaming theme - Twitch purple, streaming colors",
+          "loads_on": "live.php",
+          "injection_example": "$customCSS = ['resources/css/live-theme.min.css'];"
+        },
+        {
+          "path": "public_html/resources/css/patreon-theme.css",
+          "minified": "public_html/resources/css/patreon-theme.min.css",
+          "type": "css",
+          "description": "Patreon integration theme - brand colors, supporter tiers",
+          "loads_on": "patreon.php",
+          "injection_example": "$customCSS = ['resources/css/patreon-theme.min.css'];"
+        },
+        {
+          "path": "public_html/resources/css/tags-theme.css",
+          "minified": "public_html/resources/css/tags-theme.min.css",
+          "type": "css",
+          "description": "Tag system theme - tag badges, category colors, filter UI",
+          "loads_on": "tags.php, tag/index.php",
+          "injection_example": "$customCSS = [RES_ROOT . '/css/tags-theme.min.css'];"
+        }
+      ]
+    },
+    "page_specific_js": {
+      "description": "JavaScript files loaded per-page via $pageScripts array",
+      "files": [
+        {
+          "path": "public_html/resources/js/youtube-grid.js",
+          "minified": "public_html/resources/js/youtube-grid.min.js",
+          "type": "javascript",
+          "description": "YouTube RSS feed renderer - loads playlists, displays videos",
+          "loads_on": "youtube.php, diy.php, gamedev.php, gaming.php, gamejams.php",
+          "apis": ["loadPageConfig(yamlPath)", "renderPlaylist(config)", "renderPlaylistSection(config)"],
+          "dependencies": ["js-yaml (CDN)", "get-youtube.php proxy"]
+        },
+        {
+          "path": "public_html/resources/js/tag-system.js",
+          "minified": "public_html/resources/js/tag-system.min.js",
+          "type": "javascript",
+          "description": "Tag filtering engine - multi-select, card filtering, state management",
+          "loads_on": "youtube.php, gamedev.php, gaming.php, tags.php, tag/index.php",
+          "dependencies": ["tag-filter-api.js", "tags.json", "content_tags.json"]
+        },
+        {
+          "path": "public_html/resources/js/diy-playlists.js",
+          "minified": "public_html/resources/js/diy-playlists.min.js",
+          "type": "javascript",
+          "description": "DIY page playlist loader - specialized for DIY content",
+          "loads_on": "diy.php",
+          "dependencies": ["youtube-grid.js", "diy.yaml"]
+        },
+        {
+          "path": "public_html/resources/js/music-playlists.js",
+          "minified": "public_html/resources/js/music-playlists.min.js",
+          "type": "javascript",
+          "description": "Music page playlist loader - Spotify integration",
+          "loads_on": "music.php"
+        },
+        {
+          "path": "public_html/resources/js/live-status.js",
+          "minified": "public_html/resources/js/live-status.min.js",
+          "type": "javascript",
+          "description": "Live streaming status checker - Twitch API integration",
+          "loads_on": "live.php"
+        },
+        {
+          "path": "public_html/resources/js/martian-games.js",
+          "minified": "public_html/resources/js/martian-games.min.js",
+          "type": "javascript",
+          "description": "Martian Games branding - game studio page interactions",
+          "loads_on": "game/martian-games.php"
+        },
+        {
+          "path": "public_html/resources/js/patreon-auth-enhanced.js",
+          "minified": "public_html/resources/js/patreon-auth-enhanced.min.js",
+          "type": "javascript",
+          "description": "Patreon OAuth integration - supporter authentication",
+          "loads_on": "patreon.php (Legacy - see patreon.php inline script)"
+        },
+        {
+          "path": "public_html/patreon.php",
+          "type": "php",
+          "description": "Patreon landing page with VIP content gating",
+          "dependencies": ["js-yaml (CDN)", "youtube-grid.js", "patreon.yaml"]
+        }
+      ]
+    },
+    "cdn_dependencies": {
+      "description": "External CSS/JS loaded from CDNs",
+      "files": [
+        {
+          "name": "Bootstrap 5.3.8 CSS",
+          "url": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css",
+          "integrity": "sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB",
+          "type": "css",
+          "critical": true
+        },
+        {
+          "name": "Bootstrap 5.3.8 JS Bundle",
+          "url": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js",
+          "integrity": "sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI",
+          "type": "javascript",
+          "critical": true
+        },
+        {
+          "name": "Bootstrap Icons",
+          "url": "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css",
+          "type": "css",
+          "status": "Legacy - being phased out in favor of Font Awesome"
+        },
+        {
+          "name": "js-yaml",
+          "url": "https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js",
+          "type": "javascript",
+          "required_by": "youtube-grid.js (parses YAML configs)"
+        },
+        {
+          "name": "Google Fonts",
+          "urls": [
+            "https://fonts.googleapis.com/css2?family=Parisienne&family=Montserrat:wght@900&display=swap",
+            "https://fonts.cdnfonts.com/css/alien-league"
+          ],
+          "type": "css",
+          "fonts": ["Parisienne (logo)", "Montserrat (headings)", "Alien League (Martian Games)"]
+        },
+        {
+          "name": "Facebook SDK",
+          "url": "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v24.0&appId=331813368732871",
+          "type": "javascript",
+          "conditional": "Only loaded if $needsFb = true"
+        }
+      ]
+    }
+  },
+  "workflows": {
+    "adding_global_css": {
+      "description": "How to add a new global CSS file loaded on all pages",
+      "steps": [
+        "1. Create CSS file in public_html/resources/css/",
+        "2. Add to head.php between line 149 and 152",
+        "3. Use <?= RES_ROOT ?>/css/filename<?= $assetSuffix ?>.css",
+        "4. Run build-all.ps1 to create minified version",
+        "5. Test on localhost:8002 (dev) and production (minified)"
+      ]
+    },
+    "adding_global_js": {
+      "description": "How to add a new global JavaScript file loaded on all pages",
+      "steps": [
+        "1. Create JS file in public_html/resources/js/",
+        "2. Add to footer.php between line 125 and 132",
+        "3. Use <?= RES_ROOT ?>/js/filename<?= $assetSuffix ?>.js",
+        "4. Run build-all.ps1 to create minified version",
+        "5. Test on localhost:8002 (dev) and production (minified)"
+      ]
+    },
+    "adding_page_css": {
+      "description": "How to add CSS for a specific page",
+      "steps": [
+        "1. Create theme CSS file in public_html/resources/css/",
+        "2. In the page PHP, before including head.php:",
+        "3. Set $customCSS = [RES_ROOT . '/css/your-theme.min.css'];",
+        "4. OR: $customCSS = ['resources/css/your-theme.min.css']; (relative)",
+        "5. Run build-all.ps1 to create minified version",
+        "6. head.php will automatically inject it (lines 164-169)"
+      ],
+      "examples": [
+        "gamedev.php: $customCSS = [RES_ROOT . '/css/gamedev-theme.min.css'];",
+        "diy.php: $customCSS = ['resources/css/diy-theme.min.css'];"
+      ]
+    },
+    "adding_page_js": {
+      "description": "How to add JavaScript for a specific page",
+      "steps": [
+        "1. Create JS file in public_html/resources/js/",
+        "2. In the page PHP, before including footer.php:",
+        "3. Set $pageScripts = [RES_ROOT . '/js/your-script.min.js'];",
+        "4. OR: $pageScripts = ['resources/js/your-script.min.js']; (relative)",
+        "5. For multiple scripts: $pageScripts = ['script1.js', 'script2.js'];",
+        "6. Run build-all.ps1 to create minified version",
+        "7. footer.php will automatically inject them (lines 140-151)"
+      ],
+      "examples": [
+        "youtube.php loads tag-system.js and youtube-grid.js",
+        "diy.php loads tag-system.js and diy-playlists.js"
+      ]
+    },
+    "minification": {
+      "description": "How CSS/JS minification works",
+      "steps": [
+        "1. Run scripts/build-all.ps1 from jenninexus root",
+        "2. Script calls scripts/minify-assets.ps1",
+        "3. Finds all .css files without .min.css",
+        "4. Finds all .js files without .min.js",
+        "5. Creates .min.css and .min.js versions (strip whitespace, comments)",
+        "6. Production environment auto-loads .min versions via $assetSuffix"
+      ],
+      "script_path": "scripts/minify-assets.ps1",
+      "triggered_by": "build-all.ps1 (main build pipeline)"
+    },
+    "environment_detection": {
+      "description": "How dev vs production asset loading works",
+      "logic": [
+        "head.php lines 4-9: Checks $_SERVER['REMOTE_ADDR'] and $_SERVER['HTTP_HOST']",
+        "If localhost/127.0.0.1/port 8002: $assetSuffix = '' (load .css/.js)",
+        "If production (jenninexus.com): $assetSuffix = '.min' (load .min.css/.min.js)",
+        "All asset tags use <?= $assetSuffix ?> to auto-switch",
+        "window.RES_ROOT exposed to JavaScript for dynamic resource loading"
+      ],
+      "dev_urls": ["http://localhost:8002", "http://127.0.0.1:8002"],
+      "prod_url": "https://jenninexus.com"
+    }
+  },
+  "critical_rules": [
+    "ALWAYS use <?= RES_ROOT ?> for resource paths in PHP (NOT hardcoded /resources)",
+    "ALWAYS use <?= $assetSuffix ?> for .css/.js extensions (enables dev/prod switching)",
+    "NEVER use <?= RES_ROOT ?> inside JavaScript template literals (use '/resources' or window.RES_ROOT)",
+    "Set $customCSS array BEFORE including head.php for page-specific CSS",
+    "Set $pageScripts array BEFORE including footer.php for page-specific JS",
+    "Run build-all.ps1 after modifying any CSS/JS to create minified versions",
+    "Test on localhost:8002 (dev mode) BEFORE deploying to production",
+    "Global CSS/JS goes in head.php/footer.php, page-specific uses $customCSS/$pageScripts",
+    "Font Awesome 6.7.2 preferred over Bootstrap Icons (legacy)",
+    "All themes extend Bootstrap 5.3.8 custom properties (main.css)"
+  ],
+  "troubleshooting": {
+    "css_not_loading": {
+      "symptoms": "Styles missing, theme not applied",
+      "solutions": [
+        "Check $customCSS array is set BEFORE head.php include",
+        "Verify RES_ROOT path is correct (starts with / or uses RES_ROOT constant)",
+        "Run build-all.ps1 to ensure .min.css exists",
+        "Check browser console for 404 errors",
+        "Clear browser cache (Ctrl+Shift+R)"
+      ]
+    },
+    "js_not_loading": {
+      "symptoms": "Interactive features broken, console errors",
+      "solutions": [
+        "Check $pageScripts array is set BEFORE footer.php include",
+        "Verify script path is correct (use RES_ROOT constant)",
+        "Run build-all.ps1 to ensure .min.js exists",
+        "Check browser console for 404 or syntax errors",
+        "Ensure dependencies loaded first (js-yaml before youtube-grid.js)"
+      ]
+    },
+    "wrong_assets_loading": {
+      "symptoms": "Loading .min files in dev or .css files in production",
+      "solutions": [
+        "Check head.php lines 4-9 environment detection logic",
+        "Verify localhost is in allowed list (127.0.0.1, localhost, :8002)",
+        "Check $assetSuffix variable is set correctly",
+        "Test URL matches dev_urls in environment_detection workflow"
+      ]
+    },
+    "minified_files_missing": {
+      "symptoms": "404 errors for .min.css or .min.js in production",
+      "solutions": [
+        "Run build-all.ps1 to generate all minified assets",
+        "Check scripts/minify-assets.ps1 completed successfully",
+        "Verify .min files exist in public_html/resources/css/ and /js/",
+        "Deploy to production with deploy.ps1 (includes build step)"
+      ]
+    }
+  },
+  "integration_points": {
+    "bootstrap_theme": {
+      "description": "How Bootstrap 5.3.8 theming works",
+      "files": ["main.css (custom properties)", "custom.css (overrides)"],
+      "dark_mode": "theme-toggle.js manages data-bs-theme attribute on <html>",
+      "customization": "Use CSS custom properties in main.css (--bs-primary, --bs-body-bg, etc.)"
+    },
+    "tag_system": {
+      "description": "How tag filtering integrates with assets",
+      "css": ["tags-theme.css (badge colors, filter UI)"],
+      "js": ["tag-system.js (filtering engine)", "tag-cloud.js (offcanvas UI)", "tag-filter-api.js (API)"],
+      "dependencies": ["See .config/tag-deps.json for complete tag system architecture"]
+    },
+    "video_system": {
+      "description": "How YouTube integration works with assets",
+      "js": ["youtube-grid.js (RSS rendering)", "diy-playlists.js (DIY specialization)"],
+      "cdn": ["js-yaml (YAML parsing)"],
+      "proxy": ["get-youtube.php (RSS → JSON)"],
+      "dependencies": ["See .config/video-deps.json for complete video system architecture"]
+    }
+  }
+}

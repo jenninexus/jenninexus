@@ -1,0 +1,69 @@
+# Game Jams & Ludum Dare - Playlists Configuration
+# This file contains game jam and Ludum Dare playlist collections.
+# Includes both Ludum Dare specific jams and other game jam entries.
+page: gamejams
+title: "Game Jams & Ludum Dare"
+description: "Collections of Ludum Dare and other game jam playlists and compilations."
+
+# Section expected by `youtube-grid.js` (key ends with _section)
+gamejams_section:
+  title: "Game Jam Playlists"
+  description: "Playlists featuring Ludum Dare entries, game jam submissions, and related compilations."
+  icon: "lightning-charge"
+  container_id: "gamejams-playlists"
+  columns:
+    xs: 1
+    sm: 2
+    md: 3
+    lg: 5
+  playlists:
+    # Game Jam Highlights - General compilation (not just Ludum Dare)
+    - id: "PL9QBjNDhgNwTFn7QSZRbZGoKCCIsUlemX"
+      title: "Game Jam Highlights"
+      tags: ["game-jam","indie","gamedev","compilation"]
+      description: "48-hour game jam projects compilation"
+
+    # Ludum Dare specific playlists
+    - id: "PL6WnzXOaRqA19W60NFfCJNJOrr4SBPkZe"
+      title: "Ludum Dare gameplay"
+      tags: ["indie","game-jam","game-dev","ludum-dare"]
+
+    - id: "PL6WnzXOaRqA3yKvAYjZ4Gja9__cfwG3Ii"
+      title: "Ludum Dare 46"
+      tags: ["indie","game-dev","ludum-dare"]
+
+    - id: "PL6WnzXOaRqA3l4G2qBFlSgm8Yv3-zZlL3"
+      title: "Ludum Dare 44"
+      tags: ["game-jam","ludum-dare","game-dev"]
+
+    - id: "PL6WnzXOaRqA2KHDV9bJ9pk1vltf6KcCy8"
+      title: "Kitty McBlubberton"
+      tags: ["indie","game-jam","ludum-dare","kitty-mcblubberton"]
+
+    - id: "PL6WnzXOaRqA1Bg2Kg_oalYaInTyBCGIUu"
+      title: "Let's play LDJAM 38 entries"
+      tags: ["game-jam","game-dev","ludum-dare"]
+
+    - id: "PL6WnzXOaRqA0bkTwUcuV-c7DMcKLkt_3K"
+      title: "Let's play LDJAM 40 entries"
+      tags: ["game-jam","indie","ludum-dare"]
+
+    - id: "PL6WnzXOaRqA2HN6SQkmpsqetJNwgyRUXZ"
+      title: "Red Friday - game jam submission"
+      tags: ["indie","game-dev","ludum-dare"]
+
+# Grid display preferences used by client script when available
+grid_config:
+  columns:
+    xs: 1
+    sm: 2
+    md: 3
+    lg: 5
+  videos_per_playlist: 1
+  show_single_video: true
+  enable_hover_effects: true
+  enable_lazy_loading: true
+  aspect_ratio: "16:9"
+  layout: "single-card"
+  lazy_load: true
+  responsive: true

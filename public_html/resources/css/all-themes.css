@@ -1,0 +1,725 @@
+/**
+ * All Themes - Neophi Light/Dark Base Theme
+ * 
+ * ARCHITECTURE DECISION:
+ * - This file: Base light/dark theme for Neophi investment landing page
+ * - Page themes: Self-contained in individual CSS files (patreon-theme.css, gamedev-theme.css, etc.)
+ * - Why separate? Performance, maintainability, distinct brand identities per page
+ * 
+ * JenniNexus Color Palette Reference (used across page themes):
+ * • Patreon: #FF424D (coral), #052D49 (navy)
+ * • Game Dev: #A563D1 (purple), #FF2E88 (pink), #1e2a3a → #7b5ca8 (dark blue → purple gradient)
+ * • Gaming: #66c0f4 (Steam blue), #1b2838 (dark blue), rgba gradients for glass effect
+ * • Live: #9146ff (Twitch purple), #ff0000 (YouTube red), glass gradients with 0.3-0.4 opacity
+ * • DIY: #FF6EC4 (pink), #A563D1 (purple), #E6D5F5 (lavender)
+ * • Tags: #FF2E88 (hot pink), #A563D1 (purple), semi-transparent gradients
+ * 
+ * Social Media Platform Colors (from _platform-colors.scss):
+ * • YouTube: #ff0000 (red)
+ * • Discord: #5865F2 (blurple)
+ * • Twitch: #9146FF (purple)
+ * • Patreon: #FF424D (coral)
+ * • Instagram: #E4405F (magenta)
+ * • TikTok: #000000 (black), #ff0050 (pink accent)
+ * • Steam: #66c0f4 (blue), #1b2838 (navy)
+ * • Spotify: #1DB954 (green)
+ * 
+ * Generates CSS custom properties for light and dark themes
+ */
+:root,
+:root[data-theme=light],
+[data-bs-theme="light"] {
+  /* Neophi Base Light Theme - soft lavender base instead of stark white */
+  --background: #F9F3FB; /* Soft lavender to avoid pure white backgrounds */
+  --text: #2C2A33; /* Darkened text for better contrast on lavender */
+  --primary: #A563D1; /* JenniNexus purple */
+  --secondary: #FF2E88; /* JenniNexus pink */
+  --accent: #FF6EC4; /* Light pink accent */
+  --border: #E8DFF7; /* subtle lavender-border */
+  --glass-bg: rgba(197, 116, 224, 0.295); /* lavender-tinted glass */
+  --glow: rgba(165, 99, 209, 0.25);
+  --shadow: rgba(0, 0, 0, 0.06);
+
+  /* Map to Bootstrap body variables so light theme is not pure white */
+  --bs-body-bg: var(--background);
+  --bs-body-bg-rgb: 249, 243, 251;
+  --bs-body-color: var(--text);
+  --bs-body-color-rgb: 44, 42, 51;
+  /* Secondary background - light lavender, not white */
+  --bs-secondary-bg: #F5F3FF; /* Light lavender instead of bright white */
+  --bs-secondary-bg-rgb: 245, 243, 255;
+  /* Text colors for proper contrast */
+  --text-secondary: #495057; /* Dark gray for good contrast on lavender */
+  --text-muted: #6C757D; /* Medium gray for muted text */
+  --youtube-red: #ff0000;
+  --twitch-purple: #9146FF;
+  --patreon-coral: #FF424D;
+  --steam-blue: #66c0f4;
+  --discord-blurple: #5865F2;
+  --instagram-magenta: #E4405F;
+  --spotify-green: #1DB954;
+  --tiktok-pink: #ff0050;
+
+  /* JenniNexus brand alias variables (site-level consistency) */
+  --jenni-primary: var(--primary);
+  --jenni-secondary: var(--secondary);
+  --jenni-accent: var(--accent);
+
+  /* Glassmorphism Variables - Lavender tinted, not pure white */
+  --glass-panel-bg: rgba(249, 243, 251, 0.65); /* More transparent lavender glass */
+  --glass-panel-border: rgba(165, 99, 209, 0.2); /* Purple tinted border */
+  --glass-panel-shadow: rgba(0, 0, 0, 0.1);
+  --glass-panel-blur: 12px;
+
+  /* RGB fallbacks for glow/shadow helpers - LAVENDER not white */
+  --background-rgb: 249, 243, 251; /* Matches --background #F9F3FB */
+  --border-rgb: 232, 223, 247; /* Matches --border #E8DFF7 */
+  --primary-rgb: 165, 99, 209; /* matches --primary #A563D1 */
+  --secondary-rgb: 255, 46, 136; /* matches --secondary #FF2E88 */
+  --accent-rgb: 255, 110, 196; /* matches --accent #FF6EC4 */
+
+  /* Bootstrap Component Overrides - Light Mode */
+  --bs-card-bg: var(--glass-panel-bg);
+  --bs-card-border-color: var(--glass-panel-border);
+  --bs-modal-bg: var(--glass-panel-bg);
+  --bs-dropdown-bg: var(--glass-panel-bg);
+  
+  /* Prevent white backgrounds on common Bootstrap components */
+  --bs-white: #F9F3FB; /* Override Bootstrap white to lavender */
+  --bs-light: #F5F3FF; /* Override light variant to light lavender */
+  --bs-light-rgb: 245, 243, 255;
+}
+
+/* NUCLEAR OPTION: Force body and html to use lavender background in light mode */
+[data-bs-theme="light"] html,
+[data-bs-theme="light"] body {
+  background-color: #F9F3FB !important;
+  background: #F9F3FB !important;
+}
+
+/* Ensure containers don't add white backgrounds */
+[data-bs-theme="light"] .container,
+[data-bs-theme="light"] .container-fluid,
+[data-bs-theme="light"] section:not([class*="bg-"]),
+[data-bs-theme="light"] .row:not([class*="bg-"]) {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+:root[data-theme=dark],
+[data-bs-theme="dark"] {
+  /* Neophi Base Dark Theme - WCAG AA compliant with enhanced purple theme */
+  --background: #0F0F19; /* Dark purple-black instead of pure black */
+  --text: #E0D5EB; /* Light lavender text for great contrast */
+  --primary: #A563D1; /* JenniNexus purple (same as light) */
+  --secondary: #FF2E88; /* JenniNexus pink (same as light) */
+  --accent: #FF6EC4; /* Light pink accent (same as light) */
+  --border: #2B1C39; /* Dark purple border */
+  --glass-bg: rgba(165, 99, 209, 0.1); /* Subtle purple glass tint */
+  --glow: rgba(165, 99, 209, 0.4); /* Enhanced purple glow */
+  --shadow: rgba(0, 0, 0, 0.5);
+
+  /* Map to Bootstrap body variables */
+  --bs-body-bg: var(--background);
+  --bs-body-bg-rgb: 15, 15, 25;
+  --bs-body-color: var(--text);
+  --bs-body-color-rgb: 224, 213, 235;
+  /* Secondary background - dark purple */
+  --bs-secondary-bg: #1A1625; /* Slightly lighter dark purple */
+  --bs-secondary-bg-rgb: 26, 22, 37;
+  /* Text colors for dark mode */
+  --text-secondary: #B8A8D1; /* Light purple-gray */
+  --text-muted: #8F85A5; /* Medium purple-gray */
+  --youtube-red: #ff0000;
+  --twitch-purple: #9146FF;
+  --patreon-coral: #FF424D;
+  --steam-blue: #66c0f4;
+  --discord-blurple: #5865F2;
+  --instagram-magenta: #E4405F;
+  --spotify-green: #1DB954;
+  --tiktok-pink: #ff0050;
+
+  /* JenniNexus brand alias variables */
+  --jenni-primary: var(--primary);
+  --jenni-secondary: var(--secondary);
+  --jenni-accent: var(--accent);
+
+  /* Glassmorphism Variables - Dark mode */
+  --glass-panel-bg: rgba(15, 15, 25, 0.75); /* Semi-transparent dark purple */
+  --glass-panel-border: rgba(165, 99, 209, 0.15); /* Subtle purple border */
+  --glass-panel-shadow: rgba(0, 0, 0, 0.3);
+  --glass-panel-blur: 10px;
+
+  /* RGB fallbacks for glow/shadow helpers */
+  --background-rgb: 15, 15, 25;
+  --border-rgb: 43, 28, 57;
+  --primary-rgb: 165, 99, 209;
+  --secondary-rgb: 255, 46, 136;
+  --accent-rgb: 255, 110, 196;
+
+  /* Bootstrap Component Overrides - Dark Mode */
+  --bs-card-bg: var(--glass-panel-bg);
+  --bs-card-border-color: var(--glass-panel-border);
+  --bs-modal-bg: var(--glass-panel-bg);
+  --bs-dropdown-bg: var(--glass-panel-bg);
+}
+
+/* ===================================
+   BACKGROUND UTILITY CLASSES
+   =================================== */
+
+/* Adaptive background that works in both themes */
+.bg-theme-adaptive {
+  background-color: var(--bs-body-bg) !important;
+  color: var(--bs-body-color) !important;
+}
+
+/* Section pastel background (light lavender tint) */
+.section-pastel {
+  background: rgba(249, 243, 251, 0.7) !important;
+  backdrop-filter: blur(10px);
+}
+
+:root[data-bs-theme="dark"] .section-pastel {
+  background: rgba(15, 15, 25, 0.8) !important;
+}
+
+/* Home page surface styling */
+.home-surface {
+  background: rgba(249, 243, 251, 0.8) !important;
+  backdrop-filter: blur(10px);
+}
+
+:root[data-bs-theme="dark"] .home-surface {
+  background: rgba(15, 15, 25, 0.8) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Text contrast utilities for theme adaptation */
+.text-theme-adaptive,
+.text-theme-safe {
+  color: var(--bs-body-color) !important;
+}
+
+/* CRITICAL: Ensure NO white backgrounds */
+:root[data-bs-theme="light"] section:not([class*="bg-"]),
+:root[data-bs-theme="light"] .container:not(.bg-*) {
+  background: transparent; /* Let body lavender show through */
+}
+
+:root[data-bs-theme="dark"] section:not([class*="bg-"]),
+:root[data-bs-theme="dark"] .container:not(.bg-*) {
+  background: transparent; /* Let body dark purple show through */
+}
+
+/* CRITICAL: Override Bootstrap white utility classes */
+:root[data-bs-theme="light"] .bg-white,
+:root[data-bs-theme="light"] .bg-light {
+  background-color: #F9F3FB !important; /* Force lavender instead of white */
+}
+
+:root[data-bs-theme="light"] .card,
+:root[data-bs-theme="light"] .glass-panel {
+  background: var(--glass-panel-bg) !important;
+  background-color: var(--glass-panel-bg) !important;
+}
+
+:root[data-bs-theme="light"] .carousel-inner,
+:root[data-bs-theme="light"] .carousel-item {
+  background: transparent !important;
+}
+
+:root[data-theme=dark] {
+  --background: #0F0F19; /* Deep purple-black for JenniNexus aesthetic */
+  --text: #E0D5EB; /* Light purple-gray text - 14.2:1 contrast */
+  --text-secondary: #C9BBDD; /* Medium purple-gray for secondary text - 11.8:1 contrast */
+  --text-muted: #B8A8CC; /* Muted purple-gray with good contrast - 9.2:1 contrast */
+  --primary: #A563D1; /* JenniNexus purple primary - consistent across themes */
+  --secondary: #FF2E88; /* JenniNexus pink secondary - consistent across themes */
+  --accent: #FF6EC4; /* Bright pink accent - 7.8:1 contrast */
+  --border: #2D2436; /* Dark purple-gray borders */
+
+  /* Map to Bootstrap body variables for dark theme */
+  --bs-body-bg: var(--background);
+  --bs-body-bg-rgb: 15, 15, 25;
+  --bs-body-color: var(--text);
+  --bs-body-color-rgb: 224, 213, 235;
+  /* Dark theme RGB fallbacks */
+  --background-rgb: 15, 15, 25;
+  --border-rgb: 45, 36, 54;
+  --primary-rgb: 165, 99, 209;
+  --secondary-rgb: 255, 46, 136;
+  --accent-rgb: 255, 110, 196;
+
+  /* Glassmorphism Variables (Dark) */
+  --glass-panel-bg: rgba(0, 0, 0, 0.6);
+  --glass-panel-border: rgba(255, 255, 255, 0.1);
+  --glass-panel-shadow: rgba(0, 0, 0, 0.4);
+  --glass-panel-blur: 12px;
+
+  /* Bootstrap Component Overrides - Dark Mode */
+  --bs-card-bg: var(--glass-panel-bg);
+  --bs-card-border-color: var(--glass-panel-border);
+  --bs-modal-bg: var(--glass-panel-bg);
+  --bs-dropdown-bg: var(--glass-panel-bg);
+}
+
+:root[data-theme=dark] {
+  --glass-bg: rgba(var(--background-rgb), 0.05);
+  --glass-border: rgba(var(--border-rgb), 0.15);
+  --glass-backdrop-blur: 12px;
+  --glow-primary: rgba(var(--primary-rgb), 0.5);
+  --glow-secondary: rgba(var(--secondary-rgb), 0.5);
+  --glow-accent: rgba(var(--accent-rgb), 0.5);
+}
+:root[data-theme=dark] .neon-text {
+  text-shadow: 0 0 5px var(--glow-primary), 0 0 10px rgba(var(--primary-rgb), 0.3), 0 0 15px rgba(var(--primary-rgb), 0.2);
+}
+:root[data-theme=dark] .neon-border {
+  box-shadow: 0 0 5px var(--glow-primary), 0 0 10px rgba(var(--primary-rgb), 0.2), inset 0 0 5px rgba(var(--primary-rgb), 0.1);
+}
+:root[data-theme=dark] .neon-glow {
+  animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+:root[data-theme=light] {
+  --glass-bg: rgba(249, 243, 251, 0.7); /* Lavender glass, not white */
+  --glass-border: rgba(232, 223, 247, 0.3); /* Lavender border */
+  --glass-backdrop-blur: 8px;
+  --glow-primary: rgba(var(--primary-rgb), 0.2);
+  --glow-secondary: rgba(var(--secondary-rgb), 0.2);
+  --glow-accent: rgba(var(--accent-rgb), 0.2);
+}
+:root[data-theme=light] .subtle-glow {
+  box-shadow: 0 2px 8px var(--glow-primary);
+}
+:root[data-theme=light] .professional-border {
+  border: 1px solid rgba(var(--border-rgb), 0.2);
+}
+
+@keyframes neonPulse {
+  0% {
+    text-shadow: 0 0 5px var(--glow-primary), 0 0 10px rgba(var(--primary-rgb), 0.3);
+    filter: brightness(1);
+  }
+  100% {
+    text-shadow: 0 0 8px rgba(var(--primary-rgb), 0.7), 0 0 15px var(--glow-primary), 0 0 20px rgba(var(--primary-rgb), 0.3);
+    filter: brightness(1.1);
+  }
+}
+@keyframes investmentGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(var(--success-rgb), 0.3);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(var(--success-rgb), 0.5), 0 0 20px rgba(var(--success-rgb), 0.3);
+  }
+}
+@keyframes professionalFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+@keyframes metricCounter {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.investment-card {
+  transition: all var(--transition-normal);
+}
+.investment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(var(--shadow-rgb), 0.15), 0 0 0 1px rgba(var(--primary-rgb), 0.1);
+}
+
+.metric-display {
+  animation: metricCounter 0.6s ease-out;
+}
+.metric-display.positive {
+  color: var(--success);
+  text-shadow: 0 0 8px rgba(var(--success-rgb), 0.3);
+}
+.metric-display.negative {
+  color: var(--error);
+  text-shadow: 0 0 8px rgba(var(--error-rgb), 0.3);
+}
+
+* {
+  transition: background-color var(--transition-normal), border-color var(--transition-normal), color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+/* ===================================
+   SOCIAL MEDIA PLATFORM COLORS & BUTTONS
+   Based on official brand guidelines
+   =================================== */
+
+/* Platform Color Variables */
+/* ===================================
+   Platform Brand Colors - Enhanced Contrast
+   Updated Dec 25, 2025
+   =================================== */
+:root {
+  /* Primary brand colors */
+  --youtube-red: #ff0000;
+  --youtube-red-rgb: 255, 0, 0;
+  --discord-blurple: #5865F2;
+  --discord-blurple-rgb: 88, 101, 242;
+  --twitch-purple: #9146FF;
+  --twitch-purple-rgb: 145, 70, 255;
+  --patreon-coral: #FF424D;
+  --patreon-coral-rgb: 255, 66, 77;
+  --instagram-magenta: #E4405F;
+  --instagram-magenta-rgb: 228, 64, 95;
+  --tiktok-black: #000000;
+  --tiktok-black-rgb: 0, 0, 0;
+  --tiktok-pink: #ff0050;
+  --tiktok-pink-rgb: 255, 0, 80;
+  --steam-blue: #66c0f4;
+  --steam-blue-rgb: 102, 192, 244;
+  --steam-navy: #1b2838;
+  --steam-navy-rgb: 27, 40, 56;
+  --spotify-green: #1DB954;
+  --spotify-green-rgb: 29, 185, 84;
+  --github-dark: #333333;
+  --github-dark-rgb: 51, 51, 51;
+  
+  /* Platform Glows */
+  --glow-youtube: rgba(var(--youtube-red-rgb), 0.4);
+  --glow-discord: rgba(var(--discord-blurple-rgb), 0.5);
+  --glow-twitch: rgba(var(--twitch-purple-rgb), 0.5);
+  --glow-patreon: rgba(var(--patreon-coral-rgb), 0.5);
+  --glow-instagram: rgba(var(--instagram-magenta-rgb), 0.5);
+  --glow-steam: rgba(var(--steam-blue-rgb), 0.4);
+  --glow-spotify: rgba(var(--spotify-green-rgb), 0.5);
+  --glow-tiktok: rgba(var(--tiktok-pink-rgb), 0.5);
+  --glow-github: rgba(var(--github-dark-rgb), 0.5);
+  
+  /* Secondary/hover colors for better contrast */
+  --youtube-red-dark: #cc0000;
+  --discord-blurple-dark: #4752c4;
+  --discord-blurple-light: #7289da;
+  --twitch-purple-dark: #7c38cc;
+  --twitch-purple-light: #a970ff;
+  --patreon-coral-dark: #e73843;
+  --patreon-coral-light: #ff6b76;
+  --instagram-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  --steam-navy-dark: #171a21;
+  --spotify-green-dark: #1aa34a;
+  --github-light: #24292e;
+}
+
+/* ===================================
+   Social Media Button Styles - Enhanced Hover
+   Color change + glow on hover (sitewide protocol)
+   =================================== */
+.btn-youtube {
+  background-color: var(--youtube-red);
+  border-color: var(--youtube-red);
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn-youtube:hover,
+.btn-youtube:focus {
+  background-color: var(--youtube-red-dark);
+  border-color: var(--youtube-red-dark);
+  color: white;
+  box-shadow: 0 4px 16px var(--glow-youtube);
+  transform: translateY(-2px);
+}
+
+.btn-discord {
+  background-color: var(--discord-blurple);
+  border-color: var(--discord-blurple);
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn-discord:hover,
+.btn-discord:focus {
+  background-color: var(--discord-blurple-dark);
+  border-color: var(--discord-blurple-dark);
+  color: white;
+  box-shadow: 0 4px 16px var(--glow-discord);
+  transform: translateY(-2px);
+}
+
+.btn-twitch {
+  background-color: var(--twitch-purple);
+  border-color: var(--twitch-purple);
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn-twitch:hover,
+.btn-twitch:focus {
+  background-color: var(--twitch-purple-dark);
+  border-color: var(--twitch-purple-dark);
+  color: white;
+  box-shadow: 0 4px 16px var(--glow-twitch);
+  transform: translateY(-2px);
+}
+
+.btn-patreon {
+  background-color: var(--patreon-coral);
+  border-color: var(--patreon-coral);
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn-patreon:hover,
+.btn-patreon:focus {
+  background-color: var(--patreon-coral-dark);
+  border-color: var(--patreon-coral-dark);
+  color: white;
+  box-shadow: 0 4px 16px var(--glow-patreon);
+  transform: translateY(-2px);
+}
+
+.btn-instagram {
+  background: var(--instagram-gradient);
+  border-color: var(--instagram-magenta);
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn-instagram:hover,
+.btn-instagram:focus {
+  background: var(--instagram-gradient);
+  border-color: #bc1888;
+  color: white;
+  box-shadow: 0 4px 16px var(--glow-instagram);
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.btn-steam {
+  background-color: var(--steam-navy);
+  border-color: var(--steam-blue);
+  color: var(--steam-blue);
+  transition: all 0.3s ease;
+}
+.btn-steam:hover,
+.btn-steam:focus {
+  background-color: var(--steam-navy-dark);
+  border-color: var(--steam-blue);
+  color: #c7d5e0;
+  box-shadow: 0 4px 16px var(--glow-steam);
+  transform: translateY(-2px);
+}
+
+.btn-spotify {
+  background-color: var(--spotify-green);
+  border-color: var(--spotify-green);
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn-spotify:hover,
+.btn-spotify:focus {
+  background-color: var(--spotify-green-dark);
+  border-color: var(--spotify-green-dark);
+  color: white;
+  box-shadow: 0 4px 16px var(--glow-spotify);
+  transform: translateY(-2px);
+}
+
+.btn-tiktok {
+  background-color: var(--tiktok-black);
+  border-color: var(--tiktok-pink);
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn-tiktok:hover,
+.btn-tiktok:focus {
+  background-color: #1a1a1a;
+  border-color: var(--tiktok-pink);
+  color: white;
+  box-shadow: 0 4px 16px var(--glow-tiktok);
+  transform: translateY(-2px);
+}
+
+.btn-github {
+  background-color: var(--github-dark);
+  border-color: var(--github-dark);
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn-github:hover,
+.btn-github:focus {
+  background-color: var(--github-light);
+  border-color: var(--github-light);
+  color: white;
+  box-shadow: 0 4px 16px var(--glow-github);
+  transform: translateY(-2px);
+}
+
+/* ===================================
+   Outline Variants - Enhanced Hover Protocol
+   Color fill + glow on hover
+   =================================== */
+.btn-outline-youtube {
+  color: var(--youtube-red);
+  border-color: var(--youtube-red);
+  transition: all 0.3s ease;
+}
+.btn-outline-youtube:hover,
+.btn-outline-youtube:focus {
+  background-color: var(--youtube-red);
+  border-color: var(--youtube-red);
+  color: white;
+  box-shadow: 0 4px 16px var(--glow-youtube);
+  transform: translateY(-2px);
+}
+
+.btn-outline-tiktok {
+  color: var(--tiktok-pink);
+  border-color: var(--tiktok-pink);
+  transition: all 0.3s ease;
+}
+.btn-outline-tiktok:hover,
+.btn-outline-tiktok:focus {
+  background-color: var(--tiktok-black);
+  border-color: var(--tiktok-pink);
+  color: white;
+  box-shadow: 0 4px 16px var(--glow-tiktok);
+  transform: translateY(-2px);
+}
+
+.btn-outline-github {
+  color: var(--github-dark);
+  border-color: var(--github-dark);
+  transition: all 0.3s ease;
+}
+.btn-outline-github:hover,
+.btn-outline-github:focus {
+  background-color: var(--github-dark);
+  border-color: var(--github-dark);
+  color: white;
+  box-shadow: 0 4px 16px var(--glow-github);
+  transform: translateY(-2px);
+}
+
+.btn-outline-discord {
+  color: var(--discord-blurple);
+  border-color: var(--discord-blurple);
+  transition: all 0.3s ease;
+}
+.btn-outline-discord:hover,
+.btn-outline-discord:focus {
+  background-color: var(--discord-blurple);
+  border-color: var(--discord-blurple);
+  color: white;
+  box-shadow: 0 4px 16px var(--glow-discord);
+  transform: translateY(-2px);
+}
+
+.btn-outline-twitch {
+  color: var(--twitch-purple);
+  border-color: var(--twitch-purple);
+  transition: all 0.3s ease;
+}
+.btn-outline-twitch:hover,
+.btn-outline-twitch:focus {
+  background-color: var(--twitch-purple);
+  border-color: var(--twitch-purple);
+  color: white;
+  box-shadow: 0 4px 16px var(--glow-twitch);
+  transform: translateY(-2px);
+}
+
+.btn-outline-patreon {
+  color: var(--patreon-coral);
+  border-color: var(--patreon-coral);
+  transition: all 0.3s ease;
+}
+.btn-outline-patreon:hover,
+.btn-outline-patreon:focus {
+  background-color: var(--patreon-coral);
+  border-color: var(--patreon-coral);
+  color: white;
+  box-shadow: 0 4px 16px var(--glow-patreon);
+  transform: translateY(-2px);
+}
+
+.btn-outline-instagram {
+  background: var(--instagram-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 2px solid var(--instagram-magenta);
+  transition: all 0.3s ease;
+}
+.btn-outline-instagram:hover,
+.btn-outline-instagram:focus {
+  background: var(--instagram-gradient);
+  -webkit-text-fill-color: white;
+  border-color: #bc1888;
+  color: white;
+  box-shadow: 0 4px 16px var(--glow-instagram);
+  transform: translateY(-2px);
+}
+
+.btn-outline-steam {
+  color: var(--steam-blue);
+  border-color: var(--steam-blue);
+  transition: all 0.3s ease;
+}
+.btn-outline-steam:hover,
+.btn-outline-steam:focus {
+  background-color: var(--steam-navy);
+  border-color: var(--steam-blue);
+  color: #c7d5e0;
+  box-shadow: 0 4px 16px var(--glow-steam);
+  transform: translateY(-2px);
+}
+
+.btn-outline-spotify {
+  color: var(--spotify-green);
+  border-color: var(--spotify-green);
+  transition: all 0.3s ease;
+}
+.btn-outline-spotify:hover,
+.btn-outline-spotify:focus {
+  background-color: var(--spotify-green);
+  border-color: var(--spotify-green);
+  color: white;
+  box-shadow: 0 4px 16px var(--glow-spotify);
+  transform: translateY(-2px);
+}
+
+/* ===================================
+   END SOCIAL MEDIA PLATFORM COLORS
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .neon-glow {
+    animation: none;
+  }
+}
+@media (prefers-contrast: high) {
+  :root[data-theme=light] {
+    --glass-bg: rgba(var(--background-rgb), 0.9);
+    --glass-border: rgba(var(--border-rgb), 0.6);
+  }
+  :root[data-theme=dark] {
+    --glass-bg: rgba(var(--background-rgb), 0.1);
+    --glass-border: rgba(var(--border-rgb), 0.4);
+  }
+}
+
+/*# sourceMappingURL=all-themes.css.map */

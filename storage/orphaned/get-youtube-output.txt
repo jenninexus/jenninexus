@@ -1,0 +1,5 @@
+Archived copy of get-youtube-output.json (moved from project root on 2025-10-18)
+
+Original content (trimmed):
+
+{"link":{"@attributes":{"rel":"self","href":"http:\/\/www.youtube.com\/feeds\/videos.xml?playlist_id=PLYI86hek1EWcNBgR0ilmsUsDLWHHDxEet"}},"id":"yt:playlist:PLYI86hek1EWcNBgR0ilmsUsDLWHHDxEet","title":"🔧👨‍💻🖋️ DIY 3D + GFX", ... }

@@ -1,0 +1,212 @@
+{
+  "comment": "Public playlist and channel configuration - NO API credentials",
+  "version": "2.1",
+  "last_updated": "2025-11-08",
+  "security_note": "API credentials moved to .env and secrets.json for security",
+  "youtube": {
+    "channels": {
+      "main": {
+        "id": "UCu1S6_Gza2Y06pT1n5U_L4Q",
+        "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCu1S6_Gza2Y06pT1n5U_L4Q",
+        "shorts": "https://www.youtube.com/@jenninexus/shorts"
+      },
+      "gaming": {
+        "id": "UC4byqahPWuY9WPJNvDgbQMQ",
+        "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UC4byqahPWuY9WPJNvDgbQMQ"
+      },
+      "diy": {
+        "id": "UCk2SWSg1fvdZGnrN0XAt6NQ",
+        "rss": "https://www.youtube.com/feeds/videos.xml?channel_id=UCk2SWSg1fvdZGnrN0XAt6NQ"
+      }
+    },
+    "playlists": {
+      "gamedev": {
+        "description": "Game development and Unity/Unreal devlogs",
+        "featured_playlists": [
+          {
+            "id": "PL9QBjNDhgNwRsznW8e3-KVmwfEuwvr7Yi",
+            "title": "Devlogs",
+            "category": "gamedev"
+          }
+        ]
+      },
+      "diy": {
+        "description": "DIY tutorials and creative projects featured on /diy page",
+        "featured_playlists": [
+          {
+            "id": "PLYI86hek1EWfF1TeN4oIdw2dp126OIlIc",
+            "title": "DIY \u2702\ufe0f Tutorials",
+            "category": "fashion"
+          },
+          {
+            "id": "PLYI86hek1EWdEeuMYInQtfaSepBPz2yN7",
+            "title": "T-shirt Cutting No-Sewing \ud83d\udc5a\u2702\ufe0f",
+            "category": "fashion"
+          },
+          {
+            "id": "PLYI86hek1EWfM9KMuZjd6W97788PBJpmu",
+            "title": "\ud83d\udc5a Jenni's take on Fashion",
+            "category": "fashion"
+          },
+          {
+            "id": "PL9QBjNDhgNwSjirfHOJ5a8D-Orcj5y-Mf",
+            "title": "DIY Fashion & Crafts",
+            "category": "fashion"
+          },
+          {
+            "id": "PLYI86hek1EWdw5U7AzICxzyoBir44FXKJ",
+            "title": "DIY Hair Ideas | Tutorials",
+            "category": "hair"
+          },
+          {
+            "id": "PLYI86hek1EWcNBgR0ilmsUsDLWHHDxEet",
+            "title": "DIY 3D + GFX",
+            "category": "3d_gfx"
+          }
+        ]
+      },
+      "nailart": {
+        "description": "Nail art tutorials and beauty content featured on /nailart page",
+        "featured_playlists": [
+          {
+            "id": "PLvTBZ29I1ijFPKNzQEL0716txhMn8osuF",
+            "title": "Nail Art Diary",
+            "category": "nails"
+          },
+          {
+            "id": "PLYI86hek1EWcoJ7X5n7ys1jzQYRCjDKnN",
+            "title": "\ud83d\udc85 DIY Gel Nails",
+            "category": "nails"
+          },
+          {
+            "id": "PLYI86hek1EWciC-RmY2qfLdwXI9SeUJTf",
+            "title": "\u2728 Brand Collabs + Product Reviews \ud83d\udc85\ud83c\udffc\ud83d\udd8c\ufe0f",
+            "category": "brand_collabs"
+          },
+          {
+            "id": "PLYI86hek1EWeoAoTP0Ik6xsjqfuLb8IPt",
+            "title": "\u2728 Glitter",
+            "category": "brand_collabs"
+          },
+          {
+            "id": "PLYI86hek1EWdXUlDFlaFZKBxIq50vQ_-m",
+            "title": "\ud83e\uddd6\u200d\u2642\ufe0f DIY Self Care",
+            "category": "self_care"
+          },
+          {
+            "id": "PLYI86hek1EWfbT2FcY2yIS37Cf89NXji-",
+            "title": "\ud83e\uddf4 DIY Nail Care",
+            "category": "self_care"
+          }
+        ]
+      },
+      "music": {
+        "description": "Music production, DJ tutorials, and music history content",
+        "featured_playlists": [
+          {
+            "id": "PL9QBjNDhgNwRtiIPeSEi1HAa5ehnYpau0",
+            "title": "\ud83c\udf9b\ufe0f DJ Tutorials",
+            "category": "music"
+          },
+          {
+            "id": "PL9QBjNDhgNwSELFNvTx9hpk3xbGduBpHY",
+            "title": "\ud83c\udf4d FL Studio (tutorials)",
+            "category": "music"
+          },
+          {
+            "id": "PL9QBjNDhgNwRaJX--_cZhEAJ8HbG9umiX",
+            "title": "\ud83c\udf9b\ufe0f Favorite DJ / VJ Sets",
+            "category": "music"
+          },
+          {
+            "id": "PL9QBjNDhgNwRQONB9N2tIIhP0vPrkyNvy",
+            "title": "\ud83c\udfa1 EDC 2024",
+            "category": "music"
+          },
+          {
+            "id": "PL9QBjNDhgNwRaJX--_cZhEAJ8HbG9umiX",
+            "title": "\ud83c\udfa1 🎛️ Favorite DJ / VJ Sets",
+            "category": "music"
+          },
+          {
+            "id": "PL9QBjNDhgNwTnhBcU2WKXnjJN78OFW_JN",
+            "title": "\u2620\ufe0f\ud83c\udfb8 Music History | X Gen",
+            "category": "music"
+          },
+          {
+            "id": "PL9QBjNDhgNwSYG7c6qnwlqgRdQW-SWTHK",
+            "title": "\ud83d\udd7a\ud83c\udffe Shuffle Dance Music",
+            "category": "music"
+          }
+        ]
+      },
+      "youtube": {
+        "description": "Featured playlists across all categories on /youtube page",
+        "featured_playlists": [
+          {
+            "id": "PL9QBjNDhgNwTnv3qzgtrxReBySCOv7SFN",
+            "title": "🧠 Tips + Tuts",
+            "category": "gamedev"
+          },
+          {
+            "id": "PL9QBjNDhgNwRsznW8e3-KVmwfEuwvr7Yi",
+            "title": "👩‍💻 Devlogs",
+            "category": "gamedev"
+          },
+          {
+            "id": "PL9QBjNDhgNwQbaceJmfZzc3x4L80gvh8J",
+            "title": "🎤 Voice Acting",
+            "category": "voice-acting"
+          },
+          {
+            "id": "PL9QBjNDhgNwSjirfHOJ5a8D-Orcj5y-Mf",
+            "title": "💫 DIY Fashion & Crafts",
+            "category": "diy"
+          },
+          {
+            "id": "PL9QBjNDhgNwQygOzxOAYImp0L3zC6pBO2",
+            "title": "🤖 AI Tools + Info",
+            "category": "ai"
+          },
+          {
+            "id": "PL6WnzXOaRqA16OQ60_EcUZ0Y8tjHB73Gi",
+            "title": "🕛 Recent",
+            "category": "recent"
+          }
+        ]
+      },
+      "vip": {
+        "description": "VIP content and exclusive videos for verified patrons",
+        "featured_playlists": [
+          {
+            "id": "PL9QBjNDhgNwRihbrW60bHzJPCUzfRi3bq",
+            "title": "VIP",
+            "category": "vip"
+          },
+          {
+            "id": "PL9QBjNDhgNwTomE8_IMCAuUepcM5xzo8p",
+            "title": "\ud83d\udc51 Sub Updates",
+            "category": "vip"
+          },
+          {
+            "id": "PL9QBjNDhgNwQSoU9lNj3GdJLh8t2zSMSI",
+            "title": "\ud83c\udfb6 Sexy Music",
+            "category": "vip"
+          },
+          {
+            "id": "PL9QBjNDhgNwToY2nfpDaZ_k3FwTNtX1b8",
+            "title": "\ud83d\udd25 Fire dancing hoop yoga",
+            "category": "vip"
+          }
+        ]
+      }
+    }
+  },
+  "discord": {
+    "comment": "Public Discord invite links - safe to share",
+    "main": "https://discord.gg/KYPh7Cp",
+    "diy": "https://discord.gg/pKSyR4A9Tb",
+    "gaming": "https://discord.gg/dc86JqBntj",
+    "music": "https://discord.gg/zwcfR2BpDb"
+  }
+}

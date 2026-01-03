@@ -1,0 +1,97 @@
+# Blog posts metadata used to generate the blog listing
+# Fields: slug, title, date (YYYY-MM-DD), category, excerpt, image (MUST start with / for RES_ROOT resolution), tags (array), playlist (optional)
+# Image paths: Start with / and relative to /resources/images/ (e.g., /blog/image.jpg resolves to RES_ROOT/images/blog/image.jpg)
+
+- slug: sora-ai-2025
+  title: "Sora AI — 2025 Updates, Features & My Profile"
+  date: "2025-11-01"
+  category: "AI & Technology"
+  excerpt: "A snapshot of Sora's evolution, capabilities, and how I'm using it creatively for cinematic video generation and game dev workflows."
+  image: "/blog/neon-green.jpg"
+  tags: ["ai","sora","video-generation","gamedev","creative-tech"]
+  playlist: ""
+  sora_projects:
+    - "s_69191f72a2148191ae3afae90edcfe6f"
+    - "s_69196e8822948191ac82bef9858bb1cb"
+    - "s_691a1791e5288191a39e49e61b61dfd0"
+
+- slug: ai-tools-for-technical-artists
+  title: "AI Tools for Technical Artists and Everyday Tasks in 2025"
+  date: "2025-03-20"
+  category: "AI & Technology"
+  excerpt: "From 3D model generation to AI-powered coding in VS Code, here are the tools transforming technical art and daily workflows in 2025."
+  image: "/ai/robo-jenni.jpg"
+  tags: ["ai","technical-art","3d-modeling","productivity","gamedev","unity"]
+  playlist: "PL9QBjNDhgNwQygOzxOAYImp0L3zC6pBO2"
+
+- slug: game-dev-in-2025
+  title: "Game Development in 2025: Trends, Tools, and Predictions"
+  date: "2025-03-24"
+  category: "Game Development"
+  excerpt: "Explore the evolving landscape of game development in 2025. Discover key trends, essential tools, and predictions for indie developers."
+  image: "/gamedev/purgatory fell/purgatoryfell.jpg"
+  tags: ["gamedev","trends","unity","unreal"]
+  playlist: "PL9QBjNDhgNwRsznW8e3-KVmwfEuwvr7Yi"
+
+- slug: voice-acting-in-games
+  title: "Voice Acting in Games: Bringing Characters to Life"
+  date: "2025-02-10"
+  category: "Voice Acting"
+  excerpt: "From Newgrounds collabs to AAA games — my journey in voice acting, plus techniques and tools for creating believable game characters."
+  image: "/blog/voice-acting.png"
+  tags: ["voice-acting","game development","character development","newgrounds","animation"]
+  playlist: "PL9QBjNDhgNwQbaceJmfZzc3x4L80gvh8J"
+
+- slug: pax-west-gaming-con
+  title: "PAX West Gaming Convention 2025: My Experience & Highlights"
+  date: "2025-03-15"
+  category: "Gaming & Events"
+  excerpt: "Join me as I share my PAX West 2025 adventure - from mind-blowing indie games to creator meetups."
+  image: "/blog/pax-west-2024.jpg"
+  tags: ["gaming","conventions","pax-west","indie-games"]
+  playlist: "PL9QBjNDhgNwRIS4WXfKy4oLrPKxoK_Jra"
+
+- slug: pax-west-2022
+  title: "PAX West 2022 — Gallery & Recap"
+  date: "2022-09-05"
+  category: "Gaming & Events"
+  excerpt: "A look back at PAX West 2022 with photos, posts, and highlights."
+  image: "/blog/pax-2022.jpg"
+  tags: ["pax-west","gaming","community"]
+  playlist: "pax_west_2022"
+
+- slug: ai-tools-using-ai
+  title: "Using AI Tools — Quick Tips & Examples"
+  date: "2025-04-01"
+  category: "AI & Technology"
+  excerpt: "How I use Claude Sonnet 4.5, VS Code, Unity Muse, and AI to code, design, and publish JenniNexus.com faster than ever."
+  image: "/ai/robo-jenni_2.jpg"
+  tags: ["ai","productivity","tools","claude","vscode","gamedev"]
+  playlist: "PL9QBjNDhgNwQygOzxOAYImp0L3zC6pBO2"
+
+- slug: build-and-deploy-2024
+  title: "Build & Deploy 2024 — Pipeline Notes & Demo"
+  date: "2024-10-18"
+  category: "DevOps"
+  excerpt: "Automated build-and-deploy pipeline notes with a short demo video."
+  image: "/blog/build-deploy.png"
+  tags: ["devops","build","deploy"]
+  playlist: ""
+
+- slug: summercon-2024
+  title: "Summercon Washington 2024 — Highlights & Recap"
+  date: "2024-06-23"
+  category: "Events"
+  excerpt: "A recap of Summercon Washington 2024 — panels, streams, and convention highlights from Jenni Nexus."
+  image: "/blog/summercon_2024.jpg"
+  tags: ["events","summercon","community"]
+  playlist: ""
+
+- slug: diy-beauty-trends-2025
+  title: "DIY Beauty Trends 2025: Innovation Meets Sustainability"
+  date: "2024-12-15"
+  category: "DIY & Beauty"
+  excerpt: "Explore the latest DIY beauty trends focusing on sustainable, innovative techniques."
+  image: "/blog/beauty-trends.png"
+  tags: ["diy","beauty","sustainability","nail art"]
+  playlist: "diy_tutorials"

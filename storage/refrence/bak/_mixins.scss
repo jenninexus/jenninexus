@@ -1,0 +1,792 @@
+/// ============================================================================
+/// MG SCSS MIXINS - REUSABLE PATTERNS
+/// Bootstrap 5.3.8 Compatible (November 5, 2025)
+/// ============================================================================
+///
+/// PURPOSE: Provides reusable SCSS mixins for consistent styling across MG.
+/// These mixins do NOT override Bootstrap - they add MG-specific patterns.
+///
+/// WHAT BOOTSTRAP 5.3.8 PROVIDES (we extend, not replace):
+/// - Utility mixins (hidden, sr-only, etc.)
+/// - Responsive breakpoint mixins
+/// - We add MG brand patterns on top
+///
+/// MIXINS PROVIDED:
+/// 1. glass-panel($extra-blur, $opacity-multiplier)
+///    - Creates glassmorphism effect with backdrop-filter
+///    - Uses CSS variables from colors.scss (--glass-bg, --glass-blur)
+///    - Optional parameters for enhanced glass panels
+///
+/// 2. glass-panel-enhanced()
+///    - Stronger glass effect for primary content areas
+///    - Adds thicker border and additional shadow
+///
+/// 3. focus-ring($color)
+///    - Accessible focus indicator (WCAG AA compliant)
+///    - Customizable color with fallback to --focus-ring-color
+///
+/// 4. focus-ring-bootstrap($color, $width, $blur)
+///    - Bootstrap 5.3.8 pattern for focus rings
+///    - Uses box-shadow instead of outline
+///    - More flexible styling options
+///
+/// 5. reduced-motion()
+///    - Wraps @content in prefers-reduced-motion media query
+///    - Disables animations for accessibility
+///
+/// 6. color-mode($mode)
+///    - Bootstrap 5.3.8 theme-aware mixin
+///    - Wraps @content in [data-bs-theme="dark"] or "light" selector
+///    - Cleaner than repeating attribute selectors
+///
+/// 7. fluid-type($min, $max, $min-vw, $max-vw)
+///    - Responsive typography using clamp()
+///    - Scales font size between min/max based on viewport
+///
+/// 8. text-legibility($strength)
+///    - Text shadow for readability on busy backgrounds
+///    - Options: subtle, medium, strong
+///
+/// 9. text-legibility-panel()
+///    - Theme-aware text styling for glass panels (NEW Nov 6, 2025)
+///    - Ensures WCAG AA contrast across dark/light themes
+///    - Dark: light text + shadow, Light: dark text + no shadow
+///
+/// 10. hover-lift($lift)
+///     - Elevates element on hover with shadow
+///     - Includes reduced-motion fallback
+///
+/// 11. card-base()
+///     - Common card container styles
+///     - Combines glass-panel with overflow and transition
+///
+/// 12. custom-scrollbar()
+///     - Themed scrollbar for overflow containers
+///     - Uses --scrollbar-thumb and --scrollbar-track from colors.scss
+///
+/// 13. truncate()
+///     - Single-line text ellipsis
+///
+/// 14. line-clamp($lines)
+///     - Multi-line text truncation
+///
+/// 15. aspect-ratio($width, $height)
+///     - Responsive media container (alternative to Bootstrap .ratio)
+///
+/// 16. visually-hidden()
+///     - Accessible text for screen readers (replaces Bootstrap .sr-only)
+///
+/// USAGE EXAMPLE:
+/// ```scss
+/// .my-panel {
+///   @include glass-panel(6px); // Extra blur
+///   @include hover-lift(8px);  // Hover effect
+/// }
+/// ```
+///
+/// DEPENDENCIES:
+/// - colors.scss: CSS variables (--glass-bg, --color-primary-rgb, etc.)
+/// - Used by: customMG.scss, pages/_*.scss for component styling
+/// ============================================================================
+
+/// Glass Panel Mixin - Creates consistent glassmorphism effect
+/// @param {number} $extra-blur [0] - Additional blur on top of base blur value
+/// @param {number} $opacity-multiplier [1] - Multiplies the base opacity for lighter/darker glass
+@mixin glass-panel($extra-blur: 0, $opacity-multiplier: 1) {
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: blur(calc(var(--glass-blur) + #{$extra-blur})) saturate(var(--glass-saturate)); // Safari 9+ support
+    backdrop-filter: blur(calc(var(--glass-blur) + #{$extra-blur})) saturate(var(--glass-saturate)); // Standard property after vendor prefix
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--panel-shadow);
+    border-radius: 16px;
+
+    @if $opacity-multiplier !=1 {
+        opacity: $opacity-multiplier;
+    }
+}
+
+/// Colored Panel Variants - Favorite panel styles for theme-demo.php consistency
+/// Uses 15% background opacity + 45% border opacity (3:1 ratio) with 12px radius
+
+/// Orange Panel - Documentation, file paths, warnings, processes
+@mixin panel-orange {
+    background: rgba(255, 107, 0, 0.15);
+    border: 2px solid rgba(255, 107, 0, 0.45);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 107, 0, 0.15);
+}
+
+/// Cyan Panel - Code structure, SCSS, layout systems
+@mixin panel-cyan {
+    background: rgba(66, 244, 200, 0.15);
+    border: 2px solid rgba(66, 244, 200, 0.45);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(66, 244, 200, 0.15);
+}
+
+/// Purple Panel - UI features, JavaScript, interactions
+@mixin panel-purple {
+    background: rgba(139, 92, 246, 0.15);
+    border: 2px solid rgba(139, 92, 246, 0.45);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
+}
+
+/// Maroon Panel - Build pipelines, compilation processes
+@mixin panel-maroon {
+    background: rgba(128, 0, 0, 0.15);
+    border: 2px solid rgba(128, 0, 0, 0.45);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(128, 0, 0, 0.15);
+}
+
+/// Dark Container - Outer wrapper for major sections (16px radius)
+@mixin panel-container-dark {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 107, 0, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/// Enhanced Glass Panel - For primary content areas that need more prominence
+@mixin glass-panel-enhanced {
+    @include glass-panel(6px);
+    border-width: 2px;
+    box-shadow:
+        var(--panel-shadow),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+/// Focus Ring Mixin - Accessible focus indicator (keyboard navigation only)
+/// Uses :focus-visible to show rings ONLY when navigating with Tab key
+/// Mouse/touch clicks will NOT show the ring (modern UX best practice)
+/// @param {color} $color [var(--focus-ring-color)] - Ring color
+@mixin focus-ring($color: var(--focus-ring-color)) {
+    // Remove default focus outline (will be replaced by focus-visible)
+    &:focus {
+        outline: none;
+    }
+    
+    // Show ring ONLY when keyboard navigating (Tab key)
+    // Mouse clicks will NOT trigger this
+    &:focus-visible {
+        outline: var(--focus-ring-width) var(--focus-ring-style) $color;
+        outline-offset: var(--focus-ring-offset);
+        box-shadow: var(--focus-ring-shadow);
+    }
+}
+
+/// Focus Ring (Bootstrap 5.3.8 Pattern) - Box-shadow based focus indicator
+/// @param {color} $color [var(--color-primary)] - Ring color
+/// @param {number} $width [0.25rem] - Ring width
+/// @param {number} $blur [0] - Optional blur radius
+@mixin focus-ring-bootstrap($color: var(--color-primary), $width: 0.25rem, $blur: 0) {
+    outline: 0;
+    box-shadow: 0 0 $blur $width $color;
+}
+
+/// Reduced Motion - Disables animations for users who prefer reduced motion
+@mixin reduced-motion {
+    @media (prefers-reduced-motion: reduce) {
+        @content;
+    }
+}
+
+/// Color Mode (Bootstrap 5.3.8 Pattern) - Theme-aware styling wrapper
+/// @param {string} $mode - 'dark' or 'light'
+/// @example
+///   .panel {
+///     background: rgba(23, 26, 33, 0.7);
+///     @include color-mode(dark) {
+///       background: rgba(23, 26, 33, 0.9);
+///     }
+///     @include color-mode(light) {
+///       background: rgba(255, 255, 255, 0.8);
+///     }
+///   }
+@mixin color-mode($mode) {
+    @if $mode ==dark {
+        [data-bs-theme="dark"] & {
+            @content;
+        }
+    }
+
+    @else if $mode ==light {
+        [data-bs-theme="light"] & {
+            @content;
+        }
+    }
+}
+
+/// Responsive Typography - Fluid font sizing
+/// @param {number} $min - Minimum font size (px)
+/// @param {number} $max - Maximum font size (px)
+/// @param {number} $min-vw [320px] - Minimum viewport width
+/// @param {number} $max-vw [1200px] - Maximum viewport width
+@mixin fluid-type($min, $max, $min-vw: 320px, $max-vw: 1200px) {
+    font-size: clamp(#{$min}px, calc(#{$min}px + (#{$max} - #{$min}) * ((100vw - #{$min-vw}) / (#{$max-vw} - #{$min-vw}))), #{$max}px);
+}
+
+/// Text Shadow for Legibility - Ensures text is readable on busy backgrounds
+/// @param {string} $strength [medium] - Options: subtle, medium, strong
+@mixin text-legibility($strength: medium) {
+    @if $strength ==subtle {
+        text-shadow: var(--text-shadow-subtle);
+    }
+
+    @if $strength ==strong {
+        text-shadow: var(--text-shadow-strong);
+    }
+
+    @else {
+        text-shadow: var(--text-shadow-medium);
+    }
+}
+
+/// Panel Text Legibility - White text in BOTH themes for Mars background visibility
+/// Mars background is visible in both light/dark modes, so white text works best
+/// Uses Montserrat Variable Font with heavier weights for better legibility
+@mixin text-legibility-panel {
+    // ALWAYS white text with dark shadow over Mars background
+    color: #FFFFFF !important; // Pure white for maximum contrast
+    font-weight: 600; // Semi-bold from Montserrat Variable Font
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.8), // Strong shadow for depth
+        0 1px 2px rgba(0, 0, 0, 0.9); // Close shadow for contrast
+
+    // Dark theme: Slightly lighter weight since dark panels provide more contrast
+    :root[data-theme="dark"] & {
+        font-weight: 500;
+        color: #FFFFFF !important;
+    }
+
+    // Light theme: Very light grey (almost white) for subtle distinction
+    :root[data-theme="light"] & {
+        font-weight: 600;
+        color: #F5F5F5 !important; // Very light grey (98% white)
+    }
+}
+
+/// Panel Text Legibility (Strong) - For headings and emphasized text
+/// Uses higher font-weight and stronger shadows for maximum legibility
+@mixin text-legibility-panel-strong {
+    color: #FFFFFF !important; // Always white for headings
+    font-weight: 700; // Bold
+    text-shadow:
+        0 3px 6px rgba(0, 0, 0, 0.9),
+        0 1px 3px rgba(0, 0, 0, 1),
+        0 0 12px rgba(0, 0, 0, 0.5); // Glow effect for extra pop
+
+    letter-spacing: 0.01em; // Slight spacing for clarity at bold weights
+
+    // Light theme: Very light grey for headings
+    :root[data-theme="light"] & {
+        color: #F5F5F5 !important;
+    }
+}
+
+/// Hover Lift Effect - Elevates element on hover
+/// @param {number} $lift [4px] - How much to lift
+@mixin hover-lift($lift: 4px) {
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+        transform: translateY(-#{$lift});
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25), 0 0 15px var(--glow-primary);
+    }
+
+    @include reduced-motion {
+        transition: none;
+
+        &:hover {
+            transform: none;
+        }
+    }
+}
+
+/// Card Container - Common card styles
+@mixin card-base {
+    @include glass-panel;
+    overflow: hidden;
+    transition: all 0.3s var(--ease);
+}
+
+/// Scrollbar Styling - Themed scrollbar
+/// Note: scrollbar-width and scrollbar-color not supported in Chrome < 121, Safari, iOS Safari, Samsung Internet
+@mixin custom-scrollbar {
+    // Webkit browsers (Chrome, Safari, Edge)
+    &::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--scrollbar-track);
+        border-radius: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-thumb);
+        border-radius: 6px;
+        border: 3px solid transparent;
+        background-clip: content-box;
+
+        &:hover {
+            background-color: var(--color-primary-hover);
+        }
+    }
+
+    // Firefox (limited support in other browsers)
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/// Truncate Text - Single line ellipsis
+@mixin truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/// Line Clamp - Multi-line truncation
+/// @param {number} $lines - Number of lines to show
+@mixin line-clamp($lines: 3) {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/// Aspect Ratio Container - For responsive media
+/// @param {number} $width - Width ratio
+/// @param {number} $height - Height ratio
+@mixin aspect-ratio($width: 16, $height: 9) {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: percentage($height / $width);
+    }
+
+    >* {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/// Visually Hidden - Accessible text for screen readers
+@mixin visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/// YouTube Embed Container - Consistent styling for all video embeds
+/// @example
+///   .my-video-wrapper {
+///     @include youtube-embed-container;
+///   }
+/// 
+/// DESIGN NOTES:
+/// - 16:9 aspect ratio maintained via Bootstrap .ratio utility
+/// - Dark background with rounded corners
+/// - Consistent shadow for depth
+/// - Works with direct iframes and playlist embeds
+@mixin youtube-embed-container {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    
+    iframe {
+        border: none;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/// Button Stable - Prevents jitter/flicker on hover with transform: translate3d
+/// @param {number} $lift [6px] - How much to lift on hover
+/// @param {number} $zoom [1.02] - Scale factor on hover (default: subtle zoom)
+/// @example
+///   .my-btn {
+///     @include button-stable(4px, 1.02);
+///   }
+/// 
+/// USAGE NOTE: Social Brand Buttons
+/// - Used for .social-brand-btn class
+/// - Combines subtle lift (3px) with slight zoom (1.02) for polished hover feedback
+/// - Also used for .media-kit-btn class with download icon pattern
+/// - See BUTTONS.md for full button pattern documentation
+@mixin button-stable($lift: 6px, $zoom: 1.02) {
+    // GPU acceleration for smooth animations
+    transform: translate3d(0, 0, 0);
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), background 0.3s var(--ease), color 0.3s var(--ease), border-color 0.3s var(--ease);
+    
+    &:hover {
+        transform: translate3d(0, -#{$lift}, 0) scale($zoom);
+    }
+    
+    &:active {
+        transform: translate3d(0, -#{$lift * 0.5}, 0) scale($zoom * 0.98);
+    }
+    
+    @include reduced-motion {
+        will-change: auto;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/// Navigation Card - Consistent hover effect for sitemap/links pages
+/// @param {number} $lift [2px] - How much to lift on hover
+/// @param {number} $zoom [1.02] - Scale factor on hover
+/// @example
+///   .sitemap-card {
+///     @include navigation-card;
+///   }
+/// 
+/// DESIGN NOTES:
+/// - Used on /sitemap and /links pages for consistent card hovers
+/// - Icon scales slightly more (1.05) than card (1.02) for dynamic effect
+/// - Respects reduced-motion preferences
+@mixin navigation-card($lift: 2px, $zoom: 1.02) {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover {
+        transform: translateY(-#{$lift}) scale($zoom);
+        box-shadow: 0 8px 24px rgba(var(--color-primary-rgb), 0.3);
+        
+        .nav-card-icon {
+            transform: scale(1.05);
+        }
+    }
+    
+    @include reduced-motion {
+        transition: none;
+        &:hover {
+            transform: none;
+        }
+    }
+}
+
+/// Navigation Link Standard - Unified styling for Header, Footer, and Offcanvas
+/// @param {number} $font-size [1rem] - Base font size
+/// @param {string} $padding [0.75rem 1.5rem] - Button padding
+/// 
+/// DESIGN NOTES:
+/// - Dark Mode: Orange outline, white text. Hover: White text + orange outline + glow.
+/// - Light Mode: Semi-transparent orange outline, white text. Hover: White outline.
+/// - Uses button-stable properties for smooth interaction.
+@mixin nav-link-standard($font-size: 1rem, $padding: 0.75rem 1.5rem) {
+    display: inline-block;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 700;
+    font-size: $font-size;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none !important;
+    padding: $padding;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s var(--ease);
+    min-width: 100px;
+    position: relative;
+    z-index: 1;
+
+    // Dark Theme (Default) - Mars background is dark
+    color: #FFFFFF !important;
+    border: 2px solid rgba(var(--color-primary-rgb), 0.4);
+    background: rgba(var(--color-primary-rgb), 0.08);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+
+    &:hover,
+    &:focus-visible {
+        @include hover-lift(2px);
+        color: #FFFFFF !important;
+        background: rgba(var(--color-primary-rgb), 0.18);
+        border-color: #FFFFFF; // White outline on hover (dark mode)
+        text-shadow: 0 0 12px rgba(var(--color-primary-rgb), 0.4);
+        z-index: 2;
+    }
+
+    // Light Theme - Mars background is still dark, so white text works with semi-transparent tinted glass
+    :root[data-theme="light"] & {
+        color: #FFFFFF !important;
+        border-color: rgba(var(--color-primary-rgb), 0.6);
+        background: rgba(var(--color-primary-rgb), 0.12);
+
+        &:hover,
+        &:focus-visible {
+            color: #FFFFFF !important;
+            border-color: var(--color-primary); // Solid orange on hover (light mode)
+            background: rgba(var(--color-primary-rgb), 0.22);
+            text-shadow: 0 0 12px rgba(var(--color-primary-rgb), 0.8), 0 1px 3px rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    @include reduced-motion {
+        transition: none !important;
+        transform: none !important;
+    }
+}
+
+/// Social Links Row Shared - Standardized social icon container
+/// @param {string} $context [header] - header or footer
+@mixin social-links-row-shared($context: header) {
+    display: flex;
+    flex-wrap: nowrap !important;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 900px;
+    margin: 1.5rem auto;
+    overflow: visible;
+    padding: 8px 0;
+
+    @if $context == footer {
+        margin-bottom: 2rem !important;
+    }
+
+    .mg-social-btn {
+        flex-shrink: 1;
+        min-width: 44px;
+        width: 56px;
+        height: 56px;
+        padding: 12px;
+
+        @media (max-width: 991.98px) {
+            @if $context == header {
+                display: none !important;
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        gap: 0.5rem;
+        margin-bottom: 1.25rem !important;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 0.5rem;
+
+        .mg-social-btn {
+            width: 48px;
+            height: 48px;
+            padding: 9px;
+        }
+    }
+}
+
+/// SVG Animation - Apply FontAwesome-inspired animations to SVGs
+/// @param {string} $animation - Animation type (spin, pulse, beat, fade, bounce, shake)
+/// @param {number} $duration [2s] - Animation duration
+/// @example
+///   .loading-icon {
+///     @include svg-animation('spin', 1.5s);
+///   }
+@mixin svg-animation($animation: 'spin', $duration: 2s) {
+    @if $animation == 'spin' {
+        animation: svg-spin $duration linear infinite;
+    } @else if $animation == 'pulse' {
+        animation: svg-spin $duration steps(8) infinite;
+    } @else if $animation == 'beat' {
+        animation: svg-beat $duration ease-in-out infinite;
+    } @else if $animation == 'fade' {
+        animation: svg-fade $duration cubic-bezier(.4, 0, .6, 1) infinite;
+    } @else if $animation == 'bounce' {
+        animation: svg-bounce $duration cubic-bezier(0.280, 0.840, 0.420, 1) infinite;
+    } @else if $animation == 'shake' {
+        animation: svg-shake $duration linear infinite;
+    }
+    transform-origin: center;
+    
+    @include reduced-motion {
+        animation-duration: 1ms;
+        animation-iteration-count: 1;
+    }
+}
+
+/// SVG Sizing - Apply consistent size to SVG icons (Updated Dec 29, 2025)
+/// @param {string} $size - Size name (xs, sm, md, lg, xl, 2xl, 3xl) or multiplier (2x-10x)
+/// @example
+///   .icon-large {
+///     @include svg-size('lg'); // 1.5em × 1.5em
+///   }
+///   .icon-huge {
+///     @include svg-size('5x'); // 5em × 5em
+///   }
+@mixin svg-size($size: 'md') {
+    @if $size == 'xs' {
+        width: 0.875em;
+        height: 0.875em;
+    } @else if $size == 'sm' {
+        width: 1em;
+        height: 1em;
+    } @else if $size == 'md' {
+        width: 1.25em;
+        height: 1.25em;
+    } @else if $size == 'lg' {
+        width: 1.5em;
+        height: 1.5em;
+    } @else if $size == 'xl' {
+        width: 2em;
+        height: 2em;
+    } @else if $size == '2xl' {
+        width: 2.5em;
+        height: 2.5em;
+    } @else if $size == '3xl' {
+        width: 3em;
+        height: 3em;
+    } @else {
+        // Handle multipliers like '2x', '3x', etc.
+        $multiplier: str-slice($size, 1, str-length($size) - 1);
+        @if str-slice($size, -1) == 'x' {
+            width: #{$multiplier}em;
+            height: #{$multiplier}em;
+        }
+    }
+}
+
+/// Social Brand Button - Platform-themed CTA button with theme awareness
+/// @param {string} $platform - Platform name (discord, steam, youtube, etc.)
+/// @example
+///   .my-discord-btn {
+///     @include social-brand-button('discord');
+///   }
+/// 
+/// DESIGN NOTES:
+/// - Mars background is always dark (visible in both light/dark themes)
+/// - Light theme: More opaque backgrounds (25% base, 42% hover) for visibility
+/// - Dark theme: Standard opacity (18% base, 32% hover)
+/// - Text shadows ensure legibility on dark Mars background in both themes
+/// - Secondary colors used on hover for visual feedback
+/// - YouTube buttons: White outline/icon on hover (see socials.scss)
+@mixin social-brand-button($platform: null) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.1rem;
+    border-radius: 8px;
+    font-family: "MontserratVar", "Montserrat", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.35s var(--ease);
+    cursor: pointer;
+    // Text shadow for legibility on dark Mars background
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+
+    @if $platform {
+        // Platform-specific colors with primary/secondary support
+        color: var(--brand-#{$platform}-primary, var(--brand-#{$platform}));
+        border: 2px solid currentColor;
+        background: rgba(var(--brand-#{$platform}-primary-rgb, var(--brand-#{$platform}-rgb)), 0.18);
+
+        &:hover {
+            color: var(--brand-#{$platform}-secondary, var(--brand-#{$platform}));
+            border-color: var(--brand-#{$platform}-secondary, var(--brand-#{$platform}));
+            background: rgba(var(--brand-#{$platform}-secondary-rgb, var(--brand-#{$platform}-rgb)), 0.32);
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+            box-shadow: 
+                0 12px 30px rgba(0, 0, 0, 0.35), 
+                0 0 18px var(--brand-#{$platform}-secondary, var(--brand-#{$platform})), 
+                0 0 32px rgba(var(--brand-#{$platform}-secondary-rgb, var(--brand-#{$platform}-rgb)), 0.5);
+        }
+
+        // Light theme: More opaque for visibility on dark Mars background
+        :root[data-theme="light"] & {
+            background: rgba(var(--brand-#{$platform}-primary-rgb, var(--brand-#{$platform}-rgb)), 0.25);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+            &:hover {
+                background: rgba(var(--brand-#{$platform}-secondary-rgb, var(--brand-#{$platform}-rgb)), 0.42);
+                box-shadow: 
+                    0 12px 30px rgba(0, 0, 0, 0.4), 
+                    0 0 20px var(--brand-#{$platform}-secondary, var(--brand-#{$platform})), 
+                    0 0 35px rgba(var(--brand-#{$platform}-secondary-rgb, var(--brand-#{$platform}-rgb)), 0.6);
+            }
+        }
+
+        // Dark theme: Standard opacity
+        :root[data-theme="dark"] & {
+            background: rgba(var(--brand-#{$platform}-primary-rgb, var(--brand-#{$platform}-rgb)), 0.18);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+            &:hover {
+                background: rgba(var(--brand-#{$platform}-secondary-rgb, var(--brand-#{$platform}-rgb)), 0.32);
+            }
+        }
+    } @else {
+        // Generic platform color (uses CSS variables)
+        color: var(--platform-color, var(--color-primary));
+        border: 2px solid currentColor;
+        background: rgba(var(--platform-color-rgb, var(--color-primary-rgb)), 0.18);
+
+        &:hover {
+            color: var(--platform-color-secondary, var(--platform-color, var(--color-primary)));
+            border-color: var(--platform-color-secondary, var(--platform-color, var(--color-primary)));
+            background: rgba(var(--platform-color-secondary-rgb, var(--platform-color-rgb, var(--color-primary-rgb))), 0.32);
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+            box-shadow: 
+                0 12px 30px rgba(0, 0, 0, 0.35), 
+                0 0 18px currentColor, 
+                0 0 32px rgba(var(--platform-color-secondary-rgb, var(--platform-color-rgb, var(--color-primary-rgb))), 0.5);
+        }
+
+        // Light theme adjustments
+        :root[data-theme="light"] & {
+            background: rgba(var(--platform-color-rgb, var(--color-primary-rgb)), 0.25);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+            &:hover {
+                background: rgba(var(--platform-color-secondary-rgb, var(--platform-color-rgb, var(--color-primary-rgb))), 0.42);
+                box-shadow: 
+                    0 12px 30px rgba(0, 0, 0, 0.4), 
+                    0 0 20px currentColor, 
+                    0 0 35px rgba(var(--platform-color-secondary-rgb, var(--platform-color-rgb, var(--color-primary-rgb))), 0.6);
+            }
+        }
+
+        // Dark theme adjustments
+        :root[data-theme="dark"] & {
+            background: rgba(var(--platform-color-rgb, var(--color-primary-rgb)), 0.18);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+            &:hover {
+                background: rgba(var(--platform-color-secondary-rgb, var(--platform-color-rgb, var(--color-primary-rgb))), 0.32);
+            }
+        }
+    }
+
+    // Use button-stable mixin for smooth, jitter-free animations
+    @include button-stable(6px);
+    
+    &:hover {
+        text-decoration: none;
+        z-index: 10;
+    }
+
+    &:focus-visible {
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem var(--color-primary);
+        z-index: 10;
+    }
+}

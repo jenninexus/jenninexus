@@ -1,0 +1,222 @@
+# Game Development Page - Featured Playlists Configuration
+# Bootstrap Icons: https://icons.getbootstrap.com/
+page: gamedev
+title: "Game Development Showcase"
+description: "Featured game projects, devlogs, and learning resources for aspiring game developers"
+
+# FEATURED PROJECTS (Top priority - Hero section)
+# Order: Devlogs first, then our developed games, then Martian Games collaborations
+featured_section:
+  title: "Featured Game Projects"
+  description: "Original games and development showcases"
+  icon: "trophy"
+  container_id: "featured-playlists"
+  aspect_ratio: "16:9"
+  columns:
+    xs: 1
+    sm: 2
+    md: 3
+    lg: 4
+  playlists:
+    # Devlogs - FIRST PRIORITY
+    - id: "PL9QBjNDhgNwRsznW8e3-KVmwfEuwvr7Yi"
+      title: "Devlogs"
+      icon: "camera-video"
+      badge: "Featured"
+      description: "Game development logs and progress updates"
+      tags: ["gamedev","devlog","unity","unreal"]
+    
+    # Our Developed Games (in order)
+    - id: "PL9QBjNDhgNwS8zNaKAFjuWf4NTfk3Ul3g"
+      title: "Jenni Styles Dress Up Game"
+      icon: "emoji-smile"
+      badge: "Game Project"
+      description: "Fashion dress-up game development journey"
+      page: "/game/jennistyles.php"
+      external_url: "https://gamejolt.com/games/jennistyles/27896"
+      tags: ["unity","fashion","indie","webgl","game-project"]
+      
+    - id: "PLLzfSGTgy8YBL97yf_JRzcc3NWwk8FXyN"
+      title: "Cat-As-Trophy"
+      icon: "emoji-heart-eyes"
+      badge: "Game Project"
+      description: "Quirky game about cats and trophies"
+      page: "/game/catgame.php"
+      external_url: "https://gamejolt.com/games/cat-as-trophy/00000"
+      tags: ["platformer","indie","unity","game-project"]
+      
+    - id: "PL9QBjNDhgNwTFn7QSZRbZGoKCCIsUlemX"
+      title: "Game Jam Highlights"
+      icon: "lightning"
+      badge: "Game Jams"
+      description: "48-hour game jam projects including Cow Defender"
+      page: "/game/gamejams.php"
+      tags: ["jam","ludum-dare","indie"]
+ 
+    # Martian Games Section (Shade Muse collaborations)
+    - id: "PL9QBjNDhgNwTsF4Es4jEftJR2Tto1CU53"
+      title: "Purgatory Fell VR"
+      icon: "badge-vr"
+      badge: "Martian Games"
+      description: "Immersive VR horror experience"
+      page: "/game/purgatoryfell.php"
+      tags: ["vr","horror","martiangames","steam"]
+      
+    - id: "PL9QBjNDhgNwQYrXaiRwC0RROYmkppbssY"
+      title: "Botborgs"
+      icon: "robot"
+      badge: "Martian Games"
+      description: "Web 3 game featuring 3D 'Botborg' characters and an interplanetary society and economic system"
+      page: "/game/botborgs.php"
+      external_url: "https://kotaku.com/games/botborgs"
+      tags: ["web3","3d-modeling","martiangames"]
+
+# INDIE GAME JAM PROJECTS (Ludum Dare & Game Jams)
+# indie_gamejam_section moved to resources/playlists/gamejams.yaml to keep the Game Jams
+# content and page focused in one place. This section was intentionally removed to avoid
+# rendering duplicate playlists when `youtube-grid.js` loads page configs for both
+# `gamedev` and `gamejams`.
+
+# MARTIAN GAMES PLAYLISTS (For Martian Games section YouTube integration)
+# Display as playlist cards matching Featured section style (responsive columns)
+martian_games_playlists:
+  title: "Martian Games YouTube Content"
+  description: "Development videos and gameplay from Shade Muses' Martian Games"
+  container_id: "martian_games-playlists"
+  aspect_ratio: "16:9"
+  columns:
+    xs: 1
+    sm: 2
+    md: 3
+    lg: 5
+  playlists:
+    - id: "PL5RIMPpbzR6iA9rAMaDX-B2QfKMQkODwq"
+      title: "Martian Games Devlogs"
+      icon: "controller"
+      description: "Videos featuring games developed by Martian Games"
+      tags: ["martiangames","devlog","indie"]
+      
+    - id: "PL6WnzXOaRqA1sfMS1N7EoESHKaTZ2RHh4"
+      title: "Martian Games Gameplay"
+      icon: "airplane"
+      description: "JenniPlaysGames showcasing various Martian Games titles"
+      tags: ["martiangames","gameplay","multiplayer"]
+
+# LEARNING RESOURCES (Secondary section)
+# Tips+Tuts and Unity 3D kept as 2-column, others display 3-column with first video only
+learning_section:
+  title: "Learning Resources"
+  description: "Tutorials and tips for game development"
+  icon: "book"
+  container_id: "learning-playlists"
+  aspect_ratio: "16:9"
+  columns:
+    xs: 1
+    sm: 2
+    md: 3
+    lg: 3
+  playlists:
+    # Featured learning (2-column, show multiple videos)
+    - id: "PL9QBjNDhgNwTnv3qzgtrxReBySCOv7SFN"
+      title: "Tips + Tuts"
+      icon: "lightbulb"
+      description: "Quick tips and tutorials for game dev"
+      
+    - id: "PL9QBjNDhgNwRUXxQ6Ygp2V1LvFQrCTDSa"
+      title: "Unity 3D Tutorials"
+      icon: "box-seam"
+      description: "Unity engine tutorials and best practices"
+      
+    # Other learning resources (3-column, first video only)
+    - id: "PL9QBjNDhgNwT6x_pweTniLZxubDvVgKFO"
+      title: "Unreal Engine"
+      icon: "cube"
+      description: "Unreal Engine 5 tutorials and workflows"
+      
+    - id: "PL9QBjNDhgNwSEQR9F0JDcdG_W_3pmaPS4"
+      title: "Blender Tutorials"
+      icon: "box"
+      description: "3D modeling and animation in Blender"
+      
+    - id: "PL9QBjNDhgNwQMPrkDlf91fSUTns2l9-RR"
+      title: "Reallusion CC4"
+      icon: "person-circle"
+      description: "Character Creator 4 for game development"
+      
+    - id: "PL9QBjNDhgNwTJidiioOSGo3bGtLY7KmPr"
+      title: "Game Industry"
+      icon: "briefcase"
+      description: "Game industry insights and career advice"
+
+# Responsive Bootstrap 5.3.8 grid configuration
+# Note: Individual sections have their own responsive columns config above
+# This grid_config provides defaults for any sections without specific column settings
+grid_config:
+  columns:
+    xs: 1    # 1 column on mobile (iPhone 390px, etc.)
+    sm: 2    # 2 columns on small tablets
+    md: 3    # 3 columns on medium screens
+    lg: 3    # 3 columns on large desktops
+  videos_per_playlist: 1  # Show 1 video per playlist card
+  enable_hover_effects: true
+  enable_lazy_loading: true
+  show_single_video: true  # Show single video card format (not tall vertical)
+  layout: "single-card"
+  aspect_ratio: "16:9"
+  lazy_load: true
+  responsive: true
+
+# ARCHIVE GAMES (Older/Fun Games - Not prominently featured)
+archive_games:
+  title: "Archive Games"
+  description: "Older and experimental games from the archives"
+  icon: "archive"
+  games:
+    - page: "momshouse"
+      title: "Mom's House Quest"
+      icon: "house-door"
+      badge: "Archive"
+      description: "Hilarious adventure through Mom's house"
+      tags: ["archive", "funny", "adventure"]
+      
+    - page: "blueballs"
+      title: "Blue Balls"
+      icon: "circle-fill"
+      badge: "Archive"
+      description: "Challenging puzzle platformer"
+      tags: ["archive", "puzzle", "platformer"]
+      
+    - page: "cleanupinisle3"
+      title: "Cleanup in Aisle 3"
+      icon: "trash"
+      badge: "Archive"
+      description: "Fast-paced arcade cleaning game"
+      tags: ["archive", "arcade"]
+      
+    - page: "graveyardsmashers"
+      title: "Graveyard Smashers"
+      icon: "moon-stars"
+      badge: "Archive"
+      description: "Action-packed graveyard adventure"
+      video_id: "wOrDbXrRcf8"
+      external_url: "https://gamejolt.com/games/graveyardsmashers/446127"
+      tags: ["archive", "action", "unity"]
+      
+    - page: "soccercow"
+      title: "Soccer Cows"
+      icon: "trophy"
+      badge: "Martian Games"
+      description: "Cows playing soccer - Martian Games"
+      tags: ["archive", "sports", "martian-games"]
+  
+# External links for direct game pages (useful for playlist cards / CTA buttons)
+external_links:
+  jenni-styles: "https://gamejolt.com/games/jennistyles/27896"
+  alter-kat: "https://gamejolt.com/games/alter-kat/37503"
+  graveyardsmashers: "https://gamejolt.com/games/graveyardsmashers/446127"
+
+# SEO & Social
+metadata:
+  page_title: "Game Development Projects & Tutorials"
+  page_description: "Explore original game projects, VR experiences, and comprehensive game development tutorials covering Unity, Unreal Engine, Blender, and more."
+  keywords: ["game development", "unity tutorials", "unreal engine", "indie games", "game jam", "VR development", "3D modeling", "blender"]

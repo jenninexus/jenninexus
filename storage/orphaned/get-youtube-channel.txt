@@ -1,0 +1,7 @@
+Archived copy of get-youtube-channel.json (moved from project root on 2025-10-18)
+
+Original content (trimmed):
+
+{"link":[{"@attributes":{"rel":"self","href":"http:\/\/www.youtube.com\/feeds\/videos.xml?channel_id=UCk2SWSg1fvdZGnrN0XAt6NQ"}},{"@attributes":{"rel":"alternate","href":"https:\/\/www.youtube.com\/channel\/UCk2SWSg1fvdZGnrN0XAt6NQ"}}],"id":"yt:channel:k2SWSg1fvdZGnrN0XAt6NQ","title":"diy w jenni","author":{"name":"diy w jenni","uri":"https:\/\/www.youtube.com\/channel\/UCk2SWSg1fvdZGnrN0XAt6NQ"},"published":"2013-12-29T13:17:44+00:00","entry":[{"id":"yt:video:xVESeNarC9o","title":"🌿🫶🏽 Super Cute Pants","link":{"@attributes":{"rel":"alternate","href":"https:\/\/www.youtube.com\/shorts\/xVESeNarC9o"}}, ... ]}
+
+Note: This file may contain personal data about content posts. Keep it archived and delete if no longer needed.

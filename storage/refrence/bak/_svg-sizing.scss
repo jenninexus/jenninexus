@@ -1,0 +1,250 @@
+/// ============================================================================
+/// SVG SIZING UTILITIES
+/// FontAwesome 6.7.2 Inspired - Adapted for MG Custom SVG System
+/// ============================================================================
+///
+/// PURPOSE: Provides consistent sizing classes for MG's 8 whitelisted SVG icons
+/// (light.svg, dark.svg, discord.svg, facebook.svg, x-twitter.svg, 
+///  steam.svg, youtube.svg, chevron-up.svg)
+///
+/// SIZE CLASSES PROVIDED:
+/// 1. .svg-xs - Extra small (0.75em × 0.75em)
+/// 2. .svg-sm - Small (0.875em × 0.875em)
+/// 3. .svg-lg - Large (1.25em × 1.25em)
+/// 4. .svg-xl - Extra large (1.5em × 1.5em)
+/// 5. .svg-2xl - 2X extra large (2em × 2em)
+///
+/// MULTIPLIER CLASSES:
+/// 6. .svg-2x through .svg-10x - Literal em-based sizing (2em, 3em, ..., 10em)
+///
+/// WHY EM-BASED SIZING:
+/// - Scales with parent font-size (responsive)
+/// - Works with Bootstrap's responsive typography
+/// - Maintains aspect ratio automatically
+/// - Predictable sizing across components
+///
+/// USAGE EXAMPLES:
+/// ```html
+/// <!-- Small icon in text -->
+/// <p>Click here <svg class="svg-sm" width="16" height="16">...</svg></p>
+///
+/// <!-- Large icon button -->
+/// <button class="btn btn-lg">
+///   <svg class="svg-xl" width="24" height="24">...</svg>
+///   Action
+/// </button>
+///
+/// <!-- Multiplier for hero sections -->
+/// <div class="hero">
+///   <svg class="svg-5x" width="64" height="64">...</svg>
+/// </div>
+/// ```
+///
+/// PURGECSS SAFETY:
+/// All classes use .svg-* prefix and will be kept if used in HTML
+/// Demo usage in theme-demo.php ensures classes are preserved in dev builds
+///
+/// DEPENDENCIES:
+/// - None (standalone utility file)
+/// - Imported by: customMG.scss
+/// ============================================================================
+
+// ============================================================================
+// NAMED SIZE CLASSES (Semantic)
+// ============================================================================
+
+/// Base inline SVG class (1.125em) - Slightly larger than text for better visibility
+.svg-inline {
+    width: 1.125em;
+    height: 1.125em;
+    vertical-align: -0.125em; // Optical alignment with text
+}
+
+/// Extra small icons (inline with small text)
+.svg-xs {
+    width: 0.875em;
+    height: 0.875em;
+}
+
+/// Small icons (inline with normal text)
+.svg-sm {
+    width: 1em;
+    height: 1em;
+}
+
+/// Medium icons (default size for most UI elements)
+.svg-md {
+    width: 1.25em;
+    height: 1.25em;
+}
+
+/// Large icons (headings, prominent UI elements)
+.svg-lg {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+/// Extra large icons (hero sections, major actions)
+.svg-xl {
+    width: 2em;
+    height: 2em;
+}
+
+/// 2X extra large icons (feature highlights)
+.svg-2xl {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+/// 3X extra large icons (large feature areas)
+.svg-3xl {
+    width: 3em;
+    height: 3em;
+}
+
+// ============================================================================
+// MULTIPLIER SIZE CLASSES (Literal)
+// ============================================================================
+
+/// Base 1x size (same as .svg-md)
+.svg-1x {
+    width: 1em;
+    height: 1em;
+}
+
+/// Generate .svg-2x through .svg-10x classes
+/// Each class sets width and height to Nem (e.g., .svg-3x = 3em × 3em)
+@for $i from 2 through 10 {
+    .svg-#{$i}x {
+        width: #{$i}em;
+        height: #{$i}em;
+    }
+}
+
+// ============================================================================
+// BUTTON CONTEXT SIZING (Bootstrap-compatible)
+// ============================================================================
+
+/// Button context sizing (automatically size SVGs inside buttons)
+/// Matches Bootstrap .btn, .btn-sm, .btn-lg sizing
+.btn .svg-inline,
+.btn svg {
+    width: 1.125em;
+    height: 1.125em;
+    vertical-align: -0.125em; // Align with text baseline
+}
+
+.btn-sm .svg-inline,
+.btn-sm svg {
+    width: 1em;
+    height: 1em;
+}
+
+.btn-lg .svg-inline,
+.btn-lg svg {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+// ============================================================================
+// SOCIAL BRAND BUTTON CONTEXT (18px baseline)
+// ============================================================================
+
+/// Social brand button sizing (increased baseline for better visibility)
+.social-brand-btn .svg-brand-icon {
+    width: 1.25em; // 20px at 16px font (increased from 18px)
+    height: 1.25em;
+}
+
+.social-brand-btn.btn-sm .svg-brand-icon {
+    width: 1.125em; // 18px
+    height: 1.125em;
+}
+
+.social-brand-btn.btn-lg .svg-brand-icon {
+    width: 1.75em; // 28px (increased from 24px)
+    height: 1.75em;
+}
+
+// ============================================================================
+// ALIGNMENT & UTILITY CLASSES
+// ============================================================================
+
+/// Fixed width icons (for icon lists where alignment matters)
+.svg-fw {
+    width: 1.25em;
+    text-align: center;
+    display: inline-block;
+}
+
+/// Fluid sizing (fill parent container)
+.svg-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.svg-fill {
+    width: 100%;
+    height: 100%;
+}
+
+/// Square aspect ratio enforcement
+.svg-square {
+    aspect-ratio: 1 / 1;
+}
+
+/// Icon alignment helpers
+.svg-align-top {
+    vertical-align: top;
+}
+
+.svg-align-middle {
+    vertical-align: middle;
+}
+
+.svg-align-bottom {
+    vertical-align: bottom;
+}
+
+.svg-align-text-top {
+    vertical-align: text-top;
+}
+
+.svg-align-text-bottom {
+    vertical-align: text-bottom;
+}
+
+/// Prevent SVG shrinking in flex containers
+.svg-no-shrink {
+    flex-shrink: 0;
+}
+
+// ============================================================================
+// SIZE REFERENCE TABLE (Updated Dec 29, 2025 - Increased for better visibility)
+// ============================================================================
+/// .svg-inline = 1.125em × 1.125em (18px at 16px base) - Base inline icons
+/// .svg-xs  = 0.875em × 0.875em (14px at 16px base) - Tiny inline icons
+/// .svg-sm  = 1em × 1em         (16px at 16px base) - Small inline icons
+/// .svg-md  = 1.25em × 1.25em   (20px at 16px base) - Default/medium size
+/// .svg-lg  = 1.5em × 1.5em     (24px at 16px base) - Large UI elements
+/// .svg-xl  = 2em × 2em         (32px at 16px base) - Extra large
+/// .svg-2xl = 2.5em × 2.5em     (40px at 16px base) - Hero icons
+/// .svg-3xl = 3em × 3em         (48px at 16px base) - Large features
+/// .svg-1x  = 1em × 1em         (16px)
+/// .svg-2x  = 2em × 2em         (32px - same as .svg-xl)
+/// .svg-3x  = 3em × 3em         (48px - same as .svg-3xl)
+/// .svg-4x  = 4em × 4em         (64px at 16px base)
+/// .svg-5x  = 5em × 5em         (80px at 16px base)
+/// .svg-6x  = 6em × 6em         (96px at 16px base)
+/// .svg-7x  = 7em × 7em         (112px at 16px base)
+/// .svg-8x  = 8em × 8em         (128px at 16px base)
+/// .svg-9x  = 9em × 9em         (144px at 16px base)
+/// .svg-10x = 10em × 10em       (160px at 16px base)
+///
+/// USAGE IN MG COMPONENTS:
+/// - Theme toggle: .svg-lg (24px - increased from 20px)
+/// - Brand button icons: .svg-inline (18px default)
+/// - Social showcase: .svg-xl (32px) or .svg-2xl (40px)
+/// - Header/footer social: Responsive sizing (see socials.scss)
+/// - GoFundMe wordmark: Custom height-based sizing (preserves aspect ratio)
+/// - Feature icons: .svg-2xl or .svg-3xl for prominent sections

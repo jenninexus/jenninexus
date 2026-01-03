@@ -1,0 +1,164 @@
+{
+	"folders": [
+        {
+            "name": ".config",
+            "path": "../.config"
+        },
+        {
+            "name": "📡LIVE - jenninexus.com",
+            "path": "../jenninexus"
+        },
+        {
+            "name": "👥Shared",
+            "path": "../shared"
+        },
+        {
+            "name": "📦Shared Deps",
+            "path": "../shared-deps"
+        },
+        {
+            "name": "🛠️Scripts & Tools",
+            "path": "../scripts"
+        },
+        {
+            "name": "📟Workspaces",
+            "path": "."
+        },
+        {
+            "name": "🕵🏻Agent Docs",
+            "path": "../agent"
+        }
+    ],
+
+    "settings": {
+        "workbench.colorTheme": "Default Dark+",
+        "workbench.colorCustomizations": {
+            "titleBar.activeBackground": "#1a0b2e",
+            "titleBar.activeForeground": "#e0b8ff",
+            "titleBar.inactiveBackground": "#12071f",
+            "titleBar.inactiveForeground": "#8a6ca9",
+            "statusBar.background": "#1a0b2e",
+            "statusBar.foreground": "#e0b8ff",
+            "statusBar.noFolderBackground": "#12071f",
+            "statusBar.debuggingBackground": "#ff4081",
+            "activityBar.background": "#0f0a1a",
+            "activityBar.foreground": "#ffffff",
+            "activityBarBadge.background": "#3b82f6",
+            "activityBarBadge.foreground": "#ffffff",
+            "sideBar.background": "#0f0a1a",
+            "sideBar.foreground": "#d1d5db",
+            "sideBarTitle.foreground": "#ff4081"
+        },
+        "files.exclude": {
+            "**/node_modules": true,
+            "**/vendor": true,
+            "**/.git": true,
+            "**/cache": true,
+            "**/logs": true
+        },
+        "search.exclude": {
+            "**/node_modules": true,
+            "**/vendor": true,
+            "**/cache": true,
+            "**/logs": true,
+            "**/.git": true
+        },
+        "search.followSymlinks": false,
+        "files.watcherExclude": {
+            "**/shared/node_modules/**": true,
+            "**/shared-deps/vendor/**": true,
+            "**/cache/**": true,
+            "**/logs/**": true
+        },
+        "explorer.fileNesting.enabled": true,
+        "explorer.fileNesting.patterns": {
+            "*.php": "${capture}.md",
+            "package.json": "package-lock.json,composer.json,composer.lock",
+            ".env": ".env.*",
+            "README.md": "CHANGELOG.md,LICENSE.md",
+            "quick-start.ps1": "build-*.ps1,deploy.ps1",
+            "BaseController.php": "*Controller.php",
+            "BaseView.php": "*View.php",
+            "composer.json": "composer.lock,package.json,package-lock.json"
+        },
+        "powershell.cwd": "📡LIVE - jenninexus.com",
+        "mcp.autoStart": true,
+        "chat.mcp.autostart": "newAndOutdated",
+        "git.ignoreLimitWarning": true
+    },
+
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "🔗 Fix JenniNexus Symlinks",
+                "type": "shell",
+                "command": "pwsh",
+                "args": ["-File", "../jenninexus/scripts/quick-start.ps1", "verify"],
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                }
+            },
+            {
+                "label": "🏗️ Build JenniNexus Assets",
+                "type": "shell",
+                "command": "pwsh",
+                "args": ["-File", "../jenninexus/scripts/build/build-all.ps1"],
+                "group": "build",
+                "dependsOn": "🔗 Fix JenniNexus Symlinks",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                }
+            },
+            {
+                "label": "🚀 Start JenniNexus Dev Server",
+                "type": "shell",
+                "command": "pwsh",
+                "args": ["-File", "../jenninexus/scripts/quick-start.ps1", "serve"],
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": true,
+                    "panel": "dedicated"
+                }
+            },
+            {
+                "label": "📊 Activate JenniNexus MCP",
+                "type": "shell",
+                "command": "node",
+                "args": ["../shared-deps/sys-admin/projects/jenni.js"],
+                "group": "test",
+                "runOptions": {
+                    "runOn": "folderOpen"
+                },
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                }
+            },
+            {
+                "label": "Deploy jenninexus.com to Production",
+                "type": "shell",
+                "command": "pwsh",
+                "args": ["-File", "../jenninexus/scripts/deploy.ps1"],
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                }
+            }
+        ]
+    }
+}

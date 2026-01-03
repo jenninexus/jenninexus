@@ -1,0 +1,211 @@
+{
+  "mcpServers": {
+    "mcp_jenni_local": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\Owner\\Projects\\www\\jenninexus\\.config\\mcp-server.js"
+      ],
+      "env": {
+        "MCP_WORKSPACE_ROOT": "C:\\Users\\Owner\\Projects\\www\\jenninexus",
+        "MCP_WORKSPACE_CODE_FILE": "C:\\Users\\Owner\\Projects\\www\\workspaces\\jenninexus.code-workspace",
+        "MCP_PROJECT_TYPE": "static-php-site",
+        "MCP_FRAMEWORK": "Isolated-Custom",
+        "MCP_PROJECT_NAME": "jenninexus",
+        "MCP_PROJECT_ISOLATION": "true",
+        "MCP_NO_SHARED_FRAMEWORK": "true",
+        "MCP_ARCHITECTURE": {
+          "project_root": "C:\\Users\\Owner\\Projects\\www\\jenninexus",
+          "web_root": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\public_html",
+          "resources_root": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\public_html\\resources",
+          "includes_dir": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\public_html\\includes",
+          "index_file": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\public_html\\index.php",
+          "pages": "*.php (gamedev.php, resume.php, music.php, patreon.php, live.php, diy.php, blog.php, links.php, services.php)",
+          "css_output": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\public_html\\resources\\css",
+          "js_active": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\public_html\\resources\\js",
+          "playlists_yaml": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\public_html\\resources\\playlists",
+          "pdfs": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\public_html\\resources\\pdfs",
+          "scss_source": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\src\\assets\\scss",
+          "scripts_dir": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\scripts",
+          "docs_dir": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\storage\\docs",
+          "note": "Isolated static site with PHP includes, local vendor assets (Bootstrap/FontAwesome), and YAML playlist configs. [DEPRECATION NOTICE: Dec 24, 2025] Shared framework method is now deprecated and NOT used. Site is 100% self-contained."
+        },
+        "MCP_FEATURES": {
+          "playlist_system": "YAML-based with responsive columns (gamedev.yaml, gaming.yaml, music.yaml, diy.yaml, live.yaml, patreon.yaml). Format: columns: {xs: 1, sm: 2, md: 3, lg: 3}",
+          "youtube_integration": "RSS-only (v3.0) via youtube-grid.js - No API key needed! Server-side caching (10-min TTL) via get-youtube.php proxy. 21 playlists cached in /var/www/jenninexus/storage/cache/youtube/. Real thumbnails from RSS <media:thumbnail> tags. Secrets file exists but NOT used (use_api: false). Complete docs: storage/docs/YOUTUBE-RSS-ARCHITECTURE.md",
+          "youtube_grid_mapping": "Dual-function Bootstrap column system: getResponsiveColClasses(object) for YAML responsive configs, getColumnClass(number) for legacy simple format. Priority: responsive object → simple number → fallback",
+          "javascript_files": "11 active (youtube-grid.js v3.0, tag-system.js, theme-toggle.js, martian-games.js, patreon-auth-enhanced.js, back-to-top.js, performance-optimizer.js, polyfills.js, tag-filter-api.js, diy-playlists.js, music-playlists.js)",
+          "css_compilation": "Direct CSS management with clean-css-cli minification. SCSS archived. [Isolated Architecture: Dec 24, 2025]",
+          "responsive_design": "Mobile-first with clamp() functions. NO inline styles. All padding via custom.css: clamp(2rem, 8vw, 6.25rem) for hero sections.",
+          "platform_branding": "Steam, Patreon, YouTube, Twitch color schemes",
+          "contact_email": "jenninexus@gmail.com",
+          "bootstrap_version": "5.3.8 (LOCAL)",
+          "RES_ROOT_USAGE": "CRITICAL: Always use <?= RES_ROOT ?> for all asset paths (CSS, JS, images) in PHP files. This ensures paths work correctly in nested pages (e.g., /game/*.php, /blog/*.php). RES_ROOT is defined in includes/head.php and resolves to '/resources' in production. Example: <img src=\"<?= RES_ROOT ?>/images/photo.jpg\"> or <script src=\"<?= RES_ROOT ?>/js/script.js\">. JavaScript code should use window.RES_ROOT (injected by head.php) for dynamic path construction."
+        },
+        "MCP_DOCUMENTATION_RULES": {
+          "CRITICAL": "DO NOT CREATE NEW .md FILES OR SUMMARY DOCUMENTS",
+          "daily_session": "storage/11-18.md (read first, update as you work)",
+          "core_docs": "storage/docs/ (only edit existing when info changes)",
+          "forbidden": "Never create CHANGES.md, SUMMARY.md, UPDATE.md, session-*.md, or any new documentation files",
+          "workflow": "Read storage/11-18.md → Complete tasks → Update storage/11-18.md → Edit existing docs only if needed",
+          "memory_file": ".config/memory.mdc (comprehensive project context)",
+          "ssh_documentation": {
+            "CRITICAL": "SSH docs stored in C:\\Users\\Owner\\.ssh\\ directory ONLY",
+            "primary_doc": "C:\\Users\\Owner\\.ssh\\README-SSH-JENNINEXUS.md (complete SSH reference)",
+            "recovery_doc": "C:\\Users\\Owner\\.ssh\\SSH-RECOVERY.md (emergency procedures)",
+            "status_doc": "C:\\Users\\Owner\\.ssh\\JENNIDROP-STATUS.md (quick status reference)",
+            "config_file": "C:\\Users\\Owner\\.ssh\\config (SSH aliases)",
+            "rule": "NEVER create project-specific SSH docs - update .ssh directory files instead",
+            "forbidden_locations": [
+              "storage/docs/SSH-*.md",
+              "docs/SSH-*.md",
+              "scripts/SSH-*.md",
+              ".config/SSH-*.md",
+              "Any SSH documentation outside C:\\Users\\Owner\\.ssh\\"
+            ]
+          },
+          "docs_list": [
+            "storage/docs/TAG-SYSTEM.md",
+            "storage/docs/YOUTUBE.md",
+            "storage/docs/YOUTUBE-RSS-ARCHITECTURE.md",
+            "storage/docs/PLAYLIST-MAPPING.md",
+            "storage/docs/GAMING-PAGE.md",
+            "storage/docs/GAME-DEV-PAGES.md",
+            "storage/docs/BLOG-SYSTEM.md",
+            "storage/docs/BOOTSTRAP-5.3.8-COMPLETE.md",
+            "storage/docs/CSS-ARCHITECTURE.md",
+            "storage/docs/CSS-SCSS.md",
+            "storage/docs/DEPLOYMENT-GUIDE.md",
+            "storage/docs/LOCAL-DEV.md",
+            "storage/docs/QUICKSTART.md",
+            "storage/docs/PATREON.md"
+          ]
+        },
+        "MCP_DEV_SERVER": {
+          "type": "python-http",
+          "command": "python -m http.server 8002",
+          "working_dir": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\public_html",
+          "port": 8002,
+          "note": "Python HTTP server for local development, clean URLs work with .php extension"
+        },
+        "MCP_SCRIPTS": {
+          "build": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\scripts\\build.ps1",
+          "build_and_deploy": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\scripts\\build-and-deploy.ps1",
+          "deploy": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\scripts\\deploy.ps1",
+          "dev_server": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\scripts\\dev-server.ps1",
+          "check_bootstrap": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\scripts\\check-bootstrap-compatibility.ps1"
+        },
+        "MCP_BOOTSTRAP_REFERENCE": {
+          "CRITICAL": "Bootstrap directories are REFERENCE ONLY - DO NOT BUILD OR DEPLOY",
+          "bootstrap_source": "C:\\Users\\Owner\\Projects\\Bootstrap\\bootstrap-5.3.8\\ (official source - reference for SCSS variables, mixins, utilities)",
+          "bootstrap_examples": "C:\\Users\\Owner\\Projects\\Bootstrap\\bootstrap-5.3.8-examples\\ (official examples - copy patterns, DO NOT deploy)",
+          "fontawesome": "C:\\Users\\Owner\\Projects\\Bootstrap\\fontawesome-free-6.7.2-web\\ (icon reference - already included via CDN)",
+          "usage_rules": [
+            "✅ Reference documentation in these directories",
+            "✅ Copy code patterns from examples to jenninexus",
+            "✅ Look up Bootstrap utilities from source",
+            "❌ DO NOT build these directories",
+            "❌ DO NOT deploy these directories",
+            "❌ DO NOT modify these directories",
+            "❌ DO NOT import from these directories"
+          ],
+          "jenninexus_integration": "Bootstrap 5.3.8 via LOCAL VENDOR. Custom themes in src/assets/css/. All builds use jenninexus/scripts/ only. [Updated: Dec 24, 2025]"
+        },
+        "MCP_FORBIDDEN_PATHS": {
+          "archived": "resources/archived",
+          "backups": "**/!bak/**",
+          "src": "src",
+          "storage": "storage",
+          "scripts": "scripts"
+        }
+      },
+      "_meta": {
+        "id": "mcp_jenni-local",
+        "name": "JenniNexus Local Dev",
+        "label": "JenniNexus Local (Bootstrap 5.3.8)",
+        "description": "Local development environment for JenniNexus Bootstrap 5.3.8 site with PHP includes, YAML playlists, YouTube RSS integration (v3.0), tag system v6.4 (RSS tag detection), and file watcher for auto-rebuild. [ISOLATED ARCHITECTURE - DEC 2025]",
+        "updated": "2025-12-24",
+        "version": "4.0.0",
+        "agent_instructions": {
+          "critical_rules": [
+            "DO NOT CREATE NEW .md FILES",
+            "DO NOT CREATE SUMMARY DOCUMENTS",
+            "Read storage/11-18.md first (daily action plan)",
+            "Update storage/11-18.md as you complete tasks",
+            "Only edit existing docs in storage/docs/ when information changes"
+          ],
+          "working_directory": "C:\\Users\\Owner\\Projects\\www\\jenninexus",
+          "memory_file": ".config\\memory.mdc",
+          "daily_tracking": "storage\\11-18.md",
+          "forbidden_files": [
+            "CHANGES.md",
+            "SUMMARY.md",
+            "UPDATE.md",
+            "session-*.md",
+            "any new documentation files"
+          ]
+        }
+      }
+    },
+    "jenninexus_production": {
+      "command": "ssh",
+      "args": [
+        "jennidrop-root"
+      ],
+      "env": {
+        "MCP_PROJECT_TYPE": "production-droplet",
+        "MCP_PROJECT_NAME": "jenninexus",
+        "MCP_DOMAIN": "jenninexus.com",
+        "MCP_FRAMEWORK": "Isolated-Custom",
+        "SSH_HOSTNAME": "64.23.141.41",
+        "SSH_ALIAS": "jennidrop-root",
+        "SSH_USERNAME": "root",
+        "SSH_PORT": "22",
+        "SSH_HOST_KEY_VERIFICATION": "accept-new",
+        "MCP_WEB_SERVER": "nginx",
+        "MCP_PHP_VERSION": "8.3",
+        "MCP_PHP_FPM": "enabled",
+        "MCP_PHP_FPM_SOCKET": "/var/run/php/php8.3-fpm.sock",
+        "MCP_PROJECT_ROOT_REMOTE": "/var/www/jenninexus",
+        "MCP_WEB_ROOT_REMOTE": "/var/www/jenninexus/public_html",
+        "MCP_ASSETS_ROOT_REMOTE": "/var/www/jenninexus/public_html/resources",
+        "MCP_INCLUDES_REMOTE": "/var/www/jenninexus/public_html/includes",
+        "MCP_SSL_ENABLED": "true",
+        "MCP_SSL_CERT": "/etc/letsencrypt/live/jenninexus.com/fullchain.pem",
+        "MCP_SSL_KEY": "/etc/letsencrypt/live/jenninexus.com/privkey.pem",
+        "MCP_NGINX_CONFIG": "/etc/nginx/sites-available/jenninexus.conf",
+        "MCP_NGINX_CONFIG_LOCAL": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\.config\\jenninexus-nginx.conf",
+        "MCP_CLEAN_URLS": "enabled",
+        "MCP_URL_REWRITE": "try_files $uri $uri.php $uri.html $uri/ =404",
+        "MCP_BACKUP_ENABLED": "true",
+        "MCP_BACKUP_DIR": "/var/backups/jenninexus",
+        "MCP_DEPLOYMENT": {
+          "method": "rsync-ssh",
+          "source_local": "C:\\Users\\Owner\\Projects\\www\\jenninexus\\deploy\\",
+          "destination_remote": "jennidrop-root:/var/www/jenninexus/",
+          "exclude": ".git*, node_modules, src/assets/scss, *.md, .config, scripts/dev-*, storage/",
+          "sync_targets": "public_html/*, public_html/resources/*, public_html/includes/*",
+          "post_deploy": "sudo chown -R www-data:www-data /var/www/jenninexus && sudo chmod -R 755 /var/www/jenninexus && sudo systemctl reload nginx && sudo systemctl reload php8.3-fpm"
+        }
+      },
+      "_meta": {
+        "id": "jenninexus-production",
+        "name": "JenniNexus Production (jenninexus.com)",
+        "label": "JenniNexus Production - Nginx + PHP 8.3",
+        "description": "Production droplet at 64.23.141.41 running Nginx + PHP-FPM 8.3 with SSL, clean URLs, and rsync deployment. [ISOLATED ARCHITECTURE - DEC 2025]",
+        "updated": "2025-12-24",
+        "version": "4.0.0",
+        "status": "active",
+        "verified": {
+          "ssh_ip": "64.23.141.41",
+          "ssh_port": "22",
+          "ssh_user": "root",
+          "web_root": "/var/www/jenninexus",
+          "php_version": "8.3-fpm",
+          "nginx_config": "/etc/nginx/sites-available/jenninexus.conf",
+          "domain": "jenninexus.com",
+          "ssl": "Let's Encrypt"
+        }
+      }
+    }
+  }
+}

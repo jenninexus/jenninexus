@@ -1,0 +1,517 @@
+# JenniNexus Project Memory
+**Isolated Custom / Bootstrap Hybrid Site**  
+**Last Updated:** 2025-12-24  
+**Domain:** jenninexus.com  
+**Server:** 64.23.141.41 (SSH Alias: jennidrop-root)
+
+## 🚨 PROJECT ISOLATION (DEC 2025)
+- ✅ **Shared-Deps Removal** - No longer using `shared-deps` or `shared/` framework.
+- ✅ **Deprecation Notice** - [Dec 24, 2025] The "shared/ framework" method is officially DEPRECATED for JenniNexus.
+- ✅ **Local Vendors** - Bootstrap and FontAwesome moved to `public_html/resources/vendor/`.
+- ✅ **Self-Contained** - Project is 100% self-contained for builds and deployments.
+- ✅ **Package Manager** - Using `npm` exclusively for local project management.
+
+## 🚨 CONNECTION SAFETY (CRITICAL)
+**Correct IP:** `64.23.141.41` (jennidrop)
+**Wrong IP:** `192.241.155.141` (DO NOT USE - Causes "Permission denied")
+
+**Always use the alias:**
+```powershell
+ssh root@jennidrop
+```
+
+**Recent Changes (Dec 24, 2025):**
+- ✅ **Isolated Architecture** - Fully transitioned away from shared-deps/shared framework.
+- ✅ **Lockfile Cleanup** - Deleted `pnpm-lock.yaml` and `composer.lock` to resolve conflicts.
+- ✅ **MCP Update** - Updated `jenninexus` MCP and `sys-admin` to respect isolation.
+- ✅ **Local Bootstrap** - Moved Bootstrap 5.3.8 files locally to `public_html/resources/vendor/bootstrap/`.
+- ✅ **Local FontAwesome** - Verified FontAwesome 6.7.2 is local to `public_html/resources/`.
+- ✅ **README Refined** - Updated root README to reflect new isolated architecture and brand guidelines.
+- ✅ **Build System** - Updated `package.json` with `clean-css-cli` and `terser` for local minification.
+- ✅ **Sys-Admin Launcher** - Fixed `start-jenni-admin.bat` with consistent `jenninexus` naming.
+
+**Previous Changes (Nov 16, 2025):**
+- ✅ **Video Exclusion Fixed** - deploy.ps1 now removes videos/ from deploy package
+- ✅ **Archive Directories Excluded** - resources/archived/, !bak/, *.bak, *.backup excluded
+- ✅ **Deploy Package Optimized** - 601 files, videos excluded (manual upload when changed)
+- ✅ **Rsync Exclusions Added** - videos/, archived/, backup patterns excluded from sync
+
+**Previous Changes (Nov 11, 2025):**
+- ✅ **Tag System v6.4** - RSS feed tag detection (youtube.php, gaming.php detect categories/genres from video titles)
+- ✅ **Button Contrast** - Fixed bg-warning badges to use text-dark for WCAG AA compliance
+- ✅ **Script Loading Order** - Fixed youtube.php (js-yaml → youtube-grid → tag-system, event-driven init)
+- ✅ **Tag System Integration** - All pages (youtube, blog, live) use tag-filter-api.js with URL persistence
+- ✅ **YouTube RSS Fixes** - Corrected @jenninexus channel ID (UCMdVZ64zYbNZ5jBhaa7VxQA)
+- ✅ **Patreon OAuth** - Verified integration production-ready with graceful error handling
+
+---
+
+## 🚨 CRITICAL: READ THIS FIRST
+
+### Documentation Rules (MANDATORY)
+**Claude Sonnet 4.5 & ALL AI Models: These rules are NON-NEGOTIABLE**
+
+- ❌ **DO NOT CREATE NEW .md FILES**
+- ❌ **DO NOT CREATE SUMMARY DOCUMENTS**
+- ❌ **DO NOT CREATE NEW DOCS IN `storage/docs/`**
+- ❌ **DO NOT CREATE FILES NAMED:**
+  - `CHANGES.md`, `SUMMARY.md`, `UPDATE.md`
+  - `session-*.md`, `notes-*.md`, `log-*.md`
+  - ANY new documentation file
+- ✅ **Read `storage/11-5.md` (current action plan) FIRST**
+- ✅ **Update `storage/11-5.md` as you complete tasks**
+- ✅ **Only edit existing docs in `storage/docs/` when information changes**
+
+### Why This Rule Exists
+- Prevents documentation sprawl and duplicate information
+- Keeps all context in known locations
+- Future agents know exactly where to look
+- No conflicting or outdated summaries
+
+### If You're Tempted to Create a Summary File
+1. **STOP** - Don't do it
+2. **Ask yourself:** "Can I update `storage/11-5.md` instead?"
+3. **Answer:** Yes, you can always update the daily file
+4. **Action:** Update the existing daily tracking file
+
+### Start Every Session
+1. Open and read: `storage/11-18.md` (current priorities and todos)
+2. Check working directory: `C:\Users\Owner\Projects\www\jenninexus`
+3. Update `storage/11-18.md` as you work
+4. **Never create new summary files**
+
+---
+
+## 🎯 PROJECT IDENTITY & ISOLATION
+
+### Critical: This is an ISOLATED workspace
+- **Project Root:** `C:\Users\Owner\Projects\www\jenninexus`
+- **Working Directory:** Always `C:\Users\Owner\Projects\www\jenninexus`
+- **NOT shared-deps/sys-admin directory** - that's just a tool location
+- **Environment Variables Set:**
+  - `MCP_PROJECT_NAME=jenninexus`
+  - `MCP_PROJECT_ROOT=C:\Users\Owner\Projects\www\jenninexus`
+  - `MCP_WORKSPACE=jenninexus`
+  - `MCP_LOG_DIR=C:\Users\Owner\Projects\www\jenninexus\.vscode\logs`
+
+### What This Means
+- ✅ Terminal opens in `C:\Users\Owner\Projects\www\jenninexus` (not workspaces/)
+- ✅ All commands run from jenninexus project root
+- ✅ MCP config merges to `.vscode/mcp.json` (project-specific)
+- ✅ sys-admin creates `.sys-admin-jenninexus.lock` (prevents cross-project interference)
+- ✅ Only `mcp_jenni.json` + `mcp-manager.mcp.json` are merged (no other projects)
+
+### Other Projects to NEVER Touch
+Located in `C:\Users\Owner\Projects\www\workspaces\`:
+- ❌ boobsofwar.code-workspace
+- ❌ mg-new.code-workspace (Martian Games - separate server!)
+- ❌ neophi.code-workspace
+- ❌ waeria.code-workspace
+
+**These have their own environments and MUST remain isolated.**
+
+---
+
+## 🎨 BOOTSTRAP 5.3.8 REFERENCE DIRECTORIES
+
+### External Reference Locations (DO NOT BUILD)
+These directories are for **reference and examples only** - they are NOT part of the jenninexus project:
+
+- **Bootstrap Source:** `C:\Users\Owner\Projects\Bootstrap\bootstrap-5.3.8\`
+  - Official Bootstrap 5.3.8 source code
+  - Reference for SCSS variables, mixins, utilities
+  - DO NOT build or deploy this directory
+  
+- **Bootstrap Examples:** `C:\Users\Owner\Projects\Bootstrap\bootstrap-5.3.8-examples\`
+  - Official Bootstrap example pages and patterns
+  - Use as inspiration for layouts and components
+  - **Example used:** navbars-offcanvas pattern for jenninexus header.php
+  - Copy patterns but DO NOT deploy entire directory
+  
+- **FontAwesome:** `C:\Users\Owner\Projects\Bootstrap\fontawesome-free-6.7.2-web\`
+  - FontAwesome 6.7.2 icon library
+  - Reference for icon classes and usage
+  - Already included via CDN in site (no local build needed)
+
+### Usage Policy
+- ✅ **Reference documentation** in these directories
+- ✅ **Copy code patterns** from examples
+- ✅ **Look up Bootstrap utilities** from source
+- ❌ **DO NOT build** these directories
+- ❌ **DO NOT deploy** these directories
+- ❌ **DO NOT modify** these directories
+- ❌ **DO NOT import** from these directories
+
+### JenniNexus Bootstrap Integration
+- **Version:** Bootstrap 5.3.8 (CDN with SRI hashes)
+- **Documentation:** `storage/docs/BOOTSTRAP-5.3.8.md`
+- **Custom Themes:** `src/assets/scss/` (gaming-theme, diy-theme, etc.)
+- **Compiled CSS:** `public_html/resources/css/`
+- **Navbar Pattern:** Official Bootstrap 5.3.8 navbars-offcanvas example
+- **Navbar Height:** ~56px (Bootstrap default, no custom overrides)
+- **All pages verified:** ✅ Using Bootstrap 5.3.8 correctly
+
+### Recent Navbar Fix (November 5, 2025)
+- ❌ **Problem:** Navbar was tall and weird (using `navbar-expand-lg` with offcanvas)
+- ✅ **Solution:** Updated `header.php` to match Bootstrap 5.3.8 official navbars-offcanvas pattern
+- **Key Changes:**
+  - Removed `navbar-expand-lg` class (was causing conflict)
+  - Removed `.collapse.navbar-collapse` wrapper
+  - Added `.d-none.d-lg-flex` for desktop navigation
+  - Added `.flex-row.gap-3` for proper horizontal spacing
+  - Navbar now uses Bootstrap default ~56px height
+- **Reference:** `C:\Users\Owner\Projects\Bootstrap\bootstrap-5.3.8-examples\navbars-offcanvas\index.html`
+
+---
+
+## 📁 PROJECT STRUCTURE
+
+```
+C:\Users\Owner\Projects\www\jenninexus\
+├── public_html/              # ✅ WEB ROOT - Deploy this
+│   ├── includes/             # PHP partials (head.php, header.php, footer.php)
+│   ├── resources/            # CSS, JS, images, playlists, PDFs
+│   │   ├── css/              # Compiled CSS output
+│   │   ├── js/               # 10 active JavaScript files
+│   │   ├── playlists/        # YAML configs (gamedev.yaml, music.yaml, etc.)
+│   │   ├── pdfs/             # Resume, docs
+│   │   └── fonts/            # Web fonts
+│   └── *.php                 # 10 pages (index, gamedev, resume, music, etc.)
+├── src/assets/               # ✅ SOURCE FILES - Edit these
+│   ├── scss/                 # SCSS source → compiles to public_html/resources/css/
+│   ├── blog posts/           # Markdown blog content
+│   ├── pdfs/                 # Original PDFs
+│   └── fonts/                # Font source files
+├── scripts/                  # ✅ PowerShell automation
+│   ├── build.ps1             # Compile SCSS → CSS
+│   ├── dev-server.ps1        # Start Python HTTP server (port 8002)
+│   ├── deploy.ps1            # Deploy to production
+│   └── build-and-deploy.ps1  # Full pipeline
+├── storage/
+│   ├── docs/                 # ✅ Essential documentation
+│   ├── archive/              # Outdated docs
+│   └── logs/                 # Application logs
+├── .config/                  # ✅ Configuration files
+│   ├── mcp_jenni.json        # Source MCP config
+│   ├── mcp-server.js         # MCP server wrapper
+│   ├── jenninexus.conf       # Nginx production config
+│   └── memory.mdc            # This file (project memory)
+└── .vscode/                  # ✅ VS Code settings
+    ├── mcp.json              # Merged MCP config (generated)
+    └── logs/                 # MCP merge logs
+```
+
+---
+
+## 🚀 DEVELOPMENT WORKFLOW
+
+### Starting Development
+```powershell
+# Terminal should already be in: C:\Users\Owner\Projects\www\jenninexus
+
+# Start dev server (port 8002)
+.\scripts\dev-server.ps1
+
+# Or use npm script
+npm run dev
+
+# Access: http://localhost:8002
+```
+
+### Building Assets
+```powershell
+# Compile SCSS → CSS
+.\scripts\build.ps1
+
+# Or
+npm run build
+```
+
+### Deployment
+```powershell
+# Full pipeline: build → package → upload → reload
+.\scripts\build-and-deploy.ps1
+
+# Deploy only (assumes built)
+.\scripts\deploy.ps1
+```
+
+---
+
+## 🔧 TECH STACK
+
+| Component | Technology |
+|-----------|------------|
+| **Framework** | Bootstrap 5.3.8 |
+| **Backend** | PHP 8.3-FPM |
+| **Server** | Nginx |
+| **Preprocessor** | SCSS |
+| **JavaScript** | Vanilla JS (10 files) |
+| **Playlists** | YAML + YouTube Data API v3 |
+| **Dev Server** | Python HTTP (port 8002) |
+| **Deployment** | rsync over SSH |
+| **Node Version** | v22.13.1 ✅ |
+
+---
+
+## 🌐 PRODUCTION SERVER
+
+### Server Details (✅ VERIFIED)
+- **IP:** 64.23.141.41
+- **SSH:** root@64.23.141.41:22
+- **Domain:** jenninexus.com
+- **SSL:** Let's Encrypt
+- **Web Root:** /var/www/jenninexus
+- **PHP:** 8.3-fpm
+- **Nginx Config:** /etc/nginx/sites-available/jenninexus.conf
+
+### SSH Access
+- **Key:** `C:\Users\Owner\.ssh\id_jennidrop.openssh`
+- **Alias:** `jennidrop-root` (root user) or `jennidrop` (jenni user with sudo)
+- **SSH Config:** Configured in `~/.ssh/config` with ServerAliveInterval
+- **IMPORTANT:** DO NOT use Martian Games keys on this server!
+- **Martian Games** is a separate project on a different server (64.23.243.225)
+
+### Deployment Method
+- **Method:** rsync over SSH
+- **Source:** `deploy/` directory (generated by build script)
+- **Destination:** `jennidrop-root:/var/www/jenninexus/` (using SSH alias)
+- **Scripts:** `build-and-deploy.ps1` (full pipeline) or `deploy.ps1` (deploy only)
+- **Post-deploy:** Reload Nginx + PHP-FPM, fix permissions
+
+---
+
+## 📄 KEY FILES & PAGES
+
+### PHP Pages (10 total)
+- `index.php` - Homepage with tag filtering
+- `gamedev.php` - 22 playlists, Martian Games showcase
+- `resume.php` - Embedded PDF resume
+- `music.php` - Spotify embeds, 6 YouTube playlists
+- `patreon.php` - VIP content, exclusive playlists
+- `diy.php` - Fashion, beauty, DIY content
+- `live.php` - Twitch streams
+- `blog.php` - Blog listing
+- `links.php` - Social media aggregation
+- `services.php` - Voice acting, game dev, 3D modeling
+
+### PHP Includes (3 core files)
+- `includes/head.php` - Bootstrap 5.3.8, meta, fonts, CSS
+- `includes/header.php` - Navigation with active page detection
+- `includes/footer.php` - 4-column footer + core scripts
+
+### JavaScript Files (10 active)
+Located in `public_html/resources/js/`:
+- `youtube-grid.js` - **YouTube RSS playlist rendering (v3.0, NO API)**
+  - Fetches playlists via RSS proxy at `/resources/api/get-youtube.php`
+  - Uses `fetchPlaylistVideos()` function (lines 617-690)
+  - Extracts thumbnails from RSS `<media:group>` tags
+  - 24-hour client-side cache in localStorage
+  - Automatic fallback: RSS thumbnail → Static JPG → Gradient placeholder
+- `theme-toggle.js` - Dark mode switcher
+- `martian-games.js` - Game showcase logic
+- `patreon-auth-enhanced.js` - Patreon integration
+- `back-to-top.js` - Scroll to top button (Bootstrap .btn-primary, fixed Nov 6, 2025)
+- `performance-optimizer.js` - Page optimization
+- `polyfills.js` - Browser compatibility
+- `tag-system.js` - Content filtering
+- `diy-playlists.js` - DIY page playlists
+- `music-playlists.js` - Music page playlists
+
+---
+
+## 🎨 BRANDING & FEATURES
+
+### Platform Color Schemes
+- **Steam:** Blue/gray theme
+- **Patreon:** Red/orange branding
+- **YouTube:** Red accent
+- **Twitch:** Purple theme
+
+### Key Features
+- YAML-based playlist system (gamedev.yaml, music.yaml, etc.)
+- **YouTube RSS System v3.0 (RSS-Only, No API)**
+  - Server-side caching: 10-minute TTL in `/var/www/jenninexus/storage/cache/youtube/`
+  - Client-side caching: 24-hour localStorage cache
+  - RSS proxy: `get-youtube.php` converts XML → JSON, handles CORS
+  - Client loader: `youtube-grid.js` v3.0 (846+ lines)
+  - Real thumbnails from RSS `<media:thumbnail>` tags (480x360 quality)
+  - 21 cached playlists working correctly
+  - Graceful degradation: serves stale cache on failure
+  - 502 errors are non-critical PHP-FPM timeouts
+  - Documentation: `storage/docs/YOUTUBE-RSS-ARCHITECTURE.md` (400+ lines)
+  - Secrets file: `youtube.json` exists but NOT used (`use_api: false`)
+- Responsive Bootstrap 5.3.8 grid
+- Clean URLs (try_files $uri $uri.php)
+- Dark mode toggle
+- Tag-based content filtering
+- Facebook SDK (opt-in per page via `$needsFb = true;`)
+
+### Contact
+- **Email:** jenninexus@gmail.com
+
+---
+
+## 📚 ESSENTIAL DOCUMENTATION
+
+Located in `storage/docs/`:
+- **QUICKSTART.md** - Fast setup guide
+- **DEPLOYMENT-GUIDE.md** - Production deployment walkthrough
+- **SCRIPTS-CONSOLIDATED.md** - All scripts explained
+- **PLAYLIST-MAPPING.md** - YouTube playlist configuration
+- **YOUTUBE-RSS-ARCHITECTURE.md** - **YouTube RSS System v3.0 complete guide (400+ lines)**
+  - Overview: Why RSS instead of API (6 benefits)
+  - Architecture: Complete data flow diagram
+  - File Structure: Cache directory with 21 cached playlists
+  - Thumbnail System: RSS feed structure, quality comparison, fallback chain
+  - Configuration: YAML examples, secrets file status (exists but unused)
+  - Troubleshooting: 502 errors (5 solutions), empty playlists
+  - Cache Statistics: MD5 hash file list, storage details
+  - Best Practices: Developer guidelines, deployment notes
+  - Created: November 6, 2025
+- **WORKSPACE-CONFIG-UPDATE.md** - MCP & workspace setup
+- **BOOTSTRAP-5.3.8-MIGRATION.md** - Upgrade guide
+- **BOOTSTRAP-EXAMPLES-REFERENCE.md** - Component examples
+- **JS-FILES-AUDIT.md** - JavaScript inventory
+- **YOUTUBE-API-SETUP-GUIDE.md** - API credentials (legacy reference only)
+
+---
+
+## ⚠️ IMPORTANT NOTES
+
+### Resource Paths (Critical!)
+- ✅ **Always use `<?= RES_ROOT ?>` in PHP pages**
+- ✅ JavaScript reads `window.RES_ROOT` (injected by head.php)
+- ❌ Never hardcode `/resources/` paths in nested pages
+- Example: `<link href="<?= RES_ROOT ?>/css/styles.css" rel="stylesheet">`
+
+### Secrets Management
+- **YouTube Secrets:** `storage/secrets/youtube.json` exists but **NOT USED**
+  - Contains API credentials (youtube_api_key, client_id, client_secret)
+  - Flag `use_api: false` confirms RSS-only mode
+  - Kept for future-proofing if API features ever needed
+  - Current system uses **RSS feeds exclusively** (no authentication required)
+- **Other API Keys:** Store in `public_html/resources/secrets.json`
+- **Template:** `public_html/resources/secrets.example.json`
+- **Git:** `secrets.json` is in `.gitignore` (DO NOT commit)
+
+### Facebook SDK
+- Only loads when `$needsFb = true;` is set before `includes/head.php`
+- Used for embedded Facebook posts in blog pages
+- Optional, not loaded by default
+
+### Self-Contained Deployment
+- No shared framework or vendor symlinks
+- All assets copied to `public_html/resources/`
+- Site is fully portable and self-contained
+
+---
+
+## 🔐 MCP CONFIGURATION
+
+### MCP Server Path
+- **Source Config:** `.config/mcp_jenni.json`
+- **Merged Config:** `.vscode/mcp.json` (auto-generated)
+- **Logs:** `.vscode/logs/` (merge summaries)
+
+### MCP Servers Enabled
+- `mcp_jenni_local` - Local development environment
+- `jenninexus_production` - Production SSH access (IP)
+- `main_jenninexus` - Production SSH access (alias)
+
+### MCP Isolation Rules
+- ✅ Only merges `mcp_jenni.json` + `mcp-manager.mcp.json`
+- ✅ Project-specific lock file: `.sys-admin-jenninexus.lock`
+- ✅ Separate .vscode/mcp.json per project
+- ❌ No cross-project MCP contamination
+- ❌ Does not load martiangames, neophi, boobsofwar, waeria configs
+
+---
+
+## 🛡️ WORKSPACE INTEGRITY
+
+### For Future Agents
+When starting work in this workspace:
+
+1. **READ DAILY ACTION PLAN FIRST**
+   ```powershell
+   # Open today's session tracking file
+   code storage\10-28.md
+   ```
+   - This file contains today's priorities, rules, and todos
+   - Update it as you complete tasks
+   - **DO NOT create new summary files**
+
+2. **Verify Working Directory**
+   ```powershell
+   pwd  # Should show: C:\Users\Owner\Projects\www\jenninexus
+   ```
+
+3. **Check Environment Variables**
+   ```powershell
+   $env:MCP_PROJECT_NAME    # Should be: jenninexus
+   $env:MCP_PROJECT_ROOT    # Should be: C:\Users\Owner\Projects\www\jenninexus
+   ```
+
+4. **Review Essential Documentation** (located in `storage/docs/`)
+   - `QUICKSTART.md` - Setup guide
+   - `TAG-SYSTEM.md` - Tag filtering system
+   - `PLAYLIST-MAPPING.md` - Playlist configs
+   - `BOOTSTRAP-5.3.8-COMPLETE.md` - Bootstrap reference
+   - **Only update these when information changes**
+   - **DO NOT create new docs or summary files**
+
+5. **Never Touch Other Projects**
+   - Stay in `C:\Users\Owner\Projects\www\jenninexus`
+   - Don't edit files in other workspace folders
+   - Don't run commands from `C:\Users\Owner\Projects\www\workspaces`
+
+6. **Respect Isolation**
+   - This is jenninexus.com ONLY
+   - Martian Games (martiangames.com) is separate
+   - Different servers, different keys, different everything
+
+---
+
+## 📝 QUICK REFERENCE
+
+### Common Commands
+```powershell
+# Start dev server
+.\scripts\dev-server.ps1
+
+# Build assets
+.\scripts\build.ps1
+
+# Deploy
+.\scripts\build-and-deploy.ps1
+
+# Check Node version
+node --version  # Should be v22.13.1+
+
+# Check PHP version (local)
+php --version
+
+# Test deployment connection
+ssh jennidrop-root
+# or with explicit key
+ssh -i C:\Users\Owner\.ssh\id_jennidrop.openssh root@64.23.141.41
+```
+
+### Ports
+- **8002** - JenniNexus dev server (designated port)
+- **80** - Production HTTP (redirects to HTTPS)
+- **443** - Production HTTPS
+- **22** - SSH
+
+### URLs
+- **Local:** http://localhost:8002
+- **Production:** https://jenninexus.com
+
+---
+
+**Remember:** This workspace is ISOLATED. Work happens in `C:\Users\Owner\Projects\www\jenninexus`. The sys-admin tool is just a helper that runs from its own location but operates on this project's files through environment variables. Never confuse this with other projects in the workspace folder.
+
+---
+
+*This memory file is maintained for AI agents working in the JenniNexus workspace to ensure consistent, isolated, and correct operations.*

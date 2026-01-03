@@ -1,0 +1,276 @@
+/**
+ * Patreon Page Theme Styles
+ * Patreon brand colors with professional VIP aesthetic
+ * Brand Colors: Coral (#ff424d), Navy (#052d49), White (#f7f7f7)
+ */
+
+/* Patreon Brand Colors */
+:root {
+  --patreon-coral: #ff424d;
+  --patreon-coral-dark: #e73843;
+  --patreon-navy: #052d49;
+  --patreon-white: #f7f7f7;
+  --patreon-navy-light: #0a3d5f;
+}
+
+/* Patreon Hero with brand gradient */
+.patreon-hero {
+  background: linear-gradient(135deg, var(--patreon-navy) 0%, var(--patreon-navy-light) 50%, #1a1f2e 100%);
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.patreon-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 66, 77, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    opacity: 0.5; 
+    transform: scale(1); 
+  }
+  50% { 
+    opacity: 0.8; 
+    transform: scale(1.1); 
+  }
+}
+
+/* Patreon branded buttons */
+.btn-patreon-coral {
+  background: var(--patreon-coral);
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  /* Inherit flexbox alignment from custom.css .btn base styles */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+}
+
+.btn-patreon-coral:hover {
+  background: var(--patreon-coral-dark);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 66, 77, 0.4);
+}
+
+.btn-outline-patreon {
+  border: 2px solid var(--patreon-coral);
+  color: var(--patreon-coral);
+  background: transparent;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  /* Inherit flexbox alignment from custom.css .btn base styles */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+}
+
+.btn-outline-patreon:hover {
+  background: var(--patreon-coral);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 66, 77, 0.4);
+}
+
+/* Patreon VIP preview blur and reveal */
+.vip-guest-view .card { 
+  filter: blur(6px) saturate(0.9); 
+  transition: filter 220ms ease-in-out; 
+}
+
+.vip-guest-view .card:hover { 
+  filter: blur(4px) saturate(0.95); 
+}
+
+.vip-blur { 
+  filter: blur(6px) saturate(0.9); 
+}
+
+.vip-revealed { 
+  filter: none !important; 
+}
+
+/* Loading skeleton */
+.patreon-skeleton { 
+  background: linear-gradient(90deg, #2a2f34 0%, #343a40 50%, #2a2f34 100%); 
+  background-size: 200% 100%; 
+  animation: shimmer 1.4s linear infinite; 
+  height: 180px; 
+}
+
+@keyframes shimmer { 
+  0% { background-position: 200% 0 } 
+  100% { background-position: -200% 0 } 
+}
+
+.card-img-top.skeleton-img { 
+  width: 100%; 
+  height: 180px; 
+  object-fit: cover; 
+  display: block; 
+}
+
+/* Patreon tier cards with brand accent and glass effect */
+.patreon-tier-card {
+  border-top: 4px solid var(--patreon-coral);
+  transition: all 0.3s ease;
+  background: var(--glass-panel-bg);
+  backdrop-filter: blur(var(--glass-panel-blur));
+  -webkit-backdrop-filter: blur(var(--glass-panel-blur));
+  border: 1px solid var(--glass-panel-border);
+  border-top: 4px solid var(--patreon-coral);
+  box-shadow: var(--glass-panel-shadow);
+}
+
+.patreon-tier-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 66, 77, 0.3), 0 0 20px rgba(255, 66, 77, 0.2);
+  border-top-width: 6px;
+}
+
+[data-bs-theme="dark"] .patreon-tier-card {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-bs-theme="dark"] .patreon-tier-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(255, 66, 77, 0.4);
+}
+
+/* Patreon tier badges */
+.badge-patreon {
+  background: var(--patreon-coral);
+  color: white;
+  font-weight: 600;
+}
+
+.badge-patreon-vip {
+  background: linear-gradient(135deg, var(--patreon-coral), var(--patreon-coral-dark));
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+/* VIP Content Section with glass effect */
+#vipArea {
+  background: var(--glass-panel-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 2px solid var(--patreon-coral);
+  box-shadow: inset 0 2px 16px rgba(255, 66, 77, 0.1);
+}
+
+[data-bs-theme="dark"] #vipArea {
+  background: rgba(5, 45, 73, 0.2);
+  box-shadow: inset 0 2px 16px rgba(255, 66, 77, 0.15);
+}
+
+/* FAQ Section */
+.accordion-button:not(.collapsed) {
+  background-color: rgba(255, 66, 77, 0.1);
+  color: var(--patreon-coral);
+}
+
+.accordion-button:focus {
+  border-color: var(--patreon-coral);
+  box-shadow: 0 0 0 0.25rem rgba(255, 66, 77, 0.25);
+}
+
+/* Patreon: prevent mobile offcanvas from rendering inline on large screens */
+@media (min-width: 992px) {
+  #mobileMenu, 
+  .offcanvas-backdrop { 
+    display: none !important; 
+  }
+  button[data-bs-target="#mobileMenu"] { 
+    display: none !important; 
+  }
+}
+
+/* Ensure hero layout matches other pages when offcanvas is hidden */
+.patreon-hero .container { 
+  max-width: 1100px; 
+}
+
+/* Patreon icon styling */
+.patreon-icon {
+  color: var(--patreon-coral);
+  transition: all 0.3s ease;
+}
+
+.patreon-icon:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(255, 66, 77, 0.6));
+}
+
+/* Patreon member count badge */
+.member-count {
+  background: rgba(255, 66, 77, 0.1);
+  color: var(--patreon-coral);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  border: 2px solid var(--patreon-coral);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .patreon-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .patreon-tier-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-patreon-coral,
+  .btn-outline-patreon {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Accessibility */
+.patreon-tier-card:focus {
+  outline: 2px solid var(--patreon-coral);
+  outline-offset: 2px;
+}
+
+.btn-patreon-coral:focus,
+.btn-outline-patreon:focus {
+  outline: 2px solid var(--patreon-coral);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .patreon-hero::before {
+    display: none;
+  }
+  
+  .patreon-tier-card {
+    box-shadow: none;
+    border: 1px solid #000;
+    page-break-inside: avoid;
+  }
+  
+  .vip-blur {
+    filter: none !important;
+  }
+}

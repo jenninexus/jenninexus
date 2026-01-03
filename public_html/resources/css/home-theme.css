@@ -1,0 +1,268 @@
+/**
+ * Home Page Theme Styles
+ * Enhanced hero section and social icons for index.php
+ * Bootstrap 5.3.8 optimized responsive design
+ */
+
+/* ===================================
+   Container Constraints - Prevent Content Spillage
+   =================================== */
+
+.hero-section .container,
+section .container {
+  max-width: 1140px;
+}
+
+/* Ensure hero section has proper background */
+.hero-section {
+  background: transparent;
+}
+
+:root[data-bs-theme="light"] .hero-section {
+  background: transparent; /* Show body lavender background */
+}
+
+:root[data-bs-theme="dark"] .hero-section {
+  background: transparent; /* Show body dark background */
+}
+
+/* ===================================
+   Hero Social Icons - REVERSED Responsive Design
+   Mobile: Stacked buttons with text
+   Desktop: Icon-only squares in single row
+   =================================== */
+
+/* Mobile (default): Stacked full-width buttons with text labels */
+.hero-section .social-links {
+  display: flex;
+  flex-direction: column; /* Stack vertically on mobile */
+  gap: 0.75rem;
+  margin-top: 2rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-section .social-links .btn {
+  /* Mobile: Full-width rounded rectangles with icon + text */
+  width: 100%;
+  height: auto;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border: 2px solid currentColor;
+  background: transparent;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.hero-section .social-links .btn i,
+.hero-section .social-links .btn .bi {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* Show text labels on mobile using aria-label */
+.hero-section .social-links .btn::after {
+  content: attr(aria-label);
+  white-space: nowrap;
+}
+
+/* Desktop: Single row of icon-only squares (NO TEXT) */
+@media (min-width: 768px) {
+  .hero-section .social-links {
+    flex-direction: row; /* Horizontal row on desktop */
+    flex-wrap: nowrap;   /* Force single row */
+    gap: 0.75rem;
+    justify-content: center;
+    max-width: none;
+  }
+  
+  .hero-section .social-links .btn {
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    border-radius: 0.5rem; /* Rounded squares */
+    gap: 0;
+  }
+  
+  .hero-section .social-links .btn i,
+  .hero-section .social-links .btn .bi {
+    font-size: 1.75rem;
+  }
+  
+  /* HIDE text labels on desktop - icon only */
+  .hero-section .social-links .btn::after {
+    content: none;
+  }
+}
+
+/* Hover effects */
+.hero-section .social-links .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 46, 136, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Platform-specific colors */
+.hero-section .social-links .btn[title*="YouTube"]:hover { border-color: #FF0000; color: #FF0000; }
+.hero-section .social-links .btn[title*="Twitch"]:hover { border-color: #9146FF; color: #9146FF; }
+.hero-section .social-links .btn[title*="Discord"]:hover { border-color: #5865F2; color: #5865F2; }
+  /* Use theme-aware text/border for GitHub to avoid white-on-white in light themes */
+  .hero-section .social-links .btn[title*="GitHub"]:hover { border-color: var(--bs-body-color); color: var(--bs-body-color); }
+
+/* Responsive Typography
+   =================================== */
+@media (max-width: 575.98px) {
+  .hero-section .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section .lead {
+    font-size: 1rem;
+  }
+}
+
+/* ===================================
+   Theme Toggle Compatibility
+   =================================== */
+[data-bs-theme="dark"] .hero-section .social-links .btn {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+[data-bs-theme="dark"] .hero-section .social-links .btn:hover {
+  border-color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-bs-theme="light"] .hero-section .social-links .btn {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+[data-bs-theme="light"] .hero-section .social-links .btn:hover {
+  border-color: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* ===================================
+   Featured Projects & Creative Features — Hover Protocol
+   Enhanced zoom + glow on hover (no lateral lift)
+   =================================== */
+
+/* Project Cards - Zoom with icon glow */
+.project-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(255, 46, 136, 0.25);
+  border-color: var(--jenni-primary, #FF2E88);
+}
+
+[data-bs-theme="dark"] .project-card:hover {
+  box-shadow: 0 12px 40px rgba(255, 46, 136, 0.4);
+}
+
+/* Project Icons - Add glow animation on hover */
+.project-icon {
+  transition: all 0.3s ease;
+  color: var(--jenni-primary, #FF2E88);
+}
+
+.project-card:hover .project-icon {
+  animation: iconPulseGlow 1.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 46, 136, 0.6))
+          drop-shadow(0 0 16px rgba(255, 46, 136, 0.4));
+}
+
+/* Feature Cards - Keep existing behavior + enhance glow */
+.feature-card:hover {
+  box-shadow: 0 12px 40px rgba(255, 46, 136, 0.25);
+}
+
+[data-bs-theme="dark"] .feature-card:hover {
+  box-shadow: 0 12px 40px rgba(255, 46, 136, 0.4);
+}
+
+/* Unified Icon Glow Animation */
+@keyframes iconPulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(255, 46, 136, 0.6))
+            drop-shadow(0 0 16px rgba(255, 46, 136, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(255, 46, 136, 0.8))
+            drop-shadow(0 0 24px rgba(255, 46, 136, 0.6));
+  }
+}
+
+/* ===================================
+   Home Page Surface Helpers
+   Ensure sections use glass-panel background to avoid white-on-white issues
+   =================================== */
+
+.home-surface {
+  background: var(--glass-bg) !important;
+  border-radius: 0.75rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+/* Ensure text is always readable on home-surface backgrounds */
+.home-surface,
+.home-surface .card-title,
+.home-surface h1,
+.home-surface h2,
+.home-surface h3,
+.home-surface h4,
+.home-surface h5,
+.home-surface h6 {
+  color: var(--bs-body-color) !important;
+}
+
+/* Light mode: dark text on pastel backgrounds */
+:root[data-bs-theme="light"] .home-surface,
+:root[data-bs-theme="light"] .home-surface .card-title,
+:root[data-bs-theme="light"] .home-surface h1,
+:root[data-bs-theme="light"] .home-surface h2,
+:root[data-bs-theme="light"] .home-surface h3,
+:root[data-bs-theme="light"] .home-surface h4,
+:root[data-bs-theme="light"] .home-surface h5,
+:root[data-bs-theme="light"] .home-surface h6,
+:root[data-bs-theme="light"] .home-surface .lead,
+:root[data-bs-theme="light"] .home-surface p {
+  color: #2C2A33 !important;
+}
+
+/* Dark mode: light text on dark backgrounds */
+:root[data-bs-theme="dark"] .home-surface,
+:root[data-bs-theme="dark"] .home-surface .card-title,
+:root[data-bs-theme="dark"] .home-surface h1,
+:root[data-bs-theme="dark"] .home-surface h2,
+:root[data-bs-theme="dark"] .home-surface h3,
+:root[data-bs-theme="dark"] .home-surface h4,
+:root[data-bs-theme="dark"] .home-surface h5,
+:root[data-bs-theme="dark"] .home-surface h6,
+:root[data-bs-theme="dark"] .home-surface .lead,
+:root[data-bs-theme="dark"] .home-surface p {
+  color: #F5F3FF !important;
+}
+
+/* Cards inside home-surface should use glass panel surfaces for contrast */
+.home-surface .card,
+.home-surface .glass-panel {
+  background: var(--glass-panel-bg) !important;
+  -webkit-backdrop-filter: blur(var(--glass-panel-blur));
+  backdrop-filter: blur(var(--glass-panel-blur));
+  border: 1px solid var(--glass-panel-border) !important;
+  box-shadow: 0 8px 32px 0 var(--glass-panel-shadow);
+  color: var(--bs-body-color) !important;
+}

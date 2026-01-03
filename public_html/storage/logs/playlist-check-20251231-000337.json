@@ -1,0 +1,44 @@
+[
+  {
+    "playlist_id": "PL9QBjNDhgNwRtiIPeSEi1HAa5ehnYpau0",
+    "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PL9QBjNDhgNwRtiIPeSEi1HAa5ehnYpau0",
+    "status": "200",
+    "content_length": "15995",
+    "error": null
+  },
+  {
+    "playlist_id": "PL9QBjNDhgNwSELFNvTx9hpk3xbGduBpHY",
+    "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PL9QBjNDhgNwSELFNvTx9hpk3xbGduBpHY",
+    "status": "200",
+    "content_length": "24608",
+    "error": null
+  },
+  {
+    "playlist_id": "PL9QBjNDhgNwRaJX--_cZhEAJ8HbG9umiX",
+    "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PL9QBjNDhgNwRaJX--_cZhEAJ8HbG9umiX",
+    "status": "200",
+    "content_length": "28289",
+    "error": null
+  },
+  {
+    "playlist_id": "PL9QBjNDhgNwRQONB9N2tIIhP0vPrkyNvy",
+    "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PL9QBjNDhgNwRQONB9N2tIIhP0vPrkyNvy",
+    "status": "200",
+    "content_length": "23281",
+    "error": null
+  },
+  {
+    "playlist_id": "PL9QBjNDhgNwTnhBcU2WKXnjJN78OFW_JN",
+    "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PL9QBjNDhgNwTnhBcU2WKXnjJN78OFW_JN",
+    "status": "200",
+    "content_length": "25793",
+    "error": null
+  },
+  {
+    "playlist_id": "PL9QBjNDhgNwSYG7c6qnwlqgRdQW-SWTHK",
+    "url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PL9QBjNDhgNwSYG7c6qnwlqgRdQW-SWTHK",
+    "status": "200",
+    "content_length": "28806",
+    "error": null
+  }
+]

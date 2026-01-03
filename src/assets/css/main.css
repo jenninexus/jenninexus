@@ -1,0 +1,86 @@
+/**
+ * JenniNexus Main CSS
+ * 
+ * This file serves as the main stylesheet entry point.
+ * We use Bootstrap 5.3.8 from CDN (loaded in head.php) which provides:
+ * - All base Bootstrap components
+ * - CSS custom properties (--bs-*) for theming
+ * 
+ * Additional stylesheets:
+ * - custom.css: Site-specific overrides, glass effects, animations
+ * - all-themes.css: Theme system (auto, dark, light modes)
+ * - *-theme.css: Page-specific theme files
+ * 
+ * No SCSS compilation required.
+ */
+
+/* Root variables for consistency */
+:root {
+  --jenni-primary: #6f42c1;
+  --jenni-secondary: #e83e8c;
+  --jenni-accent: #20c997;
+}
+
+/* Basic reset if needed (Bootstrap handles most of this) */
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body defaults with gentle animated background */
+body {
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  background: linear-gradient(
+    135deg, 
+    var(--bs-body-bg) 0%, 
+    color-mix(in srgb, var(--bs-body-bg) 95%, var(--bs-primary) 5%) 50%,
+    var(--bs-body-bg) 100%
+  );
+  background-size: 400% 400%;
+  animation: gentleBackground 20s ease-in-out infinite;
+  min-height: 100vh;
+}
+
+/* Gentle background animation - subtle color shift */
+@keyframes gentleBackground {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Disable animation for reduced-motion users */
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+    background: var(--bs-body-bg);
+  }
+}
+
+/* Utility: hidden class */
+.hidden {
+  display: none !important;
+}
+
+/* Utility: visually hidden (for screen readers) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
