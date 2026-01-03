@@ -14,6 +14,10 @@
 /storage/patreon/
 secrets.json
 
+# Large Files (>100MB - upload manually or use Git LFS)
+public_html/resources/pdfs/jenninexus_cc4_2025.pdf
+src/assets/pdfs/jenninexus_cc4_2025.pdf
+
 # Backups & Archives
 /public_html/resources/archived/
 /public_html/resources/css/!bak/
