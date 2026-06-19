@@ -2,10 +2,11 @@
 
 # Jenni
 
-![Technical Artist](https://img.shields.io/badge/technical%20artist-game%20dev-00e879?style=flat-square)
-![AI Workflows](https://img.shields.io/badge/AI-workflows-42f4c8?style=flat-square)
-![Indie Studio](https://img.shields.io/badge/studio-Monofinity-39ff8c?style=flat-square)
-![Live Coding](https://img.shields.io/badge/live-coding%20%2B%20creative%20tools-00e5ff?style=flat-square)
+[![Portfolio](https://img.shields.io/badge/Portfolio-jenninexus.com-D14BFF?style=flat-square&logo=google-chrome&logoColor=white)](https://jenninexus.com)
+[![Links](https://img.shields.io/badge/Links-everything%20else-FF6EC4?style=flat-square&logo=linktree&logoColor=white)](https://jenninexus.com/links)
+[![Technical Artist](https://img.shields.io/badge/Technical%20Artist-game%20dev-A563D1?style=flat-square&logo=unity&logoColor=white)](https://jenninexus.com)
+[![AI Workflows](https://img.shields.io/badge/AI-workflows-D14BFF?style=flat-square&logo=openai&logoColor=white)](https://github.com/jenninexus?tab=repositories)
+[![Live Coding](https://img.shields.io/badge/Live%20Coding-creative%20tools-FF4081?style=flat-square&logo=twitch&logoColor=white)](https://twitch.tv/JenniNexus)
 
 ## Technical artist. Indie game dev.
 ## Building creative tools, games, and AI-assisted workflows.
@@ -43,7 +44,6 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), building
 | [site-auditor](https://github.com/jenninexus/site-auditor) | Local website audit dashboard for SEO, accessibility, security, and performance |
 | [syn-themes](https://github.com/jenninexus/syn-themes) | Cyberpunk glass VS Code theme extension |
 | [senior-pet-care](https://github.com/jenninexus/senior-pet-care) | Printable senior pet health tracker |
-| [Monofinity Studio](https://github.com/monofinitystudio) | Studio/home for larger game and creative systems work |
 
 </div>
 
@@ -110,14 +110,15 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), building
 
 <div align="center">
 
-## Latest YouTube Content
+## Latest YouTube
 
 <!-- YOUTUBE:START -->
-🎥 [**How Early Cartoons Sparked My Game Development Passion**](https://www.youtube.com/shorts/umr97zzfmuU)  
-🎥 [**Water & Lava Flow in Unity 3D - Fluid Simulation in Realtime**](https://www.youtube.com/shorts/31wITZAsPgI)  
-🎥 [**How I Started Voice Acting: on Newgrounds #VoiceActingTips**](https://www.youtube.com/shorts/aShHqIyXo9g)  
-🎥 [**Embedding YouTube Video Feed on my Website using PHP**](https://www.youtube.com/shorts/FwOe9qx7hm8)  
-🎥 [**From Drawing with a Mouse to using the XP-Pen**](https://www.youtube.com/shorts/-jpWp98syGo)  
+| | |
+|:---:|:---:|
+| [![How Early Cartoons Sparked My Game Development Passion](https://i.ytimg.com/vi/umr97zzfmuU/hqdefault.jpg)](https://www.youtube.com/shorts/umr97zzfmuU) | [![Water & Lava Flow in Unity 3D](https://i.ytimg.com/vi/31wITZAsPgI/hqdefault.jpg)](https://www.youtube.com/shorts/31wITZAsPgI) |
+| [How Early Cartoons Sparked My Game Development Passion](https://www.youtube.com/shorts/umr97zzfmuU) | [Water & Lava Flow in Unity 3D](https://www.youtube.com/shorts/31wITZAsPgI) |
+| [![How I Started Voice Acting](https://i.ytimg.com/vi/aShHqIyXo9g/hqdefault.jpg)](https://www.youtube.com/shorts/aShHqIyXo9g) | [![Embedding YouTube Video Feed on my Website](https://i.ytimg.com/vi/FwOe9qx7hm8/hqdefault.jpg)](https://www.youtube.com/shorts/FwOe9qx7hm8) |
+| [How I Started Voice Acting](https://www.youtube.com/shorts/aShHqIyXo9g) | [Embedding YouTube Video Feed on my Website](https://www.youtube.com/shorts/FwOe9qx7hm8) |
 <!-- YOUTUBE:END -->
 
 </div>
@@ -138,7 +139,7 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), building
 
 If my work helps or inspires you:
 
-[Star a repo](https://github.com/jenninexus?tab=repositories) · [Links](https://jenninexus.com/links) · [Patreon](https://www.patreon.com/c/JenniNexus) · [Paypal](https://paypal.me/jenninexus)
+[Sponsor on GitHub](https://github.com/sponsors/jenninexus) · [Links](https://jenninexus.com/links) · [Patreon](https://www.patreon.com/c/JenniNexus) · [Paypal](https://paypal.me/jenninexus)
 
 Published by [Jenni](https://github.com/jenninexus) at [Monofinity Studio](https://github.com/monofinitystudio).
 
