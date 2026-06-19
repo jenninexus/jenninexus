@@ -181,7 +181,7 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), building
 
 If my work helps or inspires you:
 
-[Sponsor on GitHub](https://github.com/sponsors/jenninexus) · [Links](https://jenninexus.com/links) · [Patreon](https://www.patreon.com/c/JenniNexus) · [Paypal](https://paypal.me/jenninexus)
+[Links](https://jenninexus.com/links) · [Sponsor](https://github.com/sponsors/jenninexus) · [Patreon](https://www.patreon.com/c/JenniNexus) · [Paypal](https://paypal.me/jenninexus)
 
 Published by [Jenni](https://github.com/jenninexus) at [Monofinity Studio](https://github.com/monofinitystudio).
 
