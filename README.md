@@ -112,13 +112,12 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), building
 
 <div align="center">
 
-## Featured YouTube
+## Featured YouTube Videos
 
 <table>
   <tr>
     <td align="center" width="33%" valign="top">
 
-### Tips + Tuts
 <a href="https://youtube.com/playlist?list=PL9QBjNDhgNwTnv3qzgtrxReBySCOv7SFN">
   <img src="https://i.ytimg.com/vi/WAxpLCjSsoI/maxresdefault.jpg" alt="Tips + Tuts Playlist" width="100%">
 </a>
@@ -126,7 +125,6 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), building
 </td>
     <td align="center" width="33%" valign="top">
 
-### Dev Journey
 <a href="https://youtube.com/playlist?list=PL9QBjNDhgNwRsznW8e3-KVmwfEuwvr7Yi">
   <img src="https://i.ytimg.com/vi/BL1MNGRUsxg/maxresdefault.jpg" alt="Dev Journey Playlist" width="100%">
 </a>
@@ -134,7 +132,6 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), building
 </td>
     <td align="center" width="33%" valign="top">
 
-### Game Jams
 <a href="https://youtube.com/playlist?list=PL9QBjNDhgNwTFn7QSZRbZGoKCCIsUlemX">
   <img src="https://i.ytimg.com/vi/F8N6aQCg3iI/maxresdefault.jpg" alt="Game Jams Playlist" width="100%">
 </a>
@@ -144,7 +141,6 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), building
   <tr>
     <td align="center" width="33%" valign="top">
 
-### 3D Graphics
 <a href="https://youtube.com/playlist?list=PLYI86hek1EWcNBgR0ilmsUsDLWHHDxEet">
   <img src="https://i.ytimg.com/vi/JAg3PRgj5T8/maxresdefault.jpg" alt="3D Graphics Playlist" width="100%">
 </a>
@@ -152,7 +148,6 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), building
 </td>
     <td align="center" width="33%" valign="top">
 
-### Jenni Styles
 <a href="https://youtube.com/playlist?list=PL9QBjNDhgNwS8zNaKAFjuWf4NTfk3Ul3g">
   <img src="https://i.ytimg.com/vi/Xv5RxM0A2pg/maxresdefault.jpg" alt="Jenni Styles Playlist" width="100%">
 </a>
@@ -160,7 +155,6 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), building
 </td>
     <td align="center" width="33%" valign="top">
 
-### AI + Tech Art
 <a href="https://youtube.com/playlist?list=PL9QBjNDhgNwQygOzxOAYImp0L3zC6pBO2">
   <img src="https://i.ytimg.com/vi/YV1PeHRETEo/maxresdefault.jpg" alt="AI Tools Playlist" width="100%">
 </a>
