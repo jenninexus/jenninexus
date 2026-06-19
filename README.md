@@ -11,7 +11,9 @@
 ## Technical artist. Indie game dev.
 ## Building creative tools, games, and AI-assisted workflows.
 
-[Portfolio](https://jenninexus.com) · [Links](https://jenninexus.com/links) · [Monofinity Studio](https://github.com/monofinitystudio)
+[![Portfolio](https://img.shields.io/badge/Portfolio-jenninexus.com-D14BFF?style=flat-square&logo=google-chrome&logoColor=white)](https://jenninexus.com)
+[![Links](https://img.shields.io/badge/Links-jenninexus.com%2Flinks-FF6EC4?style=flat-square&logo=linktree&logoColor=white)](https://jenninexus.com/links)
+[![Monofinity Studio](https://img.shields.io/badge/Monofinity-Studio-A563D1?style=flat-square&logo=github&logoColor=white)](https://github.com/monofinitystudio)
 
 </div>
 
