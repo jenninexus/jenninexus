@@ -6,7 +6,7 @@
 [![Links](https://img.shields.io/badge/Links-everything%20else-FF6EC4?style=flat-square&logo=linktree&logoColor=white)](https://jenninexus.com/links)
 [![Technical Artist](https://img.shields.io/badge/Technical%20Artist-game%20dev-A563D1?style=flat-square&logo=unity&logoColor=white)](https://jenninexus.com)
 [![AI Workflows](https://img.shields.io/badge/AI-workflows-D14BFF?style=flat-square&logo=openai&logoColor=white)](https://github.com/jenninexus?tab=repositories)
-[![Live Coding](https://img.shields.io/badge/Live%20Coding-creative%20tools-FF4081?style=flat-square&logo=twitch&logoColor=white)](https://twitch.tv/JenniNexus)
+[![Live Coding](https://img.shields.io/badge/Live%20Coding-creative%20tools-9146FF?style=flat-square&logo=twitch&logoColor=white)](https://twitch.tv/JenniNexus)
 
 ## Technical artist. Indie game dev.
 ## Building creative tools, games, and AI-assisted workflows.
