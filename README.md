@@ -2,10 +2,10 @@
 
 # Jenni
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-jenninexus.com-D14BFF?style=flat-square&logo=google-chrome&logoColor=white)](https://jenninexus.com)
-[![Links](https://img.shields.io/badge/Links-everything%20else-FF6EC4?style=flat-square&logo=linktree&logoColor=white)](https://jenninexus.com/links)
-[![Technical Artist](https://img.shields.io/badge/Technical%20Artist-game%20dev-A563D1?style=flat-square&logo=unity&logoColor=white)](https://jenninexus.com)
-[![AI Workflows](https://img.shields.io/badge/AI-workflows-D14BFF?style=flat-square&logo=openai&logoColor=white)](https://github.com/jenninexus?tab=repositories)
+[![Portfolio](https://img.shields.io/badge/Portfolio-jenninexus.com-64FFDA?style=flat-square&logo=google-chrome&logoColor=white)](https://jenninexus.com)
+[![Links](https://img.shields.io/badge/Links-everything%20else-00E5C7?style=flat-square&logo=linktree&logoColor=white)](https://jenninexus.com/links)
+[![Technical Artist](https://img.shields.io/badge/Technical%20Artist-game%20dev-00B8D4?style=flat-square&logo=unity&logoColor=white)](https://jenninexus.com)
+[![AI Workflows](https://img.shields.io/badge/AI-workflows-2979FF?style=flat-square&logo=openai&logoColor=white)](https://github.com/jenninexus?tab=repositories)
 [![Live Coding](https://img.shields.io/badge/Live%20Coding-creative%20tools-9146FF?style=flat-square&logo=twitch&logoColor=white)](https://twitch.tv/JenniNexus)
 
 ## Technical artist. Indie game dev.
