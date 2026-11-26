@@ -49,6 +49,24 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), building
 
 <div align="center">
 
+## Public Seed Network
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/seed-network/network-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="docs/seed-network/network-light.png">
+  <img alt="Seven public seed repos connected by palette sharing, writing guidance, and workflow ideas" src="docs/seed-network/network-light.png">
+</picture>
+
+[Syn Themes](https://github.com/jenninexus/syn-themes) · [Theme Designer](https://github.com/jenninexus/theme-designer) · [PDF Designer](https://github.com/jenninexus/pdf-designer) · [Voice Seed](https://github.com/jenninexus/voice-seed) · [Dashboard](https://github.com/jenninexus/dashboard) · [Agency](https://github.com/jenninexus/agency) · [Bot Seed](https://github.com/jenninexus/bot-seed)
+
+[How the tools fit together](docs/seed-network/)
+
+</div>
+
+---
+
+<div align="center">
+
 ## Creative Stack
 
 <table>

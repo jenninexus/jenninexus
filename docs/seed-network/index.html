@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Public Seed Network</title>
+<style>
+:root { color-scheme: dark; --bg:#10111c; --panel:#151628; --ink:#f2efff; --dim:#b6b8d3; --border:#343950; --violet:#c4a0ff; --teal:#76e7cc; --blue:#9dc8ff; --rose:#f3a1d7; --aurora:#4b296a; --mist:#173340; --glow:.18; --node:#1a1b31; }
+:root[data-theme="light"] { color-scheme:light; --bg:#f1f2fb; --panel:#fcfbff; --ink:#201a37; --dim:#514f70; --border:#b7b6d3; --violet:#6239a7; --teal:#146b5d; --blue:#285f9d; --rose:#943670; --aurora:#dfcafa; --mist:#c5e7ed; --glow:.3; --node:#fbfaff; }
+* { box-sizing:border-box; }
+body { margin:0; color:var(--ink); background:var(--bg); font:15px/1.5 system-ui,sans-serif; }
+main { width:min(1100px,100% - 28px); margin:26px auto 46px; }
+.toolbar { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:12px; }
+a { color:var(--blue); text-underline-offset:.22em; }
+button { color:inherit; background:var(--node); font:inherit; cursor:pointer; border:1px solid var(--border); border-radius:9px; padding:7px 12px; }
+:focus-visible { outline:2px solid var(--blue); outline-offset:3px; }
+.frame { position:relative; overflow:hidden; border:1px solid var(--border); border-radius:22px; background:radial-gradient(ellipse at 15% 15%,var(--aurora),transparent 60%),radial-gradient(ellipse at 90% 80%,var(--mist),transparent 65%),var(--panel); }
+#diagram { display:block; width:100%; height:auto; }
+.svg-title { fill:var(--ink); font-size:34px; font-weight:720; letter-spacing:-.025em; }
+.svg-subtitle,.key { fill:var(--dim); font-size:16px; }
+.node { cursor:pointer; }
+.node:focus .card,.node:hover .card,.node[aria-pressed="true"] .card { stroke-width:3.5; }
+.card { fill:var(--node); stroke:var(--tone); stroke-width:1.5; }
+.orb-aura { fill:var(--tone); opacity:var(--glow); }
+.orb { fill:var(--node); stroke:var(--tone); stroke-width:1.5; }
+.glyph { fill:none; stroke:var(--tone); stroke-width:1.65; stroke-linecap:round; stroke-linejoin:round; }
+.node-label { fill:var(--ink); font-size:18px; font-weight:680; }
+.node-subtitle { fill:var(--dim); font-size:13px; }
+.edge { fill:none; stroke:var(--tone); opacity:.46; stroke-width:2; }
+.edge.active { opacity:1; stroke-width:3; }
+.edge.inactive { opacity:.18; }
+.graph-grid { fill:none; stroke:var(--ink); opacity:.075; }
+.panel { margin-top:12px; padding:18px; background:var(--panel); border:1px solid var(--border); border-radius:14px; }
+h1,h2,p { margin:0; }
+h2 { font-size:1.12rem; }
+.panel p { color:var(--dim); margin:4px 0 8px; }
+.panel ul { margin:5px 0 0; padding-left:1.25rem; }
+.directory { display:flex; flex-wrap:wrap; gap:12px; margin-top:15px; }
+.directory a { display:inline-flex; align-items:center; min-height:36px; }
+@media (max-width:620px) {
+  .node-label { font-size:16px; }
+  .node-subtitle { font-size:12px; }
+  .key { font-size:14px; }
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="toolbar">
+    <a id="returnLink" href="https://github.com/jenninexus">Jenni’s GitHub profile</a>
+    <button type="button" id="appearance">Use light mode</button>
+  </div>
+  <div class="frame">
+    <svg id="diagram" viewBox="0 0 1000 520" role="group" aria-labelledby="graphTitle graphDescription">
+      <title id="graphTitle">Public Seed Network</title>
+      <desc id="graphDescription">Seven public repositories connected by ways to share palettes, writing guidance and workflow ideas. Select a node for details.</desc>
+      <defs>
+        <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path class="graph-grid" d="M30 0H0V30"/></pattern>
+        <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" viewBox="0 0 8 8"><path d="M1 1L6 4L1 7" fill="none" stroke="var(--dim)" stroke-width="1.1" stroke-linejoin="round"/></marker>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid)"/>
+      <g aria-hidden="true"><text x="28" y="53" class="svg-title">Public Seed Network</text><text x="29" y="82" class="svg-subtitle">How seven creative tools can work together</text></g>
+      <g id="edges" aria-hidden="true"></g>
+      <g id="nodes"></g>
+      <g id="legend" aria-hidden="true"></g>
+    </svg>
+  </div>
+  <div class="panel" aria-live="polite">
+    <h2 id="focusTitle">Explore the network</h2>
+    <p id="focusDescription">Select a project to see what it can share and which tools it pairs with.</p>
+    <a id="openRepo" hidden>Open repository</a>
+    <ul id="relationships"></ul>
+  </div>
+  <nav class="directory" aria-label="All seven repositories"></nav>
+</main>
+<script>
+const repos = [
+  { id:'syn-themes', name:'Syn Themes', label:'Editor colors', tone:'violet', wide:[142,175], small:[116,167], glyph:'M6 8h12v8H6z M9 12l2 2 4-4', about:'Six color themes for VS Code and Cursor.' },
+  { id:'theme-designer', name:'Theme Designer', label:'Brand palette JSON', tone:'violet', wide:[415,164], small:[322,167], glyph:'M6 12a6 6 0 1 1 12 0c0 2-1 3-3 3h-1l-1 3h-3l1-4 M9 11h.1 M12 8h.1 M15 10h.1', about:'Compare light and dark brand palettes and download JSON.' },
+  { id:'pdf-designer', name:'PDF Designer', label:'Documents and PDFs', tone:'teal', wide:[780,163], small:[322,326], glyph:'M8 5h6l3 3v11H8z M14 5v4h3 M10 13h5 M10 16h4', about:'Preview documents and export light and dark PDFs locally.' },
+  { id:'voice-seed', name:'Voice Seed', label:'Writing registers', tone:'rose', wide:[142,399], small:[116,326], glyph:'M6 10h2l2-4 3 12 2-8 2 2h2', about:'Keep résumé, social, and agent writing voices distinct.' },
+  { id:'dashboard', name:'Dashboard', label:'Workspace views', tone:'teal', wide:[557,290], small:[322,482], glyph:'M6 7h12v10H6z M10 7v10 M6 10h12', about:'Build a local workspace view from profile-driven dashboard templates.' },
+  { id:'agency', name:'Agency', label:'Roles and workflows', tone:'blue', wide:[455,414], small:[116,482], glyph:'M12 7v4 M7 16v-5h10v5 M10 5h4v3h-4z M5 16h4v3H5z M15 16h4v3h-4z', about:'Organize an agent project around roles, reviews, and handoffs.' },
+  { id:'bot-seed', name:'Bot Seed', label:'Discord starter', tone:'blue', wide:[805,397], small:[220,632], glyph:'M7 9h10v8H7z M12 9V6 M10 12h.1 M14 12h.1 M10 15h4', about:'Start a Discord bot with slash commands and configurable branding.' }
+];
+
+const relations = [
+  ['syn-themes','theme-designer','Editor colors inspire brand palettes'],
+  ['syn-themes','pdf-designer','Editor colors inspire document palettes'],
+  ['theme-designer','pdf-designer','Download light and dark brand JSON'],
+  ['theme-designer','dashboard','Carry brand colors into CSS tokens'],
+  ['theme-designer','bot-seed','Choose a Discord embed accent'],
+  ['voice-seed','pdf-designer','Use a writing register for document copy'],
+  ['voice-seed','agency','Use voice guidance in drafting roles'],
+  ['dashboard','agency','Use a dashboard as an optional workspace landing page'],
+  ['agency','bot-seed','Reuse review and operator workflow patterns']
+];
+const wideRoutes = {
+  'syn-themes:pdf-designer':'M242 155 C353 102 683 88 780 123',
+  'theme-designer:bot-seed':'M514 180 C668 205 718 301 795 357',
+  'voice-seed:pdf-designer':'M241 387 C418 391 520 193 672 179'
+};
+
+const byId = Object.fromEntries(repos.map(repo => [repo.id,repo]));
+const names = new URLSearchParams(location.search);
+const compact = matchMedia('(max-width: 620px)');
+const system = matchMedia('(prefers-color-scheme: light)');
+const svg = document.getElementById('diagram');
+const nodeGroup = document.getElementById('nodes');
+const edgeGroup = document.getElementById('edges');
+const legend = document.getElementById('legend');
+const appearance = document.getElementById('appearance');
+const returnPaths = { theme:'../../preview.html', pdf:'palette-demo.html' };
+const from = names.get('from');
+if (Object.hasOwn(returnPaths,from)) {
+  const link = document.querySelector('#returnLink');
+  link.href = returnPaths[from];
+  link.textContent = 'Back to palettes';
+}
+let selected = Object.hasOwn(byId,names.get('focus')) ? names.get('focus') : null;
+let theme = names.get('mode') === 'light' ? 'light' : names.get('mode') === 'dark' ? 'dark' : system.matches ? 'light' : 'dark';
+
+function repoLink(repo) { return 'https://github.com/jenninexus/' + repo.id; }
+function el(tag,attrs={},text) {
+  const node=document.createElementNS('http://www.w3.org/2000/svg',tag);
+  for (const [name,value] of Object.entries(attrs)) node.setAttribute(name,value);
+  if (text) node.textContent=text;
+  return node;
+}
+
+function draw() {
+  const key=compact.matches ? 'small' : 'wide';
+  const mobile=key==='small';
+  const width=mobile ? 438 : 1000;
+  const height=mobile ? 738 : 520;
+  const half=mobile ? 87 : 99;
+  svg.setAttribute('viewBox','0 0 '+width+' '+height);
+  nodeGroup.replaceChildren();
+  edgeGroup.replaceChildren();
+  legend.replaceChildren();
+
+  for (const [source,target] of relations) {
+    const from=byId[source], to=byId[target];
+    let [x1,y1]=from[key], [x2,y2]=to[key];
+    const direction=x2>x1 ? 1 : -1;
+    if (mobile && Math.abs(y2-y1)>70) {
+      y1+=31; y2-=37;
+    } else if (Math.abs(x2-x1)>2*half+12) {
+      x1+=direction*half; x2-=direction*(half+8);
+    } else {
+      y1+=y2>y1 ? 31 : -31;
+      y2+=y2>y1 ? -38 : 38;
+    }
+    const defaultPath=mobile && Math.abs(y2-y1)>5
+      ? 'M'+x1+' '+y1+' C'+x1+' '+((y1+y2)/2)+' '+x2+' '+((y1+y2)/2)+' '+x2+' '+y2
+      : 'M'+x1+' '+y1+' C'+((x1+x2)/2)+' '+y1+' '+((x1+x2)/2)+' '+y2+' '+x2+' '+y2;
+    const path=mobile ? defaultPath : wideRoutes[source+':'+target] ?? defaultPath;
+    edgeGroup.append(el('path',{d:path,class:'edge',style:'--tone:var(--'+from.tone+')','marker-end':'url(#arrow)','data-from':source,'data-to':target}));
+  }
+
+  for (const repo of repos) {
+    const [x,y]=repo[key];
+    const number=mobile ? 29 : 32;
+    const group=el('g',{class:'node',role:'button',tabindex:'0','aria-label':repo.name,transform:'translate('+x+' '+y+')',style:'--tone:var(--'+repo.tone+')','data-id':repo.id});
+    group.append(
+      el('rect',{x:-half,y:-32,width:half*2,height:64,rx:16,class:'card'}),
+      el('circle',{cx:-half+number,cy:0,r:21,class:'orb-aura'}),
+      el('circle',{cx:-half+number,cy:0,r:15,class:'orb'}),
+      el('path',{d:repo.glyph,transform:'translate('+(-half+number-12)+' -12)',class:'glyph'}),
+      el('text',{x:-half+number+23,y:-3,class:'node-label'},repo.name),
+      el('text',{x:-half+number+23,y:17,class:'node-subtitle'},repo.label)
+    );
+    group.addEventListener('click',()=>select(repo.id));
+    group.addEventListener('keydown',event=>{
+      if (event.key==='Enter' || event.key===' ') { event.preventDefault(); select(repo.id); }
+    });
+    nodeGroup.append(group);
+  }
+
+  const keys=[['violet','Design'],['teal','Publishing'],['rose','Writing'],['blue','Workflows']];
+  for (const [index,[tone,label]] of keys.entries()) {
+    const x=mobile ? 29+index*99 : 29+index*124;
+    const y=height-29;
+    legend.append(el('circle',{cx:x,cy:y-5,r:4,fill:'var(--'+tone+')'}),el('text',{x:x+10,y,class:'key'},label));
+  }
+  updateSelection();
+}
+
+function select(id) {
+  selected=selected===id ? null : id;
+  updateSelection();
+}
+
+function updateSelection() {
+  for (const edge of edgeGroup.children) {
+    const connected=selected && (edge.dataset.from===selected || edge.dataset.to===selected);
+    edge.classList.toggle('active',Boolean(connected));
+    edge.classList.toggle('inactive',Boolean(selected && !connected));
+  }
+  for (const node of nodeGroup.children) node.setAttribute('aria-pressed',String(node.dataset.id===selected));
+  const repo=byId[selected];
+  document.querySelector('#focusTitle').textContent=repo?.name ?? 'Explore the network';
+  document.querySelector('#focusDescription').textContent=repo?.about ?? 'Select a project to see what it can share and which tools it pairs with.';
+  const open=document.querySelector('#openRepo');
+  open.hidden=!repo;
+  const list=document.querySelector('#relationships');
+  list.replaceChildren();
+  if (repo) {
+    open.href=repoLink(repo);
+    open.textContent='Open '+repo.name+' on GitHub';
+    for (const [from,to,label] of relations) {
+      if (selected!==from && selected!==to) continue;
+      const item=document.createElement('li');
+      item.textContent=byId[from].name+' → '+byId[to].name+' · '+label;
+      list.append(item);
+    }
+  }
+}
+function applyAppearance() {
+  document.documentElement.dataset.theme=theme;
+  appearance.textContent='Use '+(theme==='dark' ? 'light' : 'dark')+' mode';
+}
+appearance.addEventListener('click',()=>{
+  theme=theme==='dark' ? 'light' : 'dark';
+  applyAppearance();
+});
+for (const repo of repos) {
+  const anchor=document.createElement('a');
+  anchor.href=repoLink(repo);
+  anchor.textContent=repo.name;
+  document.querySelector('.directory').append(anchor);
+}
+compact.addEventListener('change',draw);
+applyAppearance();
+draw();
+</script>
+</body>
+</html>
