@@ -1,54 +1,32 @@
-<div align="center">
-
-# Jenni
-## Building creative tools, games, and AI-assisted workflows.
+<div align="center">  
+  
+### Building creative tools, games, and customizable AI-assisted workflows.
 [![Portfolio](https://img.shields.io/badge/Portfolio-jenninexus.com-E040FB?style=flat-square&logo=google-chrome&logoColor=white)](https://jenninexus.com)
 [![Technical Artist](https://img.shields.io/badge/Technical%20Artist-game%20dev-00B8D4?style=flat-square&logo=unity&logoColor=white)](https://jenninexus.com)
 [![AI Workflows](https://img.shields.io/badge/AI-workflows-2979FF?style=flat-square&logo=openai&logoColor=white)](https://github.com/jenninexus?tab=repositories)
 [![Live Coding](https://img.shields.io/badge/Live%20Coding-creative%20tools-9146FF?style=flat-square&logo=twitch&logoColor=white)](https://twitch.tv/JenniNexus)
 [![Links](https://img.shields.io/badge/Links-everything%20else-FF4081?style=flat-square&logo=linktree&logoColor=white)](https://jenninexus.com/links)
+</div>
 
-## Technical artist. Indie game dev.
-## Building creative tools, games, and AI-assisted workflows.
+---
 
+<div>
+  
+### About Me:
+
+Hi friends - I'm Jenni, a Technical Artist and Game Dev based in Seattle/Tacoma.
+
+Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), you can find me designing game systems, AI tools, and practical automation for better quality life and times.
+- Game dev & 3D Art in Unity, Unreal and Blender.
+- Web-app and dashboard design, working with JS, PHP, TS, and more.
+- Customized tool-building for storytelling, art, agents, automation, and production support.
+- Live-streaming and content creation, sharing tips and tricks along the way. 
 </div>
 
 ---
 
 <div align="center">
-
-## About
-
-Technical Artist and Game Developer based in Seattle/Tacoma.
-
-Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), building game systems, creator tools, dashboards, design systems, AI workflows, and practical automation for small teams.
-
-</div>
-
-- Game development in Unity, Unreal, C#, TypeScript, and custom toolchains.
-- Web and dashboard work across JavaScript, PHP, Node, analytics, and self-hosted services.
-- AI workflow design for writing, art, agents, automation, and production support.
-- Streaming and creative education around game dev, tech art, and building in public.
-
----
-
-<div align="center">
-
-## Featured Projects
-
-| Project | What It Is |
-|---------|------------|
-| [dashboard](https://github.com/jenninexus/dashboard) | Local-first profile-based dashboard seed kit |
-| [site-auditor](https://github.com/jenninexus/site-auditor) | Local website audit dashboard for SEO, accessibility, security, and performance |
-| [syn-themes](https://github.com/jenninexus/syn-themes) | Cyberpunk glass VS Code theme extension |
-| [senior-pet-care](https://github.com/jenninexus/senior-pet-care) | Printable senior pet health tracker |
-
-</div>
-
----
-
-<div align="center">
-
+  
 ## Public Seed Network
 
 <picture>
@@ -183,7 +161,7 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), building
 
 <div align="center">
 
-## Watch / Follow
+### Watch / Follow
 
 [YouTube](https://youtube.com/@jenninexus) · [Twitch](https://twitch.tv/JenniNexus) · [Discord](https://discord.gg/KYPh7Cp) · [Links](https://jenninexus.com/links)
 
