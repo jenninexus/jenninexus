@@ -36,16 +36,6 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), you can 
 
 [How the tools fit together](docs/seed-network/)
 
-### PDF Designer palette preview
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/pdf-palettes/wizard-palettes-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="docs/pdf-palettes/wizard-palettes-light.png">
-  <img alt="Six PDF Designer palettes shown in light and dark, with Default Résumé selected alongside Void Circuit, Neon Decay, Ghost Protocol, Plasma Drift, and Martian" src="docs/pdf-palettes/wizard-palettes-light.png">
-</picture>
-
-[Explore PDF Designer](https://github.com/jenninexus/pdf-designer)
-
 </div>
 
 <div align="center">
