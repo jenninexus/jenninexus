@@ -23,12 +23,9 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), you can 
 - Live-streaming and content creation, sharing tips and tricks along the way. 
 </div>
 
----
-
 <div align="center">
   
 ## Public Seed Network
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/seed-network/network-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="docs/seed-network/network-light.png">
@@ -40,8 +37,6 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), you can 
 [How the tools fit together](docs/seed-network/)
 
 </div>
-
----
 
 <div align="center">
 
@@ -100,8 +95,6 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), you can 
 
 </div>
 
----
-
 <div align="center">
 
 ## Featured YouTube Videos
@@ -156,8 +149,6 @@ Co-founder at [Monofinity Studio](https://github.com/monofinitystudio), you can 
 </table>
 
 </div>
-
----
 
 <div align="center">
 
